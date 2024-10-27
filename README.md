@@ -50,4 +50,4 @@ git push origin branch-name
 7. Go to Github and merge your branch with main
 
 ---
-Copyright © 2024 Sekbid Multimedia Website Asteration
+Copyright © 2025 Sekbid Multimedia Website Valiance
