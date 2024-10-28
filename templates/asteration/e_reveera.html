@@ -1,0 +1,110 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/e_reveera.css') }}">
+    <script src="{{ url_for('static', filename='asteration/js/e_reveera.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"     crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing    +Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+{% endblock css_js %}
+
+{% block title %}Reveera{% endblock title %}
+
+{% block main %}
+
+
+<section class="banner">
+    <img src="{{ url_for('static', filename='asteration/img/banner/reveera_banner.png') }}" alt="banner">
+	<section class="gradient-banner">
+        
+    </section>
+</section>
+
+<div class="font-wrap">
+    
+    <section class="about">
+        <h1 class="heading hidden">About Reveera</h1>
+        <p class="hidden" id="about">
+            Reveera merupakan singkatan dari "Pristine and Sincere Dove's Embrace" atau "Pelukan Merpati yang Murni dan Tulus". Nama ini diambil karena burung merpati dilambangkan sebagai kesetiaan, cinta, dan kepedulian terhadap keluarga ataupun orang tersayang. Oleh karena itu, tujuan acara Reveera ini diselanggarakan untuk memperingati hari valentine, serta untuk menunjukkan rasa kasih sayang ke teman atau orang terdekat. Reevera dilaksanakan pada Jumat 16, Dimana seluruh angkatan SMA IGS berkumpul serta saling menunjukkan rasa kasih sayang.
+        </p>
+        <div class="kewa hidden">
+            <div class="kepan">
+                <p><b>Ketua Panitia</b></p>
+                <p class="nama">Antonius Ricky</p>
+            </div>
+            <div class="kepan">
+                <p><b>Ketua Acara</b></p>
+                <p class="nama">Sulystiawaty Tambunan</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content">
+    
+        <div class="performance">
+            <h1 class="heading hidden">Performances</h1>
+            <div class="lists">
+                <div class="list hidden">
+                    <i class='bx bx-tada bxs-music'></i>
+                    <p>Orchestra Performance</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bx-microphone'></i>
+                    <p>Singing Performance</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bxs-guitar-amp' ></i>
+                    <p>Band Performance</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bx-laugh'></i>
+                    <p>Flashmob</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="performance">
+            <h1 class="heading hidden">Activities</h1>
+            <div class="lists">
+                <div class="list hidden">
+                    <i class='bx bx-tada bxs-megaphone'></i>
+                    <p>Ice Breaking</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bxs-crown'></i>
+                    <p>King and Queen Finalist</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bx-envelope' ></i>
+                    <p>Menfess Reading</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bx-universal-access' ></i>
+                    <p>Imitate The Picture</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="performance">
+            <h1 class="heading hidden">Stands</h1>
+            <div class="lists">
+                <div class="list hidden">
+                    <i class='bx bx-tada bx-edit-alt'></i>
+                    <p>Visual Art Stand</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bxs-cake'></i>
+                    <p>Baking Stand</p>
+                </div>
+                <div class="list hidden">
+                    <i class='bx bx-tada bxs-dice-5' ></i>
+                    <p>Minigames Stand</p>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+</div>
+<img class="footer-divider" src="https://res.cloudinary.com/dhnak6cxo/image/upload/v1707232740/Asteration/Reveera/valentine_decorator_pubohp.png" alt=".">
+{% endblock main %}

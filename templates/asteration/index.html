@@ -1,0 +1,80 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/index.css') }}">
+{% endblock css_js %}
+
+
+{% block title %}Asteration{% endblock title %}
+
+{% block main %}
+	<section class="main">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<a href="{{ url_for('e_gelora') }}"><img src="{{ url_for('static', filename='asteration/img/banner/gelora_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_aventura') }}"><img src="{{ url_for('static', filename='asteration/img/banner/aventura_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_etourdissante') }}"><img src="{{ url_for('static', filename='asteration/img/banner/etourdissante_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_qaliftar') }}"><img src="{{ url_for('static', filename='asteration/img/banner/qaliftar_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_reveera') }}"><img src="{{ url_for('static', filename='asteration/img/banner/reveera_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_lunerast') }}"><img src="{{ url_for('static', filename='asteration/img/banner/lunerast_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_litioree') }}"><img src="{{ url_for('static', filename='asteration/img/banner/litioree_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_armone') }}"><img src="{{ url_for('static', filename='asteration/img/banner/armone_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_pelita') }}"><img src="{{ url_for('static', filename='asteration/img/banner/pelita_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+				<div class="carousel-item">
+					<a href="{{ url_for('e_aksara') }}"><img src="{{ url_for('static', filename='asteration/img/banner/aksara_banner.png') }}" class="d-block w-100" alt="..."></a>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		
+		
+	</section>
+
+	<section class="about">
+		<div class="about-text">
+			<h1>Asteration</h1>
+			<p>
+				Asteration (Per Aspera Ad Astra Generation) merupakan nama kabinet OSIS SMA IGS periode 2023/2024. Asteration berarti "to the stars through hardships" yang menggambarkan OSIS sebagai generasi yang akan berkerja keras melewati tantangan dan memiliki semangat juang yang tinggi untuk meraih bintang yaitu membangun IGS menjadi lebih terdepan.
+			</p>
+		</div>
+		<img src="{{ url_for('static', filename='asteration/img/logo/transparent_logo.png') }}">
+			
+	</section>
+{% endblock main %}

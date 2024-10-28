@@ -1,0 +1,40 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/magazine.css') }}">
+	<script src="{{ url_for('static', filename='asteration/js/magazine.js') }}"></script>
+{% endblock css_js %}
+
+{% block title %}Magazine{% endblock title %}
+
+{% block main %}
+	<div class="images">
+		<button class="button left">&lt;</button>
+		<button class="button right">&gt;</button>
+		<img class="one" src="{{ url_for('static', filename='asteration/img/magazine/1.png') }}" alt=""/>
+		<img class="two" src="{{ url_for('static', filename='asteration/img/magazine/2.png') }}" alt=""/>
+		<img class="three" src="{{ url_for('static', filename='asteration/img/magazine/3.png') }}" alt=""/>
+		<img class="four" src="{{ url_for('static', filename='asteration/img/magazine/4.png') }}" alt=""/>
+		<img class="five" src="{{ url_for('static', filename='asteration/img/magazine/5.png') }}" alt=""/>
+		<img class="six" src="{{ url_for('static', filename='asteration/img/magazine/6.png') }}" alt=""/>
+		<img class="seven" src="{{ url_for('static', filename='asteration/img/magazine/7.png') }}" alt=""/>
+		<img class="eight" src="{{ url_for('static', filename='asteration/img/magazine/8.png') }}" alt=""/>
+		<img class="nine" src="{{ url_for('static', filename='asteration/img/magazine/9.png') }}" alt=""/>
+		<img class="ten" src="{{ url_for('static', filename='asteration/img/magazine/10.png') }}" alt=""/>
+		<img class="eleven" src="{{ url_for('static', filename='asteration/img/magazine/11.png') }}" alt=""/>
+		<img class="twelve" src="{{ url_for('static', filename='asteration/img/magazine/12.png') }}" alt=""/>
+		<img class="thirteen" src="{{ url_for('static', filename='asteration/img/magazine/13.png') }}" alt=""/>
+		<img class="fourteen" src="{{ url_for('static', filename='asteration/img/magazine/14.png') }}" alt=""/>
+		<img class="fifteen" src="{{ url_for('static', filename='asteration/img/magazine/15.png') }}" alt=""/>
+		<img class="sixteen" src="{{ url_for('static', filename='asteration/img/magazine/16.png') }}" alt=""/>
+		<img class="seventeen" src="{{ url_for('static', filename='asteration/img/magazine/17.png') }}" alt=""/>
+		<img class="eighteen" src="{{ url_for('static', filename='asteration/img/magazine/18.png') }}" alt=""/>
+		<img class="nineteen" src="{{ url_for('static', filename='asteration/img/magazine/19.png') }}" alt=""/>
+		<img class="twenty" src="{{ url_for('static', filename='asteration/img/magazine/20.png') }}" alt=""/>
+		<img class="twenty-one" src="{{ url_for('static', filename='asteration/img/magazine/21.png') }}" alt=""/>
+		<img class="twenty-two" src="{{ url_for('static', filename='asteration/img/magazine/22.png') }}" alt=""/>
+		<img class=twenty-three" src="{{ url_for('static', filename='asteration/img/magazine/23.png') }}" alt=""/>
+		<img class="twenty-four" src="{{ url_for('static', filename='asteration/img/magazine/24.png') }}" alt=""/>
+		<img class="twenty-five" src="{{ url_for('static', filename='asteration/img/magazine/25.png') }}" alt=""/>
+	</div>
+{% endblock main %}

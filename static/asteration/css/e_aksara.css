@@ -1,0 +1,338 @@
+:root {
+    --bg: #5f405d;
+	--bg-color: #744D6F;
+     --bg-color2: rgba(53,96,119,255); 
+    --bg-color2: rgba(60,102,130,255);
+    --accent-color: white;
+    
+    --text-color: #a5709e;
+    --text-color2: rgb(82, 125, 155);
+}
+
+*{
+	text-shadow: 0px 0px 18px white;
+    
+}
+html, body {
+	background-color: var(--bg-color);
+    color: white;
+    width: 100vw;
+}
+
+header nav {
+	background: linear-gradient(to right, var(--text-color) 20%, var(--bg-color));
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 200;
+}
+
+header nav .logo h1{
+	color: white;
+}
+header nav ul li a{
+	color: white;
+}
+
+header nav ul li a:hover{
+	color: var(--text-color2);
+	text-decoration: none;
+	animation: hovering 0.2s linear;
+}
+
+section.gradient-header {
+    width: 100vw;
+}
+
+p, li {
+    font-size: 110%;
+}
+
+@keyframes hovering {
+	0% {
+		color: white;
+	}
+
+	100% {
+		color: var(--text-color2);
+	}
+}
+
+section.banner{
+	--size: 100vw;
+	position: relative;
+	width: var(--size);
+	height: calc(var(--size)/1.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+    background-color: var(--bg-color);
+}
+
+section.banner img {
+    width: 100vw;
+    height: calc(100vw /1.6);
+}
+
+section.banner .gradient-banner {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	height: 10rem;
+	width: 100%;
+	background: linear-gradient(to bottom,rgba(0,0,0,0), var(--bg-color));
+}
+
+section.about {
+	display: flex;
+    margin: 1rem auto;
+	flex-direction: column;
+	width: 90%;
+    text-align: center;
+}
+
+section.about h1 {
+	margin-top: 5rem;
+	font-weight: 700;
+	/* color: white; */
+}
+
+.kewa {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.kepan {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.hidden{
+	transform: translateY(100%);
+    filter: blur(10px);
+}
+
+.show{
+	transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+section.content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+    background-color: var(--bg-color);
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+section.content h1 {
+	font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+section.content h2 {
+	font-weight: 700;
+    color: var(--accent-color);
+}
+
+section.content .lists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+section.content .list {
+    width: 200px;
+    height: 200px;
+    background-color: var(--text-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+	box-shadow: 0px 0px	20px white;
+}
+
+section.content .list:hover {
+	animation: box-hover 0.5s linear;
+	animation: box-size 0.3s linear;
+	scale: 1.05;
+	background-color: #553851;
+}
+
+@keyframes box-hover {
+    0%{
+        background-color: var(--text-color);
+    }
+
+    100%{
+        background-color: #553851;
+    }
+}
+
+@keyframes box-size {
+    0%{
+        scale: 1;
+    }
+
+    100%{
+        scale: 1.05;
+    }
+
+} 
+
+section.content .list i {
+    font-size: 50pt;
+    color: white;
+}
+
+section.content .list p {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0;
+}
+
+p#arabic {
+	margin-top: 0.5rem;
+}
+
+.performance .gambar{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.performance .gambar .image-container img{
+	width: 400px;
+	margin: 15px;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 18px white;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+img#image{
+	width: 400px;
+	margin: 15px;
+	border-radius: 1rem;
+	box-shadow: 0px 0px 18px white;
+	
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 266.66px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  margin: 15px;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: white;
+  text-align: justify;
+  padding: 10px;
+}
+
+.overlay h5 b {
+	color: lightblue;
+}
+
+.overlay p b {
+  color: lightpink;
+}
+
+footer {
+    margin-top: 0;
+	background-color: var(--text-color);
+}
+
+footer .gradient {
+	background: linear-gradient(var(--bg-color), var(--text-color));
+}
+
+/* section.kegiatan ul li a{
+	color: var(--accent-color);
+    text-shadow:1.75px 1.75px rgba(0, 0, 0, 0.353);
+} */
+
+footer .footer-content a{
+	color: white;
+}
+
+footer .footer-content a:hover{
+	color: var(--text-color2);
+	animation: hovering 0.2s linear;
+}
+
+footer .column2 a h1{
+	margin: 0;
+	color: var(--accent-color);
+}
+
+footer .column3 a h2{
+	margin: 0;
+	color: var(--accent-color);
+}
+
+footer .copyright {
+	color: var(--bg-color);
+}
+
+@media screen and (max-width : 850px) {
+    p, li {
+        font-size: 100%;
+    }
+
+	section.banner .gradient-banner {
+		height: 5rem;
+	}
+}
+
+@media screen and (max-width : 590px) {
+	header nav ul.menu-nav{
+		background-color: var(--bg-color);
+		border-color: white;
+		box-shadow: 0px 0px 10px white;
+	}
+
+	.performance .gambar .image-container img {
+		width: 350px;
+	}
+
+	.overlay {
+		width: 350px;
+		height: 233.33px;
+	}
+}

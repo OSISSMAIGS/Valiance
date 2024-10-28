@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --bg: #793847;
+	--bg-color: #FAD0DC;
+ 	--bg-color2: #7f2645; 	
+
+	--decorator: #FFB2CC;
+
+    --text-color2: #c75771;
+    --text-color-1: #a01c2c;
+
+}
+
+*{
+	color: var(--accent-color);
+     /* text-shadow:1.75px 1.75px rgba(0, 0, 0, 0.353);  */
+}
+html, body {
+	background-color: var(--bg-color);
+    color: white;
+    max-width: 100vw;
+    
+}
+
+.font-wrap{
+    font-family: 'Dancing Script', cursive;
+}
+
+section.stars {
+	position: absolute;
+}
+
+section.stars img {
+	position: absolute;
+	width: 20px;
+	opacity: 0.3;
+	animation: srotate 5s linear infinite;
+}
+
+@keyframes srotate {
+	0% {transform: rotate(0deg) scale(0);}
+	50% {transform: rotate(180deg) scale(1.2); filter: drop-shadow(0 0 0.2rem var(--text-color2));}
+	100% {transform: rotate(360deg) scale(0);}
+}
+
+@keyframes sscale {
+	0% {transform: scale(1);}
+	100% {transform: scale(2);}
+}
+
+
+header nav {
+	background: linear-gradient(to right, var(--bg-color2) 20%, var(--text-color2));
+	position: fixed;
+	top: 0;
+	/* width: 100vw; */
+	z-index: 200;
+}
+
+header nav .logo h1{
+	color: white;
+}
+header nav ul li a{
+	color: white;
+}
+
+header nav ul li a:hover{
+	color: var(--bg-color);
+	text-decoration: none;
+	animation: hovering 0.2s linear;
+}
+
+section.gradient-header {
+    width: 100vw;
+}
+
+p, li {
+    font-size: 110%;
+}
+
+@keyframes hovering {
+	0% {
+		color: white;
+	}
+
+	100% {
+		color: var(--bg-color);
+	}
+}
+
+section.banner{
+	--size: 100vw;
+	z-index: 99;
+	position: relative;
+	width: var(--size);
+	height: calc(var(--size)/1.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+    background-color: var(--bg-color);
+}
+
+section.banner img {
+    width: 100vw;
+    height: calc(100vw /1.6);
+}
+
+section.banner .gradient-banner {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	height: 10rem;
+	width: 100%;
+	background: linear-gradient(to bottom,rgba(0,0,0,0), var(--bg-color));
+}
+
+section.about {
+    color: var(--text-color-1);
+	display: flex;
+    margin: 1rem auto;
+	flex-direction: column;
+	width: 90%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+h1.heading {
+	/* font-family: 'myfont'; */
+	margin-top: 5rem;
+	margin-bottom: 1.5rem;
+	font-weight: 800;
+	/* color: white; */
+	font-size: 3.8rem;
+    color: var(--text-color-1);
+}
+
+.hidden {
+	transform: translateY(100%);
+    filter: blur(10px);
+}
+
+.show {
+	transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+p span {
+	font-weight: 600;
+	color: var(--text-color2);
+}
+
+.kewa {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	
+}
+
+.kepan, .kepan b{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	
+}
+
+div.kewa p.nama{
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+section.content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+section.content h1 {
+	font-weight: 700;
+    /* color: white; */
+    margin: 0;
+}
+
+section.content h2 {
+	font-weight: 700;
+    color: var(--accent-color);
+}
+
+section.content .lists {
+    display: flex;
+	margin-top: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+section.content .list {
+	cursor: pointer;
+	width: 200px;
+    height: 200px;
+    background-color: var(--text-color2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+section.content .list:hover{
+	background-color: var(--bg-color2);
+	scale: 1.05;
+	animation: box-hover 0.5s linear;
+	animation: box-size 0.3s linear;
+}
+
+@keyframes box-hover {
+    0%{
+        background-color: var(--box-color);
+    }
+
+    100%{
+        background-color: rgb(13, 52, 74);
+    }
+}
+
+@keyframes box-size {
+    0%{
+        scale: 1;
+    }
+
+    100%{
+        scale: 1.05;
+    }
+
+} 
+
+section.content .list i, i svg {
+    font-size: 50pt;
+    color: var(--bg-color);
+}
+
+section.content .list p {
+    font-weight: bold;
+	font-size: 1.7rem;
+    color: var(--bg-color);
+    margin-bottom: 0;
+}
+
+.performance .gambar{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.performance .gambar img{
+	width: 400px;
+	margin: 15px;
+	border-radius: 1rem;
+}
+
+footer {
+	z-index: 999;
+    margin-top: 0;
+	background-color: var(--bg);
+}
+
+footer .gradient {
+	z-index: 99;
+	background: linear-gradient(var(--bg-color), var(--bg));
+}
+
+/* section.kegiatan ul li a{
+	color: var(--accent-color);
+    text-shadow:1.75px 1.75px rgba(0, 0, 0, 0.353);
+} */
+
+footer .footer-content a{
+	color: var(--bg-color);
+}
+
+@keyframes hovering-footer {
+	0% {
+		color: var(--bg-color);
+	}
+
+	100% {
+		color: white;
+	}
+}
+
+footer .footer-content a:hover{
+	color: white;
+	animation: hovering-footer 0.2s linear;
+}
+
+footer .column2 a h1{
+	margin: 0;
+	color: var(--bg-color-1);
+}
+
+footer .column3 a h2{
+	margin: 0;
+	color: var(--bg-color1);
+}
+
+footer.copyright p#pelita {
+	color: var(--text-color2);
+}
+
+img.footer-divider{
+    margin-bottom: 5rem;
+}
+
+@media screen and (max-width : 850px) {
+    p, li {
+        font-size: 100%;
+    }
+
+	section.banner .gradient-banner {
+		height: 5rem;
+	}
+}
+
+@media screen and (max-width :768px){
+	body {
+		width: 100vw;
+	}
+}
+
+@media screen and (max-width : 590px) {
+	body{
+		max-width: 100vw;
+	}
+
+	header nav{
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	}
+	header nav ul.menu-nav{
+		background-color: var(--bg-color);
+	}
+
+	.performance .gambar img{
+		width: 350px;
+		margin: 10px;
+	}
+
+	section.about p#about{
+		font-size: 1rem;
+		text-align: justify;
+	}
+
+	div.kewa p.nama{
+		font-size: 1.5rem;
+	}
+}

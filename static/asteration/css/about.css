@@ -1,0 +1,165 @@
+.we-are-asteration {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+#left {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 13rem;
+    color: azure;
+    padding-left: 1.45rem;
+}
+
+#right {
+    width: 32rem;
+}
+
+.daftar-isi {
+    padding: 2rem;
+}
+
+.daftar-isi p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    color: azure;
+}
+
+.daftar-isi p a {
+    text-decoration: none;
+    color: azure;
+}
+
+.daftar-isi p a:hover {
+    text-decoration: none;
+    color:burlywood;
+}
+
+.foto-sekbid img {
+    width: 100%;    
+}
+
+.personal-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 2rem;
+}
+
+#size-550-border {
+    border: 2px solid azure;
+    border-radius: 20% 20% 50% 50% / 10% 10% 12% 12% ;
+    width: 300px;
+    height: 550px;
+    position: relative;
+    margin: 2rem;
+}
+
+.each-info {
+    border: 2px solid azure;
+    border-radius: 20% 20% 50% 50% / 10% 10% 12% 12% ;
+    width: 300px;
+    height: 600px;
+    position: relative;
+    margin: 2rem;
+}
+
+.each-info .nomor-jersey {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.each-info h2 {
+    text-decoration: none;
+    color: azure;
+    position: absolute;
+    top: 75px;
+    right: 30px;
+}
+
+.each-info hr {
+    height: 5px;
+    border-width: 0;
+    color: azure;
+    background-color: azure;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.info p {
+    margin: 0;
+}
+
+#name {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+#jabatan {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+@media screen and (max-width : 1025px) {
+    #left {
+        font-size: 8.5rem;
+    }
+
+    #right {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width : 850px) {
+    #left {
+        font-size: 6rem;
+    }
+
+    #right {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width : 590px) {
+	#left {
+        font-size: 5rem;
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    .daftar-isi p {
+        font-size: 4rem;
+    }
+
+    #size-550-border {
+        border: 2px solid azure;
+        border-radius: 20% 20% 50% 50% / 10% 10% 12% 12% ;
+        width: 300px;
+        height: 530px;
+        position: relative;
+        margin: 2rem;
+    }
+    
+}

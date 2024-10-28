@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+	--light-brown: rgb(193, 161, 127);
+	--dark-brown: rgb(121, 103, 74);
+	--brown: rgb(55, 39, 32);
+	--white: rgb(255, 255, 255);
+	--light-blue: rgb(110, 203, 246);
+	--blue: rgb(87, 106, 226);
+	--dark-blue: rgb(42, 35, 86);
+	--pink: rgb(194, 82, 226);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	background: var(--dark-brown);
+	color: var(--white);
+	overflow-x: hidden;
+}
+
+@keyframes toggle-animation {
+	0%{
+		opacity: 0;
+	}
+
+	100%{
+		opacity: 1;
+	}
+}
+
+/* Header */
+	header nav {
+		background: linear-gradient(to right, rgb(97, 73, 48) 20%, var(--brown));
+		display: flex;
+		height: 50px;
+		width: 100vw;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 4%;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+	}
+
+	header nav .logo {
+		display: flex;
+		flex-direction: row;
+		cursor: pointer;
+	}
+
+	header nav .logo .asteration{
+		width: 150px;
+		display: flex;
+        gap: 0;
+	}
+
+	header nav .logo .asteration:hover{
+		color: var(--light-brown);
+		text-decoration: none;
+		animation: nav-hover-main 0.2s linear;
+	}
+
+	header nav .logo .asteration img{
+		height: 3.75rem;
+		display: flex;
+		filter: drop-shadow(0 0 1rem var(--white));
+	}
+
+	header nav .logo .asteration h1{
+		display: flex;
+		font-size: 1.1rem;
+		line-height: 65px;
+		filter: drop-shadow(0 0 1rem var(--white));
+	}
+
+	header nav .logo .credence{
+		position: absolute;
+		top: 4rem;
+		left: 4.5%;
+		display: none;
+		background: linear-gradient(to right, var(--blue) 20%, var(--light-blue));
+		width: 150px;
+		height: 50px;
+		border: 3px solid var(--dark-blue);
+		border-radius: 15px;
+		text-align: center;
+		transition: all 0.5s linear;
+		z-index: 1000;
+		align-items: center;
+		padding-left: 0.2rem;
+	}
+
+	header nav .logo .credence a{
+		display: flex;
+		gap: 10px;
+		color: var(--white);
+		text-decoration: none;
+		font-weight: 700;
+		text-shadow: 0 0 1rem var(--white);
+	}
+
+	header nav .logo .credence a:hover{
+		color: var(--dark-blue);
+		text-decoration: none;
+		animation: nav-hover-c 0.2s linear;
+	}
+
+	header nav .logo .credence a img{
+		height: 2rem;
+		display: flex;
+		filter: drop-shadow(0 0 1rem var(--white));
+	}
+
+	header nav .logo .credence a h1{
+		display: flex;
+		font-size: 1.2rem;
+		line-height: 35px;
+		filter: drop-shadow(0 0 1rem var(--white));
+	}
+
+	header nav .credence.active{
+		display: flex;
+		flex-direction: row;
+		animation: toggle-animation 0.5s linear;
+	}
+
+	header nav .logo h1{
+		display: flex;
+		margin: 0;
+		font-weight: 700;
+		text-shadow: 0 0 1rem var(--white);
+	}
+
+	header nav ul {
+		display: flex;
+		list-style: none;
+		width: 80%;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+
+	header nav ul li a{
+		color: var(--white);
+		text-decoration: none;
+		font-weight: 700;
+		text-shadow: 0 0 1rem var(--white);
+	}
+
+	header nav ul li a:hover{
+		color: var(--light-brown);
+		text-decoration: none;
+		animation: nav-hover-main 0.2s linear;
+	}
+
+	header nav .btn-nav {
+		width: 20%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	
+	header nav .btn-nav a{
+		background-color: white;
+		color: var(--dark-brown);
+		text-decoration: none;
+		border: 2px solid transparent;
+		font-weight: bold;
+		padding: 3px 8px;
+		border-radius: 12px;
+	}
+	
+	header nav .btn-nav a:hover {
+		color: var(--light-brown);
+	}
+	
+	.menu-toggle{
+        display: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle span{
+        display: block;
+        width: 25px;
+        height: 3px;
+		border-radius: 10px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background: var(--white);
+        z-index: 3;
+    }
+	
+	@keyframes nav-hover-main {
+		0% {
+			color: var(--white);
+		}
+
+		100% {
+			color: var(--light-brown);
+		}
+	}
+
+	@keyframes nav-hover-a {
+		0% {
+			color: var(--white);
+		}
+
+		100% {
+			color: var(--dark-brown);
+		}
+	}
+
+	@keyframes nav-hover-c {
+		0% {
+			color: var(--white);
+		}
+
+		100% {
+			color: var(--dark-blue);
+		}
+	}
+
+section.gradient-header {
+	position: absolute;
+	/* z-index: 11; */
+	left: 0;
+	top: 50px;
+	width: 100%;
+	height: 1.5rem;
+	background: linear-gradient(to bottom, rgba(175, 175, 175, 0.5), transparent);
+}
+
+.footer-divider {
+	position: relative;
+	top	: 14rem;
+	width: 100%;
+}
+
+/* Footer */
+	footer {
+		margin-top: 7rem;
+		background: var(--brown);
+	}
+
+	footer .gradient { 
+		height: 10rem;
+		background: linear-gradient(var(--dark-brown), var(--brown));
+		margin-bottom: 1rem;
+	}
+
+	footer .footer-content {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	footer .footer-content img{
+		width: 2rem;
+		border-radius: 0.3rem;
+		margin-right: 0.3rem;
+	}
+
+	footer .footer-content a{
+		color: var(--white);
+		text-decoration: none;
+	}
+
+	footer .footer-content a:hover{
+		color: var(--dark-brown);
+		animation: nav-hover-a 0.2s linear;
+	}
+
+	footer .column1 {
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	footer .column1 img{
+		width: 8rem;
+	}
+
+	footer .column1 .footer-text{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	footer .column1 .footer-text h5{
+		font-size: 2rem;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	footer .column1 .footer-text p{
+		text-align: center;
+	}
+
+	footer .column2 {
+		width: 30%;
+		margin: auto 0;
+	}
+
+	footer .column2 a{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	footer .column2 a h1{
+		margin: 0;
+		color: var(--dark-brown);
+	}
+
+	footer .column2 a p{
+		padding-top: 5px;
+		margin-bottom: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	footer .column3 {
+		width: 20%;
+		height: 20%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: auto 0;
+	}
+
+	footer .column3 a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 0.2rem 0;
+	}
+
+	footer .column3 a h2{
+		margin: 0;
+		color: var(--dark-brown);
+	}
+
+	footer .column3 p{
+		margin: 0;
+		margin-left: 10px;
+	}
+
+	footer .copyright {
+		margin-top: 1rem;
+		background: var(--white);
+		color: var(--dark-brown);
+	}
+
+	footer .copyright p{
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+/* Responsive Layout */
+	@media screen and (max-width : 1100px) {
+		.footer-divider {
+			top : 11rem;
+		}
+	}
+
+	@media screen and (max-width : 590px) {
+		body{
+			max-width: 100vw;
+		}
+
+
+		.menu-toggle{
+			display: block;
+			cursor: pointer;
+		}
+	
+		.menu-toggle span{
+			display: block;
+			width: 25px;
+			height: 3px;
+			border-radius: 10px;
+			margin: 5px auto;
+			transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+			background: var(--white);
+			z-index: 3;
+		}
+
+		header nav {
+			padding-left: 5%;
+			padding-right: 5%;
+			justify-content: space-between;
+		}
+
+		header nav .logo .credence{
+			left: 7%;
+		}
+
+		header nav ul.menu-nav{
+			position: absolute;
+			top: 4.5rem;
+			gap: 0;
+			flex-direction: column;
+			background-color: var(--brown);
+			width: 30%;
+			height: 70vh;
+			border: 3px solid var(--light-brown);
+			border-radius: 15px;
+			text-align: center;
+			transition: all 0.5s linear;
+			display: none;
+			flex-direction: column;
+			justify-content: space-evenly;
+			margin-left: 60%;
+			z-index: 1000;
+			align-items: center;
+			padding-left: 0;
+		}
+
+		header nav ul.menu-nav.active{
+			display: flex;
+			animation: toggle-animation 0.5s linear;
+		}
+
+		@keyframes toggle-animation {
+			0%{
+				opacity: 0;
+			}
+
+			100%{
+				opacity: 1;
+			}
+		}
+
+		.footer-divider {
+			top : 10rem;
+		}
+
+		footer .footer-content {
+			padding-left: 3%;
+			padding-right: 3%;
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+		}
+
+		footer .footer-content img{
+			width: 2rem;
+			border-radius: 0.3rem;
+			margin-right: 0rem;
+		}
+
+		footer .column1 {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		footer .column1 img{
+			width: 10rem;
+		}
+
+		footer.column1 .footer-text{
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+		}
+	
+		footer .column1 .footer-text h5{
+			font-size: 25px;
+			text-align: right;
+		}
+	
+		footer .column1 .footer-text p{
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		footer .column1 img{
+			width: 6rem;
+		}
+
+		footer .column2 {
+			display: flex;
+			width: 100%;
+			margin: auto 0;
+			padding-bottom: 40px;
+		}
+
+		footer .column2 a{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		footer .column2 a img{
+			width: 33px;
+			height: 33px;
+			display: flex;
+			margin-right: 5px;
+			justify-content: space-evenly;
+		}
+	
+		footer .column2 a p{
+			margin: 0;
+		}
+
+		footer .column3 {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			padding-bottom: 10px;
+		}
+
+		footer .column3 a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;	
+			margin: 0 10px;
+		}
+	
+		footer .column3 a h2{
+			width: 25px;
+			height: 25px;
+		}
+	
+		footer .column3 p{
+			display: none;
+			margin: 0;
+		}
+
+		footer .copyright p{
+			text-align: center;
+			font-size: 11px;
+		}
+	}

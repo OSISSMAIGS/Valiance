@@ -1,0 +1,89 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/e_litioree.css') }}">
+{% endblock css_js %}
+
+{% block title %}Litiorée{% endblock title %}
+
+{% block main %}
+<section class="banner">
+	<img src="{{ url_for('static', filename='asteration/img/banner/litioree_banner.png') }}" alt="banner">
+	<section class="gradient-banner">
+	
+	</section>
+</section>
+
+<!-- <div class="back3">
+	<div class="back2">
+		<div class="back"> -->
+            <div class="container hidden">
+                <section class="about-event hidden">
+                    <h1 class="heading text-shadow">ABOUT LITIORÉE</h1>
+                    <p class="text-shadow">LITIORÉE adalah singkatan dari "Starlit Savior's Soirèe" yang bermakna malam Juru penyelamat kita. Natal merupakan suatu acara di mana kita merayakan kelahiran Tuhan Yesus. Litiorée, memperingatkannya dengan berbagai pertunjukan serta kegiatan-kegiatan menarik lainnya.</p>
+                    <p class="text-shadow"><span>Ketua Panitia</span>: Catharine Fidelya Amran</p>
+                    <p class="text-shadow"><span>Wakil Ketua Panitia</span>: Gracia Dearis Girsang</p>
+                </section>
+            </div>
+            
+            <section class="activities">
+                <div class="activities-content">
+                    <div class="activities-animation hidden">
+                        <h1 class="heading text-shadow hidden" id="activities">ACTIVITIES</h1>
+                    <div class="card-container">
+                        <div class="box text-shadow hidden">
+                            <i class='bx bxs-bowl-rice text-shadow'></i>
+                            <p class="text-shadow">Makan bersama</p>
+                        </div>
+            
+                        <div class="box text-shadow hidden">
+                            <i class='bx bxs-camera' ></i>
+                            <p class="text-shadow">Foto bersama</p>
+                        </div>
+                        <div class="box text-shadow hidden">
+                            <i class='bx bxs-megaphone' ></i>
+                            <p class="text-shadow">Ice Breaking Games</p>
+                        </div>
+                        
+                        <div class="box text-shadow hidden">
+                            <i class='bx bxs-happy-alt'></i>
+                            <p class="text-shadow">Doa Bersama</p>
+                        </div>
+            
+                        <div class="box text-shadow hidden">
+                            <i class="bi bi-box2-heart-fill"></i>
+                            <p class="text-shadow">Doorprize</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="performance-animation">
+                        <h1 class="heading text-shadow hidden" id="activities">
+                            PEFORMANCE
+                        </h1>
+                        <div class="card-container">
+                            <div class="box text-shadow hidden">
+                                <i class='bx bxs-music mb-2'></i>
+                                <p class="text-shadow">Vokal</p>
+                            </div>
+                            <div class="box text-shadow hidden">
+                                <i class='bx bxs-music'></i>
+                                <p class="text-shadow">Paduan Suara</p>
+                            </div>
+                            <div class="box text-shadow hidden">
+                                <i class='bx bxs-happy-alt'></i>
+                                <p class="text-shadow">Ballet</p>
+                            </div>
+                            <div class="box text-shadow hidden">
+                                <i class='bx bxs-piano'></i>
+                                <p class="text-shadow">Band</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <img class="footer-divider" src="https://res.cloudinary.com/dhnak6cxo/image/upload/v1705085527/Asteration/image/Photo/platform_litioree_mrclru.png" alt=".">
+		<!-- </div>
+	</div>
+</div> -->
+{% endblock main %}

@@ -1,0 +1,24 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/events.css') }}">
+{% endblock css_js %}
+
+{% block title %}Events{% endblock title %}
+
+{% block main %}
+	<h1 class="past" id="past">Our Events</h1>
+
+	<section class="event past">
+		<a href="{{ url_for('e_gelora') }}"><img id="gelora" src="{{ url_for('static', filename='asteration/img/banner/gelora_banner.png') }}"></a>
+		<a href="{{ url_for('e_aventura') }}"><img id="aventura" src="{{ url_for('static', filename='asteration/img/banner/aventura_banner.png') }}"></a>
+		<a href="{{ url_for('e_etourdissante') }}"><img id="etourdissante" src="{{ url_for('static', filename='asteration/img/banner/etourdissante_banner.png') }}"></a>
+		<a href="{{ url_for('e_qaliftar') }}"><img id="qaliftar" src="{{ url_for('static', filename='asteration/img/banner/qaliftar_banner.png') }}"></a>
+		<a href="{{ url_for('e_reveera') }}"><img id="reveera" src="{{ url_for('static', filename='asteration/img/banner/reveera_banner.png') }}"></a>
+		<a href="{{ url_for('e_lunerast') }}"><img id="lunarest" src="{{ url_for('static', filename='asteration/img/banner/lunerast_banner.png') }}"></a>
+		<a href="{{ url_for('e_litioree') }}"><img id="litioree" src="{{ url_for('static', filename='asteration/img/banner/litioree_banner.png') }}"></a>
+		<a href="{{ url_for('e_armone') }}"><img id="armone" src="{{ url_for('static', filename='asteration/img/banner/armone_banner.png') }}"></a>
+		<a href="{{ url_for('e_pelita') }}"><img id="pelita" src="{{ url_for('static', filename='asteration/img/banner/pelita_banner.png') }}"></a>
+		<a href="{{ url_for('e_aksara') }}"><img id="aksara" src="{{ url_for('static', filename='asteration/img/banner/aksara_banner.png') }}"></a>
+	</section>
+{% endblock main %}

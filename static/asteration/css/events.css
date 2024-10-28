@@ -1,0 +1,339 @@
+/* Main */
+section.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+section.main h1{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1.past#past {
+    text-shadow: 0px 0px 18px white;
+}
+
+section.main .carousel {
+    box-shadow: 0 0 1rem black;
+}
+
+section.main .carousel, section.main .carousel .carousel-item{
+    --size: 70vw;
+    width: var(--size);
+    height: calc(var(--size)*0.5625);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+}
+
+/* section.main .carousel, section.main .carousel .carousel-item h1{
+    background-color: black;
+    
+} */
+
+/* Events */
+section.event {
+    margin: 0 10vw;
+}
+
+section.event a {
+    margin-top: 3rem;
+}
+
+section.event a img {
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 18px white;
+}
+
+img#aksara:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #f78be8;
+    animation: aksara-hover 0.5s linear;
+}
+
+img#pelita:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #2ed566;
+    animation: pelita-hover 0.5s linear;
+}
+
+img#armone:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(59, 157, 255);
+    animation: armone-hover 0.5s linear;
+}
+
+img#litioree:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #95caff;
+    animation: litioree-hover 0.5s linear;
+}
+
+img#lunarest:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #ffef0e;
+    animation: lunarest-hover 0.5s linear;
+}
+
+img#reveera:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #FFB2CC;
+    animation: reveera-hover 0.5s linear;
+}
+
+img#qaliftar:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #007d64;
+    animation: qaliftar-hover 0.5s linear;
+}
+
+img#etourdissante:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #19324b;
+    animation: etourdissante-hover 0.5s linear;
+}
+
+img#gelora:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(185, 68, 36);
+    animation: gelora-retry-hover 0.5s linear;
+}
+
+
+img#aventura:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #38a345;
+    animation: aventura-hover 0.5s linear;
+}
+
+
+@keyframes aksara-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #f78be8;
+    }
+}
+
+@keyframes pelita-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #2ed566;
+    }
+}
+
+@keyframes armone-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px rgb(59, 157, 255);;
+    }
+}
+
+@keyframes litioree-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #95caff;
+    }
+}
+
+@keyframes lunarest-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #ffef0e;
+    }
+}
+
+@keyframes reveera-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #FFB2CC;
+    }
+}
+
+@keyframes qaliftar-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #007d64;
+    }
+}
+
+@keyframes etourdissante-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #19324b;
+    }
+}
+
+@keyframes aventura-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #38a345;
+    }
+}
+@keyframes gelora-retry-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #b94424;
+    }
+}
+
+section.event img, section.event.past div.image-container a img {
+    width: 30vw;
+    height: 100%;
+}
+
+img#aksara, img#pelita {
+    height: 100%;
+    margin-top: 0rem;
+}
+
+section.upcoming {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+h1.past{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+section.past {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.image-container img {
+    width: 30vw;
+    height: 86.4%;
+    margin: 15px;
+}
+
+/* .image-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 86.4%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    margin: 15px;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    text-align: justify;
+    padding: 10px;
+}
+
+.overlay h5 b {
+    color: lightblue;
+}
+
+.overlay p b {
+    color: lightpink;
+}
+
+@media screen and (max-width : 1100px) {
+    section.main {
+        margin-top: 3rem;
+    }
+    
+    section.main .carousel, section.main .carousel .carousel-item{
+        --size: 85vw;
+        width: var(--size);
+        height: calc(var(--size)*0.5625);
+    }
+
+    section.event {
+        margin: 0 5vw;
+    }
+
+    section.event img{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width : 590px) {
+    section.event img{
+        width: 70vw;
+    }
+}

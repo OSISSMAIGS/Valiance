@@ -1,0 +1,310 @@
+:root {
+	--bg: #691b05;
+	--bg-color: #9c3113;
+	--gradient-color: white;
+	--accent-color: #b94424;
+	--box-hover: var(--gradient-color);
+}
+
+html, body {
+	background-color: var(--bg-color);
+    color: white;
+    width: 100vw;
+}
+
+header nav {
+	background: linear-gradient(to right, var(--bg) 20%, var(--accent-color));
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 200;
+}
+
+header nav ul li a:hover{
+	color: var(--gradient-color);
+	text-decoration: none;
+	animation: hovering 0.2s linear;
+}
+
+header nav .logo .asteration:hover{
+	color: var(--gradient-color);
+	text-decoration: none;
+	animation: hovering 0.2s linear;
+}
+
+section.gradient-header {
+    width: 100vw;
+}
+
+p, li {
+    font-size: 110%;
+}
+
+.hidden{
+	transform: translateY(100%);
+    filter: blur(10px);
+}
+
+.show {
+	transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+@keyframes hovering {
+	0% {
+		color: white;
+	}
+
+	100% {
+		color: var(--gradient-color);
+	}
+}
+
+section.banner{
+	--size: 100vw;
+	position: relative;
+	width: var(--size);
+	height: calc(var(--size)/1.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+    background-color: var(--bg-color);
+}
+
+section.banner img {
+    width: 100vw;
+    height: calc(100vw /1.6);
+}
+
+section.banner .gradient-banner {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	height: 10rem;
+	width: 100%;
+	background: linear-gradient(to bottom,rgba(0,0,0,0), var(--bg-color));
+}
+
+section.about {
+	display: flex;
+    margin: 1rem auto;
+	flex-direction: column;
+	width: 90%;
+    text-align: center;
+	color: var(--gradient-color);
+}
+
+section.about h1 {
+	margin-top: 5rem;
+	font-weight: 700;
+}
+
+.kewa {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.kepan {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+section.divider {
+    width: 100vw;
+    height: 5rem;
+    background: linear-gradient(var(--bg-color), var(--accent-color));
+}
+
+section.content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+    background-color: var(--accent-color);
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+section.content h1 {
+	font-weight: 700;
+    color: var(--gradient-color);
+    margin: 0;
+}
+
+section.content h2 {
+	font-weight: 700;
+    color: var(--gradient-color);
+}
+
+section.content .lists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+section.content .list {
+    width: 200px;
+    height: 200px;
+    background-color: var(--gradient-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px var(--gradient-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+section.content .list:hover {
+	background-color: var(--box-hover);
+	scale: 1.05;
+	animation: box-hover 0.5s linear;
+	animation: box-sizing 0.3s linear;
+}
+
+@keyframes box-hover {
+	0% {
+		background-color: var(--gradient-color);
+	}
+
+	100% {
+		background-color: var(--box-hover);
+	}
+}
+
+@keyframes box-sizing {
+	0% {
+		scale: 1;
+	}
+
+	100% {
+		scale: 1.05;
+	}
+}
+
+section.content .list i {
+    font-size: 50pt;
+    color: var(--accent-color);
+	/* text-shadow: 0px 0px 18px white; */
+}
+
+section.content .list p {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0;
+}
+
+.event .gambar{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.event .gambar .image-container img{
+	width: 400px;
+	height: 266.66px;
+	margin: 15px;
+	border-radius: 1rem;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 266.66px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  margin: 15px;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: white;
+  text-align: justify;
+  padding: 10px;
+}
+
+.overlay h5 b {
+  color: lightblue;
+}
+
+.overlay p b {
+	color: skyblue;
+}
+
+footer {
+    margin-top: 0;
+	background-color: var(--bg-color);
+}
+
+footer .gradient {
+	background: linear-gradient(var(--accent-color), var(--bg-color));
+}
+
+footer .footer-content a:hover{
+	color: var(--gradient-color);
+	animation: hovering 0.2s linear;
+}
+
+footer .column2 a h1{
+	margin: 0;
+	color: var(--gradient-color);
+}
+
+footer .column3 a h2{
+	margin: 0;
+	color: var(--gradient-color);
+}
+
+footer .copyright {
+	color: var(--bg-color);
+}
+
+@media screen and (max-width : 850px) {
+    p, li {
+        font-size: 100%;
+    }
+
+	section.banner .gradient-banner {
+		height: 5rem;
+	}
+}
+
+@media screen and (max-width : 590px) {
+	header nav ul.menu-nav{
+		background-color: var(--bg-color);
+	}
+
+	.event .gambar .image-container img {
+		width: 350px;
+	}
+
+	.overlay {
+		width: 350px;
+		height: 233.33px;
+	}
+}

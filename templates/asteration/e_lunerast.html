@@ -1,0 +1,126 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/e_lunerast.css') }}">
+	<script src="{{ url_for('static', filename='asteration/js/e_lunerast.js') }}"></script>
+	<script>
+
+		// start
+	
+		const start = () => {
+			setTimeout(function() {
+				spark.start()
+			}, 1000); // 1000 is time that after 1 second start the spark ( 1000 = 1 sec)
+		};
+	
+		//  Stop
+	
+		const stop = () => {
+			setTimeout(function() {
+				spark.stop()
+			}, 5000); // 5000 is time that after 5 second stop the spark ( 5000 = 5 sec)
+		};
+	
+		start();
+		// stop();
+	</script>
+{% endblock css_js %}
+
+{% block title %}Lunerast{% endblock title %}
+
+{% block main %}
+<section class="banner">
+	<img src="{{ url_for('static', filename='asteration/img/banner/lunerast_banner.png') }}" alt="banner">
+	<section class="gradient-banner">
+	
+	</section>
+</section>
+
+<section class="about">
+	<h1 class="hidden">About Lunerast</h1>
+	<p class="hidden">LUNERAST, "Lunar Love Dragon Fest" merupakan nama acara Tahun Baru Imlek ke-2575 di SMA Ignatius Global School Palembang. Di mana, acara ini merupakan salah satu acara termeriah di IGS yang telah diikuti 500+ siswa IGS. Pada acara Lunerast ini, siswa-siswi telah menikmati berbagai lomba yang menarik dan penampilan yang spektakuler, seperti performance barongsai, wushu, band, orkestra, dan performance lain yang telah disediakan dari club-club IGS. Dan tentu saja, hal yang tidak kalah penting adalah setiap siswa di sini mendapat angpao dari Ko Djony dan Ce Santy loh!</p>
+	<div class="kewa">
+		<div class="kepan hidden">
+			<p><b>Ketua Panitia</b></p>
+			<p>Eveline Nathania</p>
+		</div>
+		<div class="kepan hidden">
+			<p><b>Wakil Ketua Panitia</b></p>
+			<p>Jason Marvel</p>
+		</div>
+	</div>
+</section>
+
+<section class="divider"></section>
+
+<section class="content">
+
+	<div class="event">
+		<h1>Performances</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bx-tada bx-music'></i>
+				<p>Orchestra Performance</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-tada bxs-microphone'></i>
+				<p>Singing Performances</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-tada bx-user-voice'></i>
+				<p>Mandarin Club Performance</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-tada'><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3.5c0 .83-.67 1.5-1.5 1.5S11 4.33 11 3.5S11.67 2 12.5 2s1.5.67 1.5 1.5M8.5 5C7.67 5 7 5.67 7 6.5S7.67 8 8.5 8S10 7.33 10 6.5S9.33 5 8.5 5m5.5 7l-.78-2.25h2.96l2.16-1.08c.37-.17.52-.63.33-1a.737.737 0 0 0-1-.34l-.82.41l-.49-.84c-.29-.65-1-1.02-1.7-.86l-2.47.53c-.69.15-1.19.78-1.19 1.5v.7l-2.43 1.62h.01c-.08.07-.19.16-.25.28l-.89 1.77l-1.78.89c-.37.17-.52.64-.33 1.01a.753.753 0 0 0 1.01.33l2.22-1.11L9.6 11.5L11 13c-1 3-8 7-8 7s4 2 9 2s9-2 9-2s-5-4-7-8m2.85-.91l-.32.16h-1.2l.06.16c.52 1.03 1.28 2.09 2.11 3.03l-.53-3.41l-.12.06Z"/></svg></i>
+				<p>Dance Performance</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-tada'><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><g fill="none"><circle cx="6" cy="18" r="3" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><circle cx="18" cy="17" r="3" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path fill="currentColor" d="M21 3L9 6v4l12-3V3z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 18v-8m12 7V7M9 10V6l12-3v4M9 10l12-3"/></g></svg></i>
+				<p>Fantasix Band Performance</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="event">
+		<h1>Competitions</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bx-tada bxs-group'></i>
+				<p>Koko Cici</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-tada'><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="rgb(75, 0, 125)" version="1.1" id="Capa_1" width="75px" height="75px" viewBox="0 0 352.621 352.62" xml:space="preserve">
+					<g>
+						<g>
+							<g>
+								<path d="M207.319,9.992C201.134,3.867,189.298,0,176.31,0c-13.042,0-24.872,3.861-31.033,9.998     c6.776-1.447,16.921-2.951,29.84-2.951C185.57,7.053,196.396,8.035,207.319,9.992z"/>
+							</g>
+							<g>
+								<rect x="164.412" y="211.753" width="23.794" height="52.908"/>
+							</g>
+							<g>
+								<path d="M161.847,206.223c-25.781-10.761-44.069-50.329-44.069-96.785c0-44.363,17.249-83.403,41.61-95.671     c-13.964,1.483-22.112,4.411-22.202,4.447l-0.709,0.264l-0.24-0.627C86.5,30.234,53.122,64.054,53.122,102.151     c0,36.993,32.18,70.571,80.065,83.553l2.042,0.553v19.966H161.847z"/>
+							</g>
+							<g>
+								<path d="M215.071,17.522c-7.83-1.763-15.654-3.029-23.286-3.769c24.391,12.229,41.661,51.296,41.661,95.684     c0,46.462-18.303,86.024-44.081,96.785h28.036v-19.966l2.042-0.553c47.882-12.982,80.056-46.566,80.056-83.553     C299.493,63.654,265.572,29.637,215.071,17.522z"/>
+							</g>
+							<g>
+								<polygon points="168.93,270.192 155.858,352.62 195.261,352.62 179.649,270.192    "/>
+							</g>
+							<g>
+								<path d="M225.279,108.81c0-48.017-21.701-85.628-49.416-85.628c-27.703,0-49.401,37.617-49.401,85.628s21.698,85.62,49.401,85.62     C203.578,194.43,225.279,156.827,225.279,108.81z"/>
+							</g>
+						</g>
+					</g>
+				</svg></i>
+				<p>Lantern Making</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-tada bxs-camera'></svg></i>
+				<p>Photobooth</p>
+			</div>
+		</div>
+	</div>
+	<img class="footer-divider" src="https://res.cloudinary.com/dhnak6cxo/image/upload/v1707311596/Asteration/Lunerast/decorator_ftrm4d.png" alt="">
+</section>
+{% endblock main %}

@@ -1,0 +1,444 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg: #2c3644;;
+    --bg-litioree: #314154;
+    --box-color: #3C6187;
+    --white: #d8d3d3;
+    --accent-color: #519d50;
+}
+
+/* Snow Animation */
+@-webkit-keyframes snowfall01 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 150px 600px;
+    }
+}
+@-webkit-keyframes snowfall02 {
+    0% {
+        background-position: 0 -200px;
+    }
+    100% {
+        background-position: 0 600px;
+    }
+}
+@-webkit-keyframes snowfall03 {
+    0% {
+        background-position: 0 200px;
+    }
+    100% {
+        background-position: 300px 600px;
+    }
+}
+@keyframes snowfall01 {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 150px 600px;
+    }
+}
+@keyframes snowfall02 {
+    0% {
+        background-position: 0 -200px;
+    }
+    100% {
+        background-position: 0 600px;
+    }
+}
+@keyframes snowfall03 {
+    0% {
+        background-position: 0 200px;
+    }
+    100% {
+        background-position: 300px 600px;
+    }
+}
+
+.back {
+    background: url(https://res.cloudinary.com/dhnak6cxo/image/upload/v1705085524/Asteration/image/Photo/snow_erll5l.png) repeat;
+    -webkit-animation: snowfall01 20s linear infinite;
+    animation: snowfall01 20s linear infinite;
+}
+
+.back2 {
+    background: url(https://res.cloudinary.com/dhnak6cxo/image/upload/v1705085524/Asteration/image/Photo/snow2_knnssq.png) repeat;
+    -webkit-animation: snowfall02 20s linear infinite;
+    animation: snowfall02 20s linear infinite;
+}
+
+.back3 {
+    background: url(https://res.cloudinary.com/dhnak6cxo/image/upload/v1705085519/Asteration/image/Photo/snow3_dufjik.png) repeat ;
+    -webkit-animation: snowfall03 20s linear infinite;
+    animation: snowfall03 20s linear infinite;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg-litioree);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+header nav {
+    background: linear-gradient(to right, var(--box-color) 20%, var(--bg-litioree));
+    display: flex;
+    height: 50px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4%;
+}
+
+header nav .logo {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+header nav .logo .asteration{
+    width: 150px;
+    display: flex;
+    gap: 0;
+}
+
+header nav .logo .asteration:hover{
+    color: var(--accent-color);
+    text-decoration: none;
+    animation: nav-hover-a 0.2s linear;
+}
+
+header nav .logo .asteration img{
+    height: 3.75rem;
+    display: flex;
+    filter: drop-shadow(0 0 1rem var(--white));
+}
+
+header nav .logo .asteration h1{
+    display: flex;
+    font-size: 1.1rem;
+    line-height: 65px;
+    filter: drop-shadow(0 0 1rem var(--white));
+}
+
+header nav ul.nav-item.menu-nav li a{
+        display: flex;
+		gap: 10px;
+		color: var(--white);
+		text-decoration: none;
+		font-weight: 700;
+		text-shadow: 0 0 1rem var(--white);
+}
+
+header nav ul li a#litioree-nav:hover{
+    color: var(--accent-color);
+    text-decoration: none;
+    animation: nav-hover-a 0.2s linear;
+}
+
+.menu-toggle{
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+    z-index: 3;
+}
+
+@keyframes nav-hover-a {
+    0% {
+        color: var(--white);
+    }
+
+    100% {
+        color: var(--accent-color);
+    }
+}
+
+section.gradient-header {
+	position: absolute;
+	/* z-index: 11; */
+	left: 0;
+	top: 50px;
+	width: 100%;
+	height: 1.5rem;
+	background: linear-gradient(to bottom, rgba(175, 175, 175, 0.5), transparent);
+}
+
+section.banner{
+	--size: 100vw;
+	position: relative;
+	width: var(--size);
+	height: calc(var(--size)/1.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+    background-color: var(--bg-color);
+}
+
+section.banner img {
+    width: 100vw;
+    height: calc(100vw /1.6);
+}
+
+section.banner .gradient-banner {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+	height: 10rem;
+	width: 100%;
+	background: linear-gradient(to bottom,rgba(0,0,0,0), var(--bg-litioree));
+}
+
+.text-shadow{
+    text-shadow: 0px 0px 30px white;
+}
+
+div.container {
+    margin-left: 4%;
+}
+
+section.about-event {
+	margin-top: 2rem;
+}
+
+div.container.hidden {
+	transform: translateY(100%);
+    filter: blur(10px);
+}
+
+div.container.show {
+	transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+h1.heading {
+	font-weight: 700;
+    font-size: 3rem;
+}
+
+h1.heading#activities {
+    display: flex;
+    justify-content: center;
+}
+
+h1.heading.hidden {
+    transform: translateY(100%);
+    filter: blur(10px);
+}
+
+h1.heading.show {
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+section.about-event p {
+	margin-left: 2%;
+    font-size: 1.2rem;
+    /* max-width: 80%; */
+    text-wrap: wrap;
+    text-align: justify;
+}
+
+section.about-event p span {
+    font-weight: 700;
+}
+
+section.activities{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* div.activities-animation.hidden{
+    transform: translateY(100%);
+    filter: blur(10px);
+}
+
+
+div.activities-animation.show {
+	transform: translateY(0);
+    filter: blur(0);
+    transition: all 1s ease-in-out;
+} */
+
+div.card-container {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    max-width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    /* background-color: salmon; */
+}
+
+div.box.hidden{
+    transform: translateY(100%);
+    filter: blur(10px);
+}
+
+div.box.show {
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 1s ease-in-out;
+}
+
+div.box{
+    --size: 10rem;
+    background-color: var(--box-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 0.7rem;
+    box-shadow: 0px 0px 30px white;
+    cursor: pointer;
+}
+
+div.box:hover {
+    background-color: #2e4760;
+    animation: box-hover 0.5s linear;
+    animation: box-size 0.3s linear;
+    scale: 1.05;
+}
+
+div.box i.bx, div.box i.bi {
+    font-size: 5rem;
+    margin-bottom: 0.2rem;
+}
+
+div.box p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+@keyframes box-hover {
+    0%{
+        background-color: var(--box-color);
+    }
+
+    100%{
+        background-color: #1B2C3D;
+    }
+}
+
+@keyframes box-size {
+    0%{
+        scale: 1;
+    }
+
+    100%{
+        scale: 1.05;
+    }
+
+} 
+
+
+footer {
+	background-color: #4b6079;
+}
+
+footer .gradient {
+	background: linear-gradient(var(--bg-litioree), #4b6079)
+}
+
+footer .footer-content a{
+	color: white;
+	text-decoration: none;
+}
+
+footer .footer-content a:hover{
+	color: var(--accent-color);
+	animation: nav-hover-a 0.2s linear;
+}
+
+footer .column2 a h1{
+	margin: 0;
+	color: var(--accent-color);
+}
+
+footer .column3 a h2{
+	margin: 0;
+	color: var(--accent-color);
+}
+
+footer .copyright {
+	color: var(--bg-color);
+    color: black;
+} 
+
+@media screen and (max-width : 740px){
+    .menu-toggle{
+        display: block;
+        cursor: pointer;
+    }
+
+    h1.heading {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    section.about-event p {
+        font-size: 1rem;
+        text-align: justify;
+        width: 80vw;
+    }
+
+    div.box {
+        --size: 7.5rem;
+        height: var(--size);
+        width: var(--size);
+    }
+
+    div.box i.bx, div.box i.bi {
+        font-size: 3.5rem;
+    }
+
+    div.box p {
+        width: 7rem;
+        text-wrap: wrap;
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width : 590px){
+    header nav ul.menu-nav{
+		background-color: var(--bg-litioree);
+        border-color: white;
+        box-shadow: 0px 0px 10px var(--white);
+	}
+}

@@ -1,0 +1,41 @@
+.glider-contain {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.glider-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 300px; */
+    border: 3px solid currentColor;
+    background-image: url('logo.svg');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.glider-slide img {
+    width: 100%;
+}
+
+.glider-slide .slide-title {
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    /* https://modernfontstacks.com/ */
+    font-size: 3rem;
+    position: relative;
+    top: 100px;
+}
+
+.glider-slide:nth-child(3n+1){
+    color: rgb(193, 161, 127);
+}
+
+.glider-slide:nth-child(3n+2) {
+    color: rgb(157, 111, 87);
+}
+
+.glider-slide:nth-child(3n+3) {
+    color: rgb(97, 73, 48);
+}

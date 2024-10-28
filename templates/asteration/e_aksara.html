@@ -1,0 +1,373 @@
+{% extends "asteration/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/e_aksara.css') }}">
+{% endblock css_js %}
+
+{% block title %}Aksara{% endblock title %}
+
+{% block main %}
+<section class="banner">
+	<img src="{{ url_for('static', filename='asteration/img/banner/aksara_banner.png') }}" alt="banner">
+	<section class="gradient-banner">
+	
+	</section>
+</section>
+
+<section class="about">
+	<h1 class="hidden">About Aksara</h1>
+	<p class="hidden">
+		AKSARA yang memiliki arti “Bahasa sebagai jembatan berkomunikasi”, merupakan perayaan bulan bahasa di mana siswa-siswi diharapkan sadar betapa pentingnya bahasa. Selain itu, Aksara juga dapat menjadi wadah bagi siswa-siswi untuk menyalurkan bakat mereka bahasa.</p>
+	<div class="kewa">
+		<div class="kepan hidden">
+			<p><b>Ketua Panitia</b></p>
+			<p>Syalomita Sharlen Yap</p>
+		</div>
+		<div class="kepan hidden">
+			<p><b>Wakil Ketua Panitia</b></p>
+			<p>Luigi Emiliandra</p>
+		</div>
+	</div>
+</section>
+
+<section class="content">
+
+	<div class="performance">
+		<h1 class="hidden">Performance</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bx-group bx-tada' ></i>
+				<p>Traditional Dance Performance</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-camera-movie bx-tada' ></i>
+				<p>Theater Perfromance</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-piano bx-tada' ></i>
+				<p>Philemon Band Performance</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-guitar-amp bx-tada bx-flip-horizontal' ></i>
+				<p>Hok-Band Performance</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="performance">
+		<h1 class="hidden">Non-Language Competition</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bx-cheese bx-tada' ></i>
+				<p>Phi</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-user-voice bx-tada' ></i>
+				<p>Story Telling</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-news bx-tada' ></i>
+				<p>News Report</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-microphone-alt bx-tada' ></i>
+				<p>Indonesian Debate</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-bulb bx-tada' ></i>
+				<p>LCC</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxl-google bx-tada' ></i>
+				<p>Googling</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-paint bx-tada' ></i>
+				<p>Poster</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxl-dev-to bx-tada' ></i>
+				<p>Web Development</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxl-c-plus-plus bx-tada' ></i>
+				<p>Competitive Programming</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-megaphone bx-tada' ></i>
+				<p>Speech</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="performance">
+		<h1 class="hidden">Language Competition</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bxs-castle bx-tada'></i>
+				<p>Korean</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxs-face-mask bx-tada'></i>
+				<p>Japanese</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bxl-graphql bx-tada' ></i>
+				<p>German</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-palette bx-tada' ></i>
+				<p>French</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-abacus bx-tada' ></i>
+				<p>Chinese</p>
+			</div>
+			<div class="list hidden">
+				<i class="bx-tada fa-solid fa-kaaba"></i>
+				<p id="arabic">Arabic</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="performance">
+		<h1 class="hidden">Mini Games</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bx-message-rounded-dots bx-tada' ></i>
+				<p>Tebak Kata</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-spray-can bx-spin' ></i>
+				<p>Bottle Flip</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-football bx-spin' ></i>
+				<p>Lempar Bola</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="performance">
+		<h1 class="hidden">Stands</h1>
+		<div class="lists">
+			<div class="list hidden">
+				<i class='bx bx-bowl-hot bx-tada' ></i>
+				<p>Cooking Stand</p>
+			</div>
+			<div class="list hidden">
+				<i class='bx bx-cake bx-tada' ></i>
+				<p>Baking Stand</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="performance">
+    		<h1 class="hidden">Winners</h1>
+    		<div class="gambar">
+    			<div class="image-container hidden">
+				  <img id="image" src="{{ url_for('static', filename='asteration/img/aksara/googling.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>GOOGLING COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Natanael Yohanes<br>
+				    	<b>Juara 2 :</b> Raphael Yori<br>
+				    	<b>Juara 3 :</b> Vanessa Elvaretta<br>
+				    </p>
+				  </div>
+				</div>
+
+    			<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/debat.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>DEBATE COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> 12 IPA 4 th. 23/24<br>
+				    	<b>Juara 2 :</b> 10 IPA 1 th. 23/24<br>
+				    	<b>Juara 3 :</b> 11 IPS 4 th. 23/24<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/cp.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>COMPETITIVE PROGRAMMING</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Jose Arsenio Lendy<br>
+				    	<b>Juara 2 :</b> Nelshen Yong<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/lcc_1.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>LCC</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> 11 IPS 2 th. 23/24<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/lcc_2.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>LCC</b></h5>
+				    <p>
+				    	<b>Juara 2 :</b> 10 IPS 4 th. 23/24<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/lcc_3.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>LCC</b></h5>
+				    <p>
+				    	<b>Juara 3 :</b> 12 IPS 1 th. 23/24<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/web_dev.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>WEB DEVELOPMENT</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Nelsen Jonathan<br>
+				    	<b>Juara 2 :</b> Vitri Octavia<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/story.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>STORY TELLING COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Sheryl Anindya<br>
+				    	<b>Juara 2 :</b> Alifya Nadia<br>
+				    	<b>Juara 3 :</b> Darlene Callysta<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/speech.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>SPEECH COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Adrian Wijaya<br>
+				    	<b>Juara 2 :</b> Chelsea Livina Rusli<br>
+				    	<b>Juara 3 :</b> Lucius Felix<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/poster.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>POSTER COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> AURELIA ADELINE S<br>
+				    	<b>Juara 2 :</b> BENEDICT JEFFERSON<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/phi.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>PHI COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Louise Ethan<br>
+				    	<b>Juara 2 :</b> Gheriya Alfira Dewi<br>
+				    	<b>Juara 3 :</b> Anggie Ruth Naomi<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/news.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>NEWS REPORT COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Chasya Marvina<br>
+				    	<b>Juara 2 :</b> Khairunnisa Naufalia<br>
+				    	<b>Juara 3 :</b> Cinta Dini Pratami<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/japan.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>JAPANESE COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Dellen Delroy Lesmana<br>
+				    	<b>Juara 2 :</b> Artha Surya Pratama<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/arab.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>ARABIC COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Aisyah Zaitun Raadhany<br>
+				    	<b>Juara 2 :</b> Afiah Putri Vercia<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/prancis.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>FRENCH COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Shafiyah Hanifah Fizri<br>
+				    	<b>Juara 2 :</b> Chelsea Livina Rusli<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/chinese.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>CHINESE COMPETITION</b></h5>
+				    <p>
+				    	<b>Pemenang Level HSK 4 - 6 :</b> Indri<br>
+				    	<b>Pemenang Level HSK 1 - 3 :</b> Audrey Quintessa<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/korean.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>KOREAN COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> Ivone Alvinia<br>
+				    	<b>Juara 2 :</b> Cherish Hans<br>
+				    </p>
+				  </div>
+				</div>
+
+				<div class="image-container hidden">
+				  <img src="{{ url_for('static', filename='asteration/img/aksara/german.jpg') }}">
+				  <div class="overlay">
+				  	<h5><b>GERMAN COMPETITION</b></h5>
+				    <p>
+				    	<b>Juara 1 :</b> clo Putra Herel<br>
+				    	<b>Juara 2 :</b> Felix Josaphat<br>
+				    </p>
+				  </div>
+				</div>
+
+    		</div>
+    	</div>
+
+</section>
+{% endblock main %}
