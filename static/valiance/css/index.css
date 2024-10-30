@@ -1,0 +1,269 @@
+:root{
+    --dark-red: rgb(55, 5, 6);
+    --red: rgb(124, 28, 28);
+    --orange: rgb(195, 92, 53);
+    ---orange-hover: rgb(226, 111, 69);
+}
+
+.text-shadow{
+    text-shadow: 0px 0px 20px white;
+}
+
+.hidden{
+	transform: translateY(100%);
+    filter: blur(10px);
+}
+
+.show {
+	transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+/* Main */
+section.main {
+    display: flex;
+    justify-content: center;
+    margin: 6rem;
+}
+
+section.main .carousel {
+    box-shadow: 0 0 1rem white;
+}
+
+section.main .carousel, section.main .carousel .carousel-item a img{
+    --size: 70vw;
+    width: var(--size);
+    height: calc(var(--size)*0.5625);
+    border: 2px solid white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+/* About */
+
+.bg-wrap{
+    width: 100vw;
+    background-color: var(--red);
+}
+
+section.about {
+    display: flex;
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    align-items: center;
+    background-color: var(--red);
+    /* padding-bottom: 15vh; */
+}
+
+.waves-2{
+    background-color: var(--red);
+}
+
+section.about .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+section.about h1 {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+section.about p{
+    font-size: 20px;
+}
+
+section.about .about-content {
+    display: flex;
+    align-items: center;
+}
+
+section.about img {
+    width: 30%;
+    height: 30%;
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+/* Prior Cabinets */
+section.prior-cabinets{
+    width: 100vw;
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+section.prior-cabinets .heading{
+    font-size: 3.125rem;
+    color: white;
+    font-weight: 700;
+}
+
+.cabinet-card-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    
+}
+
+.cabinet-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--red);
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 20px white;
+}
+
+.cabinet-card h5.subheading{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p.cabinet-description{
+    width: 80%;
+    text-align: center;
+}
+
+.cabinets-logo{
+    --size: 20rem;
+    width: var(--size);
+    height: var(--size);
+    background-image: url(../img/logo/asteration_transparent.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#credence{
+    background-image: url(../img/logo/credence_transparent.png);
+    background-size: calc(var(--size)*0.60);
+}
+
+.cabinets-button{
+    width: 7.5rem;
+    height: 2rem;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8%;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.2rem;
+    /* border: 0.05rem solid white; */
+    box-shadow: 0px 0px 8px white;
+    margin-bottom: 2rem;
+}
+
+.cabinets-button:hover{
+    scale: 1.05;
+    background-color: var(---orange-hover);
+    animation: cabinet-button-hover 0.3s linear;
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes cabinet-button-hover {
+    0%{
+        scale: 1;
+        background-color: var(--orange);
+    }
+
+    100%{
+        scale: 1.05;
+        background-color: var(---orange-hover);
+    }
+}
+
+
+
+/* Responsive Layout */
+@media screen and (max-width : 1100px) {
+    section.about img {
+        width: 35%; 
+        height: 35%;
+    }
+
+    section.about h1 {
+        font-weight: 700;
+    }
+
+    section.about p {
+        font-size: 17px;
+    }
+
+    section.about img {
+        width: 30%;
+        height: 30%;
+    }
+
+    section.main {
+        margin: 3.3rem;
+    }
+
+    section.main .carousel, section.main .carousel .carousel-item a img{
+        --size: 100vw;
+        min-width: var(--size);
+        height: calc(var(--size)*0.5625);
+    }
+    section.main .carousel {
+        box-shadow: 0 10px 30px -6px black;
+    }
+
+    .cabinet-card{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width : 590px) {
+    section.about {
+        flex-direction: column-reverse;
+    }
+
+    section.about img {
+        width: 50%;
+        height: 50%;
+    }
+
+    section.about h1 {
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    section.about p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    section.prior-cabinets h1.heading {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .cabinet-card-wrap{
+        flex-direction: column;
+    }
+
+    .cabinet-card{
+        width: 80vw;
+    }
+}

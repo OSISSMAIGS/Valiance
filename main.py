@@ -7,13 +7,14 @@ app = Flask(__name__)
 def valiance():
     return render_template("valiance/index.html")
 
-# @app.route("/valiance/events")
-# def asteration_events():
-#     return render_template("valiance/events.html")
+@app.route("/Valiance") # Double routing / Alternative Route (hirauke b)
+def valiance_other():
+    return render_template("valiance/index.html")
+
 
 
 #ASTERATION
-@app.route("/")
+@app.route("/Asteration")
 def asteration():
     return render_template("asteration/index.html")
 
@@ -71,7 +72,11 @@ def asteration_magazine():
 def asteration_about():
     return render_template("asteration/about.html")
 
+# Credence
 
+@app.route('/credence')
+def credence():
+    return render_template('valiance/credence.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

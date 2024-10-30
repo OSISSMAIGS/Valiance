@@ -28,13 +28,12 @@
 	<script src="https://kit.fontawesome.com/cbc1fb4e16.js" crossorigin="anonymous"></script>
 
 	<!-- CSS & JS-->
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='asteration/css/layout.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='asteration/css/splash2.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/layout.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='valiance/css/splash.css') }}">
 	
-	<script src="{{ url_for('static', filename='asteration/js/toggle.js') }}"></script>
-    <script src="{{ url_for('static', filename='asteration/js/cabinet.js') }}"></script>
-	<script src="{{ url_for('static', filename='asteration/js/index.js') }}"></script>
-	<script src="{{ url_for('static', filename='asteration/js/shown_up.js') }}"></script>
+	<script src="{{ url_for('static', filename='valiance/js/toggle.js') }}"></script>
+	<script src="{{ url_for('static', filename='valiance/js/index.js') }}"></script>
+	<script src="{{ url_for('static', filename='valiance/js/shown_up.js') }}"></script>
 
     {% block css_js %}{% endblock css_js %}
 
@@ -53,7 +52,7 @@
 		<nav class="fixed-top">
 			<div class="logo">
 				<div class="asteration">
-					<img src="{{ url_for('static', filename='asteration/img/logo/transparent_logo.png') }}">
+					<img src="{{ url_for('static', filename='valiance/img/logo/transparent_logo.png') }}">
 					<h1>Asteration</h1>
 				</div>
 				
@@ -84,15 +83,39 @@
 			<div class="back">
 				{% block main %}{% endblock main %}
 
+				<svg
+					class="waves-footer"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 1440 320"
+			  	>
+					<defs>
+					  <filter id="waveShadow" x="-50%" y="-50%" width="200%" height="200%">
+						<feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+						<feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+						<feFlood flood-color="white" flood-opacity="1" result="color" />
+						<feComposite in2="offsetBlur" operator="in" result="shadow" />
+						<feMerge>
+						  <feMergeNode in="shadow" />
+						  <feMergeNode in="SourceGraphic" />
+						</feMerge>
+					  </filter>
+					</defs>
+				
+					<path
+					  filter="url(#waveShadow)"
+					  fill="rgb(124, 28, 28)"
+					  fill-opacity="1"
+					  d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+					></path>
+			  	</svg>
+
 				<footer>
-                    <div class="gradient"></div>
-                    
                     <div class="footer-content">
                         <div class="column1">
-                            <img src="{{ url_for('static', filename='asteration/img/logo/transparent_logo.png') }}">
+                            <img src="{{ url_for('static', filename='valiance/img/logo/transparent_logo.png') }}">
                             <div class="footer-text">
-                                <h5>Asteration</h5>
-                                <p>Kabinet OSIS SMA Ignatius Global School periode 2023/2024</p>
+                                <h5>Valiance</h5>
+                                <p>Kabinet OSIS SMA Ignatius Global School periode 2024/2025</p>
                             </div>
                         </div>
                         <div class="column2">

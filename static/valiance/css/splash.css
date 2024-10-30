@@ -1,0 +1,73 @@
+:root{
+    /* --bg:rgb(121, 103, 74); */
+    --bg: rgb(97, 73, 48);
+}
+
+
+/* Splash Screen */
+
+.intro#splash{
+	position: fixed;
+	z-index: 99999999;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--bg);
+	transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-header#splash{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo#splash{
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+	--size: 550pt;
+    max-height: var(--size);
+    max-width: var(--size);
+}
+
+.logo#splash.active{
+	bottom: 0;
+	opacity: 1;
+	scale: 1.1;
+	transition: ease-out 0.5s;
+}
+
+.logo#splash.fade{
+	bottom: 0;
+	opacity: 0;
+	transition: ease-in 0.5s;
+}
+
+@media screen and (max-width : 1200px){
+	.logo#splash{
+		--size: 900pt;
+		width: var(--size);
+		height: var(--size);
+	}
+}
+
+@media screen and (max-width : 740px){
+    .logo#splash{
+        width: 50rem;
+        height: 50rem;
+    }
+}
+
+@media screen and (max-width : 590px){
+    .logo#splash{
+        width: 35rem;
+        height: 35rem;
+    }
+}
