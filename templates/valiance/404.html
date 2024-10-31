@@ -1,0 +1,21 @@
+{% extends "valiance/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/coming_soon.css') }}">
+{% endblock css_js %}
+
+
+{% block title %}404 Page Not Found{% endblock title %}
+
+{% block main %}
+	<section class="coming-soon">
+		<div class="logo-cs"></div>
+		<div class="content">
+			<h1 class="text-shadow">404 - Page Not Found</h1>
+			<p class="text-shadow">Oops! The page you're looking for doesn't exist.</p>
+            
+		</div>
+	</section>
+	
+{% endblock main %}

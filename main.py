@@ -16,6 +16,10 @@ def valiance_other():
 def coming_soon():
     return render_template("valiance/coming_soon.html")
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('/valiance/404.html'), 404
+
 #ASTERATION
 @app.route("/Asteration")
 def asteration():

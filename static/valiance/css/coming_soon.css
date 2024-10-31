@@ -67,3 +67,14 @@ div.content p {
         font-size: 1.1rem;
     }
 }
+
+@media screen and (max-width : 590px){
+    html{
+        font-size: 62.5%;
+    }
+    .content h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1%;
+    }
+}
