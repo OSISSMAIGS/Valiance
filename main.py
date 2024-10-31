@@ -11,6 +11,12 @@ def valiance():
 def valiance_other():
     return render_template("valiance/index.html")
 
+#EVENTS - VALIANCE'S
+
+@app.route("/Valiance/Events/Euphony")
+def e_euphony():
+    return render_template("valiance/e_euphony.html")
+
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():
