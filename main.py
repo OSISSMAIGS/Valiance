@@ -11,7 +11,10 @@ def valiance():
 def valiance_other():
     return render_template("valiance/index.html")
 
-
+# OTHERS
+@app.route("/Coming_Soon")
+def coming_soon():
+    return render_template("valiance/coming_soon.html")
 
 #ASTERATION
 @app.route("/Asteration")

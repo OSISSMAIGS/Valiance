@@ -1,0 +1,20 @@
+{% extends "valiance/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/coming_soon.css') }}">
+{% endblock css_js %}
+
+
+{% block title %}Comming Soon{% endblock title %}
+
+{% block main %}
+	<section class="coming-soon">
+		<div class="logo-cs"></div>
+		<div class="content">
+			<h1 class="text-shadow">Coming Soon</h1>
+			<p class="text-shadow">This page is still in progress</p>
+		</div>
+	</section>
+	
+{% endblock main %}
