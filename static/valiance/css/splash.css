@@ -22,7 +22,7 @@ div#splash {
 	background-color: var(--splash-bg);
 	animation: fadeOutSplash 3.1s ease-out;
 	opacity: 1;
-	z-index: 10;
+	z-index: 999999999;
 	user-select: none;
 }
 
@@ -52,7 +52,7 @@ div#splash h1#splashtitle span.showNav {
 
 /* navbar css */
 div.navbarMain {
-	z-index: 9;
+	z-index: 99999999;
 	width: 100vw;
 	top: 0;
 	background-color: var(--nav-bg);

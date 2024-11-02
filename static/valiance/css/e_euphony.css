@@ -4,9 +4,9 @@
      --bg-color2: #6CB6FF; 
     --bg-color2: #6CB6FF;
     --accent-color: white;
-    
     --text-color: #1450a8;
     --text-color2: rgb(57, 145, 209);
+    --nav-bg: #2598a9;
 }
 
 *{
@@ -22,12 +22,35 @@ html, body {
     width: 100vw;
 }
 
-header nav {
-	background: linear-gradient(to right, var(--text-color) 20%, var(--bg-color));
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	z-index: 200;
+span.showNav{
+	animation: colorLetters 0.75s linear !important;
+}
+
+@keyframes colorLetters {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+
+    25% {
+        color: rgb(67, 240, 233);
+        text-shadow: 0 0.05vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.4vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
+    }
+
+    50% {
+        color: rgb(41, 198, 192);
+        text-shadow: 0 0.3vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.3vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
+    }
+
+    75% {
+        color: rgb(67, 240, 233);
+        text-shadow: 0 0.4vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.05vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
+    }
+
+    100% {
+        color: white;
+        text-shadow: none;
+    }
 }
 
 header nav .logo h1{
@@ -49,7 +72,7 @@ section.gradient-header {
 
 p, li {
     font-size: 110%;
-}
+}	
 
 @keyframes hovering {
 	0% {
@@ -130,7 +153,7 @@ section.content {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color);
     padding: 2rem 5%;
     box-sizing: border-box;
     align-items: center;
@@ -241,14 +264,14 @@ img#image{
 	
 }
 
-.overlay {
+/* .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 400px;
   height: 266.66px;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,7 +279,7 @@ img#image{
   margin: 15px;
   border-radius: 1rem;
   flex-direction: column;
-}
+} */
 
 .image-container:hover .overlay {
   opacity: 1;
@@ -274,6 +297,10 @@ img#image{
 
 .overlay p b {
   color: lightpink;
+}
+
+.waves-footer{
+    background-color: var(--bg-color);
 }
 
 footer {
@@ -340,4 +367,119 @@ footer .copyright {
 		width: 350px;
 		height: 233.33px;
 	}
+}
+
+
+
+.performance .gambar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.image-container {
+    width: calc(33.33% - 2rem);
+    min-width: 280px;
+    transition: all 0.3s ease;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+}
+
+#poster {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background: #e74c3c;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.image-container h1 {
+    color: #333;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.image-container a {
+    background: #e74c3c;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.image-container a:hover {
+    transform: scale(1.05);
+    background: #d44133;
+}
+
+
+
+
+
+.performance .gambar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* ... rest of your CSS stays the same ... */
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .image-container {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .performance .gambar {
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-container {
+        padding: 0.8rem;
+    }
+    
+    .image-container a {
+        padding: 0.4rem 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .image-container {
+        max-width: 500px;
+    }
 }
