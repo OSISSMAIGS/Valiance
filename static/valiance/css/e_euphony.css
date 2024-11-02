@@ -4,9 +4,9 @@
      --bg-color2: #6CB6FF; 
     --bg-color2: #6CB6FF;
     --accent-color: white;
-    
     --text-color: #1450a8;
     --text-color2: rgb(57, 145, 209);
+    --nav-bg: #2598a9;
 }
 
 *{
@@ -20,14 +20,6 @@ html, body {
 	background-color: var(--bg-color);
     color: white;
     width: 100vw;
-}
-
-.navbarMain {
-	background: linear-gradient(to right, var(--text-color) 20%, var(--bg-color));
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	z-index: 200;
 }
 
 span.showNav{
@@ -307,6 +299,10 @@ img#image{
   color: lightpink;
 }
 
+.waves-footer{
+    background-color: var(--bg-color);
+}
+
 footer {
     margin-top: 0;
 	background-color: var(--text-color);
@@ -373,9 +369,6 @@ footer .copyright {
 	}
 }
 
-
-
-/* SIGMA BARU */
 
 
 .performance .gambar {

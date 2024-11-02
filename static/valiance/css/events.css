@@ -1,3 +1,19 @@
+:root {
+	--light-brown: rgb(193, 161, 127);
+	--dark-brown: rgb(55, 5, 6);
+	--brown: rgb(124, 28, 28);
+	--white: rgb(255, 255, 255);
+	--light-blue: rgb(110, 203, 246);
+	--blue: rgb(87, 106, 226);
+	--dark-blue: rgb(42, 35, 86);
+	--pink: rgb(194, 82, 226);
+	--orange: rgb(195, 92, 53);
+}
+
+.waves-footer{
+    background-color: var(--dark-brown);
+}
+
 /* Main */
 section.main {
     display: flex;
@@ -50,22 +66,184 @@ section.event a img {
     box-shadow: 0px 0px 18px white;
 }
 
-/* SIGMA EVENT */
-img#euphony:hover {
+img#aksara:hover {
     scale: 1.02;
-    box-shadow: 0px 0px 25px #43F0E9;
-    animation: euphony-hover 0.5s linear;
+    box-shadow: 0px 0px 25px #f78be8;
+    animation: aksara-hover 0.5s linear;
 }
 
-@keyframes euphony-hover {
+img#pelita:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #2ed566;
+    animation: pelita-hover 0.5s linear;
+}
+
+img#armone:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(59, 157, 255);
+    animation: armone-hover 0.5s linear;
+}
+
+img#litioree:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #95caff;
+    animation: litioree-hover 0.5s linear;
+}
+
+img#lunarest:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #ffef0e;
+    animation: lunarest-hover 0.5s linear;
+}
+
+img#reveera:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #FFB2CC;
+    animation: reveera-hover 0.5s linear;
+}
+
+img#qaliftar:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #007d64;
+    animation: qaliftar-hover 0.5s linear;
+}
+
+img#etourdissante:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #19324b;
+    animation: etourdissante-hover 0.5s linear;
+}
+
+img#gelora:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(185, 68, 36);
+    animation: gelora-retry-hover 0.5s linear;
+}
+
+
+img#aventura:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #38a345;
+    animation: aventura-hover 0.5s linear;
+}
+
+
+@keyframes aksara-hover {
     0% {
         scale: 1;
-        box-shadow: 0px 0px #43F0E9;
+        box-shadow: 0px 0px white;
     }
 
     100% {
         scale: 1.02;
-        box-shadow: 0px 0px 25px #0b6562;
+        box-shadow: 0px 0px 25px #f78be8;
+    }
+}
+
+@keyframes pelita-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #2ed566;
+    }
+}
+
+@keyframes armone-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px rgb(59, 157, 255);;
+    }
+}
+
+@keyframes litioree-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #95caff;
+    }
+}
+
+@keyframes lunarest-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #ffef0e;
+    }
+}
+
+@keyframes reveera-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #FFB2CC;
+    }
+}
+
+@keyframes qaliftar-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #007d64;
+    }
+}
+
+@keyframes etourdissante-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #19324b;
+    }
+}
+
+@keyframes aventura-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #38a345;
+    }
+}
+@keyframes gelora-retry-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #b94424;
     }
 }
 
@@ -74,7 +252,10 @@ section.event img, section.event.past div.image-container a img {
     height: 100%;
 }
 
-
+img#aksara, img#pelita {
+    height: 100%;
+    margin-top: 0rem;
+}
 
 section.upcoming {
     display: flex;

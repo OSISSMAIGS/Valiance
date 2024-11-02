@@ -1,3 +1,9 @@
+:root{
+	--splash-bg: rgb(223, 86, 51);
+	--nav-bg: rgb(188, 53, 0);
+	--nav-dropdown-bg: rgb(229, 69, 20);
+}
+
 body {
 	overflow-x: hidden;
 	padding: 0;
@@ -9,16 +15,14 @@ body {
 
 /* splash css*/
 div#splash {
-	/* easy handle */
-	display: none; 
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
 	top: 0;
-	background-color: rgb(213, 102, 75);
+	background-color: var(--splash-bg);
 	animation: fadeOutSplash 3.1s ease-out;
 	opacity: 1;
-	z-index: 10;
+	z-index: 999999999;
 	user-select: none;
 }
 
@@ -48,10 +52,10 @@ div#splash h1#splashtitle span.showNav {
 
 /* navbar css */
 div.navbarMain {
-	z-index: 9;
+	z-index: 99999999;
 	width: 100vw;
 	top: 0;
-	background-color: rgb(188, 53, 0);
+	background-color: var(--nav-bg);
 	box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.3);
 	position: fixed;
 }
@@ -143,8 +147,9 @@ div.navbarMain h1 span.showNav {
 		color: white;
 		position: absolute;
 		font-size: 6vh;
-		top: 1vh;
+		/* top: 0.5vh; */
 		right: 2vw;
+		margin-top: -0.5vh;
 	}
 
 	div.navbarMain div.navbar-dropdown {
@@ -153,7 +158,7 @@ div.navbarMain h1 span.showNav {
 		height: 92vh;
 		top: 8vh;
 		right: calc(-22vw - 20vh);
-		background-color: rgb(229, 69, 20);
+		background-color: var(--nav-dropdown-bg);
 		display: flex;
 		flex-direction: column;
 		transition: right 0.75s;
