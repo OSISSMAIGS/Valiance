@@ -9,6 +9,8 @@ body {
 
 /* splash css*/
 div#splash {
+	/* easy handle */
+	display: none; 
 	height: 100vh;
 	width: 100vw;
 	position: fixed;

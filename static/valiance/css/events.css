@@ -1,0 +1,174 @@
+/* Main */
+section.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+section.main h1{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h1.past#past {
+    text-shadow: 0px 0px 18px white;
+}
+
+section.main .carousel {
+    box-shadow: 0 0 1rem black;
+}
+
+section.main .carousel, section.main .carousel .carousel-item{
+    --size: 70vw;
+    width: var(--size);
+    height: calc(var(--size)*0.5625);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+}
+
+/* section.main .carousel, section.main .carousel .carousel-item h1{
+    background-color: black;
+    
+} */
+
+/* Events */
+section.event {
+    margin: 0 10vw;
+}
+
+section.event a {
+    margin-top: 3rem;
+}
+
+section.event a img {
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 18px white;
+}
+
+/* SIGMA EVENT */
+img#euphony:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px #43F0E9;
+    animation: euphony-hover 0.5s linear;
+}
+
+@keyframes euphony-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px #43F0E9;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px #0b6562;
+    }
+}
+
+section.event img, section.event.past div.image-container a img {
+    width: 30vw;
+    height: 100%;
+}
+
+
+
+section.upcoming {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+h1.past{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+section.past {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+.image-container img {
+    width: 30vw;
+    height: 86.4%;
+    margin: 15px;
+}
+
+/* .image-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 86.4%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color and opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    margin: 15px;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    text-align: justify;
+    padding: 10px;
+}
+
+.overlay h5 b {
+    color: lightblue;
+}
+
+.overlay p b {
+    color: lightpink;
+}
+
+@media screen and (max-width : 1100px) {
+    section.main {
+        margin-top: 3rem;
+    }
+    
+    section.main .carousel, section.main .carousel .carousel-item{
+        --size: 85vw;
+        width: var(--size);
+        height: calc(var(--size)*0.5625);
+    }
+
+    section.event {
+        margin: 0 5vw;
+    }
+
+    section.event img{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width : 590px) {
+    section.event img{
+        width: 70vw;
+    }
+}

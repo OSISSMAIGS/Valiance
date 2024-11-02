@@ -1,0 +1,15 @@
+{% extends "valiance/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/events.css') }}">
+{% endblock css_js %}
+
+{% block title %}Events{% endblock title %}
+
+{% block main %}
+	<h1 class="past" id="past">Our Events</h1>
+
+	<section class="event past">
+		<a href="{{ url_for('e_euphony') }}"><img id="euphony" src="{{ url_for('static', filename='asteration/img/banner/aksara_banner.png') }}"></a>
+	</section>
+{% endblock main %}

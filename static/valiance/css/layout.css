@@ -59,7 +59,7 @@ section.gradient-header {
 }
 
 footer {
-	/* margin-top: 7rem; */
+	margin-top: 7rem;
 	background: var(--brown);
 }
 

@@ -13,6 +13,10 @@ def valiance_other():
 
 #EVENTS - VALIANCE'S
 
+@app.route("/Valiance/Events")
+def valiance_events():
+    return render_template("valiance/events.html")
+
 @app.route("/Valiance/Events/Euphony")
 def e_euphony():
     return render_template("valiance/e_euphony.html")
