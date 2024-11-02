@@ -1,73 +1,465 @@
-:root{
-    /* --bg:rgb(121, 103, 74); */
-    --bg: rgb(97, 73, 48);
+body {
+	overflow-x: hidden;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow-y: hidden;
 }
 
 
-/* Splash Screen */
-
-.intro#splash{
-	position: fixed;
-	z-index: 99999999;
-	left: 0%;
-	top: 0%;
-	width: 100%;
+/* splash css*/
+div#splash {
 	height: 100vh;
-	background-color: var(--bg);
-	transition: 1s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-header#splash{
-	position: absolute;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.logo#splash{
-	position: relative;
-	display: inline-block;
-	bottom: -20px;
-	opacity: 0;
-	--size: 550pt;
-    max-height: var(--size);
-    max-width: var(--size);
-}
-
-.logo#splash.active{
-	bottom: 0;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	background-color: rgb(213, 102, 75);
+	animation: fadeOutSplash 3.1s ease-out;
 	opacity: 1;
-	scale: 1.1;
-	transition: ease-out 0.5s;
+	z-index: 10;
+	user-select: none;
 }
 
-.logo#splash.fade{
-	bottom: 0;
-	opacity: 0;
-	transition: ease-in 0.5s;
+div#splash img#splashlogo {
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+	position: absolute;
 }
 
-@media screen and (max-width : 1200px){
-	.logo#splash{
-		--size: 900pt;
-		width: var(--size);
-		height: var(--size);
+div#splash h1#splashmotto {
+	text-align: center;
+	color: white;
+	position: relative;
+	top: calc(40vh - 10vw);
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400;
+	font-size: 16vw;
+	letter-spacing: 0.1vw;
+	font-style: normal;
+	opacity: 0.2;
+	text-shadow: 0.2vw 0.2vw 0.3vw black;
+}
+
+div#splash h1#splashtitle span.showNav {
+	animation: flamingLetters 0.75s linear;
+}
+
+
+/* navbar css */
+div.navbarMain {
+	z-index: 9;
+	width: 100vw;
+	top: 0;
+	background-color: rgb(188, 53, 0);
+	box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.3);
+	position: fixed;
+}
+
+div.navbarMain img.navbarlogo {
+	position: absolute;
+	filter: drop-shadow(2px 2px 5px black);
+	cursor: pointer;
+}
+
+div.navbarMain h1 {
+	color: white;
+	font-family: "Rubik", sans-serif;
+	position: absolute;
+	user-select: none;
+	text-shadow: 0 0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0 -0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0.3vh 0 0.6vh rgba(255, 255, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
+}
+
+div.navbarMain h1 span.showNav {
+	animation: flamingLetters 0.75s linear;
+}
+
+@media (max-width: 1024px) and (orientation:portrait)
+/*mobile screen(potrait)*/
+	{
+	div#splash img#splashlogo {
+		width: 70vw;
+		left: 15vw;
+		top: calc(40vh - 35vw);
+		animation: phoenixAnimMobile 3s;
+	}
+
+	div#splash h1#splashtitle {
+		text-align: center;
+		color: rgb(230, 230, 230);
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		top: calc(48vh + 20vw);
+		font-size: 15vw;
+		text-shadow: 0.3vw 0.3vw 0.5vw rgba(195, 57, 6, 0.4);
+		font-family: "Rubik", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		letter-spacing: -1vw;
+		font-style: normal;
+		animation: fadeTitleMobile 3s;
+	}
+
+	div.navbarMain div.navbar-heading {
+		display: none;
+	}
+
+
+	/* navbar mobile css */
+	div.navbarMain {
+		height: 8vh;
+	}
+
+	div.navbar-blackout {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+		display: none;
+		animation: blackoutFadeIn 0.3s;
+		transition: opacity 0.6s;
+	}
+
+	div.navbarMain img.navbarlogo {
+		height: 6vh;
+		top: 1vh;
+		left: 1vh;
+	}
+
+	div.navbarMain h1 {
+		font-size: 4vh;
+		top: 1.5vh;
+		left: 8vh;
+		letter-spacing: -0.2vh;
+	}
+
+	div.navbarMain i#nav-menu-icon {
+		color: white;
+		position: absolute;
+		font-size: 6vh;
+		top: 1vh;
+		right: 2vw;
+	}
+
+	div.navbarMain div.navbar-dropdown {
+		position: fixed;
+		width: calc(21vw + 20vh);
+		height: 92vh;
+		top: 8vh;
+		right: calc(-22vw - 20vh);
+		background-color: rgb(229, 69, 20);
+		display: flex;
+		flex-direction: column;
+		transition: right 0.75s;
+	}
+
+	div.navbarMain div.navbar-dropdown button {
+		width: 100%;
+		height: 7vh;
+		font-weight: 500;
+		cursor: pointer;
+		text-align: left;
+		text-indent: 6vh;
+		background-color: rgba(0, 0, 0, 0);
+		border: none;
+		color: white;
+		font-family: "Rubik", sans-serif;
+		font-size: 3vh;
+		transition: background-color 0.5s;
+		border-bottom: 0.4vh solid rgba(0, 0, 0, 0.2);
+		text-shadow: 0 0.2vw 0.6vw rgba(255, 255, 255, 0.3), 0 -0.2vw 0.6vw rgba(255, 255, 255, 0.3), 0.3vw 0 0.6vw rgba(255, 255, 255, 0.3), -0.3vw 0 0.6vw rgba(255, 255, 255, 0.3);
+	}
+
+	div.navbarMain div.navbar-dropdown button i {
+		position: absolute;
+		left: -4.5vh;
+		font-size: 3.5vh;
+		text-shadow: none;
+	}
+
+	div.navbarMain div.navbar-dropdown button:hover {
+		background-color: rgb(236, 155, 5);
+	}
+
+	div.navbarMain div.navbar-dropdown.showNav {
+		right: -1vw;
 	}
 }
 
-@media screen and (max-width : 740px){
-    .logo#splash{
-        width: 50rem;
-        height: 50rem;
-    }
+@media (min-width: 1025px),
+screen and (orientation:landscape)
+/*pc screen and landsscape*/
+	{
+	div#splash img#splashlogo {
+		width: 60vh;
+		left: calc(50vw - 30vh);
+		top: 10vh;
+		animation: phoenixAnimPC 3s;
+	}
+
+	div#splash h1#splashtitle {
+		text-align: center;
+		color: white;
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		top: 70vh;
+		font-size: 15vh;
+		text-shadow: 0.3vw 0.3vw 0.5vw rgba(195, 57, 6, 0.4);
+		font-family: "Rubik", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 500;
+		letter-spacing: -0.4vw;
+		font-style: normal;
+		animation: fadeTitlePC 3s;
+	}
+
+	div.navbarMain i#nav-menu-icon {
+		display: none;
+	}
+
+	div.navbarMain div.navbar-dropdown {
+		display: none;
+	}
+
+	/* navbar css for pc and landscape */
+	div.navbarMain h1 {
+		color: white;
+		font-family: "Rubik", sans-serif;
+		position: absolute;
+		user-select: none;
+		text-shadow: 0 0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0 -0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0.3vh 0 0.6vh rgba(255, 255, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
+	}
+
+	div.navbarMain div.navbar-heading {
+		display: flex;
+		position: absolute;
+		justify-content: space-evenly;
+	}
+
+	div.navbarMain div.navbar-heading button {
+		background-color: rgba(0, 0, 0, 0);
+		color: white;
+		font-family: "Rubik", sans-serif;
+		border: none;
+		cursor: pointer;
+		transition: text-shadow 0.5s, color 0.5s;
+		text-shadow: 0 0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0 -0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0.3vh 0 0.6vh rgba(255, 255, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
+	}
+
+	div.navbarMain div.navbar-heading button:hover {
+		color: rgb(227, 227, 227);
+		text-shadow: 0 0.6vh 1vh rgba(255, 202, 103, 0.8), 0 -0.6vh 1vh rgba(255, 202, 103, 0.8), 0.4vh 0 1vh rgba(255, 202, 103, 0.8), -0.4vh 0 1vh rgba(255, 202, 103, 0.8);
+	}
 }
 
-@media screen and (max-width : 590px){
-    .logo#splash{
-        width: 35rem;
-        height: 35rem;
-    }
+/* navbar css seperate for pc and landscape */
+@media (min-width: 1025px) {
+	div.navbarMain {
+		height: 8vh;
+	}
+
+	div.navbarMain img.navbarlogo {
+		height: 6vh;
+		top: 1vh;
+		left: 1vh;
+	}
+
+	div.navbarMain h1 {
+		font-size: 4vh;
+		top: 1.5vh;
+		left: 8vh;
+		letter-spacing: -0.2vh;
+	}
+
+	div.navbarMain div.navbar-heading {
+		width: 60vw;
+		height: 8vh;
+		right: 0;
+	}
+
+	div.navbarMain div.navbar-heading button {
+		height: 8vh;
+		font-weight: 500;
+		font-size: 3vh;
+	}
+}
+
+@media (max-width:1024px) and (orientation:landscape) {
+	div.navbarMain {
+		height: 7vw;
+	}
+
+	div.navbarMain img.navbarlogo {
+		height: 5.5vw;
+		top: 0.75vw;
+		left: 1vw;
+	}
+
+	div.navbarMain h1 {
+		font-size: 3.5vw;
+		top: 1.5vw;
+		left: 8vw;
+		letter-spacing: -0.2vw;
+	}
+
+	div.navbarMain div.navbar-heading {
+		width: 70vw;
+		height: 7vw;
+		right: 0;
+	}
+
+	div.navbarMain div.navbar-heading button {
+		height: 7vw;
+		font-weight: 500;
+		font-size: 2.5vw;
+	}
+}
+
+@keyframes fadeOutSplash {
+	0% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes phoenixAnimPC {
+	0% {
+		width: 30vh;
+		opacity: 0.2ssss;
+		left: calc(50vw - 15vh);
+		top: 100vh;
+	}
+
+	40% {
+		width: 60vh;
+		opacity: 1;
+		left: calc(50vw - 30vh);
+		top: 10vh;
+	}
+
+	100% {
+		width: 60vh;
+		left: calc(50vw - 30vh);
+		top: 10vh;
+		opacity: 1;
+	}
+}
+
+@keyframes phoenixAnimMobile {
+	0% {
+		width: 20vw;
+		left: 40vw;
+		opacity: 0.2;
+		top: calc(120vh - 5vw);
+	}
+
+	40% {
+		width: 70vw;
+		left: 15vw;
+		opacity: 1;
+		top: calc(40vh - 35vw);
+	}
+
+	100% {
+		width: 70vw;
+		left: 15vw;
+		opacity: 1;
+		top: calc(40vh - 35vw);
+	}
+}
+
+@keyframes fadeTitlePC {
+	0% {
+		font-size: 5vh;
+		opacity: 0;
+	}
+
+	35% {
+		font-size: 5vh;
+		opacity: 0;
+	}
+
+	50% {
+		font-size: 15vh;
+		opacity: 1;
+	}
+
+	100% {
+		font-size: 15vh;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeTitleMobile {
+	0% {
+		font-size: 5vw;
+		opacity: 0;
+	}
+
+	35% {
+		font-size: 5vw;
+		opacity: 0;
+	}
+
+	50% {
+		font-size: 15vw;
+		opacity: 1;
+	}
+
+	100% {
+		font-size: 15vw;
+		opacity: 1;
+	}
+}
+
+@keyframes flamingLetters {
+	0% {
+		color: white;
+		text-shadow: none;
+	}
+
+	25% {
+		color: rgb(233, 141, 11);
+		text-shadow: 0 0.05vh 0.5vh rgba(255, 202, 103, 0.8), 0 -0.4vh 0.5vh rgba(255, 202, 103, 0.8), 0.2vh 0 0.5vh rgba(255, 202, 103, 0.8), -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
+	}
+
+	50% {
+		color: rgb(233, 85, 11);
+		text-shadow: 0 0.3vh 0.5vh rgba(255, 202, 103, 0.8), 0 -0.3vh 0.5vh rgba(255, 202, 103, 0.8), 0.2vh 0 0.5vh rgba(255, 202, 103, 0.8), -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
+	}
+
+	75% {
+		color: rgb(233, 141, 11);
+		text-shadow: 0 0.4vh 0.5vh rgba(255, 202, 103, 0.8), 0 -0.05vh 0.5vh rgba(255, 202, 103, 0.8), 0.2vh 0 0.5vh rgba(255, 202, 103, 0.8), -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
+	}
+
+	100% {
+		color: white;
+		text-shadow: none;
+	}
+}
+
+@keyframes blackoutFadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
