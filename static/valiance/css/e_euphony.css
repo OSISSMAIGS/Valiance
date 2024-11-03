@@ -189,7 +189,7 @@ section.content .list {
 section.content .list:hover {
     animation: box-hover 0.5s linear, box-size 0.3s linear;
     scale: 1.05;
-    background-color: #553851;
+    background-color: rgb(20, 50, 101);
 }
 
 section.content .list i {
@@ -374,7 +374,7 @@ section.second-content {
     }
 
     100% {
-        background-color: #553851;
+        background-color: rgb(20, 50, 101);
     }
 }
 
