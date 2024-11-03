@@ -1,9 +1,3 @@
-:root{
-	--splash-bg: rgb(223, 86, 51);
-	--nav-bg: rgb(188, 53, 0);
-	--nav-dropdown-bg: rgb(229, 69, 20);
-}
-
 body {
 	overflow-x: hidden;
 	padding: 0;
@@ -19,10 +13,10 @@ div#splash {
 	width: 100vw;
 	position: fixed;
 	top: 0;
-	background-color: var(--splash-bg);
+	background-color: rgb(213, 102, 75);
 	animation: fadeOutSplash 3.1s ease-out;
 	opacity: 1;
-	z-index: 999999999;
+	z-index: 9999;
 	user-select: none;
 }
 
@@ -52,10 +46,10 @@ div#splash h1#splashtitle span.showNav {
 
 /* navbar css */
 div.navbarMain {
-	z-index: 99999999;
+	z-index: 9998;
 	width: 100vw;
 	top: 0;
-	background-color: var(--nav-bg);
+	background-color: rgb(188, 53, 0);
 	box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.3);
 	position: fixed;
 }
@@ -119,12 +113,13 @@ div.navbarMain h1 span.showNav {
 	}
 
 	div.navbar-blackout {
-		position: absolute;
+		position: fixed;
+		z-index: 9997;
 		width: 100vw;
 		height: 100vh;
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.5);
 		display: none;
 		animation: blackoutFadeIn 0.3s;
 		transition: opacity 0.6s;
@@ -147,18 +142,17 @@ div.navbarMain h1 span.showNav {
 		color: white;
 		position: absolute;
 		font-size: 6vh;
-		/* top: 0.5vh; */
+		top: -0.4vh;
 		right: 2vw;
-		margin-top: -0.5vh;
 	}
 
 	div.navbarMain div.navbar-dropdown {
 		position: fixed;
 		width: calc(21vw + 20vh);
 		height: 92vh;
-		top: 8vh;
+		top: 7.9vh;
 		right: calc(-22vw - 20vh);
-		background-color: var(--nav-dropdown-bg);
+		background-color: rgb(229, 69, 20);
 		display: flex;
 		flex-direction: column;
 		transition: right 0.75s;
