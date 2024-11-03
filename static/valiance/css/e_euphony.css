@@ -338,17 +338,17 @@ section.second-content {
     }
 
     25% {
-        color: rgb(48, 202, 197);
+        color: rgb(61, 206, 201);
         text-shadow: 0 0.05vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.4vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
     }
 
     50% {
-        color: rgb(24, 163, 159);
+        color: rgb(47, 188, 183);
         text-shadow: 0 0.3vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.3vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
     }
 
     75% {
-        color: rgb(48, 202, 197);
+        color: rgb(61, 206, 201);
         text-shadow: 0 0.4vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.05vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
     }
 
