@@ -53,8 +53,10 @@ section.main .carousel, section.main .carousel .carousel-item{
 } */
 
 /* Events */
+
 section.event {
     margin: 0 10vw;
+    min-height: 70vh;
 }
 
 section.event a {
