@@ -3,14 +3,19 @@
 :root {
     /* Primary colors */
     --bg: #5539cf;
-    --bg-color: #2598a9;
-    --bg-color2: #6CB6FF;
-    --text-color: #1450a8;
+    --bg-color: rgb(124, 85, 168);
+    --bg-color2: #da595d;
+    --text-color: rgb(245, 204, 117);
+    --text-color-darker: rgb(188, 146, 56);;
     --text-color2: rgb(57, 145, 209);
     /* UI colors */
+    --overlay-bg: rgba(245, 205, 117, 0.605);
     --accent-color: white;
-    --nav-bg: #2598a9;
-    --overlay-bg: rgba(39, 177, 223, 0.95);
+    --nav-bg: rgb(161, 157, 207);
+    --dropdown-bg: rgb(220, 89, 48);
+    --splash-bg: rgb(161, 157, 207);
+    
+    
 }
 
 
@@ -32,6 +37,11 @@ body {
 p,
 li {
     font-size: 110%;
+}
+
+a.btn{
+    background-color: var(--bg-color2);
+    color: white;
 }
 
 
@@ -60,20 +70,12 @@ li {
     color: white;
 }
 
-div#splash {
-    background-color: #218797;
-}
-
-div.navbarMain {
-    background-color: rgb(16, 146, 155);
-}
-
 div.navbarMain div.navbar-dropdown {
-    background-color: rgb(19, 161, 172);
+    background-color: rgb(121, 118, 156);
 }
 
 div.navbarMain div.navbar-dropdown button:hover {
-    background-color: rgb(22, 181, 192);
+    background-color: var(--text-color);
 }
 
 div.navbarMain div.navbar-heading button {
@@ -184,12 +186,13 @@ section.content .list {
     align-items: center;
     margin: 1rem;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 section.content .list:hover {
     animation: box-hover 0.5s linear, box-size 0.3s linear;
     scale: 1.05;
-    background-color: rgb(20, 50, 101);
+    background-color: var(--text-color-darker);
 }
 
 section.content .list i {
@@ -304,14 +307,14 @@ footer .footer-content a:hover {
 /* Waves Footer */
 
 .waves-footer {
-    background-color: #528ce3;
+    background-color: var(--bg-color2);
 }
 
 
 /* Second Content Section */
 
 section.second-content {
-    background-color: #528ce3;
+    background-color: var(--bg-color2);
 }
 
 
@@ -374,7 +377,7 @@ section.second-content {
     }
 
     100% {
-        background-color: rgb(20, 50, 101);
+        background-color: var(--text-color-darker);
     }
 }
 
