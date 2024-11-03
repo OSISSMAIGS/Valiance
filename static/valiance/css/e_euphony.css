@@ -15,12 +15,11 @@
 
 
 /* Reset and Base Styles */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-shadow: 0px 0px 18px white;
+    text-shadow: 0px 0px 0.4vw rgb(255, 255, 255);
 }
 
 html,
@@ -59,6 +58,22 @@ li {
 
 .navbar-heading a button {
     color: white;
+}
+
+div#splash {
+    background-color: #218797;
+}
+
+div.navbarMain {
+    background-color: rgb(16, 146, 155);
+}
+
+div.navbarMain div.navbar-dropdown {
+    background-color: rgb(19, 161, 172);
+}
+
+div.navbarMain div.navbar-dropdown button:hover {
+    background-color: rgb(22, 181, 192);
 }
 
 div.navbarMain div.navbar-heading button {
@@ -281,6 +296,10 @@ footer .copyright {
     color: var(--bg-color);
 }
 
+footer .footer-content a:hover {
+    color: rgb(14, 198, 198);
+    animation: nav-hover-a 0.2s linear;
+}
 
 /* Waves Footer */
 
@@ -317,18 +336,22 @@ section.second-content {
         color: white;
         text-shadow: none;
     }
+
     25% {
-        color: rgb(67, 240, 233);
+        color: rgb(48, 202, 197);
         text-shadow: 0 0.05vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.4vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
     }
+
     50% {
-        color: rgb(41, 198, 192);
+        color: rgb(24, 163, 159);
         text-shadow: 0 0.3vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.3vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
     }
+
     75% {
-        color: rgb(67, 240, 233);
+        color: rgb(48, 202, 197);
         text-shadow: 0 0.4vh 0.5vh rgba(67, 240, 233, 0.8), 0 -0.05vh 0.5vh rgba(67, 240, 233, 0.8), 0.2vh 0 0.5vh rgba(67, 240, 233, 0.8), -0.2vh 0 0.5vh rgba(67, 240, 233, 0.8);
     }
+
     100% {
         color: white;
         text-shadow: none;
@@ -339,6 +362,7 @@ section.second-content {
     0% {
         color: white;
     }
+
     100% {
         color: var(--text-color2);
     }
@@ -348,6 +372,7 @@ section.second-content {
     0% {
         background-color: var(--text-color);
     }
+
     100% {
         background-color: #553851;
     }
@@ -357,6 +382,7 @@ section.second-content {
     0% {
         scale: 1;
     }
+
     100% {
         scale: 1.05;
     }
@@ -372,10 +398,12 @@ section.second-content {
 }
 
 @media screen and (max-width: 850px) {
+
     p,
     li {
         font-size: 100%;
     }
+
     section.banner .gradient-banner {
         height: 5rem;
     }
@@ -386,13 +414,16 @@ section.second-content {
         gap: 1.5rem;
         padding: 1.5rem;
     }
+
     .image-container {
         width: calc(100% - 2rem);
         max-width: 500px;
     }
+
     .overlay h5 {
         font-size: 1.25rem;
     }
+
     .overlay .btn {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
@@ -412,9 +443,11 @@ section.second-content {
         gap: 1rem;
         padding: 1rem;
     }
+
     .overlay {
         padding: 1rem;
     }
+
     .overlay h5 {
         font-size: 1.1rem;
     }
