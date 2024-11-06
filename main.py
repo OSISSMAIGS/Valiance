@@ -89,6 +89,7 @@ def asteration_magazine():
 def asteration_about():
     return render_template("asteration/about.html")
 
+
 # Credence
 
 @app.route('/credence')
@@ -96,4 +97,4 @@ def credence():
     return render_template('valiance/credence.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
