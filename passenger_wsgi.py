@@ -1,11 +1,16 @@
-"""import imp
+import importlib.util
 import os
 import sys
 
-
 sys.path.insert(0, os.path.dirname(__file__))
 
-wsgi = imp.load_source('wsgi', 'passenger_wsgi.py')
-application = wsgi.application
-"""
-from main import app as application
+# Load the module dynamically (e.g., main.py or passenger_wsgi.py)
+module_name = 'main'  # Replace with 'passenger_wsgi' if needed
+module_path = os.path.join(os.path.dirname(__file__), f'{module_name}.py')
+
+spec = importlib.util.spec_from_file_location(module_name, module_path)
+wsgi = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(wsgi)
+
+# Set the WSGI application object
+application = wsgi.app  # or wsgi.application based on your module structure
