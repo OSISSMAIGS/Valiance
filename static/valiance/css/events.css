@@ -69,69 +69,19 @@ section.event a img {
     box-shadow: 0px 0px 18px white;
 }
 
-img#aksara:hover {
+img#euphony:hover {
     scale: 1.02;
-    box-shadow: 0px 0px 25px #f78be8;
-    animation: aksara-hover 0.5s linear;
+    box-shadow: 0px 0px 25px rgb(161, 157, 207);
+    animation: euphony-hover 0.5s linear;
 }
 
-img#pelita:hover {
+img#kandela:hover {
     scale: 1.02;
-    box-shadow: 0px 0px 25px #2ed566;
-    animation: pelita-hover 0.5s linear;
+    box-shadow: 0px 0px 25px rgb(69, 181, 79);
+    animation: kandela-hover 0.5s linear;
 }
 
-img#armone:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px rgb(59, 157, 255);
-    animation: armone-hover 0.5s linear;
-}
-
-img#litioree:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px #95caff;
-    animation: litioree-hover 0.5s linear;
-}
-
-img#lunarest:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px #ffef0e;
-    animation: lunarest-hover 0.5s linear;
-}
-
-img#reveera:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px #FFB2CC;
-    animation: reveera-hover 0.5s linear;
-}
-
-img#qaliftar:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px #007d64;
-    animation: qaliftar-hover 0.5s linear;
-}
-
-img#etourdissante:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px #19324b;
-    animation: etourdissante-hover 0.5s linear;
-}
-
-img#gelora:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px rgb(185, 68, 36);
-    animation: gelora-retry-hover 0.5s linear;
-}
-
-
-img#aventura:hover {
-    scale: 1.02;
-    box-shadow: 0px 0px 25px #38a345;
-    animation: aventura-hover 0.5s linear;
-}
-
-
-@keyframes aksara-hover {
+@keyframes euphony-hover {
     0% {
         scale: 1;
         box-shadow: 0px 0px white;
@@ -139,11 +89,11 @@ img#aventura:hover {
 
     100% {
         scale: 1.02;
-        box-shadow: 0px 0px 25px #f78be8;
+        box-shadow: 0px 0px 25px rgb(161, 157, 207);
     }
 }
 
-@keyframes pelita-hover {
+@keyframes kandela-hover {
     0% {
         scale: 1;
         box-shadow: 0px 0px white;
@@ -151,104 +101,7 @@ img#aventura:hover {
 
     100% {
         scale: 1.02;
-        box-shadow: 0px 0px 25px #2ed566;
-    }
-}
-
-@keyframes armone-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px rgb(59, 157, 255);
-        ;
-    }
-}
-
-@keyframes litioree-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #95caff;
-    }
-}
-
-@keyframes lunarest-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #ffef0e;
-    }
-}
-
-@keyframes reveera-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #FFB2CC;
-    }
-}
-
-@keyframes qaliftar-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #007d64;
-    }
-}
-
-@keyframes etourdissante-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #19324b;
-    }
-}
-
-@keyframes aventura-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #38a345;
-    }
-}
-
-@keyframes gelora-retry-hover {
-    0% {
-        scale: 1;
-        box-shadow: 0px 0px white;
-    }
-
-    100% {
-        scale: 1.02;
-        box-shadow: 0px 0px 25px #b94424;
+        box-shadow: 0px 0px 25px rgb(69, 181, 79);
     }
 }
 

@@ -253,7 +253,7 @@ section.content .list p {
 .detail .content .content-desc {
   width: 75%;
   height: 100%;
-  overflow-y: scroll;
+  overflow: auto;
   color: var(--text-color-darker);
   background-color: rgba(229, 229, 229, 0.327);
   padding: 30px;
@@ -372,7 +372,7 @@ footer .footer-content a:hover {
 /* Waves Footer */
 
 .waves-footer {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color);
 }
 
 /* Second Content Section */

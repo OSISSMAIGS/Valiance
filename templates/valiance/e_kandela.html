@@ -101,7 +101,7 @@ main%}
       </div>
       <div
         onclick="showDetail('Cooking', 'bx bxs-bowl-hot bx-tada', 'Setiap tim akan memasak salah satu menu yaitu Mie atau Nasi Goreng dengan anggaran yang diberikan dari pihak sekolah untuk membeli bahan utama. Peserta diperbolehkan membawa bahan tambahan sebagai pelengkap sesuai dengan kreativitas masing-masing. Lalu pihak sekolah akan menyediakan kompor dan para peserta harus membawa alat masak sendiri. Waktu untuk memasak dan menghias hidangan adalah selama 60 menit. Para peserta harus datang tepat waktu, tidak diperkenankan untuk meninggalkan lokasi lomba kecuali ada hal yang mendesak, dan para peserta harus menjaga ketengan ketika lomba berlangsung. Setelah waktu sudah habis para peserta akan menyajikan hidangan mereka kepada juri. Dalam kegiatan ini dapat meningkatkan kreativitas para guru.')"
-        class="list hidden"
+        class="list hidden small-detaail"
       >
         <i class="bx bxs-bowl-hot bx-tada"></i>
         <p>Cooking</p>
@@ -140,26 +140,24 @@ main%}
   </div>
 </div>
 
-<svg class="waves-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+<svg class="waves-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
   <defs>
-    <filter id="waveShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
-      <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-      <feFlood flood-color="white" flood-opacity="1" result="color" />
-      <feComposite in2="offsetBlur" operator="in" result="shadow" />
-      <feMerge>
-        <feMergeNode in="shadow" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+      <filter id="waveShadow3" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+          <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+          <feFlood flood-color="white" flood-opacity="1" result="color" />
+          <feComposite in2="offsetBlur" operator="in" result="shadow" />
+          <feMerge>
+              <feMergeNode in="shadow" />
+              <feMergeNode in="SourceGraphic" />
+          </feMerge>
+      </filter>
   </defs>
-
-  <path
-    filter="url(#waveShadow)"
-    fill="rgb(250, 150, 200)"
-    fill-opacity="1"
-    d="M0,96L21.8,117.3C43.6,139,87,181,131,186.7C174.5,192,218,160,262,133.3C305.5,107,349,85,393,106.7C436.4,128,480,192,524,218.7C567.3,245,611,235,655,240C698.2,245,742,267,785,240C829.1,213,873,139,916,122.7C960,107,1004,149,1047,154.7C1090.9,160,1135,128,1178,112C1221.8,96,1265,96,1309,106.7C1352.7,117,1396,139,1418,149.3L1440,160L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
-  ></path>
+  <path filter="url(#waveShadow3)" 
+        fill="rgb(250, 150, 200)" 
+        fill-opacity="1" 
+        d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+  </path>
 </svg>
 
 {% endblock main %}
