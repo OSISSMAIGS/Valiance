@@ -1,0 +1,117 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_kandela.css') }}"
+/>
+
+{% endblock css_js %} {% block title %}Kandela{% endblock title %} {% block
+main%}
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/kandela_banner.png') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Kandela</h1>
+  <p class="hidden">
+    Kandela merupakan singkatan dari tema Hari Guru Nasional Tahun 2023 yang
+    diterbitkan oleh kemendikbud yaitu
+    <b>"Bergerak Bersama Rayakan Merdeka Belajar"</b>. Serta Kandela sendiri
+    merupakan satuan Internasional dari intensitas cahaya sehingga nama kandela
+    memiliki makna bahwa event guru ini akan bersinar gemilang Valiance.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>M Satria Alfahri</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>Indah Naima Chalila</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Angelina Michelle</p>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Activities & Performances</h1>
+    <div class="lists">
+      <div class="list hidden">
+        <i class="bx bxs-music bx-tada"></i>
+        <p>Sing Performance</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-group bx-tada"></i>
+        <p>Tari Tanggai Performance</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-dice-3 bx-tada"></i>
+        <p>Special Games</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bx-body"></i>
+        <p>Ice Breaking</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Non-Language Competition Section -->
+  <div class="performance">
+    <h1 class="hidden">Competition</h1>
+    <div class="lists">
+      <div class="list hidden">
+        <i class="bi bi-cup-fill"></i>
+        <p>Arrange Coloured Cup</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-microphone bx-tada"></i>
+        <p>The Teachers' Voice</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-bowl-hot bx-tada"></i>
+        <p>Cooking</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bx-run bx-tada"></i>
+        <p>Trilomba</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="waves-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <defs>
+    <filter id="waveShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+      <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+      <feFlood flood-color="white" flood-opacity="1" result="color" />
+      <feComposite in2="offsetBlur" operator="in" result="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path
+    filter="url(#waveShadow)"
+    fill="rgb(250, 150, 200)"
+    fill-opacity="1"
+    d="M0,96L21.8,117.3C43.6,139,87,181,131,186.7C174.5,192,218,160,262,133.3C305.5,107,349,85,393,106.7C436.4,128,480,192,524,218.7C567.3,245,611,235,655,240C698.2,245,742,267,785,240C829.1,213,873,139,916,122.7C960,107,1004,149,1047,154.7C1090.9,160,1135,128,1178,112C1221.8,96,1265,96,1309,106.7C1352.7,117,1396,139,1418,149.3L1440,160L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
+  ></path>
+</svg>
+
+{% endblock main %}

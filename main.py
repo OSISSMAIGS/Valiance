@@ -21,6 +21,10 @@ def valiance_events():
 def e_euphony():
     return render_template("valiance/e_euphony.html")
 
+@app.route("/Valiance/Events/Kandela")
+def e_kandela():
+    return render_template("valiance/e_kandela.html")
+
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():
