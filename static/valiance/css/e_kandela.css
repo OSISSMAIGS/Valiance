@@ -11,10 +11,10 @@
   --overlay-bg: rgba(245, 205, 117, 0.605);
   --accent-color: white;
   --nav-bg: #45b54f;
+  --nav-bg-darker: #3fa247;
   --dropdown-bg: rgb(220, 89, 48);
   --splash-bg: #45b54f;
 }
-
 
 /* Reset and Base Styles */
 * {
@@ -36,11 +36,10 @@ li {
   font-size: 110%;
 }
 
-a.btn{
+a.btn {
   background-color: var(--bg-color2);
   color: white;
 }
-
 
 /* Layout Components */
 
@@ -56,7 +55,6 @@ a.btn{
   width: 100%;
 }
 
-
 /* Navigation Styles */
 
 .navbarlogo {
@@ -68,28 +66,31 @@ a.btn{
 }
 
 div.navbarMain div.navbar-dropdown {
-  background-color: rgb(121, 118, 156);
+  background-color: var(--nav-bg);
 }
 
 div.navbarMain div.navbar-dropdown button:hover {
-  background-color: var(--text-color);
+  background-color: var(--nav-bg-darker);
 }
 
 div.navbarMain div.navbar-heading button {
-  text-shadow: 0 0.2vh 0.6vh rgba(16, 16, 230, 0.3), 0 -0.2vh 0.6vh rgba(6, 102, 236, 0.3), 0.3vh 0 0.6vh rgba(0, 98, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0.2vh 0.6vh rgba(16, 16, 230, 0.3),
+    0 -0.2vh 0.6vh rgba(6, 102, 236, 0.3), 0.3vh 0 0.6vh rgba(0, 98, 255, 0.3),
+    -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
 }
 
 div.navbarMain div.navbar-heading button:hover {
   color: var(--text-color2) !important;
   text-decoration: none;
   animation: hovering 0.2s linear !important;
-  text-shadow: 0 0.6vh 1vh rgba(6, 105, 218, 0.8), 0 -0.6vh 1vh rgba(33, 25, 173, 0.8), 0.4vh 0 1vh rgba(21, 87, 208, 0.8), -0.4vh 0 1vh rgba(255, 202, 103, 0.8);
+  text-shadow: 0 0.6vh 1vh rgba(6, 105, 218, 0.8),
+    0 -0.6vh 1vh rgba(33, 25, 173, 0.8), 0.4vh 0 1vh rgba(21, 87, 208, 0.8),
+    -0.4vh 0 1vh rgba(255, 202, 103, 0.8);
 }
 
 span.showNav {
   animation: colorLetters 0.75s linear !important;
 }
-
 
 /* Banner Section */
 
@@ -97,7 +98,7 @@ section.banner {
   --size: 100vw;
   position: relative;
   width: var(--size);
-  height: calc(var(--size)/1.6);
+  height: calc(var(--size) / 1.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +109,7 @@ section.banner {
 
 section.banner img {
   width: 100vw;
-  height: calc(100vw/1.6);
+  height: calc(100vw / 1.6);
   object-fit: cover;
 }
 
@@ -121,7 +122,6 @@ section.banner .gradient-banner {
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg-color));
 }
-
 
 /* Content Sections */
 
@@ -159,7 +159,6 @@ section.content h2 {
   font-weight: 700;
   color: var(--accent-color);
 }
-
 
 /* List Cards */
 
@@ -203,6 +202,76 @@ section.content .list p {
   margin-bottom: 0;
 }
 
+.detail {
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.599);
+}
+
+.detail .detail-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail .content {
+  position: relative;
+  width: 70vw;
+  height: 350px;
+  border-radius: 15px;
+  background-color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0px 0px 20px white;
+  box-shadow: 0px 0px 20px white;
+}
+
+.detail .content .close {
+  position: absolute;
+  display: inline;
+  color: white;
+  text-shadow: 0px 0px 20px white;
+  cursor: pointer;
+  top: 25px;
+  right: 30px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.detail .content .content-desc {
+  width: 75%;
+  height: 100%;
+  overflow-y: scroll;
+  color: var(--text-color-darker);
+  background-color: rgba(229, 229, 229, 0.327);
+  padding: 30px;
+  border-radius: 15px;
+  text-shadow: 0px 0px 20px white;
+}
+
+.detail .content .content-logo {
+  width: 250px;
+  height: 250px;
+  /* background-color: red; */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 140px;
+  cursor: pointer;
+}
 
 /* Performance Section */
 
@@ -272,7 +341,6 @@ section.content .list p {
   transform: translateY(0);
 }
 
-
 /* Footer */
 
 footer {
@@ -307,13 +375,11 @@ footer .footer-content a:hover {
   background-color: var(--bg-color2);
 }
 
-
 /* Second Content Section */
 
 section.second-content {
   background-color: var(--bg-color2);
 }
-
 
 /* Utility Classes */
 
@@ -328,127 +394,143 @@ section.second-content {
   transition: all 0.7s ease-in-out;
 }
 
-
 /* Animations */
 
 @keyframes colorLetters {
   0% {
-      color: white;
-      text-shadow: none;
+    color: white;
+    text-shadow: none;
   }
 
   25% {
-      color: rgb(232, 210, 149);
-      text-shadow: 0 0.05vh 0.5vh rgb(254, 255, 177), 0 -0.4vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(232, 210, 149);
+    text-shadow: 0 0.05vh 0.5vh rgb(254, 255, 177),
+      0 -0.4vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
+      -0.2vh 0 0.5vh rgb(254, 255, 177);
   }
 
   50% {
-      color: rgb(233, 184, 128);
-      text-shadow: 0 0.3vh 0.5vh rgb(254, 255, 177), 0 -0.3vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(233, 184, 128);
+    text-shadow: 0 0.3vh 0.5vh rgb(254, 255, 177),
+      0 -0.3vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
+      -0.2vh 0 0.5vh rgb(254, 255, 177);
   }
 
   75% {
-      color: rgb(232, 210, 149);
-      text-shadow: 0 0.4vh 0.5vh rgb(254, 255, 177), 0 -0.05vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(232, 210, 149);
+    text-shadow: 0 0.4vh 0.5vh rgb(254, 255, 177),
+      0 -0.05vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
+      -0.2vh 0 0.5vh rgb(254, 255, 177);
   }
 
   100% {
-      color: white;
-      text-shadow: none;
+    color: white;
+    text-shadow: none;
   }
 }
 
 @keyframes hovering {
   0% {
-      color: white;
+    color: white;
   }
 
   100% {
-      color: var(--text-color2);
+    color: var(--text-color2);
   }
 }
 
 @keyframes box-hover {
   0% {
-      background-color: var(--text-color);
+    background-color: var(--text-color);
   }
 
   100% {
-      background-color: var(--text-color-darker);
+    background-color: var(--text-color-darker);
   }
 }
 
 @keyframes box-size {
   0% {
-      scale: 1;
+    scale: 1;
   }
 
   100% {
-      scale: 1.05;
+    scale: 1.05;
   }
 }
-
 
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
   .image-container {
-      width: calc(50% - 2rem);
+    width: calc(50% - 2rem);
   }
 }
 
 @media screen and (max-width: 850px) {
-
   p,
   li {
-      font-size: 100%;
+    font-size: 100%;
   }
 
   section.banner .gradient-banner {
-      height: 5rem;
+    height: 5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .performance .gambar {
-      gap: 1.5rem;
-      padding: 1.5rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 
   .image-container {
-      width: calc(100% - 2rem);
-      max-width: 500px;
+    width: calc(100% - 2rem);
+    max-width: 500px;
   }
 
   .overlay h5 {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .overlay .btn {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 590px) {
   header nav ul.menu-nav {
-      background-color: var(--bg-color);
-      border-color: white;
-      box-shadow: 0px 0px 10px white;
+    background-color: var(--bg-color);
+    border-color: white;
+    box-shadow: 0px 0px 10px white;
+  }
+  .detail .content {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 50vh;
+  }
+
+  .detail .content .content-desc {
+    width: 100%;
+  }
+
+  .detail .content .content-logo {
+    font-size: 100px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .performance .gambar {
-      gap: 1rem;
-      padding: 1rem;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .overlay {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .overlay h5 {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 }
