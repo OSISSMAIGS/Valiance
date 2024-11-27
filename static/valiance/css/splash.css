@@ -69,7 +69,6 @@ div.navbarMain img.navbarlogo {
 }
 
 div.navbarMain h1 {
-	color: #ffb22d;
 	font-family: 'Jaro', sans-serif;
 	position: absolute;
 	user-select: none;
@@ -91,7 +90,6 @@ div.navbarMain h1 span.showNav {
 
 	div#splash h1#splashtitle {
 		text-align: center;
-		color: #ffb22d;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -146,7 +144,6 @@ div.navbarMain h1 span.showNav {
 	}
 
 	div.navbarMain i#nav-menu-icon {
-		color: #ffb22d;
 		position: absolute;
 		font-size: 6vh;
 		top: -0.6vh;
@@ -174,7 +171,6 @@ div.navbarMain h1 span.showNav {
 		text-indent: 6vh;
 		background-color: rgba(0, 0, 0, 0);
 		border: none;
-		color: #ffb22d;
 		font-family: "Bebas Neue", sans-serif;
 		font-size: 4.2vh;
 		transition: background-color 0.5s;
@@ -189,9 +185,6 @@ div.navbarMain h1 span.showNav {
 		transform: translateY(1.2vh);
 	}
 
-	div.navbarMain div.navbar-dropdown button:hover {
-		background-color: rgb(236, 155, 5);
-	}
 
 	div.navbarMain div.navbar-dropdown.showNav {
 		right: -1vw;
@@ -211,7 +204,6 @@ screen and (orientation:landscape)
 
 	div#splash h1#splashtitle {
 		text-align: center;
-		color: #ffb22d;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -239,7 +231,6 @@ screen and (orientation:landscape)
 
 	/* navbar css for pc and landscape */
 	div.navbarMain h1 {
-		color: #ffb22d;
 		font-family: "Jaro", sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 400;
@@ -256,7 +247,6 @@ screen and (orientation:landscape)
 
 	div.navbarMain div.navbar-heading button {
 		background-color: rgba(0, 0, 0, 0);
-		color: #ffb22d;
 		font-family: "Bebas Neue", sans-serif;
 		border: none;
 		cursor: pointer;

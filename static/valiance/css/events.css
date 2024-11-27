@@ -224,3 +224,19 @@ section.past {
     }
 
 }
+
+
+
+
+/* color text */
+div.navbarMain i#nav-menu-icon,
+div.navbarMain div.navbar-dropdown button,
+div.navbarMain h1,
+div#splash h1#splashtitle,
+div.navbarMain div.navbar-heading button {
+    color: #ffb22d;
+}
+
+div.navbarMain div.navbar-dropdown button:hover {
+    background-color: rgb(236, 155, 5);
+}
