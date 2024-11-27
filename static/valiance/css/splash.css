@@ -69,11 +69,10 @@ div.navbarMain img.navbarlogo {
 }
 
 div.navbarMain h1 {
-	color: white;
-	font-family: "Rubik", sans-serif;
+	color: #ffb22d;
+	font-family: 'Jaro', sans-serif;
 	position: absolute;
 	user-select: none;
-	text-shadow: 0 0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0 -0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0.3vh 0 0.6vh rgba(255, 255, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
 }
 
 div.navbarMain h1 span.showNav {
@@ -92,7 +91,7 @@ div.navbarMain h1 span.showNav {
 
 	div#splash h1#splashtitle {
 		text-align: center;
-		color: rgb(230, 230, 230);
+		color: #ffb22d;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -102,10 +101,10 @@ div.navbarMain h1 span.showNav {
 		top: calc(48vh + 20vw);
 		font-size: 15vw;
 		text-shadow: 0.3vw 0.3vw 0.5vw rgba(195, 57, 6, 0.4);
-		font-family: "Rubik", sans-serif;
+		font-family: "Jaro", sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 500;
-		letter-spacing: -1vw;
+		letter-spacing: 0.2vw;
 		font-style: normal;
 		animation: fadeTitleMobile 3s;
 	}
@@ -140,17 +139,17 @@ div.navbarMain h1 span.showNav {
 	}
 
 	div.navbarMain h1 {
-		font-size: 4vh;
-		top: 1.5vh;
+		font-size: 5vh;
+		top: 0.7vh;
 		left: 8vh;
-		letter-spacing: -0.2vh;
+		letter-spacing: 0.2vh;
 	}
 
 	div.navbarMain i#nav-menu-icon {
-		color: white;
+		color: #ffb22d;
 		position: absolute;
 		font-size: 6vh;
-		top: -0.4vh;
+		top: -0.6vh;
 		right: 2vw;
 	}
 
@@ -175,12 +174,11 @@ div.navbarMain h1 span.showNav {
 		text-indent: 6vh;
 		background-color: rgba(0, 0, 0, 0);
 		border: none;
-		color: white;
-		font-family: "Rubik", sans-serif;
-		font-size: 3vh;
+		color: #ffb22d;
+		font-family: "Bebas Neue", sans-serif;
+		font-size: 4.2vh;
 		transition: background-color 0.5s;
 		border-bottom: 0.4vh solid rgba(0, 0, 0, 0.1);
-		text-shadow: 0 0.2vw 0.6vw rgba(255, 255, 255, 0.3), 0 -0.2vw 0.6vw rgba(255, 255, 255, 0.3), 0.3vw 0 0.6vw rgba(255, 255, 255, 0.3), -0.3vw 0 0.6vw rgba(255, 255, 255, 0.3);
 	}
 
 	div.navbarMain div.navbar-dropdown button i {
@@ -188,7 +186,7 @@ div.navbarMain h1 span.showNav {
 		left: -4.5vh;
 		font-size: 3.5vh;
 		text-shadow: none;
-		transform: translateY(0.3vh);
+		transform: translateY(1.2vh);
 	}
 
 	div.navbarMain div.navbar-dropdown button:hover {
@@ -213,7 +211,7 @@ screen and (orientation:landscape)
 
 	div#splash h1#splashtitle {
 		text-align: center;
-		color: white;
+		color: #ffb22d;
 		position: absolute;
 		margin-left: auto;
 		margin-right: auto;
@@ -221,12 +219,12 @@ screen and (orientation:landscape)
 		right: 0;
 		text-align: center;
 		top: 70vh;
-		font-size: 15vh;
+		font-size: 23vh;
 		text-shadow: 0.3vw 0.3vw 0.5vw rgba(195, 57, 6, 0.4);
-		font-family: "Rubik", sans-serif;
+		font-family: "Jaro", sans-serif;
 		font-optical-sizing: auto;
 		font-weight: 500;
-		letter-spacing: -0.4vw;
+		letter-spacing: 0.2vw;
 		font-style: normal;
 		animation: fadeTitlePC 3s;
 	}
@@ -241,11 +239,13 @@ screen and (orientation:landscape)
 
 	/* navbar css for pc and landscape */
 	div.navbarMain h1 {
-		color: white;
-		font-family: "Rubik", sans-serif;
+		color: #ffb22d;
+		font-family: "Jaro", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
 		position: absolute;
 		user-select: none;
-		text-shadow: 0 0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0 -0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0.3vh 0 0.6vh rgba(255, 255, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
 	}
 
 	div.navbarMain div.navbar-heading {
@@ -256,16 +256,15 @@ screen and (orientation:landscape)
 
 	div.navbarMain div.navbar-heading button {
 		background-color: rgba(0, 0, 0, 0);
-		color: white;
-		font-family: "Rubik", sans-serif;
+		color: #ffb22d;
+		font-family: "Bebas Neue", sans-serif;
 		border: none;
 		cursor: pointer;
 		transition: text-shadow 0.5s, color 0.5s;
-		text-shadow: 0 0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0 -0.2vh 0.6vh rgba(255, 255, 255, 0.3), 0.3vh 0 0.6vh rgba(255, 255, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
 	}
 
 	div.navbarMain div.navbar-heading button:hover {
-		color: rgb(227, 227, 227);
+		color: rgb(255, 196, 0);
 		text-shadow: 0 0.6vh 1vh rgba(255, 202, 103, 0.8), 0 -0.6vh 1vh rgba(255, 202, 103, 0.8), 0.4vh 0 1vh rgba(255, 202, 103, 0.8), -0.4vh 0 1vh rgba(255, 202, 103, 0.8);
 	}
 }
@@ -283,10 +282,10 @@ screen and (orientation:landscape)
 	}
 
 	div.navbarMain h1 {
-		font-size: 4vh;
-		top: 1.5vh;
+		font-size: 5vh;
+		top: 0.7vh;
 		left: 8vh;
-		letter-spacing: -0.2vh;
+		letter-spacing: 0.2vh;
 	}
 
 	div.navbarMain div.navbar-heading {
@@ -298,7 +297,7 @@ screen and (orientation:landscape)
 	div.navbarMain div.navbar-heading button {
 		height: 8vh;
 		font-weight: 500;
-		font-size: 3vh;
+		font-size: 4.5vh;
 	}
 }
 
@@ -314,10 +313,10 @@ screen and (orientation:landscape)
 	}
 
 	div.navbarMain h1 {
-		font-size: 3.5vw;
-		top: 1.5vw;
+		font-size: 4.5vw;
+		top: 0.5vw;
 		left: 8vw;
-		letter-spacing: -0.2vw;
+		letter-spacing: 0.2vw;
 	}
 
 	div.navbarMain div.navbar-heading {
@@ -329,7 +328,7 @@ screen and (orientation:landscape)
 	div.navbarMain div.navbar-heading button {
 		height: 7vw;
 		font-weight: 500;
-		font-size: 2.5vw;
+		font-size: 4vw;
 	}
 }
 
@@ -439,7 +438,7 @@ screen and (orientation:landscape)
 
 @keyframes flamingLetters {
 	0% {
-		color: white;
+		color: #ffb22d;
 		text-shadow: none;
 	}
 
@@ -459,7 +458,7 @@ screen and (orientation:landscape)
 	}
 
 	100% {
-		color: white;
+		color: #ffb22d;
 		text-shadow: none;
 	}
 }

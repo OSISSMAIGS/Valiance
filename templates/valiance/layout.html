@@ -19,7 +19,7 @@
       href="https://www.1001fonts.com/crosshatcher-font.html"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jaro:opsz@6..72&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
 
@@ -120,7 +120,8 @@
 
       <div class="navbar-heading">
         <a href="{{ url_for('valiance') }}"><button>Home</button></a>
-         <a href="{{ url_for('valiance_events') }}"><button>Events</button></a><!-- temporary, href nanti =>  {{ url_for('valiance_events') }} -->
+        <a href="{{ url_for('valiance_events') }}"><button>Events</button></a
+        ><!-- temporary, href nanti =>  {{ url_for('valiance_events') }} -->
         <a href="{{ url_for('coming_soon') }}"><button>Magazine</button></a>
         <a href="{{ url_for('coming_soon') }}"><button>About Us</button></a>
       </div>
@@ -133,7 +134,8 @@
         >
         <a href="{{ url_for('valiance_events') }}"
           ><button><i class="bx bxs-calendar-event"></i>Events</button></a
-        > <!-- temporary, href nanti =>  {{ url_for('valiance_events') }} -->
+        >
+        <!-- temporary, href nanti =>  {{ url_for('valiance_events') }} -->
         <a href="{{ url_for('coming_soon') }}"
           ><button><i class="bx bxs-book"></i>Magazine</button></a
         >
@@ -142,7 +144,7 @@
         >
       </div>
     </div>
-    <script src="{{ url_for('static', filename='valiance/js/splash.js') }}"></script> 
+    <script src="{{ url_for('static', filename='valiance/js/splash.js') }}"></script>
 
     <section class="gradient-header"></section>
 
@@ -153,7 +155,6 @@
         <div class="back">
           {% block main %}{% endblock main %}
 
-          
           <footer>
             <div class="footer-content">
               <div class="column1">
@@ -210,7 +211,7 @@
 
             <div class="copyright">
               <p>
-                Copyright  © <span id="currentYear"></span> Sekbid Multimedia
+                Copyright © <span id="currentYear"></span> Sekbid Multimedia
                 Website Valiance
               </p>
             </div>

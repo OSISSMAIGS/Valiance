@@ -6,7 +6,7 @@
 }
 
 .text-shadow{
-    text-shadow: 0px 0px 20px white;
+    text-shadow: 0px 0px 25px white;
 }
 
 .hidden{
@@ -77,8 +77,10 @@ section.about .about-text {
 }
 
 section.about h1 {
-    font-weight: 700;
-    font-size: 50px;
+    font-family: "Jaro", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 60px;
 }
 
 section.about p{
@@ -93,7 +95,7 @@ section.about .about-content {
 section.about img {
     width: 30%;
     height: 30%;
-    filter: drop-shadow(0px 0px 5px white);
+    filter: drop-shadow(0px 0px 3px white);
 }
 
 /* Prior Cabinets */
