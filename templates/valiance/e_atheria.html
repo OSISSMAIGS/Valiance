@@ -7,128 +7,30 @@ href="{{ url_for('static', filename='valiance/css/e_atheria.css') }}"
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxvQnlq8vDdoqhU56GYaSiKFRHp67M7TC16_DWqaisJ910FgHyabrQaUplqJF1MM-wM/exec';
-
-        const formConfigurations = {
-            Lomba_coding: [
-                { label: "Nama Lengkap", type: "text", name: "nama", required: true },
-                { label: "Email", type: "email", name: "email", required: true },
-                { label: "Nomor Telepon", type: "tel", name: "telepon", required: true },
-                { label: "Alamat", type: "textarea", name: "alamat", required: true },
-                { label: "Pendidikan Terakhir", type: "select", name: "pendidikan", required: true, options: ["SMA", "D3", "S1", "S2"] },
-            ],
-            Lomba_epep: [
-                { label: "Nama", type: "text", name: "nama", required: true },
-                { label: "Rating", type: "select", name: "rating", required: true, options: ["5", "4", "3", "2", "1"] },
-                { label: "Komentar", type: "textarea", name: "komentar", required: true },
-                { label: "Saran Perbaikan", type: "textarea", name: "saran", required: false },
-            ],
-            kevin: [
-                { label: "wj", type: "text", name: "wj", required: true },
-                { label: "Rating", type: "select", name: "rating", required: true, options: ["5", "4", "3", "2", "1"] },
-                { label: "Komentar", type: "textarea", name: "komentar", required: true },
-                { label: "Saran Perbaikan", type: "textarea", name: "saran", required: false },
-            ],
-        };
-
-        function renderForm(formType) {
-            const formFieldsContainer = document.getElementById("formFields");
-            const submitButton = document.querySelector("#dynamicForm button");
-            formFieldsContainer.innerHTML = ""; // Kosongkan form sebelumnya
-
-            if (!formType || !formConfigurations[formType]) {
-                submitButton.style.display = "none";
-                return;
-            }
-
-            formConfigurations[formType].forEach(field => {
-                const wrapper = document.createElement("div");
-                wrapper.className = "form-group";
-
-                const label = document.createElement("label");
-                label.textContent = field.label;
-                wrapper.appendChild(label);
-
-                let input;
-                if (field.type === "textarea") {
-                    input = document.createElement("textarea");
-                } else if (field.type === "select") {
-                    input = document.createElement("select");
-                    field.options.forEach(option => {
-                        const opt = document.createElement("option");
-                        opt.value = option;
-                        opt.textContent = option;
-                        input.appendChild(opt);
-                    });
-                } else {
-                    input = document.createElement("input");
-                    input.type = field.type;
-                }
-
-                input.name = field.name;
-                if (field.required) input.required = true;
-                wrapper.appendChild(input);
-
-                formFieldsContainer.appendChild(wrapper);
-            });
-
-            submitButton.style.display = "block"; // Tampilkan tombol submit
-        }
-
-        document.getElementById("formSelector").addEventListener("change", e => {
-            renderForm(e.target.value);
-        });
-
-        document.getElementById("dynamicForm").addEventListener("submit", e => {
-            e.preventDefault();
-            const formStatus = document.getElementById("formStatus");
-            formStatus.textContent = "Mengirim data...";
-            formStatus.className = "status";
-
-            const formData = new FormData(e.target);
-            formData.append("formType", document.getElementById("formSelector").value);
-
-            fetch(scriptURL, { method: "POST", body: formData })
-                .then(response => {
-                    formStatus.textContent = "Terima kasih! Data berhasil dikirim.";
-                    formStatus.className = "status success";
-                    e.target.reset();
-                })
-                .catch(error => {
-                    formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
-                    formStatus.className = "status error";
-                    console.error("Error!", error.message);
-                });
-        });
+       
 
         const competitionData = [
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}",
                 title: "LCC Bahasa",
-                link: "Lomba_coding"
+                link: "/L_LCC"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_debate_inggris.png') }}",
                 title: "English Debate",
-                link: "Lomba_epep"
+                link: "lomba_debate_inggris"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_arab.png') }}",
                 title: "Lomba Arab",
-                link: "kevin"
+                link: "lomba_arab"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_cosplay.png') }}",
                 title: "Lomba Cosplay",
-                link: "Lomba_coding"
+                link: "lomba_cosplay"
             }
         ];
-
-        function setLomba(lomba) {
-            document.getElementById("formSelector").value = lomba; // Set the dropdown value
-            renderForm(lomba); // Render form fields based on selected lomba
-            document.getElementById("dynamicForm").scrollIntoView({ behavior: 'smooth' }); // Scroll to form
-        }
 
         const posterContainer = document.querySelector('.performance .gambar');
         if (posterContainer) {
@@ -331,40 +233,6 @@ href="{{ url_for('static', filename='valiance/css/e_atheria.css') }}"
         </div>
     </div>
 </section>
-
-<svg class="waves-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <defs>
-        <filter id="waveShadow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
-          <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-          <feFlood flood-color="white" flood-opacity="1" result="color" />
-          <feComposite in2="offsetBlur" operator="in" result="shadow" />
-          <feMerge>
-            <feMergeNode in="shadow" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-    </defs>
-    <path filter="url(#waveShadow)" fill="#da595d" fill-opacity="1" d="M0,96L21.8,117.3C43.6,139,87,181,131,186.7C174.5,192,218,160,262,133.3C305.5,107,349,85,393,106.7C436.4,128,480,192,524,218.7C567.3,245,611,235,655,240C698.2,245,742,267,785,240C829.1,213,873,139,916,122.7C960,107,1004,149,1047,154.7C1090.9,160,1135,128,1178,112C1221.8,96,1265,96,1309,106.7C1352.7,117,1396,139,1418,149.3L1440,160L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path>
-</svg>
-
-<!-- Registration -->
-
-<div class="form-container">
-    <h2>Atheria Registration</h2>
-    <select id="formSelector">
-        <option value="">Pilih Jenis Form</option>
-        <option value="Lomba_coding">Lomba_coding</option>
-        <option value="Lomba_epep">Lomba_epep</option>
-        <option value="kevin">Kevin</option>
-        <!-- Tambahkan opsi form lainnya -->
-    </select>
-    <form id="dynamicForm">
-        <div id="formFields"></div>
-        <button type="submit" style="display:none;">Kirim</button>
-    </form>
-    <div class="status" id="formStatus"></div>
-</div>
 
 
 <svg class="waves-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

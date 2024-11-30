@@ -1,0 +1,256 @@
+/* Root Variables - Color Scheme */
+:root {
+    /* Primary colors */
+    --bg: #5539cf;
+    --bg-color: rgb(124, 85, 168);
+    --bg-color2: #da595d;
+    --text-color: rgb(245, 204, 117);
+    --text-color-darker: rgb(188, 146, 56);
+    --text-color2: rgb(57, 145, 209);
+    
+    /* UI colors */
+    --overlay-bg: rgba(245, 205, 117, 0.605);
+    --accent-color: white;
+    --nav-bg: rgb(161, 157, 207);
+    --dropdown-bg: rgb(220, 89, 48);
+    --splash-bg: rgb(161, 157, 207);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: 0px 0px 0.4vw rgb(255, 255, 255);
+}
+
+html,
+body {
+    background-color: var(--bg-color);
+    color: white;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+p,
+li {
+    font-size: 110%;
+}
+
+a.btn {
+    background-color: var(--bg-color2);
+    color: white;
+}
+
+
+/* Navigation Styles */
+
+.navbarlogo {
+    color: white;
+}
+
+.navbar-heading a button {
+    color: white;
+}
+
+div.navbarMain div.navbar-dropdown {
+    background-color: rgb(121, 118, 156);
+}
+
+div.navbarMain div.navbar-dropdown button:hover {
+    background-color: var(--text-color);
+}
+
+div.navbarMain div.navbar-heading button {
+    text-shadow: 0 0.2vh 0.6vh rgba(16, 16, 230, 0.3), 0 -0.2vh 0.6vh rgba(6, 102, 236, 0.3), 0.3vh 0 0.6vh rgba(0, 98, 255, 0.3), -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
+}
+
+div.navbarMain div.navbar-heading button:hover {
+    color: var(--text-color2) !important;
+    text-decoration: none;
+    animation: hovering 0.2s linear !important;
+    text-shadow: 0 0.6vh 1vh rgba(6, 105, 218, 0.8), 0 -0.6vh 1vh rgba(33, 25, 173, 0.8), 0.4vh 0 1vh rgba(21, 87, 208, 0.8), -0.4vh 0 1vh rgba(255, 202, 103, 0.8);
+}
+
+span.showNav {
+    animation: colorLetters 0.75s linear !important;
+}
+/* Layout Components */
+.kewa {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.kepan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 500px;
+    margin-top: 5rem;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.container div .title {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.container div .mechanism {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.container img {
+    height: 100%;
+    aspect-ratio: 9/16;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Registration Styles */
+.regis {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+button {
+    background-color: var(--text-color2);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: color-mix(in srgb, var(--text-color2) 80%, white);
+}
+
+.status {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.status.success {
+    color: var(--text-color);
+}
+
+.status.error {
+    color: var(--bg-color2);
+}
+
+/* Waves Footer */
+.waves-footer {
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+/* Animations */
+@keyframes colorLetters {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+    25% {
+        color: rgb(232, 210, 149);
+        text-shadow: 0 0.05vh 0.5vh rgb(254, 255, 177), 0 -0.4vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    }
+    50% {
+        color: rgb(233, 184, 128);
+        text-shadow: 0 0.3vh 0.5vh rgb(254, 255, 177), 0 -0.3vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    }
+    75% {
+        color: rgb(232, 210, 149);
+        text-shadow: 0 0.4vh 0.5vh rgb(254, 255, 177), 0 -0.05vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    }
+    100% {
+        color: white;
+        text-shadow: none;
+    }
+}
+
+@keyframes hovering {
+    0% { color: white; }
+    100% { color: var(--text-color2); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    p, li {
+        font-size: 100%;
+    }
+}
+
+/* Utility Classes */
+.hidden {
+    transform: translateY(100%);
+    filter: blur(10px);
+}
+
+.show {
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
