@@ -13,7 +13,7 @@ href="{{ url_for('static', filename='valiance/css/e_atheria.css') }}"
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}",
                 title: "LCC Bahasa",
-                link: "/L_LCC"
+                link: "/Valiance/Events/Atheria/L_LCC"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_debate_inggris.png') }}",
@@ -43,15 +43,9 @@ href="{{ url_for('static', filename='valiance/css/e_atheria.css') }}"
                 container.innerHTML = `
                     <img id="poster" src="${comp.image}" alt="${comp.title}">
                     <div class="cta-link">
-                        <a href="#" class="link-cta">Register ${comp.title}</a>
+                        <a href="${comp.link}" class="link-cta">Register ${comp.title}</a>
                     </div>
                 `;
-
-                const registerLink = container.querySelector('.link-cta');
-                registerLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default anchor behavior
-                    setLomba(comp.link); // Call setLomba function
-                });
 
                 posterContainer.appendChild(container);
             });
