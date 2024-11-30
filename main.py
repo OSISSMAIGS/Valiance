@@ -25,6 +25,14 @@ def e_euphony():
 def e_kandela():
     return render_template("valiance/e_kandela.html")
 
+@app.route("/Valiance/Events/Atheria")
+def e_atheria():
+    return render_template("valiance/e_atheria.html")
+
+#LOMBA - ATHERIA
+@app.route("/Valiance/Events/Atheria/L_LCC")
+def l_lcc():
+    return render_template("valiance/lomba_atheria/l_lcc.html")
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():

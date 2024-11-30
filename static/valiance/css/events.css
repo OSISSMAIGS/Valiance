@@ -81,6 +81,12 @@ img#kandela:hover {
     animation: kandela-hover 0.5s linear;
 }
 
+img#atheria:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(217, 0, 255);
+    animation: atheria-hover 0.5s linear;
+}
+
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -102,6 +108,18 @@ img#kandela:hover {
     100% {
         scale: 1.02;
         box-shadow: 0px 0px 25px rgb(69, 181, 79);
+    }
+}
+
+@keyframes atheria-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px rgb(2, 204, 219);
     }
 }
 
