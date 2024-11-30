@@ -49,6 +49,9 @@ a.btn {
     color: white;
 }
 
+.navbar-heading a {
+    text-decoration: none;
+}
 .navbar-heading a button {
     color: white;
 }
@@ -173,9 +176,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: color-mix(in srgb, var(--text-color2) 80%, white);
-}
 
 .status {
     margin-top: 1rem;
@@ -230,7 +230,6 @@ button:hover {
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        margin-top: 2rem;
     }
 
     .form-container {
