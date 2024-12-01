@@ -33,6 +33,9 @@ def e_atheria():
 @app.route("/Valiance/Events/Atheria/LCC")
 def l_lcc():
     return render_template("valiance/lomba_atheria/l_lcc.html")
+@app.route("/Valiance/Events/Atheria/Family_100")
+def l_family100():
+    return render_template("valiance/lomba_atheria/l_family100.html")
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():
