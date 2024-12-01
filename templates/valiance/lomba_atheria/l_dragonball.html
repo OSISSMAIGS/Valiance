@@ -6,7 +6,7 @@
 
 	<script>
 	    document.addEventListener("DOMContentLoaded", () => {
-	        const scriptURL = 'https://script.google.com/macros/s/AKfycbzI9WxP1NZjKL5b0eTVtUbXVuOK7ed-nirlO9Dc1PX2Dvbd2CjInjNXHQdZLl1_VL2m/exec';
+	        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRyDnESEOyc5hZh66Cs_QNZ6WlYco32rvKam1zB6I9aOSd5BUBfDQqqeAp2dPGAodP/exec';
 	        const form = document.getElementById("dynamicForm");
 	        const formStatus = document.getElementById("formStatus");
 	        const popupOverlay = document.getElementById("popupOverlay");
@@ -108,9 +108,26 @@
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama">Nama:</label>
-	            <input type="text" id="nama" name="nama" required>
-	        </div>
+				<label for="nama-kapten">Nama Kapten:</label>
+				<input type="text" id="nama-kapten" name="nama-kapten" required>
+			</div>
+
+			<div class="form-group">
+				<label for="nama-anggota-1">Nama Anggota 1:</label>
+				<input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
+			</div>
+			<div class="form-group">
+				<label for="nama-anggota-2">Nama Anggota 2:</label>
+				<input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
+			</div>
+			<div class="form-group">
+				<label for="nama-anggota-3">Nama Anggota 3:</label>
+				<input type="text" id="nama-anggota-3" name="nama-anggota-3" required>
+			</div>
+			<div class="form-group">
+				<label for="nama-anggota-4">Nama Anggota 4:</label>
+				<input type="text" id="nama-anggota-4" name="nama-anggota-4" required>
+			</div>
 
 	        <!-- Input Kelas -->
 	        <div class="form-group">
@@ -125,7 +142,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="36">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
