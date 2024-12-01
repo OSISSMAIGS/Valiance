@@ -3,17 +3,17 @@
 :root {
     /* Primary colors */
     --bg: #5539cf;
-    --bg-color: rgb(173, 70, 92);
-    --bg-color2: #da595d;
+    --bg-color: rgb(57, 109, 117);
+    --bg-color2: rgb(57, 109, 117);
     --text-color: rgb(250, 150, 200);
     --text-color-darker: rgb(196, 122, 159);
     --text-color2: rgb(57, 145, 209);
     --overlay-bg: rgba(245, 205, 117, 0.605);
     --accent-color: white;
-    --nav-bg: #45b54f;
-    --nav-bg-darker: #3fa247;
+    --nav-bg: rgb(248, 211, 67);
+    --nav-bg-darker: rgb(215, 184, 59);
     --dropdown-bg: rgb(220, 89, 48);
-    --splash-bg: #45b54f;
+    --splash-bg: rgb(215, 184, 59);
   }
   
   /* Reset and Base Styles */
@@ -318,7 +318,7 @@
 }
 
 .image-container .cta-link {
-    background-color: #ff0000;
+    background-color: var(--nav-bg);
     border-radius: 1.25rem;
     padding: 0.625rem 1rem;
     margin: 1rem 0;
@@ -327,7 +327,7 @@
 
 .image-container .cta-link a {
     text-decoration: none;
-    color: white;
+    color: var(--bg-color);
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -394,6 +394,10 @@ h2 {
     background-color: var(--bg-color);
   }
   
+  footer {
+    background: var(--nav-bg);
+  }
+
   /* Second Content Section */
   
   section.second-content {
