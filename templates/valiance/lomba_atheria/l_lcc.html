@@ -5,31 +5,29 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba.css') }}">
 
 	<script>
-		// URL Google Script untuk menyimpan data ke Google Sheets
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbxvQnlq8vDdoqhU56GYaSiKFRHp67M7TC16_DWqaisJ910FgHyabrQaUplqJF1MM-wM/exec';
-
-		// Event listener untuk form submission
-		document.addEventListener("DOMContentLoaded", () => {
+	    document.addEventListener("DOMContentLoaded", () => {
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbzRQA44UV_L0PkV0j8VEP6rEiFJCli-qy6HTxVI2pRI3EnO8_L8P1SbAi_c-usBRYrP/exec';
 			const form = document.getElementById("dynamicForm");
-
+			const formStatus = document.getElementById("formStatus");
+			const popupOverlay = document.getElementById("popupOverlay");
+	
 			form.addEventListener("submit", e => {
-				e.preventDefault(); // Mencegah refresh halaman
-				const formStatus = document.getElementById("formStatus");
+				e.preventDefault(); // Mencegah reload halaman
 				formStatus.textContent = "Mengirim data...";
 				formStatus.className = "status";
-
+	
 				const formData = new FormData(form);
-				formData.append("formType", "Lomba LCC"); // Nama sheet tujuan
-
-				// Mengirim data ke Google Script
+				formData.append("formType", "Lomba LCC"); // Nama sheet
+	
 				fetch(scriptURL, { method: "POST", body: formData })
 					.then(response => {
-						formStatus.textContent = "";
-						formStatus.className = "status";
-						form.reset();
-
-						// Tampilkan popup
-						document.getElementById("popupOverlay").style.display = "block";
+						if (response.ok) {
+							formStatus.textContent = "";
+							form.reset();
+							popupOverlay.style.display = "block"; // Tampilkan popup
+						} else {
+							throw new Error("Gagal mengirim data.");
+						}
 					})
 					.catch(error => {
 						formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
@@ -38,8 +36,7 @@
 					});
 			});
 		});
-
-		// Fungsi untuk menutup popup
+	
 		function closePopup() {
 			document.getElementById("popupOverlay").style.display = "none";
 		}
@@ -127,7 +124,7 @@
 	        <!-- Input Kelas -->
 	        <div class="form-group">
 	            <label for="kelas">Kelas:</label>
-	            <input type="text" id="idline" name="idline" required>
+	            <input type="text" id="kelas" name="kelas" required>
 	        </div>
 
 	        <!-- Input ID Line -->
