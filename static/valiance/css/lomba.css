@@ -12,6 +12,7 @@
   --overlay-bg: rgba(245, 205, 117, 0.605);
   --accent-color: white;
   --nav-bg: rgb(248, 211, 67);
+  --nav-bg-darker: rgb(204, 174, 55);
   --dropdown-bg: rgb(220, 89, 48);
   --splash-bg: rgb(215, 184, 59);
 }
@@ -49,7 +50,7 @@ a.btn {
 }
 
 .navbarMain a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-heading a {
@@ -86,16 +87,67 @@ div.navbarMain i#nav-menu-icon,
 div.navbarMain div.navbar-dropdown button,
 div.navbarMain h1,
 div.navbarMain div.navbar-heading button {
-    color: white;
+  color: white;
 }
 
 div.navbarMain div.navbar-dropdown {
-    background-color: var(--nav-bg);
+  background-color: var(--nav-bg);
 }
 
 span.showNav {
   animation: colorLetters 0.75s linear !important;
 }
+
+/* List Card */
+section.content {
+  margin-top: 50px;
+}
+
+section.content .lists {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+section.content a {
+  text-decoration: none;
+}
+
+section.content .list {
+  width: 200px;
+  height: 200px;
+  background-color: var(--nav-bg);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+section.content .list:hover {
+  animation: box-hover 0.5s linear, box-size 0.3s linear;
+  scale: 1.05;
+  background-color: var(--nav-bg-darker);
+}
+
+section.content .list i {
+  font-size: 50pt;
+  color: var(--text-color);
+}
+
+section.content .list p {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
 /* Layout Components */
 .kewa {
   display: flex;
@@ -119,7 +171,6 @@ span.showNav {
   padding: 0 1rem;
   gap: 2rem;
 }
-
 
 .container div .title {
   text-align: center;

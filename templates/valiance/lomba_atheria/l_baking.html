@@ -6,7 +6,7 @@
 
 	<script>
 	    document.addEventListener("DOMContentLoaded", () => {
-	        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGlflizNiFD2hdxSKl-y9wO8NMqtMyjDzsENo4v8dIaYpj18DW3lYmwYUfrujNkzQ/exec';
+	        const scriptURL = 'https://script.google.com/macros/s/AKfycbzI9WxP1NZjKL5b0eTVtUbXVuOK7ed-nirlO9Dc1PX2Dvbd2CjInjNXHQdZLl1_VL2m/exec';
 	        const form = document.getElementById("dynamicForm");
 	        const formStatus = document.getElementById("formStatus");
 	        const popupOverlay = document.getElementById("popupOverlay");
@@ -77,45 +77,25 @@
 					
 	<!-- Registration -->
 	<h2 class="regis">Registration</h2>
-	<div class="form-container">
-	   
-	    <form id="dynamicForm" onsubmit="return false;">
-	        <!-- Input Nama -->
-	        <div class="form-group">
-	            <label for="nama">Nama:</label>
-	            <input type="text" id="nama" name="nama" required>
-	        </div>
+	<section class="content">
+			<div class="performance">
+				<div class="lists">
+					<a href="{{ url_for('l_baking_party') }}">
+						<div class="list hidden">
+							<i class='bx bx-party'></i>
+								<p>Party Pack</p>
+						</div>
+					</a>
+						<a href="{{ url_for('l_baking_fun') }}">
+							<div class="list hidden">
+								<i class='bx bx-wink-smile' ></i>
+								<p>Fun Pack</p>
+							</div>
+						</a>
+			</div>
+			</div>
+	</section>
 
-	        <!-- Input Kelas -->
-	        <div class="form-group">
-	            <label for="kelas">Kelas:</label>
-	            <input type="text" id="kelas" name="kelas" required>
-	        </div>
-
-	        <!-- Input ID Line -->
-	        <div class="form-group">
-	            <label for="idline">ID Line:</label>
-	            <input type="text" id="idline" name="idline" required>
-	        </div>
-
-			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
-
-	        <!-- Tombol Submit -->
-	        <button type="submit">Kirim</button>
-	    </form>
-	    <div class="status" id="formStatus"></div>
-	</div>
-
-	<!-- Popup Overlay -->
-	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
-	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
-	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/ti/g/HFkF7X3YpL" target="_blank">Klik di sini untuk join grup Line</a>
-	        <br><br>
-	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
-	    </div>
-	</div>
 
 	<svg
 	    class="waves-footer"
