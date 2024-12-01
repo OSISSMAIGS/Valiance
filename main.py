@@ -69,6 +69,12 @@ def l_classwar():
 @app.route("/Valiance/Events/Atheria/Workshop_Baking")
 def l_baking():
     return render_template("valiance/lomba_atheria/l_baking.html")
+@app.route("/Valiance/Events/Atheria/Workshop_Baking_Fun_Pack")
+def l_baking_fun():
+    return render_template("valiance/lomba_atheria/l_baking_fun.html")
+@app.route("/Valiance/Events/Atheria/Workshop_Baking_Party_Pack")
+def l_baking_party():
+    return render_template("valiance/lomba_atheria/l_baking_party.html")
 @app.route("/Valiance/Events/Atheria/Nyanyi")
 def l_nyanyi():
     return render_template("valiance/lomba_atheria/l_nyanyi.html")
