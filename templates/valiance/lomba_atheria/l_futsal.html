@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Lomba Futsal"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,7 +47,7 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Lomba Futsal{% endblock title %}
 
 {% block main %}
 
@@ -56,25 +56,43 @@
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Futsal</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>Setiap tim terdiri dari 5 pemain utama (termasuk kiper) dan 1 pemain cadangan.
+                <br>
+                Setiap tim wajib hadir 10 Menit sebelum pertandingan berlangsung untuk melakukan persiapan.
+                <br>
+                Durasi untuk setiap pertandingan adalah 15 Menit (7x2)
+                <br>
+                Setelah 7 menit kedua tim akan bertukar sisi pertandingan dan beristirahat selama 1 menit.
+                <br>
+                Bagi pertukaran pemain harus memberitahu wasit terlebih dahulu.
+                <br>
+                Bagi pemain yang melakukan pelanggaran akan diberikan sanksi berupa kartu
+                <br>
+                Kartu kuning ( peringatan ) kartu merah ( pemain dikeluarkan dari pertandingan )
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Pelanggaran</h4>
+			        <p>Kekerasan terhadap tim lawan
+                <br>
+                Kecurangan dalam bentuk apapun
+                <br>
+                Pemain selain kiper yang menyentuh bola dengan tangan
+                <br>
+                Berkata kasar/kotor
+                <br>
+                Melakukan keributan/ kegaduhan di dalam pertandingan
+                <br>
+                Kartu kuning : pelanggaran tidak sengaja 1x.
+                <br>
+                Kartu merah : pelanggaran tidak sengaja 2x atau pelanggaran sengaja 1x.
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/futsal.png') }}"
+			alt="Lomba Futsal"
 		></img>
 	</div>
 
@@ -138,7 +156,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="16">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>

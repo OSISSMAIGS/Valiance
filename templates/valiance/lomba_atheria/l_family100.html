@@ -6,7 +6,7 @@
 
 	<script>
 	    document.addEventListener("DOMContentLoaded", () => {
-	        const scriptURL = 'https://script.google.com/macros/s/AKfycbwgU_N5QPxA8QcxRs2w_aTk869fmCYfyzQFYnfsLiU5z-QZ4Ns9xIwWkRHXaEuUMIgB/exec';
+	        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGlflizNiFD2hdxSKl-y9wO8NMqtMyjDzsENo4v8dIaYpj18DW3lYmwYUfrujNkzQ/exec';
 	        const form = document.getElementById("dynamicForm");
 	        const formStatus = document.getElementById("formStatus");
 	        const popupOverlay = document.getElementById("popupOverlay");
@@ -59,22 +59,37 @@
 		<h1 class="title">Family 100</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>Lomba Family 100 akan dilaksanakan dalam 3 ronde eliminasi dan ronde final yang akan dilaksanakan dengan cara berikut:
+								<br>
+								a. Ronde eliminasi:
+								<br>
+								Match akan berlangsung dengan sistem 1vs1 dimana kelas yang memenangkan match akan lanjut ke ronde eliminasi selanjutnya. Ronde eliminasi kedua akan dilaksanakan dengan menggunakan sistem yang sama. Untuk ronde eliminasi ketiga, akan dipergunakan sistem poin, dimana kelas tetap 1vs1, akan tetapi yang kalah pada satu match belum tentu gugur. Setelah eliminasi ketiga berakhir, poin akan diakumulasikan dan diurutkan berdasarkan poin terbanyak. 4 kelas dengan poin tertinggi akan melanjutkan pertandingan ke babak final
+								<br>
+								b. Ronde final:
+								<br>
+								Kelas dengan urutan pertama dan kedua akan berlawanan memperebutkan juara 1 dan 2, sementara  kelas dengan urutan ketiga dan keempat akan berlawanan untuk memperebutjan juara ketiga. Untuk ronde final ini, cara bermain akan mengalami sedikit perubahan (yang akan dijelaskan pada bagian “cara bermain” yang akan dilampirkan di bagian selanjutnya).
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Cara Bermain</h4>
+			        <p>a. Ronde eliminasi:
+								<br>
+								-Leader dari masing masing team menuju buzzer. Akan diberikan pertanyaan dimana kedua team leader harus memperebutkan posisi survey tertinggi. Bagi team yang berhasil memperebutkan hasil survey yang lebih tinggi berhak memilih apakah teamnya akan menjalankan permainan atau akan melemparnya ke tim lawan.
+								-Anggota tim yang menjalankan permainan akan menjawab pertanyaan dengan bergiliran dengan maksimal 3 jawaban yang tidak ada di survey. Apabila tim telah mencapai batas maksimal kesalahan ini dan tim belum menghabiskan seluruh survey yang ada, tim lawan mendapat berkesempatan untuk memberikan satu jawaban dimana jawaban akan dikunci oleh leader team lawan.
+								-Apabila jawaban tim lawan termasuk dalam survey, maka seluruh poin yang didapat dari pertanyaan ini akan diberikan kepada tim lawan, kebalikannya apabila jawaban tim lawan tidak ada disurvey, maka seluruh poin akan menjadi milik tim yang semulanya menjawab survey lainnya.
+								<br>
+								b. Ronde final:
+								<br>
+								-Untuk mempermudah penjelasan, anggap satu tim bernama tim A, tim lainnya bernama tim B
+								-Satu anggota dari masing masing tim akan menjawab 5 pertanyaan dalam kurun waktu 15 detik.
+								-Permainan akan dilakukan bergiliran, saat perwakilan tim A bermain, tim B akan mendengarkan musik dan menghadap ke dinding.
+								-Setelah tim A menyelesaikan 5 pertanyaan, akan dilaksanakan pengecekan survey dan poin akan ter-reveal.
+								-Kemudian tim B akan melaksanakan permainan, tim A mendengarkan musik dan menghadap kedinding.
+								-Setelah bermain, score tim B akan ter-reveal kembali dan pemenang akan dipilih berdasarkan poin tertinggi antara tim A dan tim B.
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/family_100.jpg') }}"
+			alt="Family 100"
 		></img>
 	</div>
 
@@ -150,7 +165,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/ti/g/BfKyTtABCp" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>

@@ -121,6 +121,8 @@ span.showNav {
 
 .container img {
     height: 100%;
+    max-width: 261px;
+    max-height: 464px;
     aspect-ratio: 9/16;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);

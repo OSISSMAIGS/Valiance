@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Lomba Mobile Legends"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,7 +47,7 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Lomba Mobile Legends{% endblock title %}
 
 {% block main %}
 
@@ -56,25 +56,54 @@
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Mobile Legends</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>
+                Lomba ML terdiri dari 5 babak (Penyisihan 1-2, semifinal (masing - masing batch) dan final) 
+                <br>
+                Setiap tim boleh mengirimkan 1 orang cadangan (saat perlombaan hanya tim inti yang boleh memasuki ruangan) 
+                <br>
+                Pemain yang mencapai final akan dipindahkan ke lobby, permainan akan dibuka untuk para penonton di lobby
+                <br>
+                Akan ada jeda 5 menit setiap babak selesai (satu babak max 30 menit, jika lebih dari 30 menit, yang turretnya paling banyak hancur, (alternatif jika turret sama jumlahnya, gold dan kill) harus surrend)
+                <br>
+                Pada lomba ini, panitia akan membuat room lalu panitia menginvite kapten kedua tim dan menjadi spectator pada match tersebut (akan diberi 5 menit sebelum match dimulai untuk mengurus room) 
+                <br>
+                Setiap tim boleh menyiapkan nama tim masing"
+                <br>
+                Penyisihan akan dimainkan BO1 sedangkan semifinal dan final akan dimainkan BO3 
+                <br>
+                Akan diambil 2 pemenang yang ditentukan pada babak final 
+                <br>
+                Pemilihan braket akan didasarkan spin wheel saat TM
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>Pemain diharapkan hadir 10 menit sebelum lomba dimulai, jika diabsen 3x tidak menjawab tim dianggap diskualifikasi dan tim lawannya dianggap menang pada babak tersebut. 
+                <br>
+                Tim beranggotakan 5 orang pemain inti (1 kapten) dan 1 pemain cadangan
+                <br>
+                Maksimal hanya 16 tim yang boleh mengikuti lomba ML (siapa cepat dia dapat & 1 kelas 1 tim (semua anggota tim wajib dari kelas yang sama))
+                <br>
+                Dilarang chat menggunakan chat all
+                <br>
+                Dilarang adanya kecurangan (menggunakan cheats, melirik hp lawan)
+                <br>
+                Perlengkapan lomba (Hp, headphone,dll) diharapkan untuk peserta membawa sendiri
+                <br>
+                Dilarang menggunakan nama tim yang tidak sepantasnya
+                <br>
+                Dilarang taunting berlebihan (jika melanggar maka akan di peringatkan oleh panitia jika sudah diingatkan lebih dari 2x dan masi melanggar makan akan di diskusikan)
+                <br>
+                Para pemain yang sudah selesai bermain diharapkan langsung keluar ruangan
+                <br>
+                Jika ada masalah selain koneksi pada game, dipersilahkan chat all "p" untuk mengpause permainan dengan alasan yang dapat diterima
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/mobile_legends.jpg') }}"
+			alt="Lomba Mobile Legends"
 		></img>
 	</div>
 
@@ -138,7 +167,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="16">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -150,7 +179,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/R/ti/g/zPxnsVN-6K" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>

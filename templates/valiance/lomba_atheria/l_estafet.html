@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Lomba Estafet Balon Seragam"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,7 +47,7 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Lomba Estafet Balon Seragam{% endblock title %}
 
 {% block main %}
 
@@ -56,25 +56,50 @@
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Estafet Balon Seragam</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>
+                Setiap kelompok wajib membawa seragam masing-masing sesuai aturan (jas, baju, celana/rok, dasi).
+                <br>
+                Balon untuk setiap tim diletakkan di tumpukan seragam pemain pertama.
+                <br>
+                Setiap tim terdiri dari 4 orang perwakilan kelas. Panitia akan membagi posisi pemain sesuai giliran estafet.
+                <br>
+                Permainan dimulai dengan aba-aba dari panitia.
+                <br>
+                Pemain pertama akan mengambil balon dari tumpukan seragamnya, lalu mencoba mengenakan seragam sambil memastikan balon selalu berada di udara dengan melemparnya keatas tanpa balon menyentuh lantai
+                <br>
+                Setelah selesai mengenakan seragam, pemain pertama harus menyerahkan balon kepada pemain berikutnya dengan tetap melempar balon ke udara tanpa terjatuh
+                <br>
+                Pemain berikutnya berlari ke area seragam masing-masing sambil menjaga balon agar tidka jatuh yang diberikan oleh pemain sebelumnya.
+                <br>
+                Jika balon pecah, tim harus mengambil balon pengganti di garis start dengan penalti waktu 10 detik.
+                <br>
+                Tim dinyatakan menang jika seluruh anggota telah menyelesaikan estafet dengan seragam lengkap, balon tetap utuh, dan mencapai garis finish tercepat.
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>Setiap kelas wajib mengirim perwakilan pemain sebanyak 4 orang
+                <br>
+                Setiap pemain wajib membawa seragam sekolah hari senin
+                <br>
+                Pemain dilarang memakai seragam (jas, baju, celana/rok, dasi) sebelum lomba dimulai
+                <br>
+                Dasi tidak boleh dibentuk sebelum lomba dimulai
+                <br>
+                Pemain diperbolehkan memakai celana pendek dibawah lutut
+                <br>
+                Pemain diharapkan hadir tepat waktu 10 menit sebelum lomba dimulai
+                <br>
+                Pemain tidak diperbolehkan meninggalkan area permainan, jika lewat 3x pemanggilan maka kelompok tersebut akan langsung didiskualifikasi
+                <br>
+                Kelompok yang mengganggu kelompok lain akan langsung didiskualifikasi
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/estafet_balon.jpg') }}"
+			alt="Lomba Estafet Balon Seragam"
 		></img>
 	</div>
 
@@ -138,7 +163,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -150,7 +175,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/R/ti/g/_kcqWUTMp3" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>

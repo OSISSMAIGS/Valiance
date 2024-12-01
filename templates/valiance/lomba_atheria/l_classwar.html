@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Classwar"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,34 +47,46 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Classwar{% endblock title %}
 
 {% block main %}
 
-	<!-- EKANISME DAN POSTER -->
+	<!-- MEKANISME DAN POSTER -->
 
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Classwar</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>Pertandingan akan dibagi menjadi 3 ronde. Akan ada tema permainan yang berbeda di tiap rondenya. 
+                <br>
+                Pada ronde pertama, panitia akan memberikan total 30 soal yang terdiri dari 20 soal matematika dan 10 soal pengetahuan umum. Peserta hanya diberikan waktu 30 menit pada babak ini, dan peserta yang mengumpulkan jawaban secara cepat akan mendapatkan poin tambahan. 8 orang dengan poin tertinggi akan lanjut ke ronde selanjutnya.
+                <br>
+                Pada ronde kedua, panitia akan menampilkan grocery list pada layar proyektor. Pada babak ini, pertandingan bersifat 4 vs 4 yang mana peserta akan dibagi menjadi dua tim. Akan ada total 50 list barang dan harga yang harus dihafal oleh perserta dan waktu yang diberikan untuk menghafal hanya 15 menit. Panitia akan memberikan 30 soal pada babak ini. Tim dengan poin tertinggi akan masuk ke ronde terakhir.
+                <br>
+                Di ronde ketiga, peserta akan dibagi menjadi 2 sesi yaitu head to head dan memainkan TIC TAC TOE serta mengerjakan soal secara cepat - cepatan dengan menekan bel. Penentu pemenang juara 1, 2 & 3 akan dilakukan melalui poin tertinggi.
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>Setiap kelas wajib mengirimkan 1 orang sebagai perwakilan.
+                <br>
+                Peserta wajib mendaftar melalui website osis dan masuk ke grup lomba classwar.
+                <br>
+                Peserta diharapkan sudah hadir di ruangan 10 menit sebelum lomba dimulai.
+                <br>
+                Peserta tidak diperbolehkan menggunakan alat bantu apapun, seperti kalkulator, smartphone, atau perangkat elektronik lainnya selama lomba sedang berlangsung.
+                <br>
+                Peserta diharapkan untuk menjaga suasana tetap kondusif dan tidak membuat keributan selama lomba sedang berlangsung.
+                <br>
+                Segala bentuk kecurangan tidak akan ditoleransi.
+                <br>
+                Keputusan juri bersifat final dan tidak dapat diganggu gugat.
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/classwar.jpg') }}"
+			alt="Classwar"
 		></img>
 	</div>
 
@@ -138,7 +150,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -150,7 +162,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/ti/g/hVbEUP6h63" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>

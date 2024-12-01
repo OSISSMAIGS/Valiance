@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Lomba Estafet Dragonball"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,34 +47,56 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Lomba Estafet Dragon Ball{% endblock title %}
 
 {% block main %}
 
-	<!-- EKANISME DAN POSTER -->
+	<!-- MEKANISME DAN POSTER -->
 
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Estafet Dragon Ball</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>Lomba akan dimainkan oleh 1 Tim yang terdiri atas 5 peserta. 
+                <br>
+                Perlombaan akan menggunakan sistem bracket yang akan di spin wheel saat Technical Meeting dan terdapat 3 babak yaitu Penyisihan, Semi Final, dan Grand Final. 
+                <br>
+                Setiap kelompok yg terdiri dari 5 orang akan berbaris secara vertikal ke belakang.
+                <br>
+                Panitia akan menyediakan 1 baskom air dan 1 cup gelas untuk dipakai secara bergiliran, dan di titik selanjutnya terdapat 6 gelas kosong dimana gelas pertama berisi bola pingpong.
+                <br>
+                Peserta harus mengisi gelas dengan air hingga penuh lalu meniup bola pingpong hingga berpindah ke dalam gelas berikutnya.
+                <br>
+                Peserta akan berlomba untuk memindahkan bola hingga ke gelas kosong ke-6
+                <br>
+                Jika dengan 1 orang, gelas tersebut tidak terisi penuh dan tidak bisa meniup bola pingpong, maka akan dilanjutkan oleh orang ke 2 untuk memenuhi gelas tersebut.
+                <br>
+                Jika bola jatuh maka akan diulang dari gelas pertama. 
+                <br>
+                Kelompok yang terlebih dahulu memindahkan bola pingpong ke gelas ke 5 dengan air penuh adalah pemenangnya.
+                <br>
+                Babak Final untuk menentukan urutan juara 1 2 3.
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>Setiap kelas wajib mengirimkan 5 orang sebagai perwakilan untuk membentuk 1 team.
+                <br>
+                Peserta hanya diperbolehkan meniup bola tanpa menyentuh bola.
+                <br>
+                Peserta dilarang untuk membuang-buang air dengan sengaja. 
+                <br>
+                Peserta dilarang untuk mengganggu peserta lain yang sedang berlomba maupun penonton. 
+                <br>
+                Akan terdapat batas waktu setiap sesi nya 8-10 menit. 
+                <br>
+                Segala bentuk kecurangan akan di diskualifikasi.
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/dragonball.jpeg') }}"
+			alt="Lomba Estafet Dragonball"
 		></img>
 	</div>
 
@@ -138,7 +160,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -150,7 +172,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/R/ti/g/me45jJjwhp" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>

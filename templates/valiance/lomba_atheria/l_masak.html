@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Lomba Masak"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,7 +47,7 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Lomba Masak{% endblock title %}
 
 {% block main %}
 
@@ -56,25 +56,41 @@
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Masak</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>Tahap Persiapan: Peserta hadir di lokasi lomba sesuai jadwal sesi masing-masing (kelas 10, 11, atau 12). Panitia akan memberikan briefing singkat sebelum lomba dimulai.
+                <br>
+                Tahap Memasak: Setiap peserta diberi waktu 60 menit untuk memasak mie instan dengan kreasi topping mereka. Kreativitas rasa, plating, dan kebersihan menjadi fokus penilaian. Semua peserta diwajibkan untuk membersihkan meja dan kompor masing-masing sebelum melanjutkan ke sesi berikutnya. Jika peserta meninggalkan area memasak dalam keadaan kotor, hal ini akan mengurangi poin mereka sesuai dengan penilaian panitia. Kebersihan dan kerapian sangat dihargai sebagai bagian dari tanggung jawab peserta dalam lomba ini.
+                <br>
+                Kriteria Penilaian: Hidangan peserta dinilai oleh juri berdasarkan kriteria rasa (40%), kreativitas (30%), kebersihan dan kerapian (30%).
+                <br>
+                Pemenang: Akan dipilih Dua Pemenang. Semua keputusan juri dan panitia bersifat final dan tidak dapat diganggu gugat.
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>Peserta merupakan siswa kelas 10, 11, atau 12. Lomba dilaksanakan per sesi: 
+                <br>
+                Sesi 1 untuk kelas 10 (08.00 - 09.00 WIB)
+                Sesi 2 untuk kelas 11 (09.00 – 10.00 WIB)
+                Sesi 3 untuk kelas 12 (10.00 – 11.00 WIB)
+                <br>
+                Jika ada Kelas yang tidak bisa hadir, wajib izin langsung ke panitia melalui LINE: @imahz1209
+                <br>
+                Peserta bebas menentukan menu berbahan dasar mie instan dengan biaya tambahan maksimal Rp 10.000–15.000.
+                <br>
+                Peserta membawa alat masak dan bahan dari rumah, kecuali kompor dan gas yang disediakan panitia. Penggunaan mie instan sebagai bahan utama wajib, sedangkan topping bebas.
+                <br>
+                Penilaian didasarkan pada kreativitas rasa, plating, dan kebersihan. Peserta wajib menjaga kebersihan area lomba. Sampah harus dibuang sesuai arahan panitia.
+                <br>
+                Peserta tidak diperbolehkan bermain-main dengan alat masak atau api (teguran 1x -10 poin; jika mengulangi DISKUALIFIKASI).
+                <br>
+                Peserta tidak diperbolehkan Meninggalkan area lomba tanpa izin.
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/cooking.jpg') }}"
+			alt="Lomba Masak"
 		></img>
 	</div>
 
@@ -138,7 +154,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -150,7 +166,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/R/ti/g/aU3mCfANkG" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>

@@ -17,7 +17,7 @@
 	            formStatus.className = "status";
 
 	            const formData = new FormData(form);
-	            formData.append("formType", "Lomba LCC"); // Nama sheet
+	            formData.append("formType", "Lomba Catur"); // Nama sheet
 
 	            fetch(scriptURL, { method: "POST", body: formData })
 	                .then(response => response.json()) // Parse response JSON
@@ -47,34 +47,52 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba LCC{% endblock title %}
+{% block title %}Lomba Catur{% endblock title %}
 
 {% block main %}
 
-	<!-- EKANISME DAN POSTER -->
+	<!-- MEKANISME DAN POSTER -->
 
 	<div class="container">
 		<div>
 
-		<h1 class="title">LCC</h1>
+		<h1 class="title">Catur</h1>
 		<div class="mechanism">
 			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <p>Permainan catur cepat 10 menit
+                <br>
+                Menggunakan Sistem Swiss (Merupakan format turnamen tanpa eliminasi yang menampilkan jumlah putaran kompetisi yang tetap, dikarenakan itu pemain tidak akan gugur melainkan dilihat dari sistem poin)
+                <br>
+                Juara diambil dari point tertinggi
 			        </p>
-			        <h4 class="sub-title">Mekanisme</h4>
-			        <p>Diberikan 20 soal tipe integral tentu/tak tentu yang ditampilkan pada proyektor pada 2 modul (10-10) dan dapat dikerjakan pada kertas yang akan diberikan selama 15 menit (total 2 modul).
-			        	HANYA jawaban yang dikotak yang akan dikoreksi.
-			        	Diambil 8 peserta dengan nilai tertinggi.
-			        	Keputusan panitia tidak dapat diganggu gugat.
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>Ketika sudah memegang buah catur wajib dijalankan tidak boleh mejalankan buah lainnya. 
+                <br>
+                Jika sudah Menekan Jam Tidak Bisa Mengulang Langkah. 
+                <br>
+                Jam di jalankan ketika wasit sudah menyatakan pertandingan di mulai. 
+                <br>
+                Jika melakukan Ilegal Move Kena Sanksi Kartu Kuning. 2 kali Ilegal Move akan dinyatakan Kalah pada match tersebut.
+                <br>
+                Jam Error Di tengah permainan maka di beri waktu masing-masing 3 menit ( Jika Tidak ada saksi / Kesepakatan kedua belah pihak mengenai sisa waktu sebelum jam error ). 
+                <br>
+                Draw Di bawah 10 langkah maka kedua pemain di berikan nilai 0. 
+                <br>
+                3 kali berturut-turut langkah yang sama ( kedua belah pihak ) maka permainan di nyatakan Draw. 
+                <br>
+                Wasit berhak menyatakan Draw jika dinilai tidak ada pertukaran buah dan lain lain. 
+                <br>
+                Peserta Berhak Menolak Ajakan draw dari lawan jika waktu lawan sudah di bawah 20 detik. ( Dengan Kondisi buah minimal masih tersisa 1 pion atau 1 perwira ). 
+                <br>
+                Buah yang terjatuh wajib di betulkan kembali posisinya sebelum menekan jam. 
+                <br>
+                Keputusan wasit yang sudah di putuskan bersifat mutlak dan tidak dapat diganggu GUGAT
 			        </p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}"
-			alt="LCC"
+			src="{{ url_for('static', filename='valiance/img/atheria/catur.jpg') }}"
+			alt="Lomba Catur"
 		></img>
 	</div>
 
@@ -138,7 +156,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -150,7 +168,7 @@
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; color: white; text-align: center; padding-top: 20%;">
 	    <div style="background: white; color: black; padding: 20px; border-radius: 10px; display: inline-block;">
 	        <p>Silahkan join link grup Line ini:</p>
-	        <a href="https://line.me/link-to-group" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/R/ti/g/gyA_qVE5rH" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 	        <button onclick="closePopup()" style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer;">Tutup</button>
 	    </div>
