@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba.css') }}">
 
 	<script>
+		let enableSend = true;
 	    document.addEventListener("DOMContentLoaded", () => {
 	        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRyDnESEOyc5hZh66Cs_QNZ6WlYco32rvKam1zB6I9aOSd5BUBfDQqqeAp2dPGAodP/exec';
 	        const form = document.getElementById("dynamicForm");
@@ -12,10 +13,11 @@
 	        const popupOverlay = document.getElementById("popupOverlay");
 
 	        form.addEventListener("submit", e => {
+				if (enableSend){
 	            e.preventDefault(); // Prevent page reload
 	            formStatus.textContent = "Mengirim data...";
 	            formStatus.className = "status";
-
+				enableSend = false;
 	            const formData = new FormData(form);
 	            formData.append("formType", "Lomba LCC"); // Nama sheet
 
@@ -32,12 +34,15 @@
 	                    } else {
 	                        throw new Error(data.message || "Gagal mengirim data.");
 	                    }
+						enableSend = true;
 	                })
 	                .catch(error => {
 	                    formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
 	                    formStatus.className = "status error";
 	                    console.error("Error!", error.message);
+						enableSend = true;
 	                });
+				}
 	        });
 	    });
 
