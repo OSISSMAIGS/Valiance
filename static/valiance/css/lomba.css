@@ -266,7 +266,7 @@ button {
 }
 
 .status.error {
-  color: var(--bg-color2);
+  color: red;
 }
 
 /* Waves Footer */
