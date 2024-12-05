@@ -60,9 +60,9 @@ def l_badminton():
 @app.route("/Valiance/Events/Atheria/Estafet_DragonBall")
 def l_dragonball():
     return render_template("valiance/lomba_atheria/l_dragonball.html")
-@app.route("/Valiance/Events/Atheria/Cosplay")
-def l_cosplay():
-    return render_template("valiance/lomba_atheria/l_cosplay.html")
+# @app.route("/Valiance/Events/Atheria/Cosplay")
+# def l_cosplay():
+#     return render_template("valiance/lomba_atheria/l_cosplay.html")
 @app.route("/Valiance/Events/Atheria/Classwar")
 def l_classwar():
     return render_template("valiance/lomba_atheria/l_classwar.html")
