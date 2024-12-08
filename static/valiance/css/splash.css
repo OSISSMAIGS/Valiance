@@ -462,3 +462,11 @@ screen and (orientation:landscape)
 		opacity: 1;
 	}
 }
+
+div.navbarMain i#nav-menu-icon,
+div.navbarMain div.navbar-dropdown button,
+div.navbarMain h1,
+div#splash h1#splashtitle,
+div.navbarMain div.navbar-heading button {
+	color: var(--nav-headings);
+}

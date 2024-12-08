@@ -3,6 +3,7 @@
     --red: rgb(124, 28, 28);
     --orange: rgb(195, 92, 53);
     ---orange-hover: rgb(226, 111, 69);
+    --nav-headings: #ffb22d;
 }
 
 .text-shadow{
@@ -275,15 +276,4 @@ p.cabinet-description{
 }
 
 
-/* color text */
-div.navbarMain i#nav-menu-icon,
-div.navbarMain div.navbar-dropdown button,
-div.navbarMain h1,
-div#splash h1#splashtitle,
-div.navbarMain div.navbar-heading button {
-    color: #ffb22d;
-}
 
-div.navbarMain div.navbar-dropdown button:hover {
-    background-color: rgb(236, 155, 5);
-}

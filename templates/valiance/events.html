@@ -1,54 +1,56 @@
-{% extends "valiance/layout.html" %}
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/events.css') }}"
+/>
+{% endblock css_js %} {% block title %}Events{% endblock title %} {% block main
+%}
+<div class="event-wrap">
+  <h1 class="past" id="past">Our Events</h1>
 
-{% block css_js %}
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/events.css') }}">
-{% endblock css_js %}
+  <section class="event past">
+    <a href="{{ url_for('e_atheria') }}"
+      ><img
+        id="atheria"
+        src="{{ url_for('static', filename='valiance/img/banner/atheria_banner.jpg') }}"
+    /></a>
+    <a href="{{ url_for('e_kandela') }}"
+      ><img
+        id="kandela"
+        src="{{ url_for('static', filename='valiance/img/banner/kandela_banner.png') }}"
+    /></a>
+    <a href="{{ url_for('e_euphony') }}"
+      ><img
+        id="euphony"
+        src="{{ url_for('static', filename='valiance/img/banner/euphony_banner.jpg') }}"
+    /></a>
+  </section>
 
-{% block title %}Events{% endblock title %}
+  <svg
+    class="waves-footer"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+  >
+    <defs>
+      <filter id="waveShadow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+        <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+        <feFlood flood-color="white" flood-opacity="1" result="color" />
+        <feComposite in2="offsetBlur" operator="in" result="shadow" />
+        <feMerge>
+          <feMergeNode in="shadow" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
 
-{% block main %}
-	<div class="event-wrap">
-    <h1 class="past" id="past">Our Events</h1>
-
-	<section class="event past">
-		<a href="{{ url_for('e_kandela') }}"><img id="kandela" src="{{ url_for('static', filename='valiance/img/banner/kandela_banner.png') }}"></a>
-		<a href="{{ url_for('e_euphony') }}"><img id="euphony" src="{{ url_for('static', filename='valiance/img/banner/euphony_banner.jpg') }}"></a>
-	</section>
-
-	<svg
-            class="waves-footer"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-          >
-            <defs>
-              <filter
-                id="waveShadow"
-                x="-50%"
-                y="-50%"
-                width="200%"
-                height="200%"
-              >
-                <feGaussianBlur
-                  in="SourceAlpha"
-                  stdDeviation="10"
-                  result="blur"
-                />
-                <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-                <feFlood flood-color="white" flood-opacity="1" result="color" />
-                <feComposite in2="offsetBlur" operator="in" result="shadow" />
-                <feMerge>
-                  <feMergeNode in="shadow" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-
-            <path
-              filter="url(#waveShadow)"
-              fill="rgb(124, 28, 28)"
-              fill-opacity="1"
-              d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-            ></path>
-    </svg>
-  </div>
+    <path
+      filter="url(#waveShadow)"
+      fill="rgb(124, 28, 28)"
+      fill-opacity="1"
+      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+    ></path>
+  </svg>
+</div>
 {% endblock main %}
