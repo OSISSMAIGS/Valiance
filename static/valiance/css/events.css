@@ -83,7 +83,7 @@ img#kandela:hover {
 
 img#atheria:hover {
     scale: 1.02;
-    box-shadow: 0px 0px 25px rgb(57, 109, 117);
+    box-shadow: 0px 0px 25px rgb(5, 28, 131);
     animation: atheria-hover 0.5s linear;
 }
 
@@ -119,7 +119,7 @@ img#atheria:hover {
 
     100% {
         scale: 1.02;
-        box-shadow: 0px 0px 25px rgb(57, 109, 117);
+        box-shadow: 0px 0px 25px rgb(5, 28, 131);
     }
 }
 

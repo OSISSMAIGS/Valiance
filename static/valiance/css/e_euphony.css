@@ -9,6 +9,7 @@
     --text-color-darker: rgb(188, 146, 56);;
     --text-color2: rgb(57, 145, 209);
     /* UI colors */
+    --nav-headings: white;
     --overlay-bg: rgba(245, 205, 117, 0.605);
     --accent-color: white;
     --nav-bg: rgb(161, 157, 207);

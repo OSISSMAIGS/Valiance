@@ -27,9 +27,23 @@ main %}
         data-bs-slide-to="1"
         aria-label="Slide 2"
       ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a href="{{ url_for('e_atheria') }}"
+          ><img
+            src="{{ url_for('static', filename='valiance/img/banner/atheria_banner.jpg') }}"
+            class="d-block w-100"
+            alt="..."
+        /></a>
+      </div>
+      <div class="carousel-item">
         <a href="{{ url_for('e_kandela') }}"
           ><img
             src="{{ url_for('static', filename='valiance/img/banner/kandela_banner.png') }}"

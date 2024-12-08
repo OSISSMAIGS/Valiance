@@ -5,116 +5,6 @@
   href="{{ url_for('static', filename='valiance/css/e_atheria.css') }}"
 />
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const competitionData = {
-      wajib: [
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/classwar.jpg') }}",
-          title: "Classwar",
-          link: "/Valiance/Events/Atheria/Classwar",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/family_100.jpg') }}",
-          title: "Family 100",
-          link: "/Valiance/Events/Atheria/Family_100",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/cooking.jpg') }}",
-          title: "Lomba Masak",
-          link: "/Valiance/Events/Atheria/Masak",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/estafet_balon.jpg') }}",
-          title: "Lomba Estafet Balon Seragam",
-          link: "/Valiance/Events/Atheria/Estafet_Balon",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/dragonball.jpeg') }}",
-          title: "Lomba Estafet Dragon Ball",
-          link: "/Valiance/Events/Atheria/Estafet_DragonBall",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/catur.jpg') }}",
-          title: "Lomba Catur",
-          link: "/Valiance/Events/Atheria/Catur",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/poster-nyanyi.jpg') }}",
-          title: "Lomba Nyanyi",
-          link: "/Valiance/Events/Atheria/Nyanyi",
-        },
-        
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/creativity.jpg') }}",
-          title: "Lomba Creativity In Vidio",
-          link: "/Valiance/Events/Atheria/Creativity_in_Vidio",
-        },
-      ],
-      tidakWajib: [
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/futsal.png') }}",
-          title: "Lomba Futsal",
-          link: "/Valiance/Events/Atheria/Futsal",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/badminton.jpg') }}",
-          title: "Lomba Badminton",
-          link: "/Valiance/Events/Atheria/Badminton",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/mobile_legends.jpg') }}",
-          title: "Lomba Mobile Legends",
-          link: "/Valiance/Events/Atheria/Mobile_Legends",
-        },
-      ],
-      workshop: [
-        {
-          image: "{{ url_for('static', filename='valiance/img/atheria/workshop.jpeg') }}",
-          title: "Workshop Baking",
-          link: "/Valiance/Events/Atheria/Workshop_Baking",
-        },
-      ],
-    };
-
-    const renderPosters = (data, containerSelector) => {
-      const container = document.querySelector(containerSelector);
-      if (container) {
-        container.innerHTML = "";
-        data.forEach((comp) => {
-          const poster = document.createElement("div");
-          poster.className = "image-container hidden";
-
-          poster.innerHTML = `
-            <img id="poster" src="${comp.image}" alt="${comp.title}">
-            <div class="cta-link">
-              <a href="${comp.link}" class="link-cta">Register ${comp.title}</a>
-            </div>
-          `;
-
-          container.appendChild(poster);
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("show");
-            }
-          });
-        });
-
-        const hiddenElements = container.querySelectorAll(".hidden");
-        hiddenElements.forEach((el) => observer.observe(el));
-      }
-    };
-
-    renderPosters(competitionData.wajib, ".performance.wajib .gambar");
-    renderPosters(competitionData.tidakWajib, ".performance.tidak-wajib .gambar");
-    renderPosters(competitionData.workshop, ".performance.workshop .gambar");
-  });
-</script>
-
-
 {% endblock css_js %} {% block title %}Atheria{% endblock title %} {% block
 main%}
 <!-- Banner Section -->
@@ -126,30 +16,224 @@ main%}
   <section class="gradient-banner"></section>
 </section>
 
-<!-- Poster Wajib -->
-<section class="content second-content">
-  <div class="performance wajib">
-    <h1 class="hidden">Lomba Wajib</h1>
-    <div class="gambar"></div>
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Atheria</h1>
+  <p class="hidden">
+    Atheria adalah sebuah tema yang terinspirasi dari konsep aether/ether, yang
+    melambangkan sesuatu yang tak terbatas. Atheria menjadi simbol tempat di
+    mana setiap individu dapat berkompetisi dan berkreasi tanpa batas,
+    merepresentasikan semangat manusia untuk terus berkembang. Dalam suasana
+    yang penuh semangat, inovasi, kolaborasi, dan kebersamaan, Atheria mengajak
+    semua peserta untuk melampaui batasan, menggali potensi terbaik, dan
+    merayakan perjalanan menuju pencapaian yang luar biasa. Atheria adalah ruang
+    di mana mimpi menjadi nyata, dan batas hanya menjadi titik awal untuk
+    eksplorasi lebih jauh.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Michelle Angelieque Gunawan</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>Ayleah Erwin Tauflek</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Marcelia Angel Purba</p>
+    </div>
   </div>
 </section>
 
-<!-- Poster Tidak Wajib -->
-<section class="content second-content">
-  <div class="performance tidak-wajib">
-    <h1 class="hidden">Lomba Tidak Wajib</h1>
-    <div class="gambar"></div>
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Performances</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Performace Yusuf', 'bx bxs-music bx-tada', 'Untuk performance dari Yusuf membawakan lagu `Right Here Waiting For You - Richard Marx`, dimana dari lagu ini para siswa siswi dapat mengambil contoh dari makna lagu ini yang tidak putus asa walaupun banyak rintangan.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-music bx-tada"></i>
+        <p>Performace Yusuf</p>
+      </div>
+      <div
+        onclick="showDetail('Taekwondo', 'bx bxs-group bx-tada', 'Merupakan performance bela diri yang menampilakn kombinasi teknik dasar dan juga kekuatan khas taekwondo. Lalu performance ini para anggota club taekwondo dapat menunjukan keterampilan mereka dalam taekwondo.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-group bx-tada"></i>
+        <p>Taekwondo</p>
+      </div>
+      <div
+        onclick="showDetail('Band Euphorie', 'bx bxs-guitar-amp bx-tada', 'Pada performance Band Euphorie kali ini membawakan lagu `Melompat Lebih Tinggi - Sheila On 7`, dimana lagu ini memeliki nuasa yang semangat dan optimisme. Lalu lirik lagu ini dapat mengajak siswa siswa IGS untuk keluar dari zona nyaman dan mengejar mimpi tanpa rasa takut.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-guitar-amp bx-tada"></i>
+        <p>Band Euphorie</p>
+      </div>
+      <div
+        onclick="showDetail('Band Pentasonix', 'bx bx-headphone bx-tada', 'Untuk band pentasonix membawakan lagu `Blue - Yung Kai`, dimana lagu ini memiliki kebebasan dalam berekspresi seperti di dalam lirik yang dapat mengajak siswa siswi di IGS untuk menjadi lebih percaya diri dalam berekspresi.')"
+        class="list hidden"
+      >
+        <i class="bx bx-headphone bx-tada"></i>
+        <p>Band Pentasonix</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competition Section -->
+  <div class="performance">
+    <h1 class="hidden">Competition</h1>
+    <div class="lists">
+      <div
+        onclick='showDetail("Futsal", "bx bx-football bx-tada", "Merupakan kompetisi olahraga yang melibatkan dua tim, dengan masing - masing tim terdiri atas lima pemain dan beberapa pemain cadangan. Lomba ini mengasah kecepatan, skill para pemain, dan juga kerjasama tim.")'
+        class="list hidden"
+      >
+        <i class="bx bx-football bx-tada"></i>
+        <p>Futsal</p>
+      </div>
+      <div
+        onclick='showDetail("Badminton", "bx bxs-trophy bx-tada", "Merupakan kompetisi olahraga yang melibatkan dua tim dan untuk kompetisi ini akan melibatkan masing - masing tim tiga orang. Lomba ini bertujuan untuk mengasah kecepatan, ketangkasan, strategi dan stamina.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-trophy bx-tada"></i>
+        <p>Badminton</p>
+      </div>
+      <div
+        onclick='showDetail("Mobile Legends", "bx bxs-mouse-alt bx-tada", "Merupakan kompetisi e-sport yang akan mempertemukan tim - tim dan bertanding pada aplikasi mobile legends.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-mouse-alt bx-tada"></i>
+        <p>Mobile Legends</p>
+      </div>
+      <div
+        onclick='showDetail("Classwar", "bx bxs-brain bx-tada", "Meruapakan kompetisi dimana para siswa akan bertanding bersama satu sama lain dengan mengumpulkan poin dari berbagai pertanyaan yang telah diberikan.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-brain bx-tada"></i>
+        <p>Classwar</p>
+      </div>
+      <div
+        onclick='showDetail("Cosplay", "bx bxs-mask bx-tada", "Merupakan kompetisi berupa pajangan untuk menilai kostum dan kemampuan memerankan karakter yang dikenakan oleh peserta.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-mask bx-tada"></i>
+        <p>Cosplay</p>
+      </div>
+      <div
+        onclick='showDetail("Family 100", "bx bx-abacus bx-tada", "Merupakan kompetisi yang berinspirasi dari acara televisi `Family 100`. Dimana dua tim akan bersaing dengan cara menjawab berdasarkan survei masyarakat.")'
+        class="list hidden"
+      >
+        <i class="bx bx-abacus bx-tada"></i>
+        <p>Family 100</p>
+      </div>
+      <div
+        onclick='showDetail("Singing", "bx bxs-microphone bx-tada", "Merupakan kompetisi dimana para peserta dapat menunjukan bakat bernyanyi mereka.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-microphone bx-tada"></i>
+        <p>Singing</p>
+      </div>
+      <div
+        onclick='showDetail("Balon Seragam", "bx bxs-balloon bx-tada", "Merupakan kompetisi dimana para peserta akan bekerja sama untuk menggunakan bagian - bagian seragam dan menjaga agar balon tidak pecah.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-balloon bx-tada"></i>
+        <p>Balon Seragam</p>
+      </div>
+      <div
+        onclick='showDetail("Chess", "bx bxs-chess bx-tada", "Merupakan kompetisi dimana para peserta akan bermain catur. Dan dalam kompetisi ini para peserta akan saling beradu kecerdasan dan juga kontrasi.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-chess bx-tada"></i>
+        <p>Chess</p>
+      </div>
+      <div
+        onclick='showDetail("Creativity in Video", "bx bxs-photo-album bx-tada", "Merupakan kompetisi dimana para peserta akan membuat vlog dengan konsep yang menarik dan juga kemampuan editing yang unik.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-photo-album bx-tada"></i>
+        <p>Creativity in Video</p>
+      </div>
+      <div
+        onclick="showDetail('Cooking', 'bx bxs-bowl-hot bx-tada', 'Merupakan kompetisi dimana setiap tim akan memasak mie instan dengan budget paling maksimal Rp. 15.000. Dan setiap tim akan berkreasi.')"
+        class="list hidden small-detaail"
+      >
+        <i class="bx bxs-bowl-hot bx-tada"></i>
+        <p>Cooking</p>
+      </div>
+      <div
+        onclick="showDetail('Estafet Dragon Ball', 'bx bx-run bx-tada', 'Merupakan kompetisi dimana setiap tim yang beranggota lima orang, dan peserta akan mengisi cup dengan air sampai penuh lalu menuip bola pingpong ke dalam cup selanjutnya  hingga ke cup yang terahkir.')"
+        class="list hidden"
+      >
+        <i class="bx bx-run bx-tada"></i>
+        <p>Estafet Dragon Ball</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fun Activity Section -->
+
+  <div class="performance">
+    <h1 class="hidden">Fun Activities</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Guess The Spy', 'bx bxs-hide bx-tada', 'Merupakan fun activity dimana membutuhkan 5 anggota dengan 1 spy dan 4 orang biasa. Lalu panitia akan memberi kata - kata dimana 4 kata yang sama dan 1 yang berbeda, setelah itu para peserta akan memberikan ciri - ciri kata tersebut dan menebak siapa spy nya. Jika pemain salah menebak maka spy akan menang.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-hide bx-tada"></i>
+        <p>Guess The Spy</p>
+      </div>
+      <div
+        onclick="showDetail('Listen To The Instruction', 'bx bx-body bx-tada', 'Merupakan fun activity dimana akan ada dua peserta akan mengikuti instruksi panitia seperti `kepala pundak lutut kaki`. Pada awalnya instruksi akan lambat namun perlahan akan cepat, lalu panitia akan memberikan perintah `ambil bola` peserta yang mengambil duluan akan menang.')"
+        class="list hidden"
+      >
+        <i class="bx bx-body bx-tada"></i>
+        <p>Listen To The Instruction</p>
+      </div>
+      <div
+        onclick="showDetail('Workshop Sugar Cookies', 'bx bxs-cookie bx-tada', 'Pada fun activity kali ini collab bersama club baking. Dan para siswa akan berkreasi dengan icing sugar yang berakena warna.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-cookie bx-tada"></i>
+        <p>Workshop Sugar Cookies</p>
+      </div>
+      <div
+        onclick="showDetail('Boardgames', 'bx bxs-dice-6 bx-tada', 'Pada fun activity ini memerlukan sticker sebagai kupon untuk masuk lalu para peserta yang telah memberikan sticker dapat masuk dan bermain boardgames yanh tersedia')"
+        class="list hidden"
+      >
+        <i class="bx bxs-dice-6 bx-tada"></i>
+        <p>Boardgames</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Workshop -->
-<section class="content second-content">
-  <div class="performance workshop">
-    <h1 class="hidden">Workshop</h1>
-    <div class="gambar"></div>
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
   </div>
-</section>
-
+</div>
 
 <svg
   class="waves-footer"
@@ -157,7 +241,8 @@ main%}
   viewBox="0 0 1440 320"
 >
   <path
-    fill="rgb(248, 211, 67)"
+    filter="url(#waveShadow3)"
+    fill="rgb(81,32,170)"
     fill-opacity="1"
     d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
   ></path>
