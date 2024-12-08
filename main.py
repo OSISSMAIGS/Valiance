@@ -29,7 +29,7 @@ def e_kandela():
 def e_atheria():
     return render_template("valiance/e_atheria.html")
 
-#LOMBA - ATHERIA
+""" #LOMBA - ATHERIA
 @app.route("/Valiance/Events/Atheria/LCC")
 def l_lcc():
     return render_template("valiance/lomba_atheria/l_lcc.html")
@@ -77,7 +77,7 @@ def l_baking_party():
     return render_template("valiance/lomba_atheria/l_baking_party.html")
 @app.route("/Valiance/Events/Atheria/Nyanyi")
 def l_nyanyi():
-    return render_template("valiance/lomba_atheria/l_nyanyi.html")
+    return render_template("valiance/lomba_atheria/l_nyanyi.html") """
 
 # OTHERS
 @app.route("/Coming_Soon")
