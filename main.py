@@ -29,6 +29,10 @@ def e_kandela():
 def e_atheria():
     return render_template("valiance/e_atheria.html")
 
+@app.route("/Valiance/Events/Savioris")
+def e_savioris():
+    return render_template("valiance/e_savioris.html")
+
 """ #LOMBA - ATHERIA
 @app.route("/Valiance/Events/Atheria/LCC")
 def l_lcc():

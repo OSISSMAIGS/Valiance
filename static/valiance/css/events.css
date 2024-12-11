@@ -86,7 +86,11 @@ img#atheria:hover {
     box-shadow: 0px 0px 25px rgb(5, 28, 131);
     animation: atheria-hover 0.5s linear;
 }
-
+img#savioris:hover {
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(200, 9, 9);
+    animation: savioris-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -120,6 +124,18 @@ img#atheria:hover {
     100% {
         scale: 1.02;
         box-shadow: 0px 0px 25px rgb(5, 28, 131);
+    }
+}
+
+@keyframes savioris-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px rgb(200, 9, 9);
     }
 }
 
