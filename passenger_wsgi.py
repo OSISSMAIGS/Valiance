@@ -12,5 +12,4 @@ spec = importlib.util.spec_from_file_location(module_name, module_path)
 wsgi = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(wsgi)
 
-# Set the WSGI application object
-application = wsgi.app  # or wsgi.application based on your module structure
+application = wsgi.app 
