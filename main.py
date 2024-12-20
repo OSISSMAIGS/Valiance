@@ -7,79 +7,75 @@ app = Flask(__name__)
 def valiance():
     return render_template("valiance/index.html")
 
-@app.route("/Valiance") # Double routing / Alternative Route (hirauke b)
-def valiance_other():
-    return render_template("valiance/index.html")
-
-@app.route("/Valiance/Events")
+@app.route("/Events")
 def valiance_events():
     return render_template("valiance/events.html")
 
 #EVENTS - VALIANCE'S
 
-@app.route("/Valiance/Events/Euphony")
+@app.route("/Events/Euphony")
 def e_euphony():
     return render_template("valiance/e_euphony.html")
 
-@app.route("/Valiance/Events/Kandela")
+@app.route("/Events/Kandela")
 def e_kandela():
     return render_template("valiance/e_kandela.html")
 
-@app.route("/Valiance/Events/Atheria")
+@app.route("/Events/Atheria")
 def e_atheria():
     return render_template("valiance/e_atheria.html")
 
-@app.route("/Valiance/Events/Savioris")
+@app.route("/Events/Savioris")
 def e_savioris():
     return render_template("valiance/e_savioris.html")
 
 """ #LOMBA - ATHERIA
-@app.route("/Valiance/Events/Atheria/LCC")
+@app.route("/Events/Atheria/LCC")
 def l_lcc():
     return render_template("valiance/lomba_atheria/l_lcc.html")
-@app.route("/Valiance/Events/Atheria/Family_100")
+@app.route("/Events/Atheria/Family_100")
 def l_family100():
     return render_template("valiance/lomba_atheria/l_family100.html")
-@app.route("/Valiance/Events/Atheria/Futsal")
+@app.route("/Events/Atheria/Futsal")
 def l_futsal():
     return render_template("valiance/lomba_atheria/l_futsal.html")
-@app.route("/Valiance/Events/Atheria/Masak")
+@app.route("/Events/Atheria/Masak")
 def l_masak():
     return render_template("valiance/lomba_atheria/l_masak.html")
-@app.route("/Valiance/Events/Atheria/Estafet_Balon")
+@app.route("/Events/Atheria/Estafet_Balon")
 def l_estafet():
     return render_template("valiance/lomba_atheria/l_estafet.html")
-@app.route("/Valiance/Events/Atheria/Mobile_Legends")
+@app.route("/Events/Atheria/Mobile_Legends")
 def l_ML():
     return render_template("valiance/lomba_atheria/l_ML.html")
-@app.route("/Valiance/Events/Atheria/Creativity_in_Vidio")
+@app.route("/Events/Atheria/Creativity_in_Vidio")
 def l_creativity():
     return render_template("valiance/lomba_atheria/l_creativity.html")
-@app.route("/Valiance/Events/Atheria/Catur")
+@app.route("/Events/Atheria/Catur")
 def l_catur():
     return render_template("valiance/lomba_atheria/l_catur.html")
-@app.route("/Valiance/Events/Atheria/Badminton")
+@app.route("/Events/Atheria/Badminton")
 def l_badminton():
     return render_template("valiance/lomba_atheria/l_badminton.html")
-@app.route("/Valiance/Events/Atheria/Estafet_DragonBall")
+@app.route("/Events/Atheria/Estafet_DragonBall")
 def l_dragonball():
     return render_template("valiance/lomba_atheria/l_dragonball.html")
-# @app.route("/Valiance/Events/Atheria/Cosplay")
+# @app.route("/Events/Atheria/Cosplay")
 # def l_cosplay():
 #     return render_template("valiance/lomba_atheria/l_cosplay.html")
-@app.route("/Valiance/Events/Atheria/Classwar")
+@app.route("/Events/Atheria/Classwar")
 def l_classwar():
     return render_template("valiance/lomba_atheria/l_classwar.html")
-@app.route("/Valiance/Events/Atheria/Workshop_Baking")
+@app.route("/Events/Atheria/Workshop_Baking")
 def l_baking():
     return render_template("valiance/lomba_atheria/l_baking.html")
-@app.route("/Valiance/Events/Atheria/Workshop_Baking_Fun_Pack")
+@app.route("/Events/Atheria/Workshop_Baking_Fun_Pack")
 def l_baking_fun():
     return render_template("valiance/lomba_atheria/l_baking_fun.html")
-@app.route("/Valiance/Events/Atheria/Workshop_Baking_Party_Pack")
+@app.route("/Events/Atheria/Workshop_Baking_Party_Pack")
 def l_baking_party():
     return render_template("valiance/lomba_atheria/l_baking_party.html")
-@app.route("/Valiance/Events/Atheria/Nyanyi")
+@app.route("/Events/Atheria/Nyanyi")
 def l_nyanyi():
     return render_template("valiance/lomba_atheria/l_nyanyi.html") """
 
