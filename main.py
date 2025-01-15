@@ -86,7 +86,7 @@ def coming_soon():
 
 @app.route("/About_Us")
 def about_us():
-    return render_template("valiance/about_us.html")
+    return render_template("valiance/coming_soon.html")
 
 @app.errorhandler(404)
 def page_not_found(error):
