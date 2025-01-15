@@ -84,6 +84,10 @@ def l_nyanyi():
 def coming_soon():
     return render_template("valiance/coming_soon.html")
 
+@app.route("/About_Us")
+def about_us():
+    return render_template("valiance/about_us.html")
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('/valiance/404.html'), 404
