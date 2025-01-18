@@ -103,37 +103,37 @@ div.sekbid-container .sekbid-item .frame h1 {
 
 /* individual card */
 div.sekbid-container .sekbid-item .frame-card{
-    width: 30vw;
-    height: 45vw;
+    width: 24vw;
+    height: 35vw;
     border-radius: 1vw;
     border: 0.5vw solid white;
     overflow: hidden;
     background-color: var(--brown);
     position: relative;
-    margin: 4vw 0;
+    margin: 3vw 0;
     user-select: none;
 }
 
 div.sekbid-container .sekbid-item .frame-card img.individual-photo{
-    width: 50vw;
+    width: 40vw;
     position: relative;
-    left: -2.7vw;
+    left: -3vw;
     top: -5vw;
 }
 
 div.sekbid-container .sekbid-item .frame-card h1.individual-number {
     position: absolute;
     color: white;
-    font-size: 12vw;
-    left: 1vw;
-    top: 0;
+    font-size: 8vw;
+    left: 0.5vw;
+    top: -0.5vw;
     font-family: "Bebas Neue", sans-serif;
 }
 
 div.sekbid-container .sekbid-item .frame-card  h1.years-experience, div.sekbid-container .sekbid-item .frame-card h1.events-experience{
     position: relative;
     color: white;
-    font-size: 2vw;
+    font-size: 1.8vw;
     left: 1vw;
     top: -18vw;
     font-family: "Bebas Neue", sans-serif;
@@ -141,7 +141,7 @@ div.sekbid-container .sekbid-item .frame-card  h1.years-experience, div.sekbid-c
 }
 div.sekbid-container .sekbid-item .frame-card h1.years-experience span,
 div.sekbid-container .sekbid-item .frame-card h1.events-experience span{
-    font-size: 3vw;
+    font-size: 2.7vw;
     font-weight: 800;
 }
 
@@ -149,17 +149,17 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card {
     position: absolute;
     color: white;
     font-size: 1.5vw;
-    width: 30vw;
+    width: 24vw;
     left: 0;
-    height: 22vw;
-    top: 26vw;
+    height: 15vw;
+    top: 20vw;
     background-color: var(--dark-brown);
 }
 
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .name-heading{
     display: block;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 2.5vw;
     color: white;
     text-align: center;
     margin-left: -0.75vw;
@@ -169,7 +169,7 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card .name-heading{
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .nickname-heading{
     display: block;
     margin-top: -0.5vw;
-    font-size: 1.2vw;
+    font-size: 1vw;
     color: white;
     text-align: center;
     margin-left: -0.75vw;
@@ -178,8 +178,8 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card .nickname-headin
 
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .jabatan-heading{
     display: block;
-    margin-top: 1vw;
-    font-size: 2vw;
+    margin-top: 1.8vw;
+    font-size: 1.8vw;
     color: white;
     text-align: center;
     margin-left: -0.75vw;
@@ -187,28 +187,29 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card .jabatan-heading
 }
 
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .line-cut2{
-    width: 25vw;
+    width: 21vw;
     height: 0.25vw;
     position: relative;
-    left: 2vw;
+
+    left: 1vw;
     background-color: white;
 }
 
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card img.frame-logo{
     position: absolute;
-    top: 11vw;
+    top: 9.7vw;
     right: 5vw;
-    width: 6vw;
+    width: 4vw;
 }
 
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect {
     text-decoration: none;
     position: absolute;
-    top: 11vw;
+    top: 9.7vw;
     left: 4vw;
 }
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect i{
-font-size: 6vw;
+font-size: 4vw;
 color: white;
 }
 
