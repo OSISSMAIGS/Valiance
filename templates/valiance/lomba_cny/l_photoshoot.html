@@ -1,0 +1,146 @@
+{% extends "valiance/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_cny.css') }}">
+
+	<script>
+		let enableSend = true;
+	    document.addEventListener("DOMContentLoaded", () => {
+	        const scriptURL = 'https://script.google.com/macros/s/AKfycbxAvIL-__EDYpuJLSP4CwWPnKV6PQWxWHPZHi2EP1z_oriXWCH3ZuA7nvpeWYL2r-1w/exec';
+	        const form = document.getElementById("dynamicForm");
+	        const formStatus = document.getElementById("formStatus");
+	        const popupOverlay = document.getElementById("popupOverlay");
+
+	        form.addEventListener("submit", e => {
+				if (enableSend){
+	            e.preventDefault(); // Prevent page reload
+	            formStatus.textContent = "Mengirim data...";
+	            formStatus.className = "status";
+				enableSend = false;
+	            const formData = new FormData(form);
+	            formData.append("formType", "Lomba Photoshoot"); // Nama sheet
+
+	            fetch(scriptURL, { method: "POST", body: formData })
+	                .then(response => response.json()) // Parse response JSON
+	                .then(data => {
+	                    if (data.status === "success") {
+	                        formStatus.textContent = "";
+	                        form.reset();
+	                        popupOverlay.style.display = "block"; // Tampilkan popup
+	                    } else if (data.status === "error" && data.message === "Peserta sudah penuh") {
+	                        formStatus.textContent = "Peserta sudah penuh. Tidak bisa mendaftar.";
+	                        formStatus.className = "status error";
+	                    } else {
+	                        throw new Error(data.message || "Gagal mengirim data.");
+	                    }
+						enableSend = true;
+	                })
+	                .catch(error => {
+	                    formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
+	                    formStatus.className = "status error";
+	                    console.error("Error!", error.message);
+						enableSend = true;
+	                });
+				}
+	        });
+	    });
+
+	    function closePopup() {
+	        document.getElementById("popupOverlay").style.display = "none";
+	    }
+	</script>
+{% endblock css_js %}
+
+{% block title %}Lomba Photoshoot{% endblock title %}
+
+{% block main %}
+
+	<!-- MEKANISME DAN POSTER -->
+
+	<div class="container">
+		<div>
+
+		<h1 class="title">Lomba Photoshoot</h1>
+		<div class="mechanism">
+			        <h4 class="sub-title">Mekanisme</h4>
+			        <p>1. Ambil foto sekreatif mungkin di photobooth yang telah disediakan.
+								<br>
+								2. Unggah foto kalian di akun sosial media masing-masing dengan menyertakan hashtag #longhuajie dan menandai akun @osis.smaigs.
+								<br>
+								3. Pastikan akun sosial media kalian dalam keadaan public.
+								<br>
+								4. Periode perlombaan dimulai hari ini hingga 30 Januari 2025 pukul 23.59 WIB.
+								<br>
+								5. Penilaian akan dilakukn dengan komposisi:
+								<br>
+								- 50% berdasarkan penilaian juri dan 50% dari likes
+								<br>
+								6. Akan ada 2 pemenang yang dipilih, 1 sma & 1 smp
+								<br>
+			        </p>
+			        <h4 class="sub-title">Peraturan</h4>
+			        <p>1. Semua orang boleh ikut serta
+								<br>
+								2. Dilarang beli likes
+			        </p>
+		</div>
+		</div>
+		<img 
+			src="{{ url_for('static', filename='valiance/img/cny/photoshoot-fix.jpg') }}"
+			alt="Lomba Photoshoot"
+		></img>
+	</div>
+
+					
+	<!-- Registration -->
+	<h2 class="regis">Registration</h2>
+	<div class="form-container">
+	   
+	    <form id="dynamicForm" onsubmit="return false;">
+	        <!-- Input Nama -->
+	        <div class="form-group">
+	            <label for="nama">Nama:</label>
+	            <input type="text" id="nama" name="nama" required>
+	        </div>
+
+	        <!-- Input Kelas -->
+	        <div class="form-group">
+	            <label for="kelas">Kelas:</label>
+	            <input type="text" id="kelas" name="kelas" required>
+	        </div>
+
+	        <!-- Input ID Line -->
+	        <div class="form-group">
+	            <label for="idline">ID Line:</label>
+	            <input type="text" id="idline" name="idline" required>
+	        </div>
+
+					<!-- Input Gdrive -->
+	        <div class="form-group">
+						<label for="gdrive">Link Gdrive:</label>
+						<input type="text" id="gdrive" name="gdrive" required><br><br>
+				</div>
+
+			<!-- Input for Max Participants -->
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
+
+	        <!-- Tombol Submit -->
+	        <button type="submit">Kirim</button>
+	    </form>
+	    <div class="status" id="formStatus"></div>
+	</div>
+
+	<svg
+	    class="waves-footer"
+	    xmlns="http://www.w3.org/2000/svg"
+	    viewBox="0 0 1440 320"
+	  >
+
+	    <path
+	      fill="rgb(232, 104, 65)"
+	      fill-opacity="1"
+	      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+	    ></path>
+	</svg>
+{% endblock main %}

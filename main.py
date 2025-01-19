@@ -29,6 +29,24 @@ def e_atheria():
 def e_savioris():
     return render_template("valiance/e_savioris.html")
 
+@app.route("/Events/CNY")
+def e_cny():
+    return render_template("valiance/e_cny.html")
+
+@app.route("/Events/CNY/KokoCici")
+def l_kokocici():
+    return render_template("valiance/lomba_cny/l_kokocici.html")
+@app.route("/Events/CNY/Vlog")
+def l_vlog():
+    return render_template("valiance/lomba_cny/l_vlog.html")
+@app.route("/Events/CNY/Photoshoot")
+def l_photoshoot():
+    return render_template("valiance/lomba_cny/l_photoshoot.html")
+@app.route("/Events/CNY/Dekor")
+def l_dekor():
+    return render_template("valiance/lomba_cny/l_dekor.html")
+
+
 """ #LOMBA - ATHERIA
 @app.route("/Events/Atheria/LCC")
 def l_lcc():
