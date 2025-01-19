@@ -1,0 +1,134 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_cny.css') }}"
+/>
+<script src="{{ url_for('static', filename='valiance/js/e_cny.js') }}"></script>
+
+<script>
+  // start
+
+  const start = () => {
+    setTimeout(function () {
+      spark.start();
+    }, 1000); // 1000 is time that after 1 second start the spark ( 1000 = 1 sec)
+  };
+
+  //  Stop
+
+  const stop = () => {
+    setTimeout(function () {
+      spark.stop();
+    }, 5000); // 5000 is time that after 5 second stop the spark ( 5000 = 5 sec)
+  };
+
+  start();
+  // stop();
+</script>
+{% endblock css_js %} {% block title %}Long hua jie IGS{% endblock title %} {%
+block main %}
+<!-- Banner Section -->
+<section class="banner" id="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/atheria_banner.jpg') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- Content Section -->
+<section class="content" id="competition">
+  <!-- Fireworks Section -->
+  <div id="firework-container"></div>
+  <!-- Competition Section -->
+  <div class="performance">
+    <section class="content second-content">
+      <div class="performance wajib">
+        <h1 class="hidden">Registrasi Lomba</h1>
+        <div class="gambar"></div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+  id="footer"
+>
+  <path
+    filter="url(#waveShadow3)"
+    fill="rgb(232, 104, 65)"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const competitionData = {
+      wajib: [
+        {
+          image:
+            "{{ url_for('static', filename='valiance/img/cny/kokocici.jpg') }}",
+          title: "Lomba KokoCici",
+          link: "/Events/CNY/KokoCici",
+        },
+        {
+          image:
+            "{{ url_for('static', filename='valiance/img/cny/vlog.png') }}",
+          title: "Lomba Vlog",
+          link: "/Events/CNY/Vlog",
+        },
+        {
+          image:
+            "{{ url_for('static', filename='valiance/img/cny/photoshoot-fix.jpg') }}",
+          title: "Lomba Photoshoot",
+          link: "/Events/CNY/Photoshoot",
+        },
+      ],
+    };
+
+    const renderPosters = (data, containerSelector) => {
+      const container = document.querySelector(containerSelector);
+      if (container) {
+        container.innerHTML = "";
+        data.forEach((comp) => {
+          const poster = document.createElement("div");
+          poster.className = "image-container hidden";
+
+          poster.innerHTML = `
+            <img id="poster" src="${comp.image}" alt="${comp.title}">
+            <div class="cta-link">
+              <a href="${comp.link}" class="link-cta">Register ${comp.title}</a>
+            </div>
+          `;
+
+          container.appendChild(poster);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        });
+
+        const hiddenElements = container.querySelectorAll(".hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
+      }
+    };
+
+    renderPosters(competitionData.wajib, ".performance.wajib .gambar");
+    renderPosters(
+      competitionData.tidakWajib,
+      ".performance.tidak-wajib .gambar"
+    );
+    renderPosters(competitionData.workshop, ".performance.workshop .gambar");
+  });
+</script>
+{% endblock main %}
