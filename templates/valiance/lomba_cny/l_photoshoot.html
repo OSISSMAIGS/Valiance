@@ -27,7 +27,7 @@
 	                    if (data.status === "success") {
 	                        formStatus.textContent = "";
 	                        form.reset();
-	                        popupOverlay.style.display = "block"; // Tampilkan popup
+	                        //popupOverlay.style.display = "block"; // Tampilkan popup
 	                    } else if (data.status === "error" && data.message === "Peserta sudah penuh") {
 	                        formStatus.textContent = "Peserta sudah penuh. Tidak bisa mendaftar.";
 	                        formStatus.className = "status error";
@@ -66,7 +66,7 @@
 			        <h4 class="sub-title">Mekanisme</h4>
 			        <p>1. Ambil foto sekreatif mungkin di photobooth yang telah disediakan.
 								<br>
-								2. Unggah foto kalian di akun sosial media masing-masing dengan menyertakan hashtag #longhuajie dan menandai akun @osis.smaigs.
+								2. Unggah foto kalian di akun sosial media masing-masing dengan menyertakan hashtag #shehuajie dan menandai akun @osis.smaigs.
 								<br>
 								3. Pastikan akun sosial media kalian dalam keadaan public.
 								<br>
@@ -87,7 +87,7 @@
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/cny/photoshoot-fix.jpg') }}"
+			src="{{ url_for('static', filename='valiance/img/cny/photoshoot-fix-new.jpg') }}"
 			alt="Lomba Photoshoot"
 		></img>
 	</div>

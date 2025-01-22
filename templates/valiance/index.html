@@ -39,9 +39,23 @@ main %}
         data-bs-slide-to="3"
         aria-label="Slide 4"
       ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="4"
+        aria-label="Slide 5"
+      ></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a href="{{ url_for('e_cny') }}"
+          ><img
+            src="{{ url_for('static', filename='valiance/img/banner/shehuajie_banner.png') }}"
+            class="d-block w-100"
+            alt="..."
+        /></a>
+      </div>
+      <div class="carousel-item">
         <a href="{{ url_for('e_savioris') }}"
           ><img
             src="{{ url_for('static', filename='valiance/img/banner/savioris_banner.png') }}"

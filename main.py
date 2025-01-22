@@ -29,20 +29,20 @@ def e_atheria():
 def e_savioris():
     return render_template("valiance/e_savioris.html")
 
-@app.route("/Events/CNY")
+@app.route("/Events/SheHuaJie")
 def e_cny():
     return render_template("valiance/e_cny.html")
 
-@app.route("/Events/CNY/KokoCici")
+@app.route("/Events/SheHuaJie/KokoCici")
 def l_kokocici():
     return render_template("valiance/lomba_cny/l_kokocici.html")
-@app.route("/Events/CNY/Vlog")
+@app.route("/Events/SheHuaJie/Vlog")
 def l_vlog():
     return render_template("valiance/lomba_cny/l_vlog.html")
-@app.route("/Events/CNY/Photoshoot")
+@app.route("/Events/SheHuaJie/Photoshoot")
 def l_photoshoot():
     return render_template("valiance/lomba_cny/l_photoshoot.html")
-@app.route("/Events/CNY/Dekor")
+@app.route("/Events/SheHuaJie/Dekor")
 def l_dekor():
     return render_template("valiance/lomba_cny/l_dekor.html")
 
