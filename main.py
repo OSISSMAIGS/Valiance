@@ -33,6 +33,8 @@ def e_savioris():
 def e_cny():
     return render_template("valiance/e_cny.html")
 
+# She Hua Jie - Registration
+
 @app.route("/Events/SheHuaJie/KokoCici")
 def l_kokocici():
     return render_template("valiance/lomba_cny/l_kokocici.html")
@@ -42,60 +44,9 @@ def l_vlog():
 @app.route("/Events/SheHuaJie/Photoshoot")
 def l_photoshoot():
     return render_template("valiance/lomba_cny/l_photoshoot.html")
-@app.route("/Events/SheHuaJie/Dekor")
+@app.route("/Events/SheHuaJie/Dekorasi")
 def l_dekor():
     return render_template("valiance/lomba_cny/l_dekor.html")
-
-
-""" #LOMBA - ATHERIA
-@app.route("/Events/Atheria/LCC")
-def l_lcc():
-    return render_template("valiance/lomba_atheria/l_lcc.html")
-@app.route("/Events/Atheria/Family_100")
-def l_family100():
-    return render_template("valiance/lomba_atheria/l_family100.html")
-@app.route("/Events/Atheria/Futsal")
-def l_futsal():
-    return render_template("valiance/lomba_atheria/l_futsal.html")
-@app.route("/Events/Atheria/Masak")
-def l_masak():
-    return render_template("valiance/lomba_atheria/l_masak.html")
-@app.route("/Events/Atheria/Estafet_Balon")
-def l_estafet():
-    return render_template("valiance/lomba_atheria/l_estafet.html")
-@app.route("/Events/Atheria/Mobile_Legends")
-def l_ML():
-    return render_template("valiance/lomba_atheria/l_ML.html")
-@app.route("/Events/Atheria/Creativity_in_Vidio")
-def l_creativity():
-    return render_template("valiance/lomba_atheria/l_creativity.html")
-@app.route("/Events/Atheria/Catur")
-def l_catur():
-    return render_template("valiance/lomba_atheria/l_catur.html")
-@app.route("/Events/Atheria/Badminton")
-def l_badminton():
-    return render_template("valiance/lomba_atheria/l_badminton.html")
-@app.route("/Events/Atheria/Estafet_DragonBall")
-def l_dragonball():
-    return render_template("valiance/lomba_atheria/l_dragonball.html")
-# @app.route("/Events/Atheria/Cosplay")
-# def l_cosplay():
-#     return render_template("valiance/lomba_atheria/l_cosplay.html")
-@app.route("/Events/Atheria/Classwar")
-def l_classwar():
-    return render_template("valiance/lomba_atheria/l_classwar.html")
-@app.route("/Events/Atheria/Workshop_Baking")
-def l_baking():
-    return render_template("valiance/lomba_atheria/l_baking.html")
-@app.route("/Events/Atheria/Workshop_Baking_Fun_Pack")
-def l_baking_fun():
-    return render_template("valiance/lomba_atheria/l_baking_fun.html")
-@app.route("/Events/Atheria/Workshop_Baking_Party_Pack")
-def l_baking_party():
-    return render_template("valiance/lomba_atheria/l_baking_party.html")
-@app.route("/Events/Atheria/Nyanyi")
-def l_nyanyi():
-    return render_template("valiance/lomba_atheria/l_nyanyi.html") """
 
 # OTHERS
 @app.route("/Coming_Soon")

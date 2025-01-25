@@ -89,6 +89,12 @@ block main %}
           title: "Lomba Photoshoot",
           link: "/Events/SheHuaJie/Photoshoot",
         },
+        {
+          image:
+            "{{ url_for('static', filename='valiance/img/cny/dekor-fix.jpg') }}",
+          title: "Lomba Dekorasi",
+          link: "/Events/SheHuaJie/Dekorasi",
+        },
       ],
     };
 
@@ -103,7 +109,7 @@ block main %}
           poster.innerHTML = `
             <img id="poster" src="${comp.image}" alt="${comp.title}">
             <div class="cta-link">
-              <a href="${comp.link}" class="link-cta">Register ${comp.title}</a>
+              <a href="${comp.link}" class="link-cta">View Details</a>
             </div>
           `;
 
