@@ -9,6 +9,7 @@
   type="text/css"
   href="{{ url_for('static', filename='valiance/css/about_us.css') }}"
 />
+<script src="{{ url_for('static', filename='valiance/js/about_us.js') }}"></script>
 {% endblock css_js %} {% block title %}About Us{% endblock title %} {% block
 main %}
 
@@ -21,34 +22,72 @@ main %}
   <div class="line-cut"></div>
 </div>
 
+
 <div class="sekbid-container">
-  <div class="sekbid-item">
+    </div>
+<script>
+  let container = document.body.querySelector(".sekbid-container");
+
+
+  //DATA
+  let DataArray = [
+    {
+      Sekbid: "Top 3",
+      imgdirect: "{{ url_for('static', filename='valiance/img/about_us/syahdanceline-duo.png') }}",
+      Members: [
+        {
+          name: "M. Satria Alfahri",
+          jersey: 2,
+          y_exp: 2,
+          e_exp: 5,
+          nicks: "satari/wibu pro hengker/fisika",
+          jabatan: "Wakil Ketua Osis I",
+          insta: "msatrialfahri",
+          imgroot: "{{ url_for('static', filename='valiance/img/about_us/syahdan-solo.png') }}"
+        },
+      ],
+    },
+  ];
+
+
+
+
+
+  for (sekbid in DataArray) {
+    const sekItem = document.createElement('div');
+    sekItem.className = "sekbid-item";
+    document.body.querySelector('.sekbid-container').append(sekItem);
+    sekItem.innerHTML += `
     <div class="frame">
       <div class="inner-frame">
         <img
-          src="{{ url_for('static', filename='valiance/img/about_us/syahdanceline-duo.png') }}"
+          src="${DataArray[sekbid].imgdirect}"
           alt=""
         />
       </div>
-      <h1>TOP 3</h1>
+      <h1>${DataArray[sekbid].Sekbid}</h1>
     </div>
-
-    <div class="frame-card">
+    `;
+    for (member in sekbid) {
+      sekItem.innerHTML += `
+      <div class="frame-card">
       <img
         class="individual-photo"
-        src="{{ url_for('static', filename='valiance/img/about_us/syahdan-solo.png') }}"
+        src="${DataArray[sekbid].Members[member].imgroot}"
         alt=""
       />
-      <h1 class="individual-number">3</h1>
-      <h1 class="years-experience"><span>2</span> Years Experience</h1>
-      <h1 class="events-experience"><span>5</span> Events</h1>
+      <h1 class="individual-number">${DataArray[sekbid].Members[member].jersey}</h1>
+      <h1 class="years-experience"><span>${DataArray[sekbid].Members[member].y_exp}</span> Years Experience</h1>
+      <h1 class="events-experience"><span>${DataArray[sekbid].Members[member].e_exp}</span> Events</h1>
       <div class="lower-frame-card">
-        <span class="name-heading">Syahdan R.A</span>
-        <span class="nickname-heading">syah/waket/dan</span>
-        <span class="jabatan-heading">Wakil Ketua Osis II</span>
+        <span class="name-heading">${DataArray[sekbid].Members[member].name}</span>
+        <span class="nickname-heading">${DataArray[sekbid].Members[member].nicks}</span>
+        <span class="jabatan-heading">${DataArray[sekbid].Members[member].jabatan}</span>
         <div class="line-cut2"></div>
         <div class="footer-card">
-          <a href="#" class="instagram-redirect"
+          <a
+            href="https://www.instagram.com/${DataArray[sekbid].Members[member].insta}/?hl=en"
+            class="instagram-redirect"
             ><i class="bx bxl-instagram-alt"></i
           ></a>
           <img
@@ -57,76 +96,25 @@ main %}
             alt=""
           />
         </div>
-      </div>
-    </div>
-
-    <div class="frame-card">
-      <img
-        class="individual-photo"
-        src="{{ url_for('static', filename='valiance/img/about_us/syahdan-solo.png') }}"
-        alt=""
-      />
-      <h1 class="individual-number">3</h1>
-      <h1 class="years-experience"><span>2</span> Years Experience</h1>
-      <h1 class="events-experience"><span>5</span> Events</h1>
-      <div class="lower-frame-card">
-        <span class="name-heading">Syahdan R.A</span>
-        <span class="nickname-heading">syah/waket/dan</span>
-        <span class="jabatan-heading">Wakil Ketua Osis II</span>
-        <div class="line-cut2"></div>
-        <div class="footer-card">
-          <a href="#" class="instagram-redirect"
-            ><i class="bx bxl-instagram-alt"></i
-          ></a>
-          <img
-            class="frame-logo"
-            src="{{ url_for('static', filename='valiance/img/logo/valiancelogo.png') }}"
-            alt=""
-          />
         </div>
-      </div>
-    </div>
-
-    <div class="frame-card">
-      <img
-        class="individual-photo"
-        src="{{ url_for('static', filename='valiance/img/about_us/syahdan-solo.png') }}"
-        alt=""
-      />
-      <h1 class="individual-number">3</h1>
-      <h1 class="years-experience"><span>2</span> Years Experience</h1>
-      <h1 class="events-experience"><span>5</span> Events</h1>
-      <div class="lower-frame-card">
-        <span class="name-heading">Syahdan R.A</span>
-        <span class="nickname-heading">syah/waket/dan</span>
-        <span class="jabatan-heading">Wakil Ketua Osis II</span>
-        <div class="line-cut2"></div>
-        <div class="footer-card">
-          <a href="#" class="instagram-redirect"
-            ><i class="bx bxl-instagram-alt"></i
-          ></a>
-          <img
-            class="frame-logo"
-            src="{{ url_for('static', filename='valiance/img/logo/valiancelogo.png') }}"
-            alt=""
-          />
         </div>
-      </div>
-    </div>
+        `
+    }
+  }
+</script>
+    <svg
+      class="waves-footer"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        filter="url(#waveShadow)"
+        fill="rgb(124, 28, 28)"
+        fill-opacity="1"
+        d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+      ></path>
+    </svg>
+
+    {% endblock main %}
   </div>
 </div>
-
-<svg
-  class="waves-footer"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1440 320"
->
-  <path
-    filter="url(#waveShadow)"
-    fill="rgb(124, 28, 28)"
-    fill-opacity="1"
-    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-  ></path>
-</svg>
-
-{% endblock main %}
