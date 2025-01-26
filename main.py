@@ -47,6 +47,9 @@ def l_photoshoot():
 @app.route("/Events/SheHuaJie/Dekorasi")
 def l_dekor():
     return render_template("valiance/lomba_cny/l_dekor.html")
+@app.route("/Events/SheHuaJie/Closed")
+def l_closed():
+    return render_template("valiance/lomba_cny/l_closed.html")
 
 # OTHERS
 @app.route("/Coming_Soon")
