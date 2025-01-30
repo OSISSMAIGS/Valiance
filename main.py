@@ -37,7 +37,7 @@ def e_cny():
 
 @app.route("/Events/SheHuaJie/KokoCici")
 def l_kokocici():
-    return render_template("valiance/lomba_cny/l_kokocici.html")
+    return render_template("valiance/lomba_cny/l_closed.html")
 @app.route("/Events/SheHuaJie/Vlog")
 def l_vlog():
     return render_template("valiance/lomba_cny/l_vlog.html")
