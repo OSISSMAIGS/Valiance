@@ -5,8 +5,8 @@
   --bg: rgb(255, 193, 8);
   --bg-color: rgb(158, 11, 17);
   --bg-color2: rgb(158, 11, 17);
-  --text-color: rgb(255, 193, 8);
-  --text-color-darker: #3e1192;
+  --text-color: #E6869F;
+  --text-color-darker: #c34e61;
   --box-list-colour: rgb(126, 5, 12);
   --text-color2: rgb(192, 79, 126);
 
@@ -560,3 +560,5 @@ section.second-content {
     font-size: 1.1rem;
   }
 }
+
+

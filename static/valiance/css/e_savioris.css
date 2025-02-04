@@ -630,7 +630,7 @@ body {
   
   /* Example background images */
   .gallery__item:nth-child(1) .gallery__item-inner {
-    background-image: url(/static/valiance/img/documentations/savioris/1.JPG);
+    background-image: url(/static/valiance/img/documentations/saviorios/1.JPG);
   }
   .gallery__item:nth-child(2) .gallery__item-inner {
     background-image: url(/static/valiance/img/documentations/savioris/2.JPG);

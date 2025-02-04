@@ -1,9 +1,6 @@
-{% extends "valiance/layout.html" %} {% block css_js %}
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{{ url_for('static', filename='valiance/css/e_cny.css') }}"
-/>
+{% extends "valiance/layout.html" %} 
+{% block css_js %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/e_cny.css') }}" />
 <script src="{{ url_for('static', filename='valiance/js/e_cny.js') }}"></script>
 
 <script>
@@ -26,8 +23,9 @@
   start();
   // stop();
 </script>
-{% endblock css_js %} {% block title %}She Hua Jie{% endblock title %} {%
-block main %}
+{% endblock css_js %} 
+{% block title %}She Hua Jie{% endblock title %} 
+{% block main %}
 <!-- Banner Section -->
 <section class="banner" id="banner">
   <img
@@ -36,6 +34,132 @@ block main %}
   />
   <section class="gradient-banner"></section>
 </section>
+
+<!-- About Section -->
+<section class="about"> 
+  <h1 class="hidden">About She Hua Jie</h1>
+  <p class="hidden">
+    Segera Hadir
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Jason Marvel</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 1</b></p>
+      <p>Lavenia Sherlifany</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 2</b></p>
+      <p>Andrew Nickson</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Sydney Venecia</p>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Performances</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Barongsai', 'bx bxs-mask bx-tada', 'Barongsai adalah tarian tradisional Tionghoa yang identik dengan perayaan Imlek. Tarian ini menggunakan kostum menyerupai singa, dimainkan oleh dua orang penari yang menunjukkan kelincahan dan kekompaka🏮🐉⛩️.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-mask bx-tada"></i>
+        <p>Barongsai</p>
+      </div>
+      <div
+        onclick="showDetail('Koko Cici', 'bx bx-male-female bx-tada', 'Dalam perayaan Imlek, Koko Cici adalah sebutan untuk duta budaya Tionghoa yang biasanya terpilih melalui ajang pemilihan seperti Koko Cici Jakarta. Koko Cici memiliki peran untuk menampilkan budaya Tionghoa dan sering terlihat dalam berbagai acara Imlek, mengenakan pakaian tradisional seperti cheongsam atau changshan. ')"
+        class="list hidden"
+      >
+        <i class="bx bx-male-female bx-tada"></i>
+        <p>Koko Cici</p>
+      </div>
+      <div
+        onclick="showDetail('Fireworks', 'bx bxs-hot bx-tada', 'Apa arti tahun baru tanpa kembang api🔥🧨? Saat langit malam dihiasi ledakan warna-warni, setiap dentuman bukan hanya sekadar hiburan, tapi simbol harapan dan awal baru yang penuh semangat. Imlek tahun ini kembang api menjadi penutup yang dapat membangkitkan moment bersama semua orang.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-hot bx-tada"></i>
+        <p>Fireworks</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competition Section -->
+  <div class="performance">
+    <h1 class="hidden">Competition</h1>
+    <div class="lists">
+      <div
+        onclick='showDetail("Koko Cici", "bx bx-male-female bx-tada", "Dalam perayaan Imlek, Koko Cici adalah sebutan untuk duta budaya Tionghoa yang biasanya terpilih melalui ajang pemilihan seperti Koko Cici Jakarta. Koko Cici memiliki peran untuk menampilkan budaya Tionghoa dan sering terlihat dalam berbagai acara Imlek, mengenakan pakaian tradisional seperti cheongsam atau changshan. ")'
+        class="list hidden"
+      >
+        <i class="bx bx-male-female bx-tada"></i>
+        <p>Koko Cici</p>
+      </div>
+      <div
+        onclick='showDetail("Vlog", "bx bx-video bx-tada", "Pada lomba ini para peserta akan membuat vlog mengenai event imlek.")'
+        class="list hidden"
+      >
+        <i class="bx bx-video bx-tada"></i>
+        <p>Vlog Competition</p>
+      </div>
+      <div
+        onclick='showDetail("Photobooth", "bx bxs-camera-home bx-tada", "Pada lomba ini para peserta akan membuat vlog mengenai event imlek.")'
+        class="list hidden"
+      >
+        <i class="bx bxs-camera-home bx-tada"></i>
+        <p>Photobooth</p>
+      </div>w
+    </div>
+  </div>
+
+  <!-- Fun Activity Section -->
+
+  <div class="performance">
+    <h1 class="hidden">Fun Activities</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Layangan dan Lampion', 'bx bxs-rocket', 'Segera Hadir')"
+        class="list hidden"
+      >
+        <i class="bx bxs-rocket"></i>
+        <p>Layangan dan Lampion</p>
+      </div>
+      <div
+        onclick="showDetail('Wish Board', 'bx bx-clipboard bx-tada', 'Segera Hadir')"
+        class="list hidden"
+      >
+        <i class="bx bx-clipboard bx-tada"></i>
+        <p>Wish Board</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading"></h2>
+        <p id="detail-desc"></p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Content Section -->
 <section class="content" id="competition">
