@@ -33,21 +33,13 @@ def e_savioris():
 def e_cny():
     return render_template("valiance/e_cny.html")
 
-# She Hua Jie - Registration
+# Serenite - Registration
 
-# @app.route("/Events/SheHuaJie/KokoCici")
-# def l_kokocici():
-#     return render_template("valiance/lomba_cny/l_closed.html")
-# @app.route("/Events/SheHuaJie/Vlog")
-# def l_vlog():
-#     return render_template("valiance/lomba_cny/l_vlog.html")
-# @app.route("/Events/SheHuaJie/Photoshoot")
-# def l_photoshoot():
-#     return render_template("valiance/lomba_cny/l_photoshoot.html")
-# @app.route("/Events/SheHuaJie/Dekorasi")
-# def l_dekor():
-#     return render_template("valiance/lomba_cny/l_dekor.html")
-@app.route("/Events/SheHuaJie/Closed")
+@app.route("/Events/Serenite/Anonymous_Gifts")
+def l_anon():
+    return render_template("valiance/lomba_serenite/l_anonymous_gifts.html")
+
+@app.route("/Events/Serenite/Closed")
 def l_closed():
     return render_template("valiance/lomba_cny/l_closed.html")
 
