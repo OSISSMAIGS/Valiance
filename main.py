@@ -35,18 +35,18 @@ def e_cny():
 
 # She Hua Jie - Registration
 
-@app.route("/Events/SheHuaJie/KokoCici")
-def l_kokocici():
-    return render_template("valiance/lomba_cny/l_closed.html")
-@app.route("/Events/SheHuaJie/Vlog")
-def l_vlog():
-    return render_template("valiance/lomba_cny/l_vlog.html")
-@app.route("/Events/SheHuaJie/Photoshoot")
-def l_photoshoot():
-    return render_template("valiance/lomba_cny/l_photoshoot.html")
-@app.route("/Events/SheHuaJie/Dekorasi")
-def l_dekor():
-    return render_template("valiance/lomba_cny/l_dekor.html")
+# @app.route("/Events/SheHuaJie/KokoCici")
+# def l_kokocici():
+#     return render_template("valiance/lomba_cny/l_closed.html")
+# @app.route("/Events/SheHuaJie/Vlog")
+# def l_vlog():
+#     return render_template("valiance/lomba_cny/l_vlog.html")
+# @app.route("/Events/SheHuaJie/Photoshoot")
+# def l_photoshoot():
+#     return render_template("valiance/lomba_cny/l_photoshoot.html")
+# @app.route("/Events/SheHuaJie/Dekorasi")
+# def l_dekor():
+#     return render_template("valiance/lomba_cny/l_dekor.html")
 @app.route("/Events/SheHuaJie/Closed")
 def l_closed():
     return render_template("valiance/lomba_cny/l_closed.html")

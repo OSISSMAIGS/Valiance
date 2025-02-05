@@ -8,14 +8,14 @@
   --text-color: #E6869F;
   --text-color-darker: #c34e61;
   --box-list-colour: rgb(126, 5, 12);
-  --text-color2: rgb(192, 79, 126);
+  --text-color2: rgb(255, 113, 172);
 
   --overlay-bg: rgba(245, 205, 117, 0.605);
   --accent-color: white;
-  --nav-headings: rgb(228, 193, 78);
-  --nav-bg: rgb(232, 104, 65);
+  --nav-headings: #ffabc1;
+  --nav-bg: #E6869F;
   --nav-bg-darker: #b22825;
-  --dropdown-bg: rgb(232, 104, 65);
+  --dropdown-bg: #E6869F;
   --splash-bg: rgb(126, 5, 12);
 }
 
@@ -77,8 +77,8 @@ div.navbarMain div.navbar-dropdown button:hover {
 }
 
 div.navbarMain div.navbar-heading button {
-  text-shadow: 0 0.2vh 0.6vh rgba(16, 16, 230, 0.3),
-    0 -0.2vh 0.6vh rgba(6, 102, 236, 0.3), 0.3vh 0 0.6vh rgba(0, 98, 255, 0.3),
+  text-shadow: 0 0.2vh 0.6vh rgba(192, 53, 207, 0.3),
+    0 -0.2vh 0.6vh rgba(200, 28, 134, 0.3), 0.3vh 0 0.6vh rgba(255, 0, 179, 0.3),
     -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
 }
 
@@ -86,9 +86,9 @@ div.navbarMain div.navbar-heading button:hover {
   color: var(--text-color2) !important;
   text-decoration: none;
   animation: hovering 0.2s linear !important;
-  text-shadow: 0 0.6vh 1vh rgba(6, 105, 218, 0.8),
-    0 -0.6vh 1vh rgba(33, 25, 173, 0.8), 0.4vh 0 1vh rgba(21, 87, 208, 0.8),
-    -0.4vh 0 1vh rgba(255, 202, 103, 0.8);
+  text-shadow: 0 0.6vh 1vh rgba(218, 6, 105, 0.8),
+    0 -0.6vh 1vh rgba(173, 25, 124, 0.8), 0.4vh 0 1vh rgba(21, 87, 208, 0.8),
+    -0.4vh 0 1vh rgba(255, 103, 222, 0.8);
 }
 
 span.showNav {
@@ -429,24 +429,24 @@ section.second-content {
   }
 
   25% {
-    color: rgb(232, 210, 149);
-    text-shadow: 0 0.05vh 0.5vh rgb(254, 255, 177),
-      0 -0.4vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
-      -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(232, 149, 193);
+    text-shadow: 0 0.05vh 0.5vh rgb(232, 149, 193),
+      0 -0.4vh 0.5vh rgb(232, 149, 193), 0.2vh 0 0.5vh rgb(232, 149, 193),
+      -0.2vh 0 0.5vh rgb(232, 149, 193);
   }
 
   50% {
-    color: rgb(233, 184, 128);
-    text-shadow: 0 0.3vh 0.5vh rgb(254, 255, 177),
-      0 -0.3vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
-      -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(233, 128, 207);
+    text-shadow: 0 0.3vh 0.5vh rgb(232, 149, 193),
+      0 -0.3vh 0.5vh rgb(232, 149, 193), 0.2vh 0 0.5vh rgb(232, 149, 193),
+      -0.2vh 0 0.5vh rgb(232, 149, 193);
   }
 
   75% {
-    color: rgb(232, 210, 149);
-    text-shadow: 0 0.4vh 0.5vh rgb(254, 255, 177),
-      0 -0.05vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
-      -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(232, 149, 214);
+    text-shadow: 0 0.4vh 0.5vh rgb(232, 149, 193),
+      0 -0.05vh 0.5vh rgb(232, 149, 193), 0.2vh 0 0.5vh rgb(232, 149, 193),
+      -0.2vh 0 0.5vh rgb(232, 149, 193);
   }
 
   100% {

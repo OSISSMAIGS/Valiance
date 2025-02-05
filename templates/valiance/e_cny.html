@@ -162,19 +162,7 @@
 </div>
 
 <!-- Content Section -->
-<section class="content" id="competition">
-  <!-- Fireworks Section -->
-  <div id="firework-container"></div>
-  <!-- Competition Section -->
-  <div class="performance">
-    <section class="content second-content">
-      <div class="performance wajib">
-        <h1 class="hidden">Registrasi Lomba</h1>
-        <div class="gambar"></div>
-      </div>
-    </section>
-  </div>
-</section>
+
 
 <!-- Footer Section -->
 <svg
@@ -185,7 +173,7 @@
 >
   <path
     filter="url(#waveShadow3)"
-    fill="rgb(232, 104, 65)"
+    fill="#E6869F"
     fill-opacity="1"
     d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
   ></path>
@@ -194,32 +182,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const competitionData = {
-      wajib: [
-        {
-          image:
-            "{{ url_for('static', filename='valiance/img/cny/kokocici-fix.jpg') }}",
-          title: "Lomba KokoCici",
-          link: "/Events/SheHuaJie/KokoCici",
-        },
-        {
-          image:
-            "{{ url_for('static', filename='valiance/img/cny/vlog-new-fix.jpg') }}",
-          title: "Lomba Vlog",
-          link: "/Events/SheHuaJie/Vlog",
-        },
-        {
-          image:
-            "{{ url_for('static', filename='valiance/img/cny/photoshoot-fix-new-fix.jpg') }}",
-          title: "Lomba Photoshoot",
-          link: "/Events/SheHuaJie/Photoshoot",
-        },
-        {
-          image:
-            "{{ url_for('static', filename='valiance/img/cny/dekor-fix.jpg') }}",
-          title: "Lomba Dekorasi",
-          link: "/Events/SheHuaJie/Dekorasi",
-        },
-      ],
+      
     };
 
     const renderPosters = (data, containerSelector) => {
