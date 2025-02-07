@@ -207,7 +207,17 @@
     justify-content: center;
     gap: 5rem;
   }
-  
+
+  #qris{
+    --size: 30vw;
+    width: var(--size);
+    height: var(--size);
+    background-image: url(../img/serenite/qris.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   /* Registration Styles */
   .regis {
     text-align: center;
@@ -343,6 +353,10 @@
       margin-top: 8rem;
       flex-direction: column;
     }
+
+    #qris{
+      --size: 50vw;
+    }
   }
   
   @media screen and (max-width: 768px) {
@@ -359,6 +373,10 @@
     p,
     li {
       font-size: 100%;
+    }
+
+    #qris{
+      --size: 60vw;
     }
   }
   
