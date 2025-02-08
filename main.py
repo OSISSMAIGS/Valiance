@@ -37,7 +37,7 @@ def e_cny():
 
 @app.route("/Events/Serenite/Anonymous_Gifts")
 def l_anon():
-    return render_template("valiance/lomba_serenite/l_anonymous_gifts.html")
+    return render_template("valiance/lomba_cny/l_closed.html")
 
 @app.route("/Events/Serenite/Closed")
 def l_closed():
