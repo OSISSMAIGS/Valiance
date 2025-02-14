@@ -1,0 +1,202 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_serenite.css') }}"
+/>
+
+{% endblock css_js %} {% block title %}Serenite{% endblock title %} {% block
+main%}
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/serenite_banner.png') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- About Section -->  
+<section class="about">
+  <h1 class="hidden">About Serenité</h1>
+  <p class="hidden">
+    Serenité (Sweet Serenade) adalah acara Valentine dengan tema yang penuh
+    romantis dan kasih sayang, acara ini tampaknya akan menjadi sebuah
+    pengalaman yang sangat berkesan bagi semua yang hadir. Serenité menawarkan
+    berbagai aktivitas menarik yang dapat dinikmati bersama orang-orang
+    tercinta.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Kheiren Valentine Husnafsky</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>Tara Tania Djong</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Margaretha Queen Gading</p>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Activities & Performances</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Violin x Ballet Performace', 'bx bx-music bx-tada', 'Sebuan pertunjukan yang memadukan keindahan musik violin dengan keanggunan tarian balet, menciptakan suasana romantis dan elegan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Violin x Ballet Performance</p>
+      </div>
+      <div
+        onclick="showDetail('Dance Performance', 'bx bx-run bx-tada', 'Aksi menari yang dinamis dan penuh energi, membawa Anda dalam suasana ceria dan meriah.')"
+        class="list hidden"
+      >
+        <i class="bx bx-run bx-tada"></i>
+        <p>Dance Performance</p>
+      </div>
+      <div
+        onclick="showDetail('Theatre Performance', 'bx bx-film bx-tada', 'Pertunjukan teater yang mengisahkan kisah cinta dan kasih sayang, membawa Anda dalam suasana yang emosional dan menyentuh hati.')"
+        class="list hidden"
+      >
+        <i class="bx bx-film bx-tada"></i>
+        <p>Theatre Performance</p>
+      </div>
+      <div
+        onclick="showDetail('Workshop Decorating Cupcakes', 'bx bx-cake bx-tada', 'Pelajari cara menghias cupcakes dengan kreatif dan menarik, membawa pulang hasil karya  masing -masing.')"
+        class="list hidden"
+      >
+        <i class="bx bx-cake bx-tada"></i>
+        <p>Workshop Decorating Cupcakes</p>
+      </div>
+      <div
+        onclick="showDetail('Workshop Face Painting', 'bx bx-face bx-tada', 'Temukan bakat Anda dalam melukis wajah dengan berbagai desain dan warna, menciptakan kesenangan dan kegembiraan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-face bx-tada"></i>
+        <p>Workshop Face Painting</p>
+      </div>
+      <div
+        onclick="showDetail('Workshop Switching Painting', 'bx bx-brush bx-tada', 'Siswa dapat mengekspresikan diri dengan workshop painting dimana sepasang orang melukis di canvas yang sama dan saling bertukaran.')"
+        class="list hidden"
+      >
+        <i class="bx bx-brush bx-tada"></i>
+        <p>Workshop Switching Painting</p>
+      </div>
+      <div
+        onclick="showDetail('Minigames', 'bx bx-game bx-tada', 'Berbagai permainan kecil yang menyenangkan dan interaktif seperti; cupids arrow dan scoop the heart dimana siswa bisa bersaing dengan teman-teman.')"
+        class="list hidden"
+      >
+        <i class="bx bx-game bx-tada"></i>
+        <p>Minigames</p>
+      </div>
+      <div
+        onclick="showDetail('Call the cupid', 'bx bx-heart bx-tada', 'Abadikan momen spesial Anda dengan foto dan video yang lucu dan menyenangkan')"
+        class="list hidden"
+      >
+        <i class="bx bx-heart bx-tada"></i>
+        <p>Call the cupid</p>
+      </div>
+      <div
+        onclick="showDetail('Pameran Club', 'bx bx-buildings bx-tada', 'Kunjungi pameran yang menampilkan berbagai klub dan komunitas, menemukan minat dan hobi baru.')"
+        class="list hidden"
+      >
+        <i class="bx bx-buildings bx-tada"></i>
+        <p>Pameran Club</p>
+      </div>
+      <div
+        onclick="showDetail('Mini Bioskop', 'bx bx-movie bx-tada', 'Tonton film-film spesial yang dipilih khusus untuk acara Serenité, menikmati suasana yang romantis dan nyaman.')"
+        class="list hidden"
+      >
+        <i class="bx bx-movie bx-tada"></i>
+        <p>Mini Bioskop</p>
+      </div>
+      <div
+        onclick="showDetail('Paduan Suara', 'bx bx-microphone bx-tada', 'Pertunjukan paduan suara yang  menciptakan suasana yang harmonis dan menyentuh hati.')"
+        class="list hidden"
+      >
+        <i class="bx bx-microphone bx-tada"></i>
+        <p>Paduan Suara</p>
+      </div>
+      <div
+        onclick="showDetail('Fashion Show Prince and Princess', 'bx bx-crown bx-tada', 'Pertunjukan fashion show yang menampilkan busana-busana elegan dan mewah, memilih pasangan prince dan princess yang paling stylish dan charming.')"
+        class="list hidden"
+      >
+        <i class="bx bx-crown bx-tada"></i>
+        <p>Fashion Show Prince and Princess</p>
+      </div>
+      <div
+        onclick="showDetail('Love Board', 'bx bx-note bx-tada', 'Proyek kolaborasi antara siswa siswi yang berbentuk majalah dinding. Love Board ini diciptakan untuk mengekspresikan kreatifitas dan perasaan siswa-siswi IGS.')"
+        class="list hidden"
+      >
+        <i class="bx bx-note bx-tada"></i>
+        <p>Love Board</p>
+      </div>
+      <div
+        onclick="showDetail('Flashmob', 'bx bx-group bx-tada', 'Performance yang membawakan lagu The Greatest Show yang patut dikagumi.')"
+        class="list hidden"
+      >
+        <i class="bx bx-group bx-tada"></i>
+        <p>Flashmob</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <defs>
+    <filter id="waveShadow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+      <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+      <feFlood flood-color="white" flood-opacity="1" result="color" />
+      <feComposite in2="offsetBlur" operator="in" result="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+    filter="url(#waveShadow3)"
+    fill="#bb8a94"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
+
+{% endblock main %}

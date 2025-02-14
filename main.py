@@ -33,6 +33,10 @@ def e_savioris():
 def e_cny():
     return render_template("valiance/e_cny.html")
 
+@app.route("/Events/Serenite")
+def e_serenite():
+    return render_template("valiance/e_serenite.html")
+
 # Serenite - Registration
 
 @app.route("/Events/Serenite/Anonymous_Gifts")
