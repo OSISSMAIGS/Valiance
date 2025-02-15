@@ -9,7 +9,12 @@
 <div class="event-wrap">
   <h1 class="past" id="past">Our Events</h1>
 
-  <section class="event past">
+  <section class="event past mb-5">
+    <a href="{{ url_for('e_serenite') }}"
+      ><img
+        id="serenite"
+        src="{{ url_for('static', filename='valiance/img/banner/serenite_banner.png') }}"
+    /></a>
     <a href="{{ url_for('e_cny') }}"
       ><img
         id="cny"
@@ -34,11 +39,6 @@
       ><img
         id="euphony"
         src="{{ url_for('static', filename='valiance/img/banner/euphony_banner.jpg') }}"
-    /></a>
-    <a href="{{ url_for('e_serenite') }}"
-      ><img
-        id="serenite"
-        src="{{ url_for('static', filename='valiance/img/banner/serenite_banner.png') }}"
     /></a>
   </section>
 

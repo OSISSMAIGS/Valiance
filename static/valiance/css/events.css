@@ -96,6 +96,12 @@ img#cny:hover {
     box-shadow: 0px 0px 25px rgb(255, 193, 8);
     animation: cny-hover 0.5s linear;
 }
+
+img#serenite{
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(150, 201, 223);
+    animation: serenite-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -152,6 +158,17 @@ img#cny:hover {
     100% {
         scale: 1.02;
         box-shadow: 0px 0px 25px rgb(255, 193, 8);
+    }
+}
+@keyframes serenite-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px rgb(150, 201, 223);
     }
 }
 

@@ -3,10 +3,10 @@
 :root {
   /* Primary colors */
   --bg: #5539cf;
-  --bg-color: #F8D7DA ;
+  --bg-color: rgb(150, 201, 223) ;
   --bg-color2: #da595d;
-  --text-color: #bb8a94;
-  --text-color-darker: #8B5D66;
+  --text-color: rgb(201, 139, 113);
+  --text-color-darker: rgb(155, 102, 79);
   --text-color2: rgb(57, 145, 209);
   --overlay-bg: rgba(245, 205, 117, 0.605);
   --accent-color: white;
@@ -22,7 +22,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-shadow: 0px 0px 0.4vw rgb(255, 255, 255);
 }
 
 html,
