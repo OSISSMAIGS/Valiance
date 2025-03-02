@@ -1,0 +1,366 @@
+/* Root Variables - Color Scheme */
+:root {
+  /* Primary colors */
+  --bg: rgb(230, 255, 8);
+  --bg-color: rgb(45, 158, 11);
+  --bg-color2: #2aca3a;
+  --text-color: rgb(255, 255, 8);
+  --text-color-darker: #389211;
+  --box-list-colour: rgb(76, 187, 35);
+  --text-color2: rgb(43, 255, 0);
+
+  --overlay-bg: rgba(255, 255, 16, 0.605);
+  --accent-color: white;
+  --nav-headings: rgb(248, 211, 91);
+  --nav-bg: rgb(0, 196, 0);
+  --nav-bg-darker: #33c13a;
+  --dropdown-bg: rgb(129, 232, 65);
+  --splash-bg: rgb(43, 126, 5);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: 0px 0px 0.4vw rgb(255, 255, 255);
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: white;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+p,
+li {
+  font-size: 110%;
+}
+
+a.btn {
+  background-color: var(--bg-color2);
+  color: white;
+}
+
+/* Navigation Styles */
+
+.navbarlogo {
+  color: white;
+}
+
+.navbarMain a {
+  text-decoration: none;
+}
+
+.navbar-heading a {
+  text-decoration: none;
+}
+.navbar-heading a button {
+  color: white;
+}
+
+
+div.navbarMain div.navbar-dropdown {
+  background-color: var(--nav-bg);
+}
+
+div.navbarMain div.navbar-dropdown button:hover {
+  background-color: var(--nav-bg-darker);
+}
+
+div.navbarMain div.navbar-heading button {
+  text-shadow: 0 0.2vh 0.6vh rgba(223, 230, 16, 0.3),
+    0 -0.2vh 0.6vh rgba(201, 236, 6, 0.3), 0.3vh 0 0.6vh rgba(255, 234, 0, 0.3),
+    -0.3vh 0 0.6vh rgba(255, 255, 255, 0.3);
+}
+
+div.navbarMain div.navbar-heading button:hover {
+  color: var(--text-color2) !important;
+  text-decoration: none;
+  animation: hovering 0.2s linear !important;
+  text-shadow: 0 0.6vh 1vh rgba(200, 218, 6, 0.8),
+    0 -0.6vh 1vh rgba(156, 173, 25, 0.8), 0.4vh 0 1vh rgba(196, 208, 21, 0.8),
+    -0.4vh 0 1vh rgba(230, 255, 103, 0.8);
+}
+
+div.navbarMain i#nav-menu-icon,
+div.navbarMain div.navbar-dropdown button,
+div.navbarMain h1,
+div.navbarMain div.navbar-heading button {
+  color: white;
+}
+
+div.navbarMain div.navbar-dropdown {
+  background-color: var(--nav-bg);
+}
+
+span.showNav {
+  animation: colorLetters 0.75s linear !important;
+}
+
+/* List Card */
+section.content {
+  margin-top: 50px;
+}
+
+section.content .lists {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+section.content a {
+  text-decoration: none;
+}
+
+section.content .list {
+  width: 200px;
+  height: 200px;
+  background-color: var(--nav-bg);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+section.content .list:hover {
+  animation: box-hover 0.5s linear, box-size 0.3s linear;
+  scale: 1.05;
+  background-color: var(--nav-bg-darker);
+}
+
+section.content .list i {
+  font-size: 50pt;
+  color: var(--text-color);
+}
+
+section.content .list p {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+/* Layout Components */
+.kewa {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.kepan {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 500px;
+  margin-top: 8rem;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+.container div .title {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.container div .mechanism {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+}
+
+.container img {
+  height: 100%;
+  max-width: 261px;
+  max-height: 464px;
+  aspect-ratio: 9/16;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#workshop {
+  justify-content: center;
+  gap: 5rem;
+}
+
+/* Registration Styles */
+.regis {
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 100px;
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+button {
+  background-color: var(--text-color2);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.status {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.status.success {
+  color: var(--text-color);
+}
+
+.status.error {
+  color: red;
+}
+
+/* Waves Footer */
+.waves-footer {
+  background-color: var(--bg-color);
+  width: 100%;
+}
+
+footer {
+  background: var(--nav-bg);
+}
+
+/* Animations */
+@keyframes colorLetters {
+  0% {
+    color: #ffb22d;
+    text-shadow: none;
+  }
+
+  25% {
+    color: rgb(233, 141, 11);
+    text-shadow: 0 0.05vh 0.5vh rgba(255, 202, 103, 0.8),
+      0 -0.4vh 0.5vh rgba(255, 202, 103, 0.8),
+      0.2vh 0 0.5vh rgba(255, 202, 103, 0.8),
+      -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
+  }
+
+  50% {
+    color: rgb(233, 85, 11);
+    text-shadow: 0 0.3vh 0.5vh rgba(255, 202, 103, 0.8),
+      0 -0.3vh 0.5vh rgba(255, 202, 103, 0.8),
+      0.2vh 0 0.5vh rgba(255, 202, 103, 0.8),
+      -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
+  }
+
+  75% {
+    color: rgb(233, 141, 11);
+    text-shadow: 0 0.4vh 0.5vh rgba(255, 202, 103, 0.8),
+      0 -0.05vh 0.5vh rgba(255, 202, 103, 0.8),
+      0.2vh 0 0.5vh rgba(255, 202, 103, 0.8),
+      -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
+  }
+
+  100% {
+    color: #ffb22d;
+    text-shadow: none;
+  }
+}
+
+@keyframes hovering {
+  0% {
+    color: white;
+  }
+  100% {
+    color: var(--text-color2);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1500) {
+  .container {
+    margin-top: 8rem;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 8rem;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  p,
+  li {
+    font-size: 100%;
+  }
+}
+
+/* Utility Classes */
+.hidden {
+  transform: translateY(100%);
+  filter: blur(10px);
+}
+
+.show {
+  transform: translateY(0);
+  filter: blur(0);
+  transition: all 0.7s ease-in-out;
+}

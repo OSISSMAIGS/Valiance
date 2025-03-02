@@ -37,6 +37,10 @@ def e_cny():
 def e_serenite():
     return render_template("valiance/e_serenite.html")
 
+@app.route("/Events/Tamiera")
+def e_tamiera():
+    return render_template("valiance/e_tamiera.html")
+
 # Serenite - Registration
 
 @app.route("/Events/Serenite/Anonymous_Gifts")
@@ -46,6 +50,20 @@ def l_anon():
 @app.route("/Events/Serenite/Closed")
 def l_closed():
     return render_template("valiance/lomba_cny/l_closed.html")
+
+@app.route("/Events/Tamiera/Azan")
+def l_azan():
+    return render_template("valiance/lomba_tamiera/l_azan.html")
+@app.route("/Events/Tamiera/Nasyid")
+def l_nasyid():
+    return render_template("valiance/lomba_tamiera/l_nasyid.html")
+@app.route("/Events/Tamiera/Cerdas_Cermat")
+def l_cerdas_cermat():
+    return render_template("valiance/lomba_tamiera/l_cerdas_cermat.html")
+@app.route("/Events/Tamiera/Sambung_Ayat")
+def l_sambung_ayat():
+    return render_template("valiance/lomba_tamiera/l_sambung_ayat.html")
+
 
 # OTHERS
 @app.route("/Coming_Soon")
