@@ -3,7 +3,7 @@
 :root {
   /* Primary colors */
   --bg: rgb(230, 255, 8);
-  --bg-color: rgb(45, 158, 11);
+  --bg-color: rgb(38, 101, 79);
   --bg-color2: #2aca3a;
   --text-color: rgb(255, 255, 8);
   --text-color-darker: #389211;
@@ -406,33 +406,36 @@ section.second-content {
 
 @keyframes colorLetters {
   0% {
-    color: white;
+    color: #ffb22d;
     text-shadow: none;
   }
 
   25% {
-    color: rgb(232, 210, 149);
-    text-shadow: 0 0.05vh 0.5vh rgb(254, 255, 177),
-      0 -0.4vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
-      -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(233, 141, 11);
+    text-shadow: 0 0.05vh 0.5vh rgba(255, 202, 103, 0.8),
+      0 -0.4vh 0.5vh rgba(255, 202, 103, 0.8),
+      0.2vh 0 0.5vh rgba(255, 202, 103, 0.8),
+      -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
   }
 
   50% {
-    color: rgb(233, 184, 128);
-    text-shadow: 0 0.3vh 0.5vh rgb(254, 255, 177),
-      0 -0.3vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
-      -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(233, 85, 11);
+    text-shadow: 0 0.3vh 0.5vh rgba(255, 202, 103, 0.8),
+      0 -0.3vh 0.5vh rgba(255, 202, 103, 0.8),
+      0.2vh 0 0.5vh rgba(255, 202, 103, 0.8),
+      -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
   }
 
   75% {
-    color: rgb(232, 210, 149);
-    text-shadow: 0 0.4vh 0.5vh rgb(254, 255, 177),
-      0 -0.05vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177),
-      -0.2vh 0 0.5vh rgb(254, 255, 177);
+    color: rgb(233, 141, 11);
+    text-shadow: 0 0.4vh 0.5vh rgba(255, 202, 103, 0.8),
+      0 -0.05vh 0.5vh rgba(255, 202, 103, 0.8),
+      0.2vh 0 0.5vh rgba(255, 202, 103, 0.8),
+      -0.2vh 0 0.5vh rgba(255, 202, 103, 0.8);
   }
 
   100% {
-    color: white;
+    color: #ffb22d;
     text-shadow: none;
   }
 }
@@ -441,7 +444,6 @@ section.second-content {
   0% {
     color: white;
   }
-
   100% {
     color: var(--text-color2);
   }
