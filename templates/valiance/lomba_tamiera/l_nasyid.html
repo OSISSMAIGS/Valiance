@@ -7,7 +7,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbwV6BayV5fNba5XLq6aSn6pztqPPit8JfzYt0l79xrxJJ4rDDafThgWS685hD2Put7I/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwNGb6V32H1YO1gO_2XJgSrTm3B2qMCA7xA08CRAO3-4rhQ9_0jTEd4n6WHQ4pe_4iT/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -109,7 +109,7 @@
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/serenite/Nasyid.png') }}"
+			src="{{ url_for('static', filename='valiance/img/tamiera/l_nasyid.jpeg') }}"
 			alt="Lomba Nasyid"
 		></img>
 	</div>
@@ -122,8 +122,12 @@
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama">Nama:</label>
-	            <input type="text" id="nama" name="nama" required>
+	            <label for="nama-anggota-1">Nama Anggota 1:</label>
+	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
+	        </div>
+	        <div class="form-group">
+	            <label for="nama-anggota-2">Nama Anggota 2 (opsional):</label>
+	            <input type="text" id="nama-anggota-2" name="nama-anggota-2">
 	        </div>
 
 	        <!-- Input Kelas -->
@@ -152,7 +156,7 @@
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
 			<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 			<p>Silahkan join link grup Line ini 🍀:</p>
-	        <a href="https://line.me/ti/g/wLJ5BqjeG8" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/ti/g/KCCYz66uen" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 			<button 
 				id="closeButton"

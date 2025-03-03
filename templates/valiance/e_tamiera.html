@@ -8,23 +8,23 @@
         const competitionData = [
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_lcc_bahasa.png') }}",
-                title: "LCC Bahasa",
-                link: "Events/Tamiera/Nasyid"
+                title: "Lomba Nasyid",
+                link: "{{ url_for('l_nasyid') }}"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_debate_inggris.png') }}",
-                title: "English Debate",
-                link: "https://forms.gle/nQupMb1exPc4v56M9"
+                title: "Lomba Cerdas Cermat Islami",
+                link: "{{ url_for('l_cerdas_cermat') }}"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_arab.png') }}",
-                title: "Lomba Arab",
-                link: "https://docs.google.com/forms/d/e/1FAIpQLSc9PJKnjvXiJ74mgJKnGpwFjgWXMJ_PZbQL22eeH_ILIwh0Kg/viewform?usp=pp_url"
+                title: "Lomba Adzan",
+                link: "{{ url_for('l_azan') }}"
             },
             {
                 image: "{{ url_for('static', filename='valiance/img/euphony/lomba_cosplay.png') }}",
-                title: "Lomba Cosplay",
-                link: "https://docs.google.com/forms/d/e/1FAIpQLSedQd5Zr2EtbFYFws851F91b-bD2XDlCADNAPzADyrfl1QYxQ/viewform?usp=sf_link"
+                title: "Lomba Sambung Ayat",
+                link: "{{ url_for('l_sambung_ayat') }}"
             },
         ];
     
@@ -41,7 +41,7 @@
                     <img id="poster" src="${comp.image}" alt="${comp.title}">
                     <div class="overlay">
                         <h5><b>${comp.title}</b></h5>
-                        <a href="${'#'}" class="btn">Register Now</a>
+                        <a href="${comp.link}" class="btn">Register Now</a>
                     </div>
                 `;
             

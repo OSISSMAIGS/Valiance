@@ -97,9 +97,14 @@ img#cny:hover {
     animation: cny-hover 0.5s linear;
 }
 
-img#serenite{
+img#serenite:hover{
     scale: 1.02;
     box-shadow: 0px 0px 25px rgb(150, 201, 223);
+    animation: serenite-hover 0.5s linear;
+}
+img#tamiera:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(150, 223, 150);
     animation: serenite-hover 0.5s linear;
 }
 @keyframes euphony-hover {
@@ -169,6 +174,17 @@ img#serenite{
     100% {
         scale: 1.02;
         box-shadow: 0px 0px 25px rgb(150, 201, 223);
+    }
+}
+@keyframes serenite-hover {
+    0% {
+        scale: 1;
+        box-shadow: 0px 0px white;
+    }
+
+    100% {
+        scale: 1.02;
+        box-shadow: 0px 0px 25px rgb(164, 223, 150);
     }
 }
 
