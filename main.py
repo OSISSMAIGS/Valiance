@@ -37,30 +37,22 @@ def e_cny():
 def e_serenite():
     return render_template("valiance/e_serenite.html")
 
-@app.route("/Events/Tamiera")
+@app.route("/Events/Pesantren_Kilat")
 def e_tamiera():
     return render_template("valiance/e_tamiera.html")
 
-# Serenite - Registration
+# Tamiera - Registration
 
-@app.route("/Events/Serenite/Anonymous_Gifts")
-def l_anon():
-    return render_template("valiance/lomba_cny/l_closed.html")
-
-@app.route("/Events/Serenite/Closed")
-def l_closed():
-    return render_template("valiance/lomba_cny/l_closed.html")
-
-@app.route("/Events/Tamiera/Azan")
+@app.route("/Events/Pesantren_Kilat/Azan")
 def l_azan():
     return render_template("valiance/lomba_tamiera/l_azan.html")
-@app.route("/Events/Tamiera/Nasyid")
+@app.route("/Events/Pesantren_Kilat/Nasyid")
 def l_nasyid():
     return render_template("valiance/lomba_tamiera/l_nasyid.html")
-@app.route("/Events/Tamiera/Cerdas_Cermat")
+@app.route("/Events/Pesantren_Kilat/Cerdas_Cermat")
 def l_cerdas_cermat():
     return render_template("valiance/lomba_tamiera/l_cerdas_cermat.html")
-@app.route("/Events/Tamiera/Sambung_Ayat")
+@app.route("/Events/Pesantren_Kilat/Sambung_Ayat")
 def l_sambung_ayat():
     return render_template("valiance/lomba_tamiera/l_sambung_ayat.html")
 
