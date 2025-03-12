@@ -39,22 +39,22 @@ def e_serenite():
 
 @app.route("/Events/Pesantren_Kilat")
 def e_tamiera():
-    return render_template("valiance/e_tamiera.html")
+    return render_template("valiance/l_closed.html")
 
 # Tamiera - Registration
 
 @app.route("/Events/Pesantren_Kilat/Azan")
 def l_azan():
-    return render_template("valiance/lomba_tamiera/l_azan.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Pesantren_Kilat/Nasyid")
 def l_nasyid():
-    return render_template("valiance/lomba_tamiera/l_nasyid.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Pesantren_Kilat/Cerdas_Cermat")
 def l_cerdas_cermat():
-    return render_template("valiance/lomba_tamiera/l_cerdas_cermat.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Pesantren_Kilat/Sambung_Ayat")
 def l_sambung_ayat():
-    return render_template("valiance/lomba_tamiera/l_sambung_ayat.html")
+    return render_template("valiance/l_closed.html")
 
 
 # OTHERS
