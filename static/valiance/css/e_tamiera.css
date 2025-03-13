@@ -5,15 +5,15 @@
   --bg: rgb(230, 255, 8);
   --bg-color: rgb(38, 101, 79);
   --bg-color2: #2aca3a;
-  --text-color: rgb(255, 255, 8);
-  --text-color-darker: #389211;
+  --text-color: rgb(253, 189, 91);
+  --text-color-darker: rgb(230, 167, 72);
   --box-list-colour: rgb(76, 187, 35);
-  --text-color2: rgb(43, 255, 0);
+  --text-color2: rgb(17, 245, 108);
 
   --overlay-bg: rgba(255, 255, 16, 0.605);
   --accent-color: white;
   --nav-headings: rgb(248, 211, 91);
-  --nav-bg: rgb(0, 196, 0);
+  --nav-bg: rgb(143, 128, 143);
   --nav-bg-darker: #33c13a;
   --dropdown-bg: rgb(129, 232, 65);
   --splash-bg: rgb(43, 126, 5);
