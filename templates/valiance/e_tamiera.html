@@ -1,108 +1,199 @@
-{% extends "valiance/layout.html" %}
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_tamiera.css') }}"
+/>
 
-{% block css_js %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/e_tamiera.css') }}">
-
-<script>
-	document.addEventListener('DOMContentLoaded', function() {
-        const competitionData = [
-            {
-                image: "{{ url_for('static', filename='valiance/img/tamiera/l_nasyid.jpeg') }}",
-                title: "Lomba Nasyid",
-                link: "{{ url_for('l_nasyid') }}"
-            },
-            {
-                image: "{{ url_for('static', filename='valiance/img/tamiera/l_cerdas_cermat.jpeg') }}",
-                title: "Lomba Cerdas Cermat Islami",
-                link: "{{ url_for('l_cerdas_cermat') }}"
-            },
-            {
-                image: "{{ url_for('static', filename='valiance/img/tamiera/l_azan.jpeg') }}",
-                title: "Lomba Adzan",
-                link: "{{ url_for('l_azan') }}"
-            },
-            {
-                image: "{{ url_for('static', filename='valiance/img/tamiera/l_sambung_ayat.jpeg') }}",
-                title: "Lomba Sambung Ayat",
-                link: "{{ url_for('l_sambung_ayat') }}"
-            },
-        ];
-    
-        const posterContainer = document.querySelector('.performance .gambar');
-        if (posterContainer) {
-            posterContainer.innerHTML = '';
-    
-            competitionData.forEach((comp, index) => {
-                const container = document.createElement('div');
-                // Fix: Properly add the classes
-                container.className = 'image-container hidden';
-            
-                container.innerHTML = `
-                    <img id="poster" src="${comp.image}" alt="${comp.title}">
-                    <div class="overlay">
-                        <h5><b>${comp.title}</b></h5>
-                        <a href="${comp.link}" class="btn">Register Now</a>
-                    </div>
-                `;
-            
-                posterContainer.appendChild(container);
-            });
-    
-            // Initialize the intersection observer after creating elements
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    }
-                });
-            });
-    
-            // Observe all hidden elements
-            const hiddenElements = document.querySelectorAll(".hidden");
-            hiddenElements.forEach((el) => observer.observe(el));
-        }
-    });
-</script>
-{% endblock css_js %}
-
-{% block title %}Pesantren Kilat{% endblock title %}
-
-{% block main %}
+{% endblock css_js %} {% block title %}Tamiera{% endblock title %} {% block main
+%}
 <!-- Banner Section -->
 <section class="banner">
-    <img src="{{ url_for('static', filename='valiance/img/banner/tamiera_banner_fix.png') }}" alt="banner">
-    <section class="gradient-banner"></section>
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/tamiera_banner.jpg') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
 </section>
 
-<!-- Poster -->
-<section class="content second-content">
-    <div class="performance">
-        <h1 class="hidden">Registration</h1>
-        <div class="gambar">
-            
-        </div>
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Tamiera</h1>
+  <p class="hidden">
+    Tamiera (Najtamie fi Ramadan) : Berkumpul di Ramadan adalah acara buka
+    bersama yang diadakan di sekolah untuk memeriahkan bulan suci Ramadan. Acara
+    ini bertujuan untuk memperkuat silaturahmi dan kebersamaan antara siswa,
+    guru, dan staf sekolah. Dengan tema "Berkumpul di Ramadan", acara ini
+    diharapkan dapat menjadi sarana untuk memperdalam keimanan dan keakraban di
+    antara lingkungan sekolah.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>M. Farisz Naufal Abdillah</p>
     </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 1</b></p>
+      <p>Amelia Ramadani</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 2</b></p>
+      <p>Aisyah Raya Raihana</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Feola Ratu Didian</p>
+    </div>
+  </div>
 </section>
 
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Activities & Performances</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Hadroh Opening', 'bx bx-music bx-tada', 'Pembukaan acara dengan penampilan hadroh yang meriah dan penuh semangat.')"
+        class="list hidden"
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Hadroh Opening</p>
+      </div>
+      <div
+        onclick="showDetail('Tari Dindin Badindin', 'bx bx-run bx-tada', 'Penampilan tarian tradisional yang menarik dan menghibur.')"
+        class="list hidden"
+      >
+        <i class="bx bx-run bx-tada"></i>
+        <p>Tari Dindin Badindin</p>
+      </div>
+      <div
+        onclick="showDetail('Tilawah', 'bx bx-book-reader bx-tada', 'Penampilan tilawah Al-Qur`an yang indah dan menyentuh hati.')"
+        class="list hidden"
+      >
+        <i class="bx bx-book-reader bx-tada"></i>
+        <p>Tilawah</p>
+      </div>
+      <div
+        onclick="showDetail('Pembuka / Sari Tilawah', 'bx bx-play-circle bx-tada', 'Penampilan pembuka tilawah yang memukau dan membangkitkan semangat.')"
+        class="list hidden"
+      >
+        <i class="bx bx-play-circle bx-tada"></i>
+        <p>Pembuka / Sari Tilawah</p>
+      </div>
+      <div
+        onclick="showDetail('Murajaah Anak SD', 'bx bx-child bx-tada', 'Penampilan murajaah anak-anak SD yang menggemaskan dan menghibur.')"
+        class="list hidden"
+      >
+        <i class="bx bx-child bx-tada"></i>
+        <p>Murajaah Anak SD</p>
+      </div>
+      <div
+        onclick="showDetail('Stand Live Karaoke', 'bx bx-microphone bx-tada', 'Kegiatan karaoke yang memungkinkan peserta untuk bernyanyi secara langsung.')"
+        class="list hidden"
+      >
+        <i class="bx bx-microphone bx-tada"></i>
+        <p>Stand Live Karaoke</p>
+      </div>
+      <div
+        onclick="showDetail('Sholat Maghrib Berjamaah', 'bx bx-group bx-tada', 'Sholat Magrib yang dilakukan bersama untuk memperkuat silaturahmi dan kebersamaan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-group bx-tada"></i>
+        <p>Sholat Maghrib Berjamaah</p>
+      </div>
+      <div
+        onclick="showDetail('Band', 'bx bxs-guitar-amp bx-tada', 'Penampilan band dengan alunan musik yang enerjik dan modern, menghadirkan hiburan yang dinamis dan mengasyikkan untuk semua kalangan.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-guitar-amp bx-tada"></i>
+        <p>Band</p>
+      </div>
+      <div
+        onclick="showDetail('Orkestra Kultum', 'bx bxs-piano bx-tada', 'Penampilan orkestra yang mengiringi kultum dengan penuh kehangatan dan hikmah, menciptakan suasana religius yang menyentuh hati.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-piano bx-tada"></i>
+        <p>Orkestra Kultum</p>
+      </div>
+      <div
+        onclick="showDetail('Vocal Group SD', 'bx bx-user-voice bx-tada', 'Penampilan vokal dari anak-anak SD yang manis dan menggemaskan, menyuguhkan harmoni riang yang mampu menyentuh dan menghibur penonton.')"
+        class="list hidden"
+      >
+        <i class="bx bx-user-voice bx-tada"></i>
+        <p>Vocal Group SD</p>
+      </div>
+      <div
+        onclick="showDetail('Vocal Group Teachers', 'bx bx-speaker bx-tada', 'Penampilan vokal para guru yang penuh dedikasi, menampilkan harmoni yang indah dan menginspirasi, menggambarkan semangat kebersamaan di lingkungan pendidikan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-speaker bx-tada"></i>
+        <p>Vocal Group Teachers</p>
+      </div>
+      <div
+        onclick="showDetail('Nyanyi Elizabeth', 'bx bxl-deezer bx-tada', ' Penampilan solo oleh siswi SMA IGS yang berbakat, menyampaikan lagu dengan penuh perasaan dan kemampuan vokal yang memukau, menyemarakkan acara dengan keanggunannya.')"
+        class="list hidden"
+      >
+        <i class="bx bxl-deezer bx-tada"></i>
+        <p>Nyanyi Elizabeth</p>
+      </div>
+      <div
+        onclick="showDetail('Duet Vocal SD', 'bx bx-user-plus bx-tada', 'Penampilan duet vokal dari anak-anak SD yang kompak dan ceria, menampilkan harmoni yang menyentuh dan penuh keceriaan, memperlihatkan kebersamaan yang menghangatkan hati.')"
+        class="list hidden"
+      >
+        <i class="bx bx-user-plus bx-tada"></i>
+        <p>Duet Vocal SD</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Footer Wave -->
-<svg class="waves-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <defs>
-        <filter id="waveShadow3" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
-            <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-            <feFlood flood-color="white" flood-opacity="1" result="color" />
-            <feComposite in2="offsetBlur" operator="in" result="shadow" />
-            <feMerge>
-                <feMergeNode in="shadow" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-    </defs>
-    <path filter="url(#waveShadow3)" 
-          fill="rgb(0, 196, 0)" 
-          fill-opacity="1" 
-          d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-    </path>
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <defs>
+    <filter id="waveShadow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+      <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+      <feFlood flood-color="white" flood-opacity="1" result="color" />
+      <feComposite in2="offsetBlur" operator="in" result="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+    filter="url(#waveShadow3)"
+    fill="rgb(0, 196, 0)"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
 </svg>
 {% endblock main %}
