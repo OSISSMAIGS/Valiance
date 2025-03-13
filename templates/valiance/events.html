@@ -10,6 +10,11 @@
   <h1 class="past" id="past">Our Events</h1>
 
   <section class="event past mb-5">
+    <a href="{{ url_for('e_tamiera') }}"
+      ><img
+        id="tamiera"
+        src="{{ url_for('static', filename='valiance/img/banner/tamiera_banner.jpg') }}"
+    /></a>
     <a href="{{ url_for('e_serenite') }}"
       ><img
         id="serenite"
@@ -51,7 +56,11 @@
       <filter id="waveShadow" x="-50%" y="-50%" width="200%" height="200%">
         <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
         <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-        <feFlood flood-color="rgb(124, 28, 28)" flood-opacity="1" result="color" />
+        <feFlood
+          flood-color="rgb(124, 28, 28)"
+          flood-opacity="1"
+          result="color"
+        />
         <feComposite in2="offsetBlur" operator="in" result="shadow" />
         <feMerge>
           <feMergeNode in="shadow" />

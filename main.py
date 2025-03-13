@@ -37,9 +37,9 @@ def e_cny():
 def e_serenite():
     return render_template("valiance/e_serenite.html")
 
-@app.route("/Events/Pesantren_Kilat")
+@app.route("/Events/Tamiera")
 def e_tamiera():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/e_tamiera.html")
 
 # Tamiera - Registration
 
