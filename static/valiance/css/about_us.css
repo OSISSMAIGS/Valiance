@@ -52,6 +52,8 @@ div.line-cut{
 div.sekbid-container{
     width: 100vw;
     margin: 0;
+    position: relative;
+    top: calc(1vw + 3vh);
 }
 
 div.sekbid-container .sekbid-item{
@@ -264,3 +266,139 @@ div.content p {
         margin-bottom: 1%;
     }
 }
+
+
+/* Second Navbar */
+div.navbarMain{
+    box-shadow: none;
+}
+div.navbarScroll {
+    width: 100vw;
+    height: 6vh;
+    background-color: rgb(222, 97, 48);
+    position: fixed;
+    color: white;
+    z-index: 9000;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.5);
+}
+
+.prev,
+.next {
+    position: absolute;
+    font-size: 4.125vh;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 2vh;
+}
+
+.next {
+    right: 2vh;
+}
+
+.mainScrollContainer {
+    position: absolute;
+    left: calc(4vh);
+    width: calc(100vw - 8vh);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    -webkit-mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 90%,
+            rgba(0, 0, 0, 0) 100%);
+}
+
+.SelectionsContainer {
+    max-width: calc(98vw - 8vh);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.SelectionsContainer button {
+    background: none;
+    color: white;
+    height: 100%;
+    padding: 0 3vh;
+    font-size: 2.5vh;
+    border: none;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: -0.12vh;
+}
+
+.SelectionsContainer button:hover {
+    color: orange;
+}
+
+@media (min-width:1024px){
+    div.navbarScroll {
+        top: 7.9vh;
+    }
+}
+@media (max-width:1024px) and (orientation:portrait) {
+    div.navbarScroll {
+        top: 7.9vh;
+    }
+    div.top-section {
+        top: 14vh;
+    }
+    div.sekbid-container {
+        top: calc(1vw + 12vh);
+    }
+}
+@media (max-width:1024px) and (orientation:landscape) {
+    div.navbarScroll {
+        top: 6.9vw;
+    }
+    div.navbarScroll {
+        height: 6vw;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        font-size: 4vw;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .prev {
+        left: 1.5vw;
+    }
+
+    .next {
+        right: 1.5vw;
+    }
+
+    .mainScrollContainer {
+        left: 3vw;
+        width: 94vw;
+    }
+
+    .SelectionsContainer {
+        max-width: 92vw;
+    }
+
+    .SelectionsContainer button {
+        padding: 0 2.25vw;
+        font-size: 1.875vw;
+        letter-spacing: -0.09vw;
+    }
+}
+
+
