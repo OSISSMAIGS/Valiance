@@ -12,7 +12,34 @@
 <script src="{{ url_for('static', filename='valiance/js/about_us.js') }}"></script>
 {% endblock css_js %} {% block title %}About Us{% endblock title %} {% block
 main %}
-
+<div class="navbarScroll">
+      <div class="prev" onclick="changeScrollPage(0)">❮</div>
+      <div class="next" onclick="changeScrollPage(1)">❯</div>
+      <div class="mainScrollContainer">
+        <div class="SelectionsContainer">
+          <a href="#"><button>sosial</button></a>
+          <a href="#"><button>ddv</button></a>
+          <a href="#"><button>mulmed</button></a>
+          <a href="#"><button>secretary</button></a>
+          <a href="#"><button>sample</button></a>
+          <a href="#"><button>sosial</button></a>
+          <a href="#"><button>ddv</button></a>
+          <a href="#"><button>mulmed</button></a>
+          <a href="#"><button>secretary</button></a>
+          <a href="#"><button>sample</button></a>
+          <a href="#"><button>sosial</button></a>
+          <a href="#"><button>ddv</button></a>
+          <a href="#"><button>mulmed</button></a>
+          <a href="#"><button>secretary</button></a>
+          <a href="#"><button>sample</button></a>
+          <a href="#"><button>sosial</button></a>
+          <a href="#"><button>ddv</button></a>
+          <a href="#"><button>mulmed</button></a>
+          <a href="#"><button>secretary</button></a>
+          <a href="#"><button>sample</button></a>
+        </div>
+      </div>
+    </div>
 <div class="top-section">
   <div class="heading-section"><span>ABOUT US</span></div>
   <img
@@ -101,6 +128,47 @@ main %}
         `
     }
   }
+
+
+  // Second Navbar
+
+  const scrollContainer = document.querySelector(".SelectionsContainer");
+
+      scrollContainer.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY + evt.deltaX; // Scrolls horizontally
+      });
+      function changeScrollPage(n) {
+        if (n == 0) {
+          if (scrollContainer.scrollLeft > scrollContainer.clientWidth) {
+            scrollContainer.scrollTo({
+              left: scrollContainer.scrollLeft - scrollContainer.clientWidth,
+              behavior: "smooth",
+            });
+          } else {
+            scrollContainer.scrollTo({
+              left: 0,
+              behavior: "smooth",
+            });
+          }
+        }
+        if (n == 1) {
+          if (
+            scrollContainer.scrollWidth >
+            scrollContainer.clientWidth + scrollContainer.scrollLeft
+          ) {
+            scrollContainer.scrollTo({
+              left: scrollContainer.scrollLeft + scrollContainer.clientWidth,
+              behavior: "smooth",
+            });
+          } else {
+            scrollContainer.scrollTo({
+              left: scrollContainer.scrollWidth - scrollContainer.clientWidth,
+              behavior: "smooth",
+            });
+          }
+        }
+      }
 </script>
     <svg
       class="waves-footer"
