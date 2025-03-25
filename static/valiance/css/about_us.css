@@ -50,9 +50,10 @@ div.line-cut{
 
 /* section sekbid head */
 div.sekbid-container{
-    width: 100vw;
+    width: 95vw;
     margin: 0;
     position: relative;
+    left: 2.5vw;
     top: calc(1vw + 3vh);
 }
 
@@ -73,6 +74,7 @@ div.sekbid-container .sekbid-item .frame {
     background-color: rgb(222, 97, 48);
     border-radius: 2vw;
     margin-bottom: 8vw;
+    margin-top: 6vw;
 }
 
 div.sekbid-container .sekbid-item .frame .inner-frame {
@@ -120,7 +122,7 @@ div.sekbid-container .sekbid-item .frame-card img.individual-photo{
     width: 40vw;
     position: relative;
     left: -3vw;
-    top: -5vw;
+    top: -4vw;
 }
 
 div.sekbid-container .sekbid-item .frame-card h1.individual-number {
@@ -161,7 +163,7 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card {
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .name-heading{
     display: block;
     font-weight: 600;
-    font-size: 2.5vw;
+    font-size: 1.8vw;
     color: white;
     text-align: center;
     margin-left: -0.75vw;
@@ -171,7 +173,7 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card .name-heading{
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .nickname-heading{
     display: block;
     margin-top: -0.5vw;
-    font-size: 1vw;
+    font-size: 1.2vw;
     color: white;
     text-align: center;
     margin-left: -0.75vw;
@@ -333,7 +335,8 @@ div.navbarScroll {
     background: none;
     color: white;
     height: 100%;
-    padding: 0 3vh;
+    width: 100%;
+    min-width: 28vh;
     font-size: 2.5vh;
     border: none;
     cursor: pointer;

@@ -17,26 +17,6 @@ main %}
       <div class="next" onclick="changeScrollPage(1)">❯</div>
       <div class="mainScrollContainer">
         <div class="SelectionsContainer">
-          <a href="#"><button>sosial</button></a>
-          <a href="#"><button>ddv</button></a>
-          <a href="#"><button>mulmed</button></a>
-          <a href="#"><button>secretary</button></a>
-          <a href="#"><button>sample</button></a>
-          <a href="#"><button>sosial</button></a>
-          <a href="#"><button>ddv</button></a>
-          <a href="#"><button>mulmed</button></a>
-          <a href="#"><button>secretary</button></a>
-          <a href="#"><button>sample</button></a>
-          <a href="#"><button>sosial</button></a>
-          <a href="#"><button>ddv</button></a>
-          <a href="#"><button>mulmed</button></a>
-          <a href="#"><button>secretary</button></a>
-          <a href="#"><button>sample</button></a>
-          <a href="#"><button>sosial</button></a>
-          <a href="#"><button>ddv</button></a>
-          <a href="#"><button>mulmed</button></a>
-          <a href="#"><button>secretary</button></a>
-          <a href="#"><button>sample</button></a>
         </div>
       </div>
     </div>
@@ -53,6 +33,7 @@ main %}
 <div class="sekbid-container">
     </div>
 <script>
+  let SelectionsContainer = document.body.querySelector(".SelectionsContainer");
   let container = document.body.querySelector(".sekbid-container");
 
 
@@ -60,32 +41,367 @@ main %}
   let DataArray = [
     {
       Sekbid: "Top 3",
-      imgdirect: "{{ url_for('static', filename='valiance/img/about_us/syahdanceline-duo.png') }}",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742906043/Top_3_zu2asa_g4bw7w.png",
       Members: [
+        {
+          name: "Celine Aurelia Tan",
+          jersey: 1,
+          y_exp: 2,
+          nicks: "selintan/ /syelyn/ /anyomayi kyosyong",
+          jabatan: "Ketua OSIS",
+          insta: "cellne.tan",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742128957/Celine_Tan_hstwty.png"
+        },
         {
           name: "M. Satria Alfahri",
           jersey: 2,
           y_exp: 2,
-          e_exp: 5,
-          nicks: "satari/wibu pro hengker/fisika",
-          jabatan: "Wakil Ketua Osis I",
+          nicks: "satari/ /wibu pro hengker/ /fisika",
+          jabatan: "Wakil Ketua OSIS I",
           insta: "msatrialfahri",
-          imgroot: "{{ url_for('static', filename='valiance/img/about_us/syahdan-solo.png') }}"
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742128940/Satria_zxkbju.png"
+        },
+        {
+          name: "Syahdan Rafi Akram",
+          jersey: 3,
+          y_exp: 2,
+          nicks: "syahdan/ /dan/ /danprohengker",
+          jabatan: "Wakil Ketua OSIS II",
+          insta: "syahdansu",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742128954/Syahdan_2_psp64d.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Sekretaris",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742129869/Sekretaris_1_txopjl.png",
+      Members: [
+        {
+          name: "Michelle Aneurin",
+          jersey: 12,
+          y_exp: 2,
+          nicks: "aneurin",
+          jabatan: "Sekretaris",
+          insta: "michelle_aneurin",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742129425/Michelle_Aneurine_uinpxs.png"
+        },
+        {
+          name: "Jessica Duangmun",
+          jersey: 40,
+          y_exp: 1,
+          nicks: "Jessmun",
+          jabatan: "Wakil Sekretaris",
+          insta: "jemoonn",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742129425/Jessica_wquqvt.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Bendahara",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742130624/Bendahara_ikdnq6.png",
+      Members: [
+        {
+          name: "Celine Natifa Sanny",
+          jersey: 99,
+          y_exp: 2,
+          nicks: "celine",
+          jabatan: "Bendahara",
+          insta: "celinensan",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742130623/Celine_Natifa_rdgnzs.png"
+        },
+        {
+          name: "Kayla Visha Arganata",
+          jersey: 63,
+          y_exp: 1,
+          nicks: "kela/ /ayak/ /kayie",
+          jabatan: "Wakil Bendahara",
+          insta: "kaylaavsh",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742130608/Kayla_r2m2wa.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Bela Negara",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132604/Bela_Negara_isuupl.png",
+      Members: [
+        {
+          name: "Michelle Angelieque G.",
+          jersey: 31,
+          y_exp: 2,
+          nicks: "que/ /icel",
+          jabatan: "Koordinator",
+          insta: "michelleangelieque",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132287/Michelle_Angelieque_uhi6hk.png"
+        },
+        {
+          name: "Bernard Febriansen",
+          jersey: 82,
+          y_exp: 1,
+          nicks: "onat/ /bernard",
+          jabatan: "Anggota",
+          insta: "bernardfeb__",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132276/onat_wfk3ke.png"
+        },
+        {
+          name: "Sulthan Santri Aji",
+          jersey: 51,
+          y_exp: 1,
+          nicks: "tan/ /sul/ /tantrum",
+          jabatan: "Anggota",
+          insta: "tll_5b",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132275/Sultan_ismh7y.png"
+        },
+        {
+          name: "Raya Asya Syafaleh",
+          jersey: 56,
+          y_exp: 1,
+          nicks: "Ray/ /Yaya/ /Layaya",
+          jabatan: "Anggota",
+          insta: "rayaasyasflh",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132272/Raya_ckmtnf.png"
+        },
+        {
+          name: "Anastasya Michaela",
+          jersey: 20,
+          y_exp: 1,
+          nicks: "nanas",
+          jabatan: "Anggota",
+          insta: "anastasya_michaela",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132276/Anastasya_jqbroi.png"
+        },
+        {
+          name: "Laxmi Dewi Putu Ardana",
+          jersey: 90,
+          y_exp: 1,
+          nicks: "mimi/ /laxmi/ /lax",
+          jabatan: "Anggota",
+          insta: "laxmi.ardana",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132257/Laxmi_yw0nl2.png"
+        },
+        {
+          name: "Muhammad Rafie K. F.",
+          jersey: 75,
+          y_exp: 1,
+          nicks: "Fiee/ /Rapi",
+          jabatan: "Anggota",
+          insta: "ravvie._",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742132257/Rafie_c2dxch.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Multimedia Onfield",
+      imgdirect: "",
+      Members: [
+        {
+          name: "Alif Danendra",
+          jersey: 96,
+          y_exp: 2,
+          nicks: "alip",
+          jabatan: "Koordinator",
+          insta: "alif.danendra_",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742137361/Alif_ojzc68.png"
+        },
+        {
+          name: "Adrian Wijaya",
+          jersey: 81,
+          y_exp: 1,
+          nicks: "drian",
+          jabatan: "Anggota",
+          insta: "rianadr.pdf",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742137364/Adrian_b2e0mx.png"
+        },
+        {
+          name: "Austin Uno Hendry",
+          jersey: 13,
+          y_exp: 2,
+          nicks: "lighting",
+          jabatan: "Anggota",
+          insta: "austin.uno.888",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742137376/Austin_nzeusi.png"
+        },
+        {
+          name: "Gavin Anggreas",
+          jersey: 17,
+          y_exp: 1,
+          nicks: "gavin/ /JMK 6",
+          jabatan: "Anggota",
+          insta: "gavin_anggreas",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742137375/Gavin_dn1g5t.png"
+        },
+        {
+          name: "Richiro Huang",
+          jersey: 69,
+          y_exp: 1,
+          nicks: "chiro/ /JMK 9",
+          jabatan: "Anggota",
+          insta: "richiro_huang",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742137364/Richiro_fuzdmj.png"
+        },
+        {
+          name: "Alvaro Valentino",
+          jersey: 23,
+          y_exp: 1,
+          nicks: "alvaro",
+          jabatan: "Anggota",
+          insta: "vlntinoav",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742137367/Alvaro_psx6gc.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Multimedia Website",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742906532/Multimedia_Website_uaczrr_tpdbjn.png",
+      Members: [
+        {
+          name: "Kevin Wilbert Johan",
+          jersey: 7,
+          y_exp: 2,
+          nicks: "kep/kepin/pin",
+          jabatan: "Koordinator",
+          insta: "kevinwlbrtj",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742135824/Kevin_Wilbert_uxmryr.png"
+        },
+        {
+          name: "Hilarius Jenson Phang",
+          jersey: 42,
+          y_exp: 1,
+          nicks: "jen/ /son",
+          jabatan: "Anggota",
+          insta: "jenson_pov",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742135830/Hilarius_etjflb.png"
+        },
+        {
+          name: "Rhasya Faqih P. S.",
+          jersey: 95,
+          y_exp: 1,
+          nicks: "rhasya/ /sultan dubai",
+          jabatan: "Anggota",
+          insta: "rhsya_fps",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742135827/Rhasya_egukn8.png"
+        },
+        {
+          name: "Winson",
+          jersey: 85,
+          y_exp: 1,
+          nicks: "just keep swimming",
+          jabatan: "Anggota",
+          insta: "winson.liee",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742135830/Winson_dpmhau.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Sekretariat",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742134595/Sekretariat_fokkfg.png",
+      Members: [
+        {
+          name: "Ruth Abigail Levana",
+          jersey: 35,
+          y_exp: 1,
+          nicks: "rutrut/ /rutek/ /ruti",
+          jabatan: "Koordinator",
+          insta: "ruthabigals",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107370/Ruth_Abigail_Levana_DDV_Sekretariat_Koordinator_Formal_mtnd2v.png"
+        },
+        {
+          name: "Siti Naila Zhafirah",
+          jersey: 74,
+          y_exp: 1,
+          nicks: "naila/ /anai",
+          jabatan: "Anggota",
+          insta: "aannaaii_",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107362/Siti_Naila_Zhafirah_DDV_Sekretariat_Anggota_Formal_y2spjs.png"
+        },
+        {
+          name: "Dina Evelin Cae",
+          jersey: 45,
+          y_exp: 1,
+          nicks: "dindin/ /ellin",
+          jabatan: "Anggota",
+          insta: "dinaevlnn",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107368/Dina_Evelin_Cae_DDV_Sekretariat_Anggota_Formal_wcqwqn.png"
+        },
+        {
+          name: "Syiezha Naiyra Q.R.",
+          jersey: 73,
+          y_exp: 1,
+          nicks: "syiezha/ /sheza/ /zizi",
+          jabatan: "Anggota",
+          insta: "not_zizi_",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107369/Syiezha_DDV_Sekretariat_Anggota_Formal_rxowab.png"
+        },
+        {
+          name: "Jovan Lauw",
+          jersey: 72,
+          y_exp: 1,
+          nicks: "van/ /jovan/ /jovan",
+          jabatan: "Anggota",
+          insta: "lauwjovan",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107369/Jovan_Lauw_DDV_Sekretariat_Anggota_Formal_eilj0s.png"
+        },
+      ],
+    },
+    {
+      Sekbid: "Dokumentasi",
+      imgdirect: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742907341/erasebg-transformed_z2shwu.png",
+      Members: [
+        {
+          name: "Valiqa Khaya Nareshwari",
+          jersey: 33,
+          y_exp: 2,
+          nicks: "vali",
+          jabatan: "Koordinator",
+          insta: "valiqakhaya",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107181/Valiqa_Khaya_Nareshwari_Dokumentasi__Koordinator_Formal_lwslai.png"
+        },
+        {
+          name: "Wira Fathi",
+          jersey: 59,
+          y_exp: 2,
+          nicks: "wira",
+          jabatan: "Anggota",
+          insta: "wirafathi",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742216346/Wira_Fathi_Dokumentasi_Anggota_Formal_nnwqmi.png"
+        },
+        {
+          name: "Fatiyyah Alphahasanah D.",
+          jersey: 76,
+          y_exp: 2,
+          nicks: "fatiyyah/ /deka",
+          jabatan: "Anggota",
+          insta: "fatiyyahd",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107180/Fatiyyah_Alphahasanah_Deka_Dokumentasi_Anggota_Formal_tnrj14.png"
+        },
+        {
+          name: "Frizzy Alnaufal Lenggana",
+          jersey: 26,
+          y_exp: 1,
+          nicks: "fruizy",
+          jabatan: "Anggota",
+          insta: "7rizzyall",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107182/Frizzy_Alnaufal_Lenggana_DDV_Dokumentasi_Anggota_Formal_nzhn65.png"
+        },
+        {
+          name: "Nicholas Kevin Yulius P.",
+          jersey: 28,
+          y_exp: 1,
+          nicks: "pin/ /kepin/ /nicho",
+          jabatan: "Anggota",
+          insta: "28kvin",
+          imgroot: "https://res.cloudinary.com/dyhmzbx7c/image/upload/v1742107181/Nicholas_Kevin_Yulius_Putra_Dokumentasi_Anggota_Formal_lladgh.png"
         },
       ],
     },
   ];
 
-
-
-
-
   for (sekbid in DataArray) {
     const sekItem = document.createElement('div');
     sekItem.className = "sekbid-item";
     document.body.querySelector('.sekbid-container').append(sekItem);
+    SelectionsContainer.innerHTML +=  `<a href="#${DataArray[sekbid].Sekbid}"><button>${DataArray[sekbid].Sekbid}</button></a>`
     sekItem.innerHTML += `
-    <div class="frame">
+    <div class="frame" id="${DataArray[sekbid].Sekbid}">
       <div class="inner-frame">
         <img
           src="${DataArray[sekbid].imgdirect}"
@@ -95,7 +411,7 @@ main %}
       <h1>${DataArray[sekbid].Sekbid}</h1>
     </div>
     `;
-    for (member in sekbid) {
+    for (member in DataArray[sekbid].Members) {
       sekItem.innerHTML += `
       <div class="frame-card">
       <img
@@ -105,10 +421,9 @@ main %}
       />
       <h1 class="individual-number">${DataArray[sekbid].Members[member].jersey}</h1>
       <h1 class="years-experience"><span>${DataArray[sekbid].Members[member].y_exp}</span> Years Experience</h1>
-      <h1 class="events-experience"><span>${DataArray[sekbid].Members[member].e_exp}</span> Events</h1>
       <div class="lower-frame-card">
         <span class="name-heading">${DataArray[sekbid].Members[member].name}</span>
-        <span class="nickname-heading">${DataArray[sekbid].Members[member].nicks}</span>
+        <span class="nickname-heading">/${DataArray[sekbid].Members[member].nicks}/</span>
         <span class="jabatan-heading">${DataArray[sekbid].Members[member].jabatan}</span>
         <div class="line-cut2"></div>
         <div class="footer-card">
