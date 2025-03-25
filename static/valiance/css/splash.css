@@ -155,7 +155,7 @@ div.navbarMain h1 span.showNav {
 		width: calc(21vw + 20vh);
 		height: 92vh;
 		top: 7.9vh;
-		right: calc(-22vw - 20vh);
+		right: calc(-25vw - 23vh);
 		background-color: var(--dropdown-bg);
 		display: flex;
 		flex-direction: column;
