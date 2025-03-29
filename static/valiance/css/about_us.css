@@ -405,3 +405,25 @@ div.navbarScroll {
 }
 
 
+
+div.frame-card .lower-frame-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Menjaga teks tetap di tengah */
+    align-items: center; 
+    width: 100%; /* Sesuai dengan frame-card */
+    height: 15vw; /* Pastikan tinggi tidak berubah */
+    background-color: var(--dark-brown);
+}
+
+div.footer-card {
+    width: 100%; /* Menyesuaikan dengan parent */
+    height: 5vw; /* Atur tinggi agar tetap konsisten */
+    min-height: 50px; /* Pastikan tidak terlalu kecil */
+    max-height: 80px; /* Mencegah terlalu besar */
+    display: flex;
+    justify-content: space-between; /* Menyebarkan ikon Instagram & logo */
+    align-items: center;
+    background-color: var(--dark-brown);
+    padding: 0.5vw; /* Memberikan sedikit ruang */
+}
