@@ -166,11 +166,9 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card .name-heading{
     font-size: 1.8vw;
     color: white;
     text-align: center;
-    margin-left: 0.75vw;
+    margin-left: -0.75vw;
     user-select: text;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+   
 }
 
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card .nickname-heading{
