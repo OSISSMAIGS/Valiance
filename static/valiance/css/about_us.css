@@ -87,14 +87,40 @@ div.sekbid-container .sekbid-item .frame .inner-frame {
     border-radius: 1.65vw;
     overflow: hidden;
 }
+div.sekbid-container .sekbid-item .frame .inner-frame img {
+    width: 97%;
+    max-height: 57vw;
+}
 
-div.sekbid-container .sekbid-item .frame .inner-frame img{  
+div.sekbid-container .sekbid-item .frame-card img{  
     position: relative;
     bottom: -0.5vw;
     left: 1.875vw;
     width: 95%;
-    max-height: 47.5vw;
 }
+
+/* Perbaikan gambar card */
+
+#satriafix{
+    width: 82%;
+    left: 7vw;
+}
+#michellefix{
+    padding: 1.5vw;
+}
+#rafiefix{
+    padding: 3vw;
+    bottom: -1.5vw;
+    left: -4vw;
+}
+#fatifix{
+    padding: 12vw;
+    top: -16vw;
+}
+
+
+
+/* end */
 
 div.sekbid-container .sekbid-item .frame h1 {
     position: relative;
@@ -134,17 +160,16 @@ div.sekbid-container .sekbid-item .frame-card h1.individual-number {
     font-family: "Bebas Neue", sans-serif;
 }
 
-div.sekbid-container .sekbid-item .frame-card  h1.years-experience, div.sekbid-container .sekbid-item .frame-card h1.events-experience{
-    position: relative;
+div.sekbid-container .sekbid-item .frame-card  h1.years-experience{
+    position: absolute;
     color: white;
     font-size: 1.8vw;
     left: 1vw;
-    top: -18vw;
+    top: 8vw;
     font-family: "Bebas Neue", sans-serif;
     user-select: text;
 }
-div.sekbid-container .sekbid-item .frame-card h1.years-experience span,
-div.sekbid-container .sekbid-item .frame-card h1.events-experience span{
+div.sekbid-container .sekbid-item .frame-card h1.years-experience span{
     font-size: 2.7vw;
     font-weight: 800;
 }
@@ -336,13 +361,16 @@ div.navbarScroll {
     background: none;
     color: white;
     height: 100%;
-    width: 100%;
-    min-width: 28vh;
     font-size: 2.5vh;
     border: none;
     cursor: pointer;
+    padding: 0 3vh;
     font-family: "Open Sans", sans-serif;
     letter-spacing: -0.12vh;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
 }
 
 .SelectionsContainer button:hover {
@@ -363,6 +391,144 @@ div.navbarScroll {
     }
     div.sekbid-container {
         top: calc(1vw + 12vh);
+    }
+    /* individual card */
+    div.sekbid-container .sekbid-item .frame-card {
+        width: 72vw;
+        height: 105vw;
+        border-radius: 3vw;
+        border: 1.5vw solid white;
+        overflow: hidden;
+        background-color: var(--brown);
+        position: relative;
+        margin: 9vw 0;
+        user-select: none;
+    }
+
+   div.sekbid-container .sekbid-item .frame-card img.individual-photo {
+       position: relative;
+       top: -13vw;
+       left: -9vw;
+       width: 125vw;
+   }
+
+   /* Perbaikan gambar card */
+
+   #satriafix {
+       width: 82%;
+       left: 21vw;
+   }
+
+   #michellefix {
+       padding: 4.5vw;
+   }
+
+   #rafiefix {
+       padding: 9vw;
+       bottom: -4.5vw;
+       left: -12vw;
+   }
+
+   #fatifix {
+       padding: 36vw;
+       top: -48vw;
+   }
+
+    div.sekbid-container .sekbid-item .frame-card h1.individual-number {
+        position: absolute;
+        color: white;
+        font-size: 24vw;
+        left: 1.5vw;
+        top: -1.5vw;
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card h1.years-experience {
+        position: absolute;
+        color: white;
+        font-size: 5.4vw;
+        left: 3vw;
+        top: 24vw;
+        font-family: "Bebas Neue", sans-serif;
+        user-select: text;
+    }
+    
+    div.sekbid-container .sekbid-item .frame-card h1.years-experience span {
+        font-size: 8.1vw;
+        font-weight: 800;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card {
+        position: absolute;
+        color: white;
+        font-size: 4.5vw;
+        width: 72vw;
+        left: 0;
+        height: 45vw;
+        top: 60vw;
+        background-color: var(--dark-brown);
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card .name-heading {
+        display: block;
+        font-weight: 600;
+        font-size: 5.4vw;
+        color: white;
+        text-align: center;
+        margin-left: -2.25vw;
+        user-select: text;
+
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card .nickname-heading {
+        display: block;
+        margin-top: -1.5vw;
+        font-size: 3.6vw;
+        color: white;
+        text-align: center;
+        margin-left: -2.25vw;
+        user-select: text;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card .jabatan-heading {
+        display: block;
+        margin-top: 5.4vw;
+        font-size: 5.4vw;
+        color: white;
+        text-align: center;
+        margin-left: -2.25vw;
+        user-select: text;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card .line-cut2 {
+        width: 63vw;
+        height: 0.75vw;
+        position: relative;
+        left: 3vw;
+        background-color: white;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card img.frame-logo {
+        position: absolute;
+        top: 29.1vw;
+        right: 15vw;
+        width: 12vw;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect {
+        text-decoration: none;
+        position: absolute;
+        top: 29.1vw;
+        left: 12vw;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect i {
+        font-size: 12vw;
+        color: white;
+    }
+
+    div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect i:hover {
+        color: rgb(200, 200, 200);
     }
 }
 @media (max-width:1024px) and (orientation:landscape) {
@@ -407,4 +573,5 @@ div.navbarScroll {
 
 
     
+
 
