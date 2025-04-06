@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Pop up ad
 
-    const overlay = document.querySelector('.overlay');
+    const overlay = document.querySelector('.popup-overlay');
     const popup = document.querySelector('.popup');
     const closeButton = document.querySelector('.popup-close');
     const buyButton = document.querySelector('.popup-button');
@@ -32,11 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close popup function
     function closePopup() {
-        overlay.style.opacity = '0';
-        
-        // Set the animation timing
-        setTimeout(() => {
+        overlay.classList.remove('active');
+        // Wait for the transition to finish then hide the overlay
+        setTimeout(function() {
             overlay.style.display = 'none';
+            // Optionally remove inline styles if needed
+            overlay.style.pointerEvents = 'none';
         }, 300);
         
         // Save in localStorage that popup has been closed
