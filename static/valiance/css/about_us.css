@@ -11,41 +11,37 @@
 }
 
 /* section foto bersama */
-div.top-section{
+section.top-section{
     width: 100vw;
-    position: relative;
-    top: calc(4vw + 4vh);
-    height: 85vw;
-}
-
-div.top-section .heading-section{
-    position: absolute;
-    width: 100%;
-    left: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
 }
 
-div.top-section .heading-section span{
+section.top-section h1.about-heading{
+    font-size: 10vw;
     color: white;
-    font-size: 20vw;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 
-div.top-section img{
-    width: 100%;
-    position: relative;
+.fotbar-kabinet{
+    margin-top: 2rem;
+    --size: 80vw;
+    width: var(--size);
+    height: calc(var(--size)/1.8);
+    background-image: url(../img/about_us/fotbar_kabinet.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0.2rem solid white;
+    /* box-shadow: 0px 0px 15px white; */
+    border-radius: 0.2rem;
 }
 
-div.line-cut{
-    position: relative;
-    left: 3.5vw;
-    width: 92vw;
-    height: 3px;
-    background-color: white;
-    box-shadow: 0 5px 12px rgba(255, 255, 255, 0.5);
-}
+
 
 
 /* section sekbid head */
@@ -237,6 +233,7 @@ div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redi
     position: absolute;
     top: 9.7vw;
     left: 4vw;
+    margin-left: 55%;
 }
 div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect i{
 font-size: 4vw;
@@ -265,6 +262,7 @@ div.content p {
     font-weight: 700;
     font-size: 1.2rem;
 }
+
 
 .waves-footer{
     background-color: var(--dark-brown);
@@ -383,6 +381,10 @@ div.navbarScroll {
     }
 }
 @media (max-width:1024px) and (orientation:portrait) {
+    section.top-section{
+        margin-top: 14rem;
+        margin-bottom: 0;
+    }
     div.navbarScroll {
         top: 7.9vh;
     }
@@ -520,6 +522,7 @@ div.navbarScroll {
         position: absolute;
         top: 29.1vw;
         left: 12vw;
+        margin-left: 60%;
     }
 
     div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect i {

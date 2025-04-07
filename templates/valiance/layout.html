@@ -120,10 +120,10 @@
 
       <div class="navbar-heading">
         <a href="{{ url_for('valiance') }}"><button>Home</button></a>
-        <a href="{{ url_for('valiance_events') }}"><button>Events</button></a
-        ><!-- temporary, href nanti =>  {{ url_for('valiance_events') }} -->
+        <a href="{{ url_for('valiance_events') }}"><button>Events</button></a>
+        <a href="https://valthephoenix.osissmaigs.com" target="_self"><button>Try Val</button></a>
         <a href="{{ url_for('coming_soon') }}"><button>Magazine</button></a>
-        <a href="{{ url_for('coming_soon') }}"><button>About Us</button></a>
+        <a href="{{ url_for('about_us') }}"><button>About Us</button></a>
       </div>
 
       <!-- dropdown mobile -->
@@ -136,10 +136,13 @@
           ><button><i class="bx bxs-calendar-event"></i>Events</button></a
         >
         <!-- temporary, href nanti =>  {{ url_for('valiance_events') }} -->
+        <a href="https://valthephoenix.osissmaigs.com" target="_self"
+          ><button><i class="bx bxs-chat"></i>Try Val</button></a
+        >
         <a href="{{ url_for('coming_soon') }}"
           ><button><i class="bx bxs-book"></i>Magazine</button></a
         >
-        <a href="{{ url_for('coming_soon') }}"
+        <a href="{{ url_for('about_us') }}"
           ><button><i class="bx bxs-info-circle"></i>About Us</button></a
         >
       </div>
@@ -150,10 +153,36 @@
 
     <section class="stars"></section>
 
+    <!-- Pop up ad -->
+
+    <div class="popup-overlay">
+      <div class="popup">
+          <button class="popup-close"><span>×</span></button>
+          <div class="popup-content">
+              <img src="{{ url_for('static', filename='/valiance/img/foto/val-logo.png') }}" alt="img" class="popup-image">
+              <h2 class="popup-title">INTRODUCING OUR OWN AI ASSISTANT</h2>
+              <p class="popup-text">Kunjungi valthephoenix.osissmaigs.com dan chat langsung dengan Val, asisten AI yang siap membantu dengan cepat dan memberikan pengalaman interaktif. !
+              </p>
+              <button class="popup-button">Try It Now</button>
+          </div>
+      </div>
+    </div>
+
+
     <div class="back3">
       <div class="back2">
         <div class="back">
           {% block main %}{% endblock main %}
+          <div class="fixed-icon-container">
+            <div class="chat-bubble">Mulai chat dengan Val</div>
+            <a href="https://valthephoenix.osissmaigs.com" target="_self" rel="noopener noreferrer">
+                <div class="fixed-icon">
+                    <div class="icon">
+                        <div class="val-logo"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
 
           <footer>
             <div class="footer-content">

@@ -22,7 +22,7 @@ div#splash {
 	background-color: var(--splash-bg);
 	animation: fadeOutSplash 3.1s ease-out;
 	opacity: 1;
-	z-index: 9999;
+	z-index: 9999999;
 	user-select: none;
 	/* handling */
 
