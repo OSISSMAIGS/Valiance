@@ -1,0 +1,132 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_estrevo.css') }}"
+/>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const competitionData = {
+      wajib: [
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}",
+          title: "Easter Egg Hunt",
+          link: "/Events/Estrevo/Easter_Egg_Hunt",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/match_the_eggs.jpg') }}",
+          title: "Match The Eggs",
+          link: "/Events/Estrevo/Match_The_Eggs",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/eggy_wobble.jpg') }}",
+          title: "Eggy Wobble",
+          link: "/Events/Estrevo/Eggy_Wobble",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/precision_hole_toss.jpg') }}",
+          title: `Precision Hole Toss"`,
+          link: "/Events/Estrevo/Precision_Hole_Toss",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/swapping_the_quotes.jpeg') }}",
+          title: "Swapping The Quotes",
+          link: "/Events/Estrevo/Swapping_The_Quotes",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/lagu_rohani.png') }}",
+          title: "Lomba Lagu Rohani",
+          link: "/Events/Estrevo/Lomba_Lagu_Rohani",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/cari_ayat.jpg') }}",
+          title: "Cari Ayat",
+          link: "/Events/Estrevo/Cari_Ayat",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/cca_alkitab.jpg') }}",
+          title: "CCA Alkitab",
+          link: "/Events/Estrevo/CCA_Alkitab",
+        },
+      ],
+    };
+
+    const renderPosters = (data, containerSelector) => {
+      const container = document.querySelector(containerSelector);
+      if (container) {
+        container.innerHTML = "";
+        data.forEach((comp) => {
+          const poster = document.createElement("div");
+          poster.className = "image-container hidden";
+
+          poster.innerHTML = `
+            <img id="poster" src="${comp.image}" alt="${comp.title}">
+            <div class="cta-link">
+              <a href="${comp.link}" class="link-cta">Register ${comp.title}</a>
+            </div>
+          `;
+
+          container.appendChild(poster);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        });
+
+        const hiddenElements = container.querySelectorAll(".hidden");
+        hiddenElements.forEach((el) => observer.observe(el));
+      }
+    };
+
+    renderPosters(competitionData.wajib, ".performance.wajib .gambar");
+    renderPosters(competitionData.tidakWajib, ".performance.tidak-wajib .gambar");
+    renderPosters(competitionData.workshop, ".performance.workshop .gambar");
+  });
+</script>
+
+
+{% endblock css_js %} {% block title %}Estrevo{% endblock title %} {% block
+main%}
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/estrevo_banner.png') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- Poster Wajib -->
+<section class="content second-content">
+  <div class="performance wajib">
+    <h1 class="hidden">Competition</h1>
+    <div class="gambar"></div>
+  </div>
+</section>
+
+<!-- Poster Tidak Wajib
+<section class="content second-content">
+  <div class="performance tidak-wajib">
+    <h1 class="hidden">Lomba Tidak Wajib</h1>
+    <div class="gambar"></div>
+  </div>
+</section> -->
+
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <path
+    fill="#E87575"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
+
+{% endblock main %}

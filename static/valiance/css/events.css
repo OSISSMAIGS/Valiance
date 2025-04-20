@@ -107,6 +107,11 @@ img#tamiera:hover{
     box-shadow: 0px 0px 25px rgb(150, 223, 150);
     animation: serenite-hover 0.5s linear;
 }
+img#estrevo:hover{
+    scale: 1.02;
+    box-shadow: 0px 0px 25px rgb(150, 223, 150);
+    animation: serenite-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;

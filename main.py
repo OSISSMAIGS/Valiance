@@ -56,6 +56,37 @@ def l_cerdas_cermat():
 def l_sambung_ayat():
     return render_template("valiance/l_closed.html")
 
+# Estrevo
+@app.route("/Events/Estrevo")
+def e_estrevo():
+    return render_template("valiance/e_estrevo.html")
+
+# Estrevo - Registration
+@app.route("/Events/Estrevo/Easter_Egg_Hunt")
+def e_easter_egg():
+    return render_template("valiance/lomba_estrevo/l_easter_egg.html")
+@app.route("/Events/Estrevo/Cari_Ayat")
+def e_cari_ayat():
+    return render_template("valiance/lomba_estrevo/l_cari_ayat.html")
+@app.route("/Events/Estrevo/CCA_Alkitab")
+def e_cca_alkitab():
+    return render_template("valiance/lomba_estrevo/l_cca_alkitab.html")
+@app.route("/Events/Estrevo/Eggy_Wobble")
+def e_eggy_wobble():
+    return render_template("valiance/lomba_estrevo/l_eggy_wobble.html")
+@app.route("/Events/Estrevo/Lomba_Lagu_Rohani")
+def e_lagu_rohani():
+    return render_template("valiance/lomba_estrevo/l_lagu_rohani.html")
+@app.route("/Events/Estrevo/Match_The_Eggs")
+def e_match_the_eggs():
+    return render_template("valiance/lomba_estrevo/l_match_the_eggs.html")
+@app.route("/Events/Estrevo/Precision_Hole_Toss")
+def e_precision_hole_toss():
+    return render_template("valiance/lomba_estrevo/l_precision_hole_toss.html")
+@app.route("/Events/Estrevo/Swapping_The_Quotes")
+def e_swapping_the_quotes():
+    return render_template("valiance/lomba_estrevo/l_swapping_the_quotes.html")
+
 
 # OTHERS
 @app.route("/Coming_Soon")
