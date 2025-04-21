@@ -45,7 +45,7 @@ def e_tamiera():
 
 @app.route("/Events/Pesantren_Kilat/Azan")
 def l_azan():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiancze/l_closed.html")
 @app.route("/Events/Pesantren_Kilat/Nasyid")
 def l_nasyid():
     return render_template("valiance/l_closed.html")
