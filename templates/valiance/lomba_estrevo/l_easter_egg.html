@@ -7,7 +7,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbwi9_kvQAiIihX9eZrpLHTG-HuKJT0vziPv64JVthEvccEDRhlgRaWwPzlsNaFtm8JD-A/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Gkl0f7mqIXxAZWuuzqTZAV-eEdRsAND54Yp4C6RGP0JPs0nG3sQeU0aqSQbri_8O/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -95,7 +95,7 @@
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/tamiera/l_cerdas_cermat.jpeg') }}"
+			src="{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}"
 			alt="Easter Egg Hunt"
 		></img>
 	</div>
@@ -108,9 +108,18 @@
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama">Nama :</label>
-	            <input type="text" id="nama" name="nama" required>
+	            <label for="nama-kapten">Nama Kapten:</label>
+	            <input type="text" id="nama-kapten" name="nama-kapten" required>
 	        </div>
+	        <div class="form-group">
+	            <label for="nama-anggota-1">Nama Anggota 1:</label>
+	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
+	        </div>
+	        <div class="form-group">
+	            <label for="nama-anggota-2">Nama Anggota 2:</label>
+	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
+	        </div>
+
 	        <!-- Input Kelas -->
 	        <div class="form-group">
 	            <label for="kelas">Kelas:</label>
@@ -124,7 +133,7 @@
 	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="7">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -135,9 +144,9 @@
 	<!-- Popup Overlay -->
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
-			<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+			<div class="tenor-gif-embed" data-postid="14523728" data-share-method="host" data-aspect-ratio="0.9375" data-width="100%"><a href="https://tenor.com/view/easter-easter-bunny-cute-bunny-easter-eggs-easter-egg-gif-14523728">Easter Easter Bunny Sticker</a>from <a href="https://tenor.com/search/easter-stickers">Easter Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 			<p>Silahkan join link grup Line ini 🍀:</p>
-	        <a href="https://line.me/ti/g/PJvNafVrzQ" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/R/ti/g/QnPGSG3wGb" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 			<button 
 				id="closeButton"

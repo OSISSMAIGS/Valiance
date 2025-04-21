@@ -9,33 +9,9 @@
   document.addEventListener("DOMContentLoaded", function () {
     const competitionData = {
       wajib: [
+       
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}",
-          title: "Easter Egg Hunt",
-          link: "/Events/Estrevo/Easter_Egg_Hunt",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/match_the_eggs.jpg') }}",
-          title: "Match The Eggs",
-          link: "/Events/Estrevo/Match_The_Eggs",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/eggy_wobble.jpg') }}",
-          title: "Eggy Wobble",
-          link: "/Events/Estrevo/Eggy_Wobble",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/precision_hole_toss.jpg') }}",
-          title: `Precision Hole Toss"`,
-          link: "/Events/Estrevo/Precision_Hole_Toss",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/swapping_the_quotes.jpeg') }}",
-          title: "Swapping The Quotes",
-          link: "/Events/Estrevo/Swapping_The_Quotes",
-        },
-        {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/lagu_rohani.png') }}",
+          image: "{{ url_for('static', filename='valiance/img/estrevo/lagu_rohani.jpg') }}",
           title: "Lomba Lagu Rohani",
           link: "/Events/Estrevo/Lomba_Lagu_Rohani",
         },
@@ -45,9 +21,36 @@
           link: "/Events/Estrevo/Cari_Ayat",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/cca_alkitab.jpg') }}",
-          title: "CCA Alkitab",
-          link: "/Events/Estrevo/CCA_Alkitab",
+          image: "{{ url_for('static', filename='valiance/img/estrevo/cerdas_cermat_alkitab.jpg') }}",
+          title: "Cerdas Cermat Alkitab",
+          link: "/Events/Estrevo/Cerdas_Cermat_Alkitab",
+        },
+      ],
+      tidakWajib: [
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/swapping_the_quotes.jpg') }}",
+          title: "Swapping The Quotes",
+          link: "/Events/Estrevo/Swapping_The_Quotes",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}",
+          title: "Easter Egg Hunt",
+          link: "/Events/Estrevo/Easter_Egg_Hunt",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/match_the_egg.jpg') }}",
+          title: "Match The Eggs",
+          link: "/Events/Estrevo/Match_The_Eggs",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/egg_wobble.jpg') }}",
+          title: "Eggy Wobble",
+          link: "/Events/Estrevo/Eggy_Wobble",
+        },
+        {
+          image: "{{ url_for('static', filename='valiance/img/estrevo/precision_hole_toss.jpg') }}",
+          title: `Precision Hole Toss"`,
+          link: "/Events/Estrevo/Precision_Hole_Toss",
         },
       ],
     };
@@ -109,13 +112,13 @@ main%}
   </div>
 </section>
 
-<!-- Poster Tidak Wajib
+<!-- Poster Tidak Wajib -->
 <section class="content second-content">
   <div class="performance tidak-wajib">
-    <h1 class="hidden">Lomba Tidak Wajib</h1>
+    <h1 class="hidden">Free Activities</h1>
     <div class="gambar"></div>
   </div>
-</section> -->
+</section>
 
 <svg
   class="waves-footer"

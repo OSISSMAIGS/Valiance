@@ -7,7 +7,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbzOBYcmrL8Dh5YOOQVn4ymVCuZPGfMO6vFaW_lA1NJLPhNUoGWKhQPJG7bvNlG2HtMs/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Gkl0f7mqIXxAZWuuzqTZAV-eEdRsAND54Yp4C6RGP0JPs0nG3sQeU0aqSQbri_8O/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -34,7 +34,7 @@
 					formStatus.className = "status";
 					enableSend = false;
 					const formData = new FormData(form);
-					formData.append("formType", "Lomba Cari Ayat");
+					formData.append("formType", "Lomba Ayat Alkitab");
 	
 					fetch(scriptURL, { method: "POST", body: formData })
 						.then(response => response.json())
@@ -84,18 +84,36 @@
 		<div class="mechanism">
 			<h4 class="sub-title">Mekanisme</h4>
 			<p>
-				1. Peserta akan diberikan referensi ayat oleh panitia (misalnya, "Mazmur 23:1").
+				1. Lomba dibagi menjadi 3 ronde. (Pada ronde pertama semua peserta dibagi lagi menjadi beberapa sesi)
 				<br>
-				2. Peserta harus menemukan ayat tersebut di Alkitab secepat mungkin.
+				2. Pemenang setiap ronde ditentukan berdasarkan jumlah poin tertinggi.
 				<br>
-				3. Peserta yang pertama menemukan dan membacakan dengan benar akan mendapatkan poin.
+				3. Pemenang ronde tersebut akan lanjut ke ronde selanjutnya
 				<br>
-				4. Pemenang ditentukan berdasarkan jumlah poin tertinggi setelah beberapa putaran.
+				4. Referensi ayat akan ditampilkan pada PPT oleh panitia (ex: "Mazmur 23:1")
+				<br>
+				5. Yang pertama menemukan dan membacakan dengan benar akan mendapatkan poin.
+			</p>
+			<h4 class="sub-title">Peraturan</h4>
+			<p>
+				1. Setiap kelas wajib mengirimkan 1 perwakilan
+				<br>
+				2. Peserta wajib datang tepat waktu
+				<br>
+				3. Peserta wajib membawa Alkitab
+				<br>
+				4. Peserta dilarang searching di internet
+				<br>
+				5. Peserta hanya boleh menjawab saat sudah dipersilahkan oleh panitia.
+				<br>
+				6. Jika peserta tidak menjawab dalam waktu 15 detik, maka pertanyaan akan dilempar ke kelompok lain.
+				<br>
+				7. Jika ada pelanggaran akan di diskualifikasi
 			</p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/tamiera/l_cerdas_cermat.jpeg') }}"
+			src="{{ url_for('static', filename='valiance/img/estrevo/cari_ayat.jpg') }}"
 			alt="Lomba Cari Ayat"
 		></img>
 	</div>
@@ -108,16 +126,8 @@
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama-kapten">Nama Kapten:</label>
-	            <input type="text" id="nama-kapten" name="nama-kapten" required>
-	        </div>
-	        <div class="form-group">
-	            <label for="nama-anggota-1">Nama Anggota 1:</label>
-	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
-	        </div>
-	        <div class="form-group">
-	            <label for="nama-anggota-2">Nama Anggota 2:</label>
-	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
+	            <label for="nama">Nama:</label>
+	            <input type="text" id="nama" name="nama" required>
 	        </div>
 
 	        <!-- Input Kelas -->
@@ -144,9 +154,9 @@
 	<!-- Popup Overlay -->
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
-			<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+			<div class="tenor-gif-embed" data-postid="14523728" data-share-method="host" data-aspect-ratio="0.9375" data-width="100%"><a href="https://tenor.com/view/easter-easter-bunny-cute-bunny-easter-eggs-easter-egg-gif-14523728">Easter Easter Bunny Sticker</a>from <a href="https://tenor.com/search/easter-stickers">Easter Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 			<p>Silahkan join link grup Line ini 🍀:</p>
-	        <a href="https://line.me/ti/g/PJvNafVrzQ" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/ti/g/KdLDUa_uun" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 			<button 
 				id="closeButton"

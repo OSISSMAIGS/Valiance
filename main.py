@@ -68,8 +68,8 @@ def e_easter_egg():
 @app.route("/Events/Estrevo/Cari_Ayat")
 def e_cari_ayat():
     return render_template("valiance/lomba_estrevo/l_cari_ayat.html")
-@app.route("/Events/Estrevo/CCA_Alkitab")
-def e_cca_alkitab():
+@app.route("/Events/Estrevo/Cerdas_Cermat_Alkitab")
+def e_cerdas_cermat_alkitab():
     return render_template("valiance/lomba_estrevo/l_cca_alkitab.html")
 @app.route("/Events/Estrevo/Eggy_Wobble")
 def e_eggy_wobble():

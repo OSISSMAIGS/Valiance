@@ -2,18 +2,18 @@
 :root {
   /* Primary colors */
   --bg: #F7EDF7;
-  --bg-color: #c6bca6;
-  --bg-color2: #d5cab2;
+  --bg-color: rgb(234, 196, 113);
+  --bg-color2: rgb(234, 196, 113);
   --text-color: white;
   --text-color-darker: white;
-  --text-color2: rgb(57, 145, 209);
+  --text-color2: rgb(180, 212, 235);
 
   /* UI colors */
   --overlay-bg: rgba(245, 205, 117, 0.605);
   --accent-color: white;
   --nav-bg: #E87575;
   --nav-bg-darker: rgb(204, 174, 55);
-  --dropdown-bg: rgb(220, 89, 48);
+  --dropdown-bg: rgb(234, 196, 113);
   --splash-bg: #E87575;
 }
 
@@ -22,7 +22,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-shadow: 0px 0px 0.4vw rgb(255, 255, 255);
 }
 
 html,

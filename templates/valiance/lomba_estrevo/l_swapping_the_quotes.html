@@ -7,7 +7,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbzOBYcmrL8Dh5YOOQVn4ymVCuZPGfMO6vFaW_lA1NJLPhNUoGWKhQPJG7bvNlG2HtMs/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Gkl0f7mqIXxAZWuuzqTZAV-eEdRsAND54Yp4C6RGP0JPs0nG3sQeU0aqSQbri_8O/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -34,7 +34,7 @@
 					formStatus.className = "status";
 					enableSend = false;
 					const formData = new FormData(form);
-					formData.append("formType", "Swapping The Quotes");
+					formData.append("formType", "Swapping Quotes");
 	
 					fetch(scriptURL, { method: "POST", body: formData })
 						.then(response => response.json())
@@ -93,7 +93,7 @@
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/tamiera/l_cerdas_cermat.jpeg') }}"
+			src="{{ url_for('static', filename='valiance/img/estrevo/swapping_the_quotes.jpg') }}"
 			alt="Swapping The Quotes"
 		></img>
 	</div>
@@ -106,16 +106,8 @@
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama-kapten">Nama Kapten:</label>
-	            <input type="text" id="nama-kapten" name="nama-kapten" required>
-	        </div>
-	        <div class="form-group">
-	            <label for="nama-anggota-1">Nama Anggota 1:</label>
-	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
-	        </div>
-	        <div class="form-group">
-	            <label for="nama-anggota-2">Nama Anggota 2:</label>
-	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
+	            <label for="nama">Nama:</label>
+	            <input type="text" id="nama" name="nama" required>
 	        </div>
 
 	        <!-- Input Kelas -->
@@ -142,10 +134,11 @@
 	<!-- Popup Overlay -->
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
+			<div class="tenor-gif-embed" data-postid="16533967" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+				<a href="https://tenor.com/view/kawaii-cute-animal-japanese-korean-gif-16533967">Kawaii Cute Sticker</a>
+			</div>
 			<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-			<p>Silahkan join link grup Line ini 🍀:</p>
-	        <a href="https://line.me/ti/g/PJvNafVrzQ" target="_blank">Klik di sini untuk join grup Line</a>
-	        <br><br>
+			<p style="color: black; margin: 15px 0;">Data Registrasi Berhasil dikirim 💖</p>
 			<button 
 				id="closeButton"
 				style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;"

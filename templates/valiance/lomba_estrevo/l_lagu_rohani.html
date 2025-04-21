@@ -7,7 +7,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbzOBYcmrL8Dh5YOOQVn4ymVCuZPGfMO6vFaW_lA1NJLPhNUoGWKhQPJG7bvNlG2HtMs/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Gkl0f7mqIXxAZWuuzqTZAV-eEdRsAND54Yp4C6RGP0JPs0nG3sQeU0aqSQbri_8O/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -34,7 +34,7 @@
 					formStatus.className = "status";
 					enableSend = false;
 					const formData = new FormData(form);
-					formData.append("formType", "Lomba Lagu Rohani");
+					formData.append("formType", "Lomba Rohani");
 	
 					fetch(scriptURL, { method: "POST", body: formData })
 						.then(response => response.json())
@@ -92,10 +92,22 @@
 					<br>
 				4. Juri akan memberikan skor dan menentukan pemenang berdasarkan total nilai tertinggi.
 			</p>
+			<h4 class="sub-title">Peraturan</h4>
+			<p>
+				1. Setiap kelas wajib mengirimkan satu Peserta.
+					<br>
+				2. Peserta yang menyanyi maximal 2 orang (Duet).
+					<br>
+				3. Lagu yang dibawa Wajib lagu Rohani.
+					<br>
+				4. Durasi penampilan maximal 5/6 menit
+					<br>
+				5. Keputusan juri TIDAK bisa di ganggu gugat
+			</p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/tamiera/l_cerdas_cermat.jpeg') }}"
+			src="{{ url_for('static', filename='valiance/img/estrevo/lagu_rohani.jpg') }}"
 			alt="Lomba Lagu Rohani"
 		></img>
 	</div>
@@ -108,16 +120,16 @@
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama-kapten">Nama Kapten:</label>
+	            <label for="nama-kapten">Nama:</label>
 	            <input type="text" id="nama-kapten" name="nama-kapten" required>
 	        </div>
 	        <div class="form-group">
-	            <label for="nama-anggota-1">Nama Anggota 1:</label>
-	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
+	            <label for="nama-anggota-1">Nama Anggota 2 (Opsional):</label>
+	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" >
 	        </div>
 	        <div class="form-group">
-	            <label for="nama-anggota-2">Nama Anggota 2:</label>
-	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
+	            <label for="nama-anggota-2">Nama Anggota 3 (Opsional):</label>
+	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" >
 	        </div>
 
 	        <!-- Input Kelas -->
@@ -144,9 +156,9 @@
 	<!-- Popup Overlay -->
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
-			<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+			<div class="tenor-gif-embed" data-postid="14523728" data-share-method="host" data-aspect-ratio="0.9375" data-width="100%"><a href="https://tenor.com/view/easter-easter-bunny-cute-bunny-easter-eggs-easter-egg-gif-14523728">Easter Easter Bunny Sticker</a>from <a href="https://tenor.com/search/easter-stickers">Easter Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 			<p>Silahkan join link grup Line ini 🍀:</p>
-	        <a href="https://line.me/ti/g/PJvNafVrzQ" target="_blank">Klik di sini untuk join grup Line</a>
+	        <a href="https://line.me/ti/g/XrZBP4s5BB" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 			<button 
 				id="closeButton"
