@@ -41,22 +41,6 @@ def e_serenite():
 def e_tamiera():
     return render_template("valiance/e_tamiera.html")
 
-# Tamiera - Registration
-
-@app.route("/Events/Pesantren_Kilat/Azan")
-def l_azan():
-    return render_template("valiancze/l_closed.html")
-@app.route("/Events/Pesantren_Kilat/Nasyid")
-def l_nasyid():
-    return render_template("valiance/l_closed.html")
-@app.route("/Events/Pesantren_Kilat/Cerdas_Cermat")
-def l_cerdas_cermat():
-    return render_template("valiance/l_closed.html")
-@app.route("/Events/Pesantren_Kilat/Sambung_Ayat")
-def l_sambung_ayat():
-    return render_template("valiance/l_closed.html")
-
-# Estrevo
 @app.route("/Events/Estrevo")
 def e_estrevo():
     return render_template("valiance/e_estrevo.html")
@@ -64,19 +48,19 @@ def e_estrevo():
 # Estrevo - Registration
 @app.route("/Events/Estrevo/Easter_Egg_Hunt")
 def e_easter_egg():
-    return render_template("valiance/lomba_estrevo/l_easter_egg.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Estrevo/Cari_Ayat")
 def e_cari_ayat():
-    return render_template("valiance/lomba_estrevo/l_cari_ayat.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Estrevo/Cerdas_Cermat_Alkitab")
 def e_cerdas_cermat_alkitab():
-    return render_template("valiance/lomba_estrevo/l_cca_alkitab.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Estrevo/Eggy_Wobble")
 def e_eggy_wobble():
     return render_template("valiance/lomba_estrevo/l_eggy_wobble.html")
 @app.route("/Events/Estrevo/Lomba_Lagu_Rohani")
 def e_lagu_rohani():
-    return render_template("valiance/lomba_estrevo/l_lagu_rohani.html")
+    return render_template("valiance/l_closed.html")
 @app.route("/Events/Estrevo/Match_The_Eggs")
 def e_match_the_eggs():
     return render_template("valiance/lomba_estrevo/l_match_the_eggs.html")
