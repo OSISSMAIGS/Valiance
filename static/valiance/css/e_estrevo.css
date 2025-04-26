@@ -261,6 +261,9 @@ section.content .list p {
   text-shadow: 0px 0px 20px white;
 }
 
+#detail-heading{
+color: white;
+}
 .detail .content .content-logo {
   width: 250px;
   height: 250px;
@@ -274,7 +277,6 @@ section.content .list p {
 }
 
 /* Performance Section */
-
 .performance .gambar {
   display: flex;
   flex-wrap: wrap;
