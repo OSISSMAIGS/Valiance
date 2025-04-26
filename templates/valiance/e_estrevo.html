@@ -4,51 +4,58 @@
   type="text/css"
   href="{{ url_for('static', filename='valiance/css/e_estrevo.css') }}"
 />
-
+<script src="{{ url_for('static', filename='valiance/js/detail.js') }}"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const competitionData = {
       wajib: [
-       
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/lagu_rohani.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/lagu_rohani.jpg') }}",
           title: "Lomba Lagu Rohani",
           link: "/Events/Estrevo/Lomba_Lagu_Rohani",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/cari_ayat.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/cari_ayat.jpg') }}",
           title: "Cari Ayat",
           link: "/Events/Estrevo/Cari_Ayat",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/cerdas_cermat_alkitab.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/cerdas_cermat_alkitab.jpg') }}",
           title: "Cerdas Cermat Alkitab",
           link: "/Events/Estrevo/Cerdas_Cermat_Alkitab",
         },
       ],
       tidakWajib: [
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/swapping_the_quotes.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/swapping_the_quotes.jpg') }}",
           title: "Swapping The Quotes",
           link: "/Events/Estrevo/Swapping_The_Quotes",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}",
           title: "Easter Egg Hunt",
           link: "/Events/Estrevo/Easter_Egg_Hunt",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/match_the_egg.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/match_the_egg.jpg') }}",
           title: "Match The Eggs",
           link: "/Events/Estrevo/Match_The_Eggs",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/egg_wobble.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/egg_wobble.jpg') }}",
           title: "Eggy Wobble",
           link: "/Events/Estrevo/Eggy_Wobble",
         },
         {
-          image: "{{ url_for('static', filename='valiance/img/estrevo/precision_hole_toss.jpg') }}",
+          image:
+            "{{ url_for('static', filename='valiance/img/estrevo/precision_hole_toss.jpg') }}",
           title: `Precision Hole Toss"`,
           link: "/Events/Estrevo/Precision_Hole_Toss",
         },
@@ -87,11 +94,13 @@
     };
 
     renderPosters(competitionData.wajib, ".performance.wajib .gambar");
-    renderPosters(competitionData.tidakWajib, ".performance.tidak-wajib .gambar");
+    renderPosters(
+      competitionData.tidakWajib,
+      ".performance.tidak-wajib .gambar"
+    );
     renderPosters(competitionData.workshop, ".performance.workshop .gambar");
   });
 </script>
-
 
 {% endblock css_js %} {% block title %}Estrevo{% endblock title %} {% block
 main%}
@@ -104,21 +113,190 @@ main%}
   <section class="gradient-banner"></section>
 </section>
 
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Estrevo</h1>
+  <p class="hidden">
+    Estrevo adalah nama yang berasal dari gabungan kata Easter dan frasa Revive
+    Hope. Easter merupakan hari suci di mana umat Kristiani memperingati
+    kebangkitan Yesus Kristus, sementara Revive Hope berarti membangkitkan
+    harapan. Nama Estrevo mencerminkan keyakinan bahwa melalui kebangkitan
+    Yesus, harapan yang sempat redup dalam hati umat kini kembali hidup. Estrevo
+    menjadi simbol akan kebangkitan, pemulihan, dan hadirnya harapan baru bagi
+    semua yang percaya.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Elizabeth Queentina Kristalkitri Tobing</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>Yosua Pranata Sormin</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Anastasya Michaela</p>
+    </div>
+  </div>
+
+  <h1 class="hidden">Perayaan Misa</h1>
+  <p class="hidden">
+    Perayaan Misa kudus merupakan awal pembukaan dari semua kegiatan dan serta
+    menjadi pusat event sebagai bentuk penghormatan dan rasa syukur atas
+    kebangkitan Yesus Kristus. Perayaan ini juga menjadi momen reflektif untuk
+    memperkuat iman dan pengharapan umat.
+  </p>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Competitions</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Dongeng', 'bx bxs-book-bookmark bx-tada', 'Penampilan mendongeng dengan cerita berjudul Piko Adventure. Mengisahkan Piko yang berburu telur yang harus ia jaga')"
+        class="list hidden"
+      >
+        <i class="bx bxs-book-bookmark bx-tada"></i>
+        <p>Dongeng</p>
+      </div>
+      <div
+        onclick="showDetail('Vokal Solo', 'bx bxs-microphone bx-tada', 'Penampilan solo vokal dari siswa SMP yang membawakan lagu Karya Terbesar sebagai bentuk refleksi iman atas pengorbanan terbesar yang Tuhan berikan')"
+        class="list hidden"
+      >
+        <i class="bx bxs-microphone bx-tada"></i>
+        <p>Vokal Solo</p>
+      </div>
+      <div
+        onclick="showDetail('Duet The Prayer', 'bx bx-male-female bx-tada', 'Penampilan duet vokal yang membawakan lagu The Prayer  yang mencerminkan doa dan harapan melalui suara yang merdu')"
+        class="list hidden"
+      >
+        <i class="bx bxs-group bx-tada"></i>
+        <p>Duet The Prayer</p>
+      </div>
+      <div
+        onclick="showDetail('Performance Dance', 'bx bx-male-female bx-tada', 'Tarian ballet yang dipadukan dengan worship flag yang diiringi lagu Good Prayer sebagai simbol penyembahan')"
+        class="list hidden"
+      >
+        <i class="bx bxs-group bx-tada"></i>
+        <p>Performance Dance</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Competition Section -->
+  <div class="performance">
+    <h1 class="hidden">Competitions</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Lomba Lagu Rohani', 'bx bxs-music bx-tada', 'Sebuah ajang ekspresi iman melalui musik, di mana peserta dapat menyampaikan pesan-pesan rohani yang menguatkan melalui lagu. Lomba ini bertujuan untuk mempererat rasa kebersamaan dalam iman.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-music bx-tada"></i>
+        <p>Lomba Lagu Rohani</p>
+      </div>
+      <div
+        onclick="showDetail('Cari Ayat Alkitab', 'bx bxs-book-open bx-tada', 'Aktivitas ini dirancang untuk mendorong peserta agar lebih akrab dengan Kitab Suci. Melalui permainan yang interaktif, peserta diajak untuk menemukan ayat-ayat Alkitab yang yang mengandung nilai-nilai rohani yang mendalam.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-book-open bx-tada"></i>
+        <p>Cari Ayat Alkitab</p>
+      </div>
+      <div
+        onclick="showDetail('Cerdas Cermat Alkitab', 'bx bxs-brain bx-tada', 'Lomba ini bertujuan untuk menguji dan memperdalam pengetahuan peserta mengenai isi Alkitab. CCA diselenggarakan dengan tujuan upaya menanamkan nilai-nilai iman secara menyenangkan.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-brain bx-tada"></i>
+        <p>Cerdas Cermat Alkitab (CCA)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fun Activity Section -->
+
+  <div class="performance">
+    <h1 class="hidden">Fun Activities</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Easter Egg Hunt', 'bx bxs-basket bx-tada', 'Merupakan permainan mencari telur Paskah yang tersembunyi di lingkungan sekolah.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-basket bx-tada"></i>
+        <p>Easter Egg Hunt</p>
+      </div>
+      <div
+        onclick="showDetail('Match The Eggs', 'bx bxs-color bx-tada', 'Merupakan permainan mencocokkan 6 butir telur berdasarkan warna yang sesuai secepat mungkin.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-color bx-tada"></i>
+        <p>Match The Eggs</p>
+      </div>
+      <div
+        onclick="showDetail('Eggy Wobble', 'bx bxs-dice-6 bx-tada', 'Merupakan permainan memasukan bola yang terikat pada pinggang kedalam cup yang terikat dibagian perut dengan cara menggoyangkan tubuh.')"
+        class="list hidden"
+      >
+        <i class="bx bxs-dice-6 bx-tada"></i>
+        <p>Eggy Wobble</p>
+      </div>
+      <div
+        onclick="showDetail('Precision Hole Toss', 'bx bx-up-arrow-alt bx-tada', 'Merupakan permaianan melempar bola kedalam papan dengan lubang berukuran yang berbeda dengan poin yang berbeda - beda.')"
+        class="list hidden"
+      >
+        <i class="bx bx-up-arrow-alt bx-tada"></i>
+        <p>Precision Hole Toss</p>
+      </div>
+      <div
+        onclick="showDetail('ILC', 'bx bxs-palette bx-tada', 'Kegiatan membuat kerajinan tangan yang kreatif dan seru bersama murid-murid IGS')"
+        class="list hidden"
+      >
+        <i class="bx bxs-palette bx-tada"></i>
+        <p>ILC</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Poster Wajib -->
-<section class="content second-content">
+<!-- <section class="content second-content">
   <div class="performance wajib">
     <h1 class="hidden">Competition</h1>
     <div class="gambar"></div>
   </div>
-</section>
+</section> -->
 
 <!-- Poster Tidak Wajib -->
-<section class="content second-content">
+<!-- <section class="content second-content">
   <div class="performance tidak-wajib">
     <h1 class="hidden">Free Activities</h1>
     <div class="gambar"></div>
   </div>
-</section>
+</section> -->
 
 <svg
   class="waves-footer"
