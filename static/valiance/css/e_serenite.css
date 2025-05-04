@@ -598,22 +598,22 @@ section.second-content {
 
 /* Example background images */
 .gallery__item:nth-child(1) .gallery__item-inner {
-  background-image: url(/static/valiance/img/documentations/kandela/1.JPG);
+  background-image: url(/static/valiance/img/documentations/serenite/1.JPG);
 }
 .gallery__item:nth-child(2) .gallery__item-inner {
-  background-image: url(/static/valiance/img/documentations/kandela/2.JPG);
+  background-image: url(/static/valiance/img/documentations/serenite/2.JPG);
 }
 .gallery__item:nth-child(3) .gallery__item-inner {
-  background-image: url(/static/valiance/img/documentations/kandela/3.JPG);
+  background-image: url(/static/valiance/img/documentations/serenite/3.JPG);
 }
 .gallery__item:nth-child(4) .gallery__item-inner {
-  background-image: url(/static/valiance/img/documentations/kandela/4.JPG);
+  background-image: url(/static/valiance/img/documentations/serenite/4.JPG);
 }
 .gallery__item:nth-child(5) .gallery__item-inner {
-  background-image: url(/static/valiance/img/documentations/kandela/5.JPG);
+  background-image: url(/static/valiance/img/documentations/serenite/5.JPG);
 }
 .gallery__item:nth-child(6) .gallery__item-inner {
-  background-image: url(/static/valiance/img/documentations/kandela/6.JPG);
+  background-image: url(/static/valiance/img/documentations/serenite/6.JPG);
 }
 
 
