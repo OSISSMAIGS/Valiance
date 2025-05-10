@@ -6,6 +6,8 @@
     --bg-color2: rgb(184, 179, 98);
     --text-color: white;
     --text-color-darker: white;
+    --box-color: rgb(147, 88, 66);
+    --box-hover: rgb(104, 56, 38);
     --text-color2: rgb(254, 171, 17);
   
     /* UI colors */
@@ -177,6 +179,18 @@
     color: var(--text-color);
     margin-bottom: 0;
   }
+
+  p.about-desc{
+    font-size: 1.5rem;
+    width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  
+
+
   
   /* Layout Components */
   .kewa {
@@ -189,6 +203,74 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+
+  section.content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--bg-color);
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+  }
+  
+  section.content h1 {
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+  section.content h2 {
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+  
+  /* List Cards */
+  
+  section.content .lists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+  
+  section.content .list {
+    width: 200px;
+    height: 200px;
+    background-color: var(--box-color);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  section.content .list:hover {
+    animation: box-hover 0.5s linear, box-size 0.3s linear;
+    scale: 1.05;
+    background-color: var(--box-hover);
+  }
+  
+  section.content .list i {
+    font-size: 50pt;
+    color: white;
+  }
+  
+  section.content .list p {
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0;
+  }
+
+  span.info-wrap{
+    color: #ffb22d;
   }
   
   /* Container Styles */
@@ -237,7 +319,7 @@
   .regis {
     text-align: center;
     color: var(--text-color);
-    margin-top: 100px;
+    margin-top: 0;
     margin-bottom: 1rem;
   }
   
