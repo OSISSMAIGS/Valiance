@@ -2,31 +2,31 @@
 
 {% block css_js %}
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_estrevo.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_vaisakha.css') }}">
 
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Gkl0f7mqIXxAZWuuzqTZAV-eEdRsAND54Yp4C6RGP0JPs0nG3sQeU0aqSQbri_8O/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbxNaXpBeGa2VUkc1yN4PXoH8-Jvpg3pDcKqZjXNKWulj3PtZFqqCdGLnkuz1zjlRZga/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
 			const closeButton = document.getElementById("closeButton");
-			
+	
 			// Event listener untuk overlay
 			popupOverlay.addEventListener('click', function(e) {
 				if (e.target === this) {
 					closePopup();
 				}
 			});
-			
+	
 			// Event listener untuk tombol close
 			closeButton.addEventListener('click', closePopup);
 			closeButton.addEventListener('touchend', function(e) {
 				e.preventDefault();
 				closePopup();
 			});
-	
+            
 			form.addEventListener("submit", e => {
 				if (enableSend){
 					e.preventDefault();
@@ -34,7 +34,7 @@
 					formStatus.className = "status";
 					enableSend = false;
 					const formData = new FormData(form);
-					formData.append("formType", "Lomba Ayat Alkitab");
+					formData.append("formType", "Daftar Kehadiran Waisak");
 	
 					fetch(scriptURL, { method: "POST", body: formData })
 						.then(response => response.json())
@@ -71,79 +71,62 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba Cari Ayat{% endblock title %}
+{% block title %}Daftar Kehadiran Vaisakha{% endblock title %}
 
 {% block main %}
+<section class="banner">
+	<img
+	  src="{{ url_for('static', filename='valiance/img/vaisakha/vaisakha_banner.jpg') }}"
+	  alt="banner"
+	/>
+	<section class="gradient-banner"></section>
+ </section>
 
 	<!-- MEKANISME DAN POSTER -->
 
-	<div class="container">
+	<!-- <div class="container">
 		<div>
 
-		<h1 class="title">Lomba Cari Ayat</h1>
+		<h1 class="title">Easter Egg Hunt</h1>
 		<div class="mechanism">
 			<h4 class="sub-title">Mekanisme</h4>
 			<p>
-				1. Lomba dibagi menjadi 3 ronde. (Pada ronde pertama semua peserta dibagi lagi menjadi beberapa sesi)
-				<br>
-				2. Pemenang setiap ronde ditentukan berdasarkan jumlah poin tertinggi.
-				<br>
-				3. Pemenang ronde tersebut akan lanjut ke ronde selanjutnya
-				<br>
-				4. Referensi ayat akan ditampilkan pada PPT oleh panitia (ex: "Mazmur 23:1")
-				<br>
-				5. Yang pertama menemukan dan membacakan dengan benar akan mendapatkan poin.
-			</p>
-			<h4 class="sub-title">Peraturan</h4>
-			<p>
-				1. Setiap kelas wajib mengirimkan 1 perwakilan
-				<br>
-				2. Peserta wajib datang tepat waktu
-				<br>
-				3. Peserta wajib membawa Alkitab
-				<br>
-				4. Peserta dilarang searching di internet
-				<br>
-				5. Peserta hanya boleh menjawab saat sudah dipersilahkan oleh panitia.
-				<br>
-				6. Jika peserta tidak menjawab dalam waktu 15 detik, maka pertanyaan akan dilempar ke kelompok lain.
-				<br>
-				7. Jika ada pelanggaran akan di diskualifikasi
+				1. Peserta mulai mencari telur Paskah setelah aba-aba dimulai.
+					<br>
+				2. ⁠Peserta hanya boleh mengumpulkan telur Paskah yang ditemukan.
+					<br>
+				3. Peserta tidak boleh mengganggu atau menghalangi peserta lain
+					<br>
+				4. Peserta dengan jumlah telur terbanyak menjadi pemenangnya.
 			</p>
 		</div>
 		</div>
 		<img 
-			src="{{ url_for('static', filename='valiance/img/estrevo/cari_ayat.jpg') }}"
-			alt="Lomba Cari Ayat"
+			src="{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}"
+			alt="Easter Egg Hunt"
 		></img>
-	</div>
+	</div> -->
 
 					
 	<!-- Registration -->
-	<h2 class="regis">Registration</h2>
+	<h2 class="regis">Daftar Kehadiran Vaisakha <br> (Khusus Kelas 12)</h2>
 	<div class="form-container mb-3">
 	   
 	    <form id="dynamicForm" onsubmit="return false;">
 	        <!-- Input Nama -->
 	        <div class="form-group">
-	            <label for="nama">Nama:</label>
+	            <label for="nama">Nama :</label>
 	            <input type="text" id="nama" name="nama" required>
 	        </div>
-
 	        <!-- Input Kelas -->
 	        <div class="form-group">
 	            <label for="kelas">Kelas:</label>
 	            <input type="text" id="kelas" name="kelas" required>
 	        </div>
 
-	        <!-- Input ID Line -->
-	        <div class="form-group">
-	            <label for="idline">ID Line:</label>
-	            <input type="text" id="idline" name="idline" required>
-	        </div>
 
 			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="9999">
+            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
 
 	        <!-- Tombol Submit -->
 	        <button type="submit">Kirim</button>
@@ -154,10 +137,8 @@
 	<!-- Popup Overlay -->
 	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
-			<div class="tenor-gif-embed" data-postid="14523728" data-share-method="host" data-aspect-ratio="0.9375" data-width="100%"><a href="https://tenor.com/view/easter-easter-bunny-cute-bunny-easter-eggs-easter-egg-gif-14523728">Easter Easter Bunny Sticker</a>from <a href="https://tenor.com/search/easter-stickers">Easter Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-			<p>Silahkan join link grup Line ini 🍀:</p>
-	        <a href="https://line.me/ti/g/KdLDUa_uun" target="_blank">Klik di sini untuk join grup Line</a>
-	        <br><br>
+			<div class="tenor-gif-embed" data-postid="1191699353002321181" data-share-method="host" data-aspect-ratio="0.894309" data-width="100%"><a href="https://tenor.com/view/dudu-monk-gif-1191699353002321181">Dudu Monk Sticker</a>from <a href="https://tenor.com/search/dudu+monk-stickers">Dudu Monk Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+			<p style="color: black; margin: 15px 0;">Data Registrasi Berhasil dikirim 💖</p>
 			<button 
 				id="closeButton"
 				style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;"
@@ -171,7 +152,7 @@
 	  >
 
 	    <path
-	      fill="#E87575"
+	      fill="rgb(88, 31, 66)"
 	      fill-opacity="1"
 	      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
 	    ></path>

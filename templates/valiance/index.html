@@ -63,9 +63,23 @@ main %}
         data-bs-slide-to="7"
         aria-label="Slide 8"
       ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="8"
+        aria-label="Slide 9"
+      ></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a href="{{ url_for('e_vaisakha') }}"
+          ><img
+            src="{{ url_for('static', filename='valiance/img/vaisakha/vaisakha_banner.jpg') }}"
+            class="d-block w-100"
+            alt="..."
+        /></a>
+      </div>
+      <div class="carousel-item">
         <a href="{{ url_for('e_estrevo') }}"
           ><img
             src="{{ url_for('static', filename='valiance/img/banner/estrevo_banner.png') }}"
