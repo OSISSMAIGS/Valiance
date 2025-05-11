@@ -1,194 +1,375 @@
 {% extends "valiance/layout.html" %}
 
 {% block css_js %}
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_vaisakha.css') }}">
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='valiance/css/index.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='valiance/css/lomba_vaisakha.css') }}"
+  />
 
-	<script>
-		let enableSend = true;
-		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbxNaXpBeGa2VUkc1yN4PXoH8-Jvpg3pDcKqZjXNKWulj3PtZFqqCdGLnkuz1zjlRZga/exec';
-			const form = document.getElementById("dynamicForm");
-			const formStatus = document.getElementById("formStatus");
-			const popupOverlay = document.getElementById("popupOverlay");
-			const closeButton = document.getElementById("closeButton");
-	
-			// Event listener untuk overlay
-			popupOverlay.addEventListener('click', function(e) {
-				if (e.target === this) {
-					closePopup();
-				}
-			});
-	
-			// Event listener untuk tombol close
-			closeButton.addEventListener('click', closePopup);
-			closeButton.addEventListener('touchend', function(e) {
-				e.preventDefault();
-				closePopup();
-			});
-            
-			form.addEventListener("submit", e => {
-				if (enableSend){
-					e.preventDefault();
-					formStatus.textContent = "Mengirim data...";
-					formStatus.className = "status";
-					enableSend = false;
-					const formData = new FormData(form);
-					formData.append("formType", "Daftar Kehadiran Waisak");
-	
-					fetch(scriptURL, { method: "POST", body: formData })
-						.then(response => response.json())
-						.then(data => {
-							if (data.status === "success") {
-								formStatus.textContent = "";
-								form.reset();
-								showPopup();
-							} else if (data.status === "error" && data.message === "Peserta sudah penuh") {
-								formStatus.textContent = "Peserta sudah penuh. Tidak bisa mendaftar.";
-								formStatus.className = "status error";
-							} else {
-								throw new Error(data.message || "Gagal mengirim data.");
-							}
-							enableSend = true;
-						})
-						.catch(error => {
-							formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
-							formStatus.className = "status error";
-							console.error("Error!", error.message);
-							enableSend = true;
-						});
-				}
-			});
-		});
-	
-		function showPopup() {
-			document.getElementById("popupOverlay").style.display = "flex";
-		}
-	
-		function closePopup() {
-			document.getElementById("popupOverlay").style.display = "none";
-		}
-	</script>
+  <script>
+    let enableSend = true;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxNaXpBeGa2VUkc1yN4PXoH8-Jvpg3pDcKqZjXNKWulj3PtZFqqCdGLnkuz1zjlRZga/exec";
+      const form = document.getElementById("dynamicForm");
+      const formStatus = document.getElementById("formStatus");
+      const popupOverlay = document.getElementById("popupOverlay");
+      const closeButton = document.getElementById("closeButton");
+
+      // Event listener untuk overlay
+      popupOverlay.addEventListener("click", function (e) {
+        if (e.target === this) {
+          closePopup();
+        }
+      });
+
+      // Event listener untuk tombol close
+      closeButton.addEventListener("click", closePopup);
+      closeButton.addEventListener("touchend", function (e) {
+        e.preventDefault();
+        closePopup();
+      });
+
+      form.addEventListener("submit", (e) => {
+        if (enableSend) {
+          e.preventDefault();
+          formStatus.textContent = "Mengirim data...";
+          formStatus.className = "status";
+          enableSend = false;
+          const formData = new FormData(form);
+          formData.append("formType", "Daftar Kehadiran Waisakha");
+
+          fetch(scriptURL, { method: "POST", body: formData })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status === "success") {
+                formStatus.textContent = "";
+                form.reset();
+                showPopup();
+              } else if (
+                data.status === "error" &&
+                data.message === "Peserta sudah penuh"
+              ) {
+                formStatus.textContent =
+                  "Peserta sudah penuh. Tidak bisa mendaftar.";
+                formStatus.className = "status error";
+              } else {
+                throw new Error(data.message || "Gagal mengirim data.");
+              }
+              enableSend = true;
+            })
+            .catch((error) => {
+              formStatus.textContent =
+                "Gagal mengirim data. Silakan coba lagi.";
+              formStatus.className = "status error";
+              console.error("Error!", error.message);
+              enableSend = true;
+            });
+        }
+      });
+    });
+
+    function showPopup() {
+      document.getElementById("popupOverlay").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+    }
+
+    // e_vaisakha's competition's handler main script
+    document.addEventListener("DOMContentLoaded", function () {
+      const competitionData = {
+        wajib: [
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/buddhis_idol.jpg') }}",
+            title: "Lomba Buddhist Idol",
+            link: "/Events/Vaisakha/Lomba_Buddhist_Idol",
+          },
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/lcc.png') }}",
+            title: "Lomba Cerdas Cermat Buddhist ",
+            link: "/Events/Vaisakha/Lomba_LCC_Buddhist",
+          },
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/membaca_dhammapada.png') }}",
+            title: "Lomba Baca Dhammapada",
+            link: "/Events/Vaisakha/Lomba_Baca_Dhammapada",
+          },
+        ],
+        tidakWajib: [
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/bingo.png') }}",
+            title: "Minigames BINGO",
+            link: "/Events/Vaisakha/Minigames_Bingo",
+          },
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/memory_matching_cards.png') }}",
+            title: "Memory Matching Card",
+            link: "/Events/Vaisakha/Minigames_Memory_Matching_Card",
+          },
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/lotus_landmines.png') }}",
+            title: "Minigames Lotus Landmines",
+            link: "/Events/Vaisakha/Minigames_Lotus_Landmines",
+          },
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/tower_of_dharmma.jpg') }}",
+            title: "Minigames Tower of Dharma",
+            link: "/Events/Vaisakha/Minigames_Tower_of_Dharma",
+          },
+          {
+            image:
+              "{{ url_for('static', filename='valiance/img/vaisakha/draw_your_face.png') }}",
+            title: "Draw Your Face",
+            link: "/Events/Vaisakha/Draw_Your_Face",
+          },
+        ],
+      };
+
+      const renderPosters = (data, containerSelector) => {
+        const container = document.querySelector(containerSelector);
+        if (container) {
+          container.innerHTML = "";
+          data.forEach((comp) => {
+            const poster = document.createElement("div");
+            poster.className = "image-container hidden";
+
+            poster.innerHTML = `
+              <img id="poster" src="${comp.image}" alt="${comp.title}">
+              <div class="cta-link">
+                <a href="${comp.link}" class="link-cta">Register ${comp.title}</a>
+              </div>
+            `;
+
+            container.appendChild(poster);
+          });
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          });
+
+          const hiddenElements = container.querySelectorAll(".hidden");
+          hiddenElements.forEach((el) => observer.observe(el));
+        }
+      };
+
+      renderPosters(competitionData.wajib, ".performance.wajib .gambar");
+      renderPosters(
+        competitionData.tidakWajib,
+        ".performance.tidak-wajib .gambar"
+      );
+      renderPosters(competitionData.workshop, ".performance.workshop .gambar");
+    });
+  </script>
 {% endblock css_js %}
 
-{% block title %}Daftar Kehadiran Vaisakha{% endblock title %}
+{% block title %}
+  Daftar Kehadiran Vaisakha
+{% endblock title %}
 
 {% block main %}
-<section class="banner">
-	<img
-	  src="{{ url_for('static', filename='valiance/img/vaisakha/vaisakha_banner.jpg') }}"
-	  alt="banner"
-	/>
-	<section class="gradient-banner"></section>
- </section>
+  <section class="banner">
+    <img
+      src="{{ url_for('static', filename='valiance/img/vaisakha/vaisakha_banner.jpg') }}"
+      alt="banner"
+    />
+    <section class="gradient-banner"></section>
+  </section>
 
-	<!-- MEKANISME DAN POSTER -->
+  <!-- MEKANISME DAN POSTER -->
+  <!-- Commented out mechanism and poster section -->
 
-	<!-- <div class="container">
-		<div>
+  <h2 class="regis"><b>About Vaisakha</b></h2>
+  <p class="about-desc">
+    Vaiśākha adalah event peringatan Waisakha dari Valiance yang terinspirasi dari
+    bulan kelahiran Buddha dalam kalender India kuno yang membawa kedamaian dan
+    refleksi diri. Acara ini menghadirkan berbagai aktivitas bermakna untuk
+    mempererat nilai keagamaan
+  </p>
 
-		<h1 class="title">Easter Egg Hunt</h1>
-		<div class="mechanism">
-			<h4 class="sub-title">Mekanisme</h4>
-			<p>
-				1. Peserta mulai mencari telur Paskah setelah aba-aba dimulai.
-					<br>
-				2. ⁠Peserta hanya boleh mengumpulkan telur Paskah yang ditemukan.
-					<br>
-				3. Peserta tidak boleh mengganggu atau menghalangi peserta lain
-					<br>
-				4. Peserta dengan jumlah telur terbanyak menjadi pemenangnya.
-			</p>
-		</div>
-		</div>
-		<img 
-			src="{{ url_for('static', filename='valiance/img/estrevo/easter_egg.jpg') }}"
-			alt="Easter Egg Hunt"
-		></img>
-	</div> -->
-	<h2 class="regis"><b>About Vaisakha</b></h2>
-	<p class="about-desc">Vaiśākha adalah event peringatan Waisak dari Valiance yang terinspirasi dari bulan kelahiran Buddha dalam kalender India kuno yang membawa kedamaian dan refleksi diri. Acara ini menghadirkan berbagai aktivitas bermakna untuk mempererat nilai keagamaan</p>
+  <section class="content">
+    <!-- Performance Section -->
+    <div class="performance">
+      <div class="lists">
+        <div class="list hidden">
+          <i class="bx bxs-t-shirt bx-tada"></i>
+          <p>
+            Dresscode: <br />
+            <span class="info-wrap">Seragam Rompi</span>
+          </p>
+        </div>
+        <div class="list hidden">
+          <i class="bx bxs-time bx-tada"></i>
+          <p>
+            Waktu: <br />
+            <span class="info-wrap">12:00-16:00</span>
+          </p>
+        </div>
+        <div class="list hidden">
+          <i class="bx bxs-door-open bx-tada"></i>
+          <p>
+            Opengate Kedatangan: <br />
+            <span class="info-wrap">11:00</span>
+          </p>
+        </div>
+        <div class="list hidden">
+          <i class="bx bx-x bx-tada"></i>
+          <p>
+            Closegate Kedatangan: <br />
+            <span class="info-wrap">12:00</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<section class="content">
-		<!-- Performance Section -->
-		<div class="performance">
-		  <div class="lists">
-			<div
-			  class="list hidden"
-			>
-			<i class='bx bxs-t-shirt bx-tada'></i>
-			  <p>Dresscode: <br> <span class="info-wrap">Seragam Rompi</span></p>
-			</div>
-			<div
-			  class="list hidden"
-			>
-			  <i class="bx bxs-time bx-tada"></i>
-			  <p>Waktu: <br> <span class="info-wrap">12:00-16:00</span></p>
-			</div>
-			<div
-			  class="list hidden"
-			>
-			  <i class="bx bxs-door-open bx-tada"></i>
-			  <p>Opengate Kedatangan: <br> <span class="info-wrap">11:00</span></p>
-			</div>
-			<div
-			  class="list hidden"
-			>
-			  <i class="bx bx-x bx-tada"></i>
-			  <p>Closegate Kedatangan: <br> <span class="info-wrap">12:00</span></p>
-			</div>
-		  </div>
-		</div>
-	</section>
+  <!-- Registration -->
+  <h2 class="regis">
+    <b>
+      Daftar Kehadiran Vaisakha <br />
+      (Khusus Kelas 12)
+    </b>
+  </h2>
+  <div class="form-container mb-3">
+    <form id="dynamicForm" onsubmit="return false;">
+      <!-- Input Nama -->
+      <div class="form-group">
+        <label for="nama">Nama :</label>
+        <input type="text" id="nama" name="nama" required />
+      </div>
+      <!-- Input Kelas -->
+      <div class="form-group">
+        <label for="kelas">Kelas:</label>
+        <input type="text" id="kelas" name="kelas" required />
+      </div>
 
-	
-	<!-- Registration -->
-	<h2 class="regis"><b>Daftar Kehadiran Vaisakha <br> (Khusus Kelas 12)</b></h2>
-	<div class="form-container mb-3">
-	   
-	    <form id="dynamicForm" onsubmit="return false;">
-	        <!-- Input Nama -->
-	        <div class="form-group">
-	            <label for="nama">Nama :</label>
-	            <input type="text" id="nama" name="nama" required>
-	        </div>
-	        <!-- Input Kelas -->
-	        <div class="form-group">
-	            <label for="kelas">Kelas:</label>
-	            <input type="text" id="kelas" name="kelas" required>
-	        </div>
+      <!-- Input for Max Participants -->
+      <input
+        type="hidden"
+        id="maxParticipants"
+        name="maxParticipants"
+        value="99999"
+      />
 
+      <!-- Tombol Submit -->
+      <button type="submit">Kirim</button>
+    </form>
+    <div class="status" id="formStatus"></div>
+  </div>
 
-			<!-- Input for Max Participants -->
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="99999">
+  <!-- Popup Overlay -->
+  <div
+    id="popupOverlay"
+    style="
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <div
+      style="
+        background: rgb(222, 216, 196);
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        margin: 20px;
+      "
+    >
+      <div
+        class="tenor-gif-embed"
+        data-postid="1191699353002321181"
+        data-share-method="host"
+        data-aspect-ratio="0.894309"
+        data-width="100%"
+      >
+        <a href="https://tenor.com/view/dudu-monk-gif-1191699353002321181"
+          >Dudu Monk Sticker</a>
+        >from
+        <a href="https://tenor.com/search/dudu+monk-stickers"
+          >Dudu Monk Stickers</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <p style="color: black; margin: 15px 0">
+        Data Registrasi Berhasil dikirim 💖
+      </p>
+      <button
+        id="closeButton"
+        style="
+          padding: 10px 20px;
+          background: rgb(124, 28, 28);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 10px;
+          user-select: none;
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation;
+        "
+      >
+        Tutup
+      </button>
+    </div>
+  </div>
 
-	        <!-- Tombol Submit -->
-	        <button type="submit">Kirim</button>
-	    </form>
-	    <div class="status" id="formStatus"></div>
-	</div>
+  <!-- Poster Wajib -->
+  <section class="content second-content">
+    <div class="performance wajib">
+      <h1 class="hidden">Competition</h1>
+      <div class="gambar"></div>
+    </div>
+  </section>
 
-	<!-- Popup Overlay -->
-	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
-		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
-			<div class="tenor-gif-embed" data-postid="1191699353002321181" data-share-method="host" data-aspect-ratio="0.894309" data-width="100%"><a href="https://tenor.com/view/dudu-monk-gif-1191699353002321181">Dudu Monk Sticker</a>from <a href="https://tenor.com/search/dudu+monk-stickers">Dudu Monk Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-			<p style="color: black; margin: 15px 0;">Data Registrasi Berhasil dikirim 💖</p>
-			<button 
-				id="closeButton"
-				style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;"
-			>Tutup</button>
-		</div>
-	</div>
-	<svg
-	    class="waves-footer"
-	    xmlns="http://www.w3.org/2000/svg"
-	    viewBox="0 0 1440 320"
-	  >
+  <!-- Poster Tidak Wajib -->
+  <section class="content second-content">
+    <div class="performance tidak-wajib">
+      <h1 class="hidden">Free Activities</h1>
+      <div class="gambar"></div>
+    </div>
+  </section>
 
-	    <path
-	      fill="rgb(88, 31, 66)"
-	      fill-opacity="1"
-	      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-	    ></path>
-	</svg>
+  <svg
+    class="waves-footer"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+  >
+    <path
+      fill="rgb(88, 31, 66)"
+      fill-opacity="1"
+      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+    ></path>
+  </svg>
 {% endblock main %}
