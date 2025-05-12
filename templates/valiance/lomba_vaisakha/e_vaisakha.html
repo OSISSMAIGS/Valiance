@@ -44,7 +44,7 @@
           formStatus.className = "status";
           enableSend = false;
           const formData = new FormData(form);
-          formData.append("formType", "Daftar Kehadiran Waisakha");
+          formData.append("formType", "Daftar Kehadiran Waisak");
 
           fetch(scriptURL, { method: "POST", body: formData })
             .then((response) => response.json())
