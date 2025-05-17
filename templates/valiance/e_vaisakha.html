@@ -1,0 +1,191 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_vaisakha.css') }}"
+/>
+
+{% endblock css_js %} {% block title %}Vaiśākha{% endblock title %} {% block
+main%}
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/vaisakha_banner.jpeg') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Vaiśākha</h1>
+  <p class="hidden">
+    Vaiśākha adalah event peringatan Waisak dari Valiance yang terinspirasi dari
+    bulan kelahiran Buddha dalam kalender India kuno yang membawa kedamaian dan
+    refleksi diri. Acara ini menghadirkan berbagai aktivitas bermakna untuk
+    mempererat nilai keagamaan
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Justin Marguel Johanes</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>Winson</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Joceline Chrestella</p>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Activities & Performances</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Kedatangan Sangha', 'bx bx-group bx-tada', 'Kedatangan Sangha merupakan momen yang membawa keistimewaan dalam perayaan Waisak. Peserta dapat mendengarkan pesan langsung serta menunjukkan rasa hormat kepada anggota Sangha')"
+        class="list hidden"
+      >
+        <i class="bx bx-group bx-tada"></i>
+        <p>Kedatangan Sangha</p>
+      </div>
+      <div
+        onclick="showDetail('Stand Cooking', 'bx bx-dish bx-tada', 'Peserta dapat menikmati beragam makanan dalam suasana Waisak bersama melalui stand makanan yang disediakan')"
+        class="list hidden"
+      >
+        <i class="bx bx-dish bx-tada"></i>
+        <p>Stand Cooking</p>
+      </div>
+      <div
+        onclick="showDetail('BINGO', 'bx bx-grid-alt bx-tada', 'Permainan ini menggabungkan keberuntungan dan pengetahuan seputar ajaran Buddha. Peserta akan menjawab soal berdasarkan angka dari spin wheel untuk membentuk pola garis pada kertas bingo')"
+        class="list hidden"
+      >
+        <i class="bx bx-grid-alt bx-tada"></i>
+        <p>BINGO</p>
+      </div>
+      <div
+        onclick="showDetail('Memory Matching Card', 'bx bx-layer bx-tada', 'Permainan ini melatih daya ingat peserta dengan mencocokkan posisi gambar setelah diacak. Peserta harus mengatur ulang gambar berdasarkan memori awal dalam waktu yang ditentukan')"
+        class="list hidden"
+      >
+        <i class="bx bx-layer bx-tada"></i>
+        <p>Memory Matching Card</p>
+      </div>
+      <div
+        onclick="showDetail('Lotus Landmines', 'bx bx-directions bx-tada', 'Permainan ini membutuhkan kerja sama tim di mana satu peserta ditutup matanya dan dipandu oleh rekannya melewati jalur berisi `ranjau` lotus. Tujuannya adalah mencapai garis akhir tanpa menginjak bunga lotus yang menjadi perangkap')"
+        class="list hidden"
+      >
+        <i class="bx bx-directions bx-tada"></i>
+        <p>Lotus Landmines</p>
+      </div>
+      <div
+        onclick="showDetail('Tower of Dharma', 'bx bx-objects-vertical-bottom bx-tada', 'Merupakan permainan tim, yang harus membuat menara dari gelas bertuliskan kata baik menggunakan tali dan jika gagal menaruh satu gelas maka akan gagal.')"
+        class="list hidden"
+      >
+        <i class="bx bx-objects-vertical-bottom bx-tada"></i>
+        <p>Tower of Dharma</p>
+      </div>
+      <div
+        onclick="showDetail('Draw Your Face', 'bx bx-face bx-tada', 'Panitia akan menyiapkan lukisan muka yang kosong dan para peserta akan mendekorasikannya sekreatif mungkin.')"
+        class="list hidden"
+      >
+        <i class="bx bx-face bx-tada"></i>
+        <p>Draw Your Face</p>
+      </div>
+      <div
+        onclick="showDetail('Buddhist Idol', 'bx bx-music bx-tada', 'Para peserta akan bernyanyi satu lagu Buddhis')"
+        class="list hidden"
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Buddhist Idol</p>
+      </div>
+      <div
+        onclick="showDetail('Cerdas Cermat Buddhist', 'bx bx-question-mark bx-tada', 'Merupakan lomba yang mengharuskan para peserta untuk menjawab dengan cepat dari handout yang telat di hafalkan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-question-mark bx-tada"></i>
+        <p>Cerdas Cermat Buddhist</p>
+      </div>
+      <div
+        onclick="showDetail('Puja Bakti', 'bx bx-heart bx-tada', 'Puja Bakti merupakan bentuk penghormatan dan persembahan spiritual kepada Triratna (Buddha, Dhamma, dan Sangha). Kegiatan ini dilaksanakan dengan penuh hormat melalui pembacaan paritta, meditasi, dan ceramah Dhamma. ')"
+        class="list hidden"
+      >
+        <i class="bx bx-heart bx-tada"></i>
+        <p>Puja Bakti</p>
+      </div>
+      <div
+        onclick="showDetail('Choir Malam Suci Waisak', 'bx bx-microphone bx-tada', 'Penampilan paduan suara yang membawakan lagu berjudul Malam Suci Waisak menghadirkan nyanyian rohani yang menyentuh hati dan memperdalam suasana batin dengan penuh penghayatan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-microphone bx-tada"></i>
+        <p>Choir Malam Suci Waisak</p>
+      </div>
+      <div
+        onclick="showDetail('Drama Riwayat Hidup Buddha', 'bx bx-mask bx-tada', 'Drama Riwayat Hidup Buddha menceritakan tentang riwayat hidup Siddhartha Gautama yang dari lahir, mencapai penerangan sempurna, hingga Parinibbana.')"
+        class="list hidden"
+      >
+        <i class="bx bx-mask bx-tada"></i>
+        <p>Drama Riwayat Hidup Buddha</p>
+      </div>
+      <div
+        onclick="showDetail('Parinibanna by Fae', 'bx bx-leaf bx-tada', 'Pertunjukan `Parinibanna` yang akan dibawakan oleh Fae adalah pertunjukan seni yang menggambarkan detik-detik Sang Buddha mencapai Parinibbana dengan ekspresi visual dan musikal.')"
+        class="list hidden"
+      >
+        <i class="bx bx-leaf bx-tada"></i>
+        <p>Parinibanna by Fae</p>
+      </div>
+      <div
+        onclick="showDetail('Tari Puja', 'bx bx-star bx-tada', 'Tari Puja adalah persembahan seni gerak sebagai bentuk penghormatan kepada Sang Buddha. Tarian ini menampilkan gerakan yang anggun dengan makna spiritual yang mendalam')"
+        class="list hidden"
+      >
+        <i class="bx bx-star bx-tada"></i>
+        <p>Tari Puja</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <path
+    filter="url(#waveShadow3)"
+    fill="rgb(88, 31, 66)"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
+
+{% endblock main %}

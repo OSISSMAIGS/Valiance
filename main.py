@@ -47,42 +47,7 @@ def e_estrevo():
 
 @app.route("/Events/Vaisakha")
 def e_vaisakha():
-    return render_template("valiance/lomba_vaisakha/e_vaisakha.html")
-
-# Vaisakha - Registration
-@app.route("/Events/Vaisakha/Lomba_Buddhist_Idol")
-def l_buddhist_idol():
-    return render_template("valiance/lomba_vaisakha/l_buddhist_idol.html")
-
-@app.route("/Events/Vaisakha/Lomba_LCC_Buddhist")
-def l_lcc():
-    return render_template("valiance/lomba_vaisakha/l_lcc.html")
-
-@app.route("/Events/Vaisakha/Lomba_Baca_Dhammapada")
-def l_baca_dhammapada():
-    return render_template("valiance/lomba_vaisakha/l_baca_dhammapada.html")
-
-@app.route("/Events/Vaisakha/Minigames_Bingo")
-def l_bingo():
-    return render_template("valiance/lomba_vaisakha/l_bingo.html")
-
-@app.route("/Events/Vaisakha/Minigames_Memory_Matching_Card")
-def l_memory_matching_card():
-    return render_template("valiance/lomba_vaisakha/l_memory_matching_card.html")
-
-@app.route("/Events/Vaisakha/Minigames_Lotus_Landmines")
-def l_lotus_landmines():
-    return render_template("valiance/lomba_vaisakha/l_lotus_landmines.html")
-
-@app.route("/Events/Vaisakha/Minigames_Tower_of_Dharma")
-def l_tower_of_dharma():
-    return render_template("valiance/lomba_vaisakha/l_tower_of_dharma.html")
-
-@app.route("/Events/Vaisakha/Draw_Your_Face")
-def l_draw_your_face():
-    return render_template("valiance/lomba_vaisakha/l_draw_your_face.html")
-
-
+    return render_template("valiance/e_vaisakha.html")
 
 # OTHERS
 @app.route("/Coming_Soon")
