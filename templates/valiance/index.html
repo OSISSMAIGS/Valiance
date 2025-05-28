@@ -69,12 +69,26 @@ main %}
         data-bs-slide-to="8"
         aria-label="Slide 9"
       ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="9"
+        aria-label="Slide 10"
+      ></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a href="{{ url_for('e_eterlight') }}"
+          ><img
+            src="{{ url_for('static', filename='valiance/img/banner/eterlight_banner.png') }}"
+            class="d-block w-100"
+            alt="..."
+        /></a>
+      </div>
+      <div class="carousel-item">
         <a href="{{ url_for('e_vaisakha') }}"
           ><img
-            src="{{ url_for('static', filename='valiance/img/vaisakha/vaisakha_banner.jpeg') }}"
+            src="{{ url_for('static', filename='valiance/img/banner/vaisakha_banner.jpeg') }}"
             class="d-block w-100"
             alt="..."
         /></a>

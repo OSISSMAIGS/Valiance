@@ -117,6 +117,11 @@ img#vaisakha:hover {
     box-shadow: 0 0 25px rgb(212, 160, 50);
     animation: vaisakha-hover 0.5s linear;
 }
+img#eterlight:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgb(251, 255, 28);
+    animation: eterlight-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -198,6 +203,16 @@ img#vaisakha:hover {
     }
 }
 @keyframes vaisakha-hover {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 white;
+    }
+    to {
+        transform: scale(1.02);
+        box-shadow: 0 0 25px rgb(212, 160, 50);
+    }
+}
+@keyframes eterlight-hover {
     from {
         transform: scale(1);
         box-shadow: 0 0 white;
