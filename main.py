@@ -49,6 +49,10 @@ def e_estrevo():
 def e_vaisakha():
     return render_template("valiance/e_vaisakha.html")
 
+@app.route("/Events/Eterlight")
+def e_eterlight():
+    return render_template("valiance/e_eterlight.html")
+
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():

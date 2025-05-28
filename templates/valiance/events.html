@@ -10,10 +10,15 @@
   <h1 class="past" id="past">Our Events</h1>
 
   <section class="event past mb-5">
+    <a href="{{ url_for('e_eterlight') }}"
+      ><img
+        id="eterlight"
+        src="{{ url_for('static', filename='valiance/img/banner/eterlight_banner.png') }}"
+    /></a>
     <a href="{{ url_for('e_vaisakha') }}"
       ><img
         id="vaisakha"
-        src="{{ url_for('static', filename='valiance/img/vaisakha/vaisakha_banner.jpeg') }}"
+        src="{{ url_for('static', filename='valiance/img/banner/vaisakha_banner.jpeg') }}"
     /></a>
     <a href="{{ url_for('e_estrevo') }}"
       ><img
