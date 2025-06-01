@@ -430,7 +430,6 @@ section.second-content {
 }
 
 @media screen and (max-width: 850px) {
-
     p,
     li {
         font-size: 100%;
@@ -448,17 +447,25 @@ section.second-content {
     }
 
     .image-container {
-        width: calc(100% - 2rem);
-        max-width: 500px;
+        width: calc(50% - 1.5rem); /* Adjusted for new gap */
+        min-width: 280px; /* Slightly smaller min-width */
+    }
+
+    .overlay { /* Overlay always visible on smaller screens */
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* Subtle dark semi-transparent background */
     }
 
     .overlay h5 {
-        font-size: 1.25rem;
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        color: #FFFFFF; /* White text for better contrast */
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Shadow for readability */
     }
 
     .overlay .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem; /* Adjust button padding */
+        font-size: 0.9rem; /* Adjust button font size */
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.5); /* Shadow for button definition */
     }
 }
 

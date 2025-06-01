@@ -3,6 +3,7 @@
 {% block css_js %}
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_questival.css') }}">
+	<script src="{{ url_for('static', filename='valiance/js/e_questival.js') }}" defer></script>
 
 	<script>
 		let enableSend = true;
@@ -76,8 +77,8 @@
 	<!-- MEKANISME DAN POSTER -->
 	<div class="container">
 		<div>
-			<h1 class="title">Lomba Basket</h1>
-			<div class="mechanism">
+		<h1 class="title">Lomba Basket</h1>
+		<div class="mechanism">
 				<h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
 				<ol>
 					<li>Jumlah Pemain setiap tim terdiri dari 3 pemain inti dan 1 pemain cadangan.
@@ -89,14 +90,14 @@
 					<li>Tim dengan poin terbesar akan menjadi pemenang untuk ronde tersebut</li>
 					<li>Mengikuti semua aturan yang ada dan semua keputusan wasit yang bersifat mutlak.</li>
 				</ol>
-			</div>
+		</div>
 		</div>
 		<img 
 			src="{{ url_for('static', filename='valiance/img/questival/lomba_basket.jpg') }}"
 			alt="Lomba Basket"
 		></img>
 	</div>
-
+					
 	<!-- Registration -->
 	<h2 class="regis">Registration</h2>
 	<div class="form-container mb-3">
@@ -145,7 +146,7 @@
 				<div class="tenor-gif-embed" data-postid="5119407727361077711" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/pump-fist-fist-pump-basket-ball-celebrate-celebration-gif-5119407727361077711">Pump Fist Fist Pump Basket Ball GIF</a>from <a href="https://tenor.com/search/pump+fist-gifs">Pump Fist GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 				<p>Untuk info lebih lanjut, silakan join grup LINE khusus lomba ini:</p>
 				<a href="https://line.me/ti/g/_jjrmY8L43" target="_blank">Klik di sini untuk join grup Line</a>
-				<br><br>
+	        <br><br>
 			</div>
 			<button 
 				id="closeButton"
