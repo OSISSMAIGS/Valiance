@@ -1,0 +1,228 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_questival.css') }}"
+/>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const competitionData = [
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_basket.jpg') }}",
+        title: "Lomba Basket",
+        link: "{{ url_for('lomba_basket') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_blind_makeup.jpg') }}",
+        title: "Lomba Blind Make Up",
+        link: "{{ url_for('lomba_blind_makeup') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_deal_blind_mute_baking.jpg') }}",
+        title: "Lomba Deaf, Blind, Mute Baking",
+        link: "{{ url_for('lomba_deaf_blind_mute_baking') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_esport_valorant.jpg') }}",
+        title: "Lomba E-Sport Valorant",
+        link: "{{ url_for('lomba_esport_valorant') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_guess_the_word.jpeg') }}",
+        title: "Lomba Guess The Words?",
+        link: "{{ url_for('lomba_guess_the_words') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_round_and_round.jpg') }}",
+        title: "Lomba Round And Round",
+        link: "{{ url_for('lomba_round_and_round') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_squid_game.jpeg') }}",
+        title: "Lomba Squid Game 5v5",
+        link: "{{ url_for('lomba_squid_game_5v5') }}",
+        type: "lomba",
+        hasRegistration: true,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/lomba_velocity.jpeg') }}",
+        title: "Lomba Velocity",
+        link: "{{ url_for('lomba_velocity') }}",
+        type: "lomba",
+        hasRegistration: false,
+      },
+      // Minigames (will be changed to type: "other")
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/minigames_eye_contact.jpeg') }}",
+        title: "Eye Contact",
+        link: "{{ url_for('minigames_eye_contact') }}",
+        type: "other",
+        hasRegistration: false,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/minigames_lie_detector.jpg') }}",
+        title: "Lie Detector",
+        link: "{{ url_for('minigames_lie_detector') }}",
+        type: "other",
+        hasRegistration: false,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/minigames_dont_touch_the_color.jpg') }}",
+        title: "Don't Touch The Color",
+        link: "{{ url_for('minigames_dont_touch_the_color') }}",
+        type: "other",
+        hasRegistration: false,
+      },
+
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/workshop_swap_the_canvas.jpg') }}",
+        title: "Swap The Canvas",
+        link: "{{ url_for('workshop_swap_the_canvas') }}",
+        type: "other",
+        hasRegistration: false,
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/questival/workshop_dalgona.jpg') }}",
+        title: "Dalgona Workshop",
+        link: "{{ url_for('workshop_dalgona') }}",
+        type: "other",
+        hasRegistration: false,
+      },
+    ];
+
+    const sections = {
+      lomba: {
+        title: "Lomba",
+        container: document.getElementById("lomba-container"),
+        items: [],
+      },
+      other: {
+        title: "Other Activities",
+        container: document.getElementById("other-activities-container"),
+        items: [],
+      },
+    };
+
+    competitionData.forEach((comp) => {
+      if (sections[comp.type]) {
+        sections[comp.type].items.push(comp);
+      }
+    });
+
+    Object.values(sections).forEach((section) => {
+      if (section.container && section.items.length > 0) {
+        section.items.forEach((item) => {
+          const itemContainer = document.createElement("div");
+          itemContainer.className = "image-container hidden"; // Add classes for styling and animation
+
+          let overlayContent = `<h5><b>${item.title}</b></h5>`;
+          if (item.link) {
+            const buttonText = item.hasRegistration ? "Registration" : "View";
+            overlayContent += `<a href="${item.link}" class="btn">${buttonText}</a>`;
+          }
+
+          itemContainer.innerHTML = `
+            <img id="poster" src="${item.image}" alt="${item.title}">
+            <div class="overlay">
+                ${overlayContent}
+            </div>
+          `;
+          section.container.appendChild(itemContainer);
+        });
+      }
+    });
+
+    // Initialize the intersection observer after creating elements
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    // Observe all hidden elements
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));
+  });
+</script>
+{% endblock css_js %} {% block title %}Questival{% endblock title %} {% block
+main %}
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/questival_banner.png') }}"
+    alt="Questival Event Banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- Poster -->
+<section class="content second-content">
+  <div class="performance">
+    <!-- Pastikan class ini ada untuk JS selector -->
+    <h1 class="hidden">Registration</h1>
+
+    <h2 class="section-title hidden">Lomba</h2>
+    <div class="gambar" id="lomba-container">
+      <!-- Lomba posters will be inserted by JavaScript here -->
+    </div>
+
+    <h2 class="section-title hidden">Other Activities</h2>
+    <div class="gambar" id="other-activities-container">
+      <!-- Other Activities posters will be inserted by JavaScript here -->
+    </div>
+  </div>
+</section>
+
+<!-- Footer Wave -->
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <defs>
+    <filter id="waveShadow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+      <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
+      <feFlood flood-color="white" flood-opacity="1" result="color" />
+      <feComposite in2="offsetBlur" operator="in" result="shadow" />
+      <feMerge>
+        <feMergeNode in="shadow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path
+    filter="url(#waveShadow3)"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
+{% endblock main %}

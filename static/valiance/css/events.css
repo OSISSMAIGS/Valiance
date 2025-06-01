@@ -122,6 +122,11 @@ img#eterlight:hover {
     box-shadow: 0 0 25px rgb(251, 255, 28);
     animation: eterlight-hover 0.5s linear;
 }
+img#questival:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgb(8, 5, 181);
+    animation: questival-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -222,7 +227,16 @@ img#eterlight:hover {
         box-shadow: 0 0 25px rgb(212, 160, 50);
     }
 }
-
+@keyframes questival-hover {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 white;
+    }
+    to {
+        transform: scale(1.02);
+        box-shadow: 0 0 25px rgb(8, 5, 181);
+    }
+}
 section.event img,
 section.event.past div.image-container a img {
     width: 30vw;

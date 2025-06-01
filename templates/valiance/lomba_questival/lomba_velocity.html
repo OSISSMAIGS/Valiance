@@ -1,0 +1,58 @@
+{% extends "valiance/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_questival.css') }}">
+
+	<script>
+		// No form-specific JavaScript needed for this page
+		document.addEventListener("DOMContentLoaded", () => {
+			// Basic JS if any common script is needed, otherwise can be empty or removed
+		});
+	</script>
+{% endblock css_js %}
+
+{% block title %}Lomba Velocity{% endblock title %}
+
+{% block main %}
+
+	<!-- MEKANISME DAN POSTER -->
+	<div class="container">
+		<div>
+			<h1 class="title">Lomba Velocity</h1>
+			<div class="mechanism">
+				<h4 class="sub-title">MEKANISME</h4>
+				<ol>
+					<li>Lomba dapat diikuti secara individu maupun kelompok (max 5 orang)</li>
+					<li>Video velocity harus dibuat bersama guru atau staf SMA IGS.</li>
+					<li>Vidio dapat di unggah pada akun tiktok dengan menggunakan hashtag #Questival#PartOfQuestival #IgnatiusGlobalSchool dan menandai akun @osis.smaigs</li>
+					<li>Vidio terakhir dikumpulkan pada tanggal 4 Juni 2025 pada jam 23.59</li>
+				</ol>
+				<h4 class="sub-title" style="margin-top: 1rem;">PERATURAN LOMBA</h4>
+				<ol>
+					<li>Vidio tidak mengandung unsur SARA ataupun bullying.</li>
+					<li>Video harus diunggah ke platform yang ditentukan dengan menggunakan hashtag resmi lomba.</li>
+					<li>Dilarang melakukan kecurangan dalam bentuk apapun (contoh: membeli likes dan viewers)</li>
+					<li>Keputusan dewan juri tidak dapat diganggu gugat dan bersifat mutlak.</li>
+				</ol>
+			</div>
+		</div>
+		<img 
+			src="{{ url_for('static', filename='valiance/img/questival/lomba_velocity.jpeg') }}"
+			alt="Lomba Velocity"
+		></img>
+	</div>
+
+	<!-- No Registration Section for this page -->
+
+	<svg
+	    class="waves-footer"
+	    xmlns="http://www.w3.org/2000/svg"
+	    viewBox="0 0 1440 320"
+	  >
+	    <path
+	      fill-opacity="1"
+	      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+	    ></path>
+	</svg>
+{% endblock main %} 
