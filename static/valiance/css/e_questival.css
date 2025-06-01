@@ -1,0 +1,615 @@
+/* Root Variables - Color Scheme */
+
+:root {
+    /* Primary colors for Questival */
+    --bg: #0A2463; /* Deep Blue */
+    --bg-color: #1E40AF; /* Medium Blue */
+    --bg-color2: #FF8C00; /* Dark Orange */
+    --text-color: #FFD700; /* Gold/Yellow */
+    --text-color-darker: #B8860B; /* Dark Gold */
+    --text-color2: #FFFFFF; /* White for contrast */
+    
+    /* UI colors for Questival */
+    --nav-headings: #FFFFFF; /* White */
+    --overlay-bg: rgba(255, 215, 0, 0.65); /* Gold with opacity */
+    --accent-color: #FFD700; /* Gold/Yellow */
+    --nav-bg: #0D3B87; /* Darker Blue for Nav */
+    --dropdown-bg: #0D3B87; /* Dark Orange for Dropdown */
+    --splash-bg: #0D3B87; /* Darker Blue for Splash */
+}
+
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: 0px 0px 0.4vw rgb(255, 255, 255);
+}
+
+html,
+body {
+    background-color: var(--bg-color);
+    color: white;
+    width: 100vw;
+}
+
+p,
+li {
+    font-size: 110%;
+}
+
+a.btn{
+    background-color: var(--bg-color2);
+    color: white;
+}
+
+
+/* Layout Components */
+
+.kewa {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.kepan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* Navigation Styles */
+
+.navbarlogo {
+    color: var(--nav-headings); /* White */
+}
+
+.navbar-heading a button {
+    color: var(--nav-headings); /* White */
+}
+
+div.navbarMain div.navbar-dropdown {
+    background-color: var(--dropdown-bg); /* Dark Orange */
+}
+
+div.navbarMain div.navbar-dropdown button:hover {
+    background-color: var(--text-color-darker); /* Dark Gold */
+}
+
+div.navbarMain div.navbar-heading button {
+    /* Adjusted text-shadow for Questival if needed, or use nav-headings color directly */
+    text-shadow: 0 0.1vh 0.2vh rgba(0, 0, 0, 0.4); 
+}
+
+div.navbarMain div.navbar-heading button:hover {
+    color: var(--text-color) !important; /* Gold/Yellow */
+    text-decoration: none;
+    animation: hovering 0.2s linear !important;
+    text-shadow: 0 0.2vh 0.5vh rgba(255, 215, 0, 0.5); /* Softer gold shadow */
+}
+
+span.showNav {
+    animation: colorLetters 0.75s linear !important;
+}
+
+
+/* Banner Section */
+
+section.banner {
+    --size: 100vw;
+    position: relative;
+    width: var(--size);
+    height: calc(var(--size)/1.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: var(--bg-color);
+}
+
+section.banner img {
+    width: 100vw;
+    height: calc(100vw/1.6);
+    object-fit: cover;
+}
+
+section.banner .gradient-banner {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    height: 10rem;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg-color2));
+}
+
+
+/* Content Sections */
+
+section.about {
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+}
+
+section.about h1 {
+    margin-top: 5rem;
+    font-weight: 700;
+    color: var(--text-color); /* Gold/Yellow for headings */
+}
+
+section.content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--bg-color);
+    padding: 2rem 5%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+section.content h1 {
+    font-weight: 700;
+    color: var(--text-color2); /* White for headings */
+    margin: 0;
+}
+
+section.content h2 {
+    font-weight: 700;
+    color: var(--text-color2); /* White */
+}
+
+
+/* List Cards */
+
+section.content .lists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+section.content .list {
+    width: 200px;
+    height: 200px;
+    background-color: var(--text-color); /* Gold/Yellow */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px var(--accent-color); /* Gold/Yellow shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+section.content .list:hover {
+    animation: box-hover 0.5s linear, box-size 0.3s linear;
+    scale: 1.05;
+    background-color: var(--text-color-darker); /* Dark Gold */
+}
+
+section.content .list i {
+    font-size: 50pt;
+    color: var(--bg); /* Deep Blue icons on gold cards */
+}
+
+section.content .list p {
+    font-weight: bold;
+    color: var(--bg); /* Deep Blue text on gold cards */
+    margin-bottom: 0;
+}
+
+
+/* Performance Section */
+
+.performance .gambar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: calc(33.333% - 2rem);
+    min-width: 300px;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px var(--accent-color); /* Gold/Yellow shadow */
+}
+
+.image-container:hover {
+    transform: translateY(-10px);
+}
+
+.image-container::before {
+    content: "";
+    display: block;
+    padding-top: 177.78%;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--overlay-bg); /* Gold with opacity */
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    height: 100%;
+}
+
+.overlay h5 {
+    color: var(--bg); /* Deep Blue text on gold overlay */
+    font-size: 1.5rem; /* Adjusted for better visibility */
+    margin-bottom: 0.5rem; /* Added margin */
+    font-weight: bold;
+}
+
+.overlay .btn {
+    background-color: var(--bg); /* Deep Blue button */
+    color: var(--text-color); /* Gold/Yellow text on button */
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.overlay .btn:hover {
+    background-color: var(--bg-color2); /* Dark Orange on hover */
+    color: var(--text-color2); /* White text on hover */
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 0;
+    background-color: var(--nav-bg);
+    width: 100vw;
+    margin-bottom: 0;
+}
+
+footer .gradient {
+    background: linear-gradient(var(--bg-color), var(--text-color));
+}
+
+footer .column2 a h1,
+footer .column3 a h2 {
+    margin: 0;
+    color: var(--accent-color);
+}
+
+footer .copyright {
+    color: var(--bg-color);
+}
+
+footer .footer-content a:hover {
+    color: rgb(14, 198, 198);
+    animation: nav-hover-a 0.2s linear;
+}
+
+/* Waves Footer */
+
+.waves-footer {
+    background-color: var(--bg-color2);
+    display: block; /* Ensure it takes up space */
+}
+
+.waves-footer path {
+    fill: var(--nav-bg); /* Use Questival nav background color */
+}
+
+
+/* Second Content Section */
+
+section.second-content {
+    background-color: var(--bg-color2);
+}
+
+
+/* Utility Classes */
+
+.hidden {
+    transform: translateY(100%);
+    filter: blur(10px);
+}
+
+.show {
+    transform: translateY(0);
+    filter: blur(0);
+    transition: all 0.7s ease-in-out;
+}
+
+
+/* Animations */
+
+@keyframes colorLetters {
+    0% {
+        color: white;
+        text-shadow: none;
+    }
+
+    25% {
+        color: rgb(232, 210, 149);
+        text-shadow: 0 0.05vh 0.5vh rgb(254, 255, 177), 0 -0.4vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    }
+
+    50% {
+        color: rgb(233, 184, 128);
+        text-shadow: 0 0.3vh 0.5vh rgb(254, 255, 177), 0 -0.3vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    }
+
+    75% {
+        color: rgb(232, 210, 149);
+        text-shadow: 0 0.4vh 0.5vh rgb(254, 255, 177), 0 -0.05vh 0.5vh rgb(254, 255, 177), 0.2vh 0 0.5vh rgb(254, 255, 177), -0.2vh 0 0.5vh rgb(254, 255, 177);
+    }
+
+    100% {
+        color: white;
+        text-shadow: none;
+    }
+}
+
+@keyframes hovering {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: var(--text-color2);
+    }
+}
+
+@keyframes box-hover {
+    0% {
+        background-color: var(--text-color);
+    }
+
+    100% {
+        background-color: var(--text-color-darker);
+    }
+}
+
+@keyframes box-size {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.05;
+    }
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    .image-container {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    p,
+    li {
+        font-size: 100%;
+    }
+
+    section.banner .gradient-banner {
+        height: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .performance .gambar {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .image-container {
+        width: calc(100% - 2rem);
+        max-width: 500px;
+    }
+
+    .overlay h5 {
+        font-size: 1.25rem;
+    }
+
+    .overlay .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    header nav ul.menu-nav {
+        background-color: var(--bg-color);
+        border-color: white;
+        box-shadow: 0px 0px 10px white;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .performance .gambar {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .overlay {
+        padding: 1rem;
+    }
+
+    .overlay h5 {
+        font-size: 1.1rem;
+    }
+}
+
+/* DOCUMENTATIONS */
+
+.hero-section {
+    min-height: 80vh;
+    background-color: var(--bg-color2);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hero-section__header {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .hero-section__title {
+    color: var(--text-color); /* Gold/Yellow */
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .gallery {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .gallery__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .gallery__item {
+    width: calc(33.333% - 1.35rem);
+    min-width: 280px;
+    aspect-ratio: 16/9;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #C6EBC5;
+    box-shadow: 0px 0px 10px white;
+  }
+  
+  .gallery__item-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #FBF2CF;
+    border-radius: 15px;
+  }
+  
+  /* Example background images */
+  .gallery__item:nth-child(1) .gallery__item-inner {
+    background-image: url(/static/valiance/img/documentations/euphony/1.JPG);
+  }
+  .gallery__item:nth-child(2) .gallery__item-inner {
+    background-image: url(/static/valiance/img/documentations/euphony/2.JPG);
+  }
+  .gallery__item:nth-child(3) .gallery__item-inner {
+    background-image: url(/static/valiance/img/documentations/euphony/3.JPG);
+  }
+  .gallery__item:nth-child(4) .gallery__item-inner {
+    background-image: url(/static/valiance/img/documentations/euphony/4.JPG);
+  }
+  .gallery__item:nth-child(5) .gallery__item-inner {
+    background-image: url(/static/valiance/img/documentations/euphony/5.JPG);
+  }
+  .gallery__item:nth-child(6) .gallery__item-inner {
+    background-image: url(/static/valiance/img/documentations/euphony/6.JPG);
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+    .gallery__item {
+        width: calc(50% - 1rem);
+    }
+  
+    .hero-section {
+        padding: 1.5rem;
+    }
+  
+    .gallery__container {
+        gap: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-section {
+        padding: 1rem;
+    }
+  
+    .hero-section__title {
+        font-size: 2rem;
+    }
+  
+    .gallery__container {
+        gap: 1rem;
+    }
+  
+    .gallery__item {
+        width: 100%;
+        min-width: unset;
+    }
+  
+    .gallery__item-inner {
+        border-width: 3px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .hero-section__title {
+        font-size: 1.5rem;
+    }
+    
+    .gallery__item-inner {
+        border-width: 2px;
+    }
+  }
