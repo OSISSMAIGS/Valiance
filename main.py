@@ -64,19 +64,19 @@ def lomba_basket():
 
 @app.route("/Events/Questival/Lomba_Guess_The_Words")
 def lomba_guess_the_words():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_guess_the_words.html")
 
 @app.route("/Events/Questival/Lomba_Squid_Game_5v5")
 def lomba_squid_game_5v5():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_squid_game_5v5.html")
 
 @app.route("/Events/Questival/Lomba_Esport_Valorant")
 def lomba_esport_valorant():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_esport_valorant.html")
 
 @app.route("/Events/Questival/Lomba_Blind_Makeup")
 def lomba_blind_makeup():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_blind_makeup.html")
 
 @app.route("/Events/Questival/Lomba_Deaf_Blind_Mute_Baking")
 def lomba_deaf_blind_mute_baking():
@@ -84,11 +84,11 @@ def lomba_deaf_blind_mute_baking():
 
 @app.route("/Events/Questival/Lomba_Round_And_Round")
 def lomba_round_and_round():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_round_and_round.html")
 
 @app.route("/Events/Questival/Lomba_Velocity")
 def lomba_velocity():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_velocity.html")
 
 # WORKSHOPS - Questival
 @app.route("/Events/Questival/Workshop_Swap_The_Canvas")
