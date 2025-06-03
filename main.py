@@ -60,7 +60,7 @@ def e_questival():
 # LOMBA - Questival
 @app.route("/Events/Questival/Lomba_Basket")
 def lomba_basket():
-    return render_template("valiance/l_closed.html")
+    return render_template("valiance/lomba_questival/lomba_basket.html")
 
 @app.route("/Events/Questival/Lomba_Guess_The_Words")
 def lomba_guess_the_words():
