@@ -4,6 +4,10 @@
   type="text/css"
   href="{{ url_for('static', filename='valiance/css/e_questival.css') }}"
 />
+<script
+  src="{{ url_for('static', filename='valiance/js/e_questival.js') }}"
+  defer
+></script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -43,7 +47,7 @@
       {
         image:
           "{{ url_for('static', filename='valiance/img/questival/lomba_guess_the_word.jpeg') }}",
-        title: "Lomba Guess The Words?",
+        title: "Lomba Guess The Words",
         link: "{{ url_for('lomba_guess_the_words') }}",
         type: "lomba",
         hasRegistration: true,
