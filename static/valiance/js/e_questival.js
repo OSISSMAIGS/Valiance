@@ -1,22 +1,8 @@
-// JavaScript for Questival event pages
-
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('e_questival.js loaded');
-    // Add Questival-specific JavaScript functionality here
-
-    if (typeof spark !== 'undefined' && spark.start) {
-        spark.start(); // Start the particle animation
-        console.log('Spark particles started.');
-    } else {
-        console.error('Spark object or spark.start method not found.');
-    }
-});
-
 var spark = {
     maxCount: 50,
     speed: 0.8,
     frameInterval: 15,
-    alpha: 0.7,
+    alpha: 0.35,
     gradient: false,
     start: null,
     stop: null,
@@ -44,12 +30,13 @@ var spark = {
   
     var t = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame;
     
-    // New color combination (Squid Game Theme)
+    // New color combination (pink, yellow, and orange)
     var n = [
-      "rgba(255, 0, 150,",   // Pink/Magenta (Guards)
-      "rgba(0, 128, 128,",   // Teal/Green (Players)
-      "rgba(220, 220, 220,", // Light Grey (Neutral/Accent)
-      "rgba(255, 255, 255,"   // White (Accent)
+      "rgba(255,105,180,",   // Hot pink
+      "rgba(255,228,0,",     // Yellow
+      "rgba(255,140,0,",     // Orange
+      "rgba(255,182,193,",   // Light pink
+      "rgba(255,165,0;"      // Orange (lighter)
     ];
     
     var e = false,
@@ -61,16 +48,13 @@ var spark = {
   
     function d(t, e, i) {
       return t.color = n[Math.random() * n.length | 0] + (spark.alpha + ")"),
+             t.color2 = n[Math.random() * n.length | 0] + (spark.alpha + ")"),
              t.x = Math.random() * e,
              t.y = Math.random() * i - i,
              t.diameter = 10 * Math.random() + 5,
              t.tilt = 10 * Math.random() - 10,
              t.tiltAngleIncrement = .07 * Math.random() + .05,
              t.tiltAngle = Math.random() * Math.PI,
-             t.shapes = ['circle', 'square', 'triangle'],
-             t.shape = t.shapes[Math.floor(Math.random() * t.shapes.length)],
-             t.rotation = Math.random() * Math.PI * 2,
-             t.rotationSpeed = (Math.random() - 0.5) * 0.05,
              t;
     }
   
@@ -95,39 +79,19 @@ var spark = {
                   t.x += Math.sin(r) - .5;
                   t.y += .5 * (Math.cos(r) + t.diameter + spark.speed);
                   t.tilt = 15 * Math.sin(t.tiltAngle);
-                  t.rotation += t.rotationSpeed;
                 }
                 if (t.x > n + 20 || t.x < -20 || t.y > i) {
                   e && a.length <= spark.maxCount ? d(t, n, i) : (a.splice(o, 1), o--);
                 }
               }
             }(),
-            function(ctx) {
-              for (var particle, k = 0; k < a.length; k++) {
-                particle = a[k];
-                
-                ctx.fillStyle = particle.color; 
-
-                ctx.save();
-                ctx.translate(particle.x, particle.y);
-                ctx.rotate(particle.rotation);
-
-                var size = particle.diameter;
-                ctx.beginPath();
-
-                if (particle.shape === 'circle') {
-                  ctx.arc(0, 0, size / 2, 0, 2 * Math.PI);
-                } else if (particle.shape === 'square') {
-                  ctx.rect(-size / 2, -size / 2, size, size);
-                } else if (particle.shape === 'triangle') {
-                  var h = size * (Math.sqrt(3)/2);
-                  ctx.moveTo(0, -h / 2);
-                  ctx.lineTo(-size / 2, h / 2);
-                  ctx.lineTo(size / 2, h / 2);
-                  ctx.closePath();
-                }
-                ctx.fill();
-                ctx.restore();
+            function(t) {
+              for (var n, e, i, o, r = 0; r < a.length; r++) {
+                if (n = a[r], t.beginPath(), t.lineWidth = n.diameter, i = n.x + n.tilt, e = i + n.diameter / 2, o = n.y + n.tilt + n.diameter / 2, spark.gradient) {
+                  var l = t.createLinearGradient(e, n.y, i, o);
+                  l.addColorStop("0", n.color), l.addColorStop("1.0", n.color2), t.strokeStyle = l;
+                } else t.strokeStyle = n.color;
+                t.moveTo(e, n.y), t.lineTo(i, o), t.stroke();
               }
             }(l),
             o = n - u % spark.frameInterval

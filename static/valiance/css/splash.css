@@ -1,7 +1,8 @@
 :root{
-	--nav-bg: rgb(222, 97, 48);
-	--dropdown-bg: rgb(220, 89, 48);
-	--splash-bg: rgb(213, 102, 75);
+	--nav-bg: #000000;
+  --nav-bg-darker: #1A1A1A;
+  --dropdown-bg: #1E1E1E;
+  --splash-bg: #000000;
 }
 
 body {

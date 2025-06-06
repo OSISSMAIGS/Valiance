@@ -9,6 +9,7 @@
 	--pink: rgb(194, 82, 226);
 	--orange: rgb(195, 92, 53);
 	--val-yellow: rgb(255, 178, 45);
+	--black: #000;
 }
 
 * {
@@ -20,7 +21,7 @@
 html,
 body {
 	font-family: "Open Sans", sans-serif;
-	background: var(--dark-brown);
+	background: var(--black);
 	color: var(--white);
 	overflow-x: hidden;
 }
@@ -372,7 +373,8 @@ section.gradient-header {
 }
 
 footer {
-	background: var(--brown);
+	background: var(--black);
+	padding: 2rem 0;
 }
 
 footer .gradient {
@@ -398,7 +400,7 @@ footer .footer-content a {
 }
 
 footer .footer-content a:hover {
-	color: var(--orange);
+	color: #FEAF2D;
 	animation: nav-hover-a 0.2s linear;
 }
 
@@ -411,7 +413,7 @@ footer .column1 {
 }
 
 footer .column1 img {
-	width: 13rem;
+	width: 15rem;
 }
 
 footer .column1 .footer-text {
@@ -421,13 +423,14 @@ footer .column1 .footer-text {
 }
 
 footer .column1 .footer-text h5 {
-	font-size: 2rem;
+	font-size: 2.2rem;
 	font-weight: 700;
 	margin: 0;
 }
 
 footer .column1 .footer-text p {
 	text-align: center;
+	font-size: 1.1rem;
 }
 
 footer .column2 {
@@ -443,7 +446,7 @@ footer .column2 a {
 
 footer .column2 a h1 {
 	margin: 0;
-	color: var(--orange);
+	color: #FEAF2D;
 }
 
 footer .column2 a p {
@@ -451,6 +454,7 @@ footer .column2 a p {
 	margin-bottom: 0;
 	margin: 0;
 	text-align: center;
+	font-size: 1.1rem;
 }
 
 footer .column3 {
@@ -471,12 +475,13 @@ footer .column3 a {
 
 footer .column3 a h2 {
 	margin: 0;
-	color: var(--orange);
+	color: #FEAF2D;
 }
 
 footer .column3 p {
 	margin: 0;
 	margin-left: 10px;
+	font-size: 1.1rem;
 }
 
 footer .copyright {
@@ -621,3 +626,7 @@ footer .copyright p {
 		font-size: 11px;
 	}
 }
+
+
+
+
