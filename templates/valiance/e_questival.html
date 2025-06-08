@@ -4,229 +4,210 @@
   type="text/css"
   href="{{ url_for('static', filename='valiance/css/e_questival.css') }}"
 />
-<script
-  src="{{ url_for('static', filename='valiance/js/e_questival.js') }}"
-  defer
-></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const competitionData = [
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_basket.jpg') }}",
-        title: "Lomba Basket",
-        link: "{{ url_for('lomba_basket') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_blind_makeup.jpg') }}",
-        title: "Lomba Blind Make Up",
-        link: "{{ url_for('lomba_blind_makeup') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_deal_blind_mute_baking.jpg') }}",
-        title: "Lomba Deaf, Blind, Mute Baking",
-        link: "{{ url_for('lomba_deaf_blind_mute_baking') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_esport_valorant.jpg') }}",
-        title: "Lomba E-Sport Valorant",
-        link: "{{ url_for('lomba_esport_valorant') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_guess_the_word.jpeg') }}",
-        title: "Lomba Guess The Words",
-        link: "{{ url_for('lomba_guess_the_words') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_round_and_round.jpg') }}",
-        title: "Lomba Round And Round",
-        link: "{{ url_for('lomba_round_and_round') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_squid_game.jpeg') }}",
-        title: "Lomba Squid Game 5v5",
-        link: "{{ url_for('lomba_squid_game_5v5') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_velocity.jpeg') }}",
-        title: "Lomba Velocity",
-        link: "{{ url_for('lomba_velocity') }}",
-        type: "lomba",
-        hasRegistration: false,
-      },
-      // Minigames (will be changed to type: "other")
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/minigames_eye_contact.jpeg') }}",
-        title: "Eye Contact",
-        link: "{{ url_for('minigames_eye_contact') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/minigames_lie_detector.jpg') }}",
-        title: "Lie Detector",
-        link: "{{ url_for('minigames_lie_detector') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/minigames_dont_touch_the_color.jpg') }}",
-        title: "Don't Touch The Color",
-        link: "{{ url_for('minigames_dont_touch_the_color') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/workshop_swap_the_canvas.jpg') }}",
-        title: "Swap The Canvas",
-        link: "{{ url_for('workshop_swap_the_canvas') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/workshop_dalgona.jpg') }}",
-        title: "Dalgona Workshop",
-        link: "{{ url_for('workshop_dalgona') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-    ];
-
-    const sections = {
-      lomba: {
-        title: "Lomba",
-        container: document.getElementById("lomba-container"),
-        items: [],
-      },
-      other: {
-        title: "Other Activities",
-        container: document.getElementById("other-activities-container"),
-        items: [],
-      },
-    };
-
-    competitionData.forEach((comp) => {
-      if (sections[comp.type]) {
-        sections[comp.type].items.push(comp);
-      }
-    });
-
-    Object.values(sections).forEach((section) => {
-      if (section.container && section.items.length > 0) {
-        section.items.forEach((item) => {
-          const itemContainer = document.createElement("div");
-          itemContainer.className = "image-container hidden"; // Add classes for styling and animation
-
-          let overlayContent = `<h5><b>${item.title}</b></h5>`;
-          if (item.link) {
-            const buttonText = item.hasRegistration ? "Registration" : "View";
-            overlayContent += `<a href="${item.link}" class="btn">${buttonText}</a>`;
-          }
-
-          itemContainer.innerHTML = `
-            <img id="poster" src="${item.image}" alt="${item.title}">
-            <div class="overlay">
-                ${overlayContent}
-            </div>
-          `;
-          section.container.appendChild(itemContainer);
-        });
-      }
-    });
-
-    // Initialize the intersection observer after creating elements
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    });
-
-    // Observe all hidden elements
-    const hiddenElements = document.querySelectorAll(".hidden");
-    hiddenElements.forEach((el) => observer.observe(el));
-  });
-</script>
 {% endblock css_js %} {% block title %}Questival{% endblock title %} {% block
-main %}
+main%}
 <!-- Banner Section -->
 <section class="banner">
   <img
-    src="{{ url_for('static', filename='valiance/img/banner/questival_banner.png') }}"
-    alt="Questival Event Banner"
+    src="{{ url_for('static', filename='valiance/img/banner/questival_banner.jpg') }}"
+    alt="banner"
   />
   <section class="gradient-banner"></section>
 </section>
 
-<!-- Poster -->
-<section class="content second-content">
-  <div class="performance">
-    <!-- Pastikan class ini ada untuk JS selector -->
-    <h1 class="hidden">Registration</h1>
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Questival</h1>
+  <p class="hidden">
+    Questival merupakan nama yang berasal dari gabubgan quest dan juga festival. Quest disini memiliki arti seperti lomba dan festival sebagai festivalnya. Dalam event Questival ini para siswa dapat mengikuti berbagai jenis lomba dan juga minigames yang dapat memperat hubungan pertemanan dan juga solidaritas. Questival juga menjadi ajang healing untuk para siswa setelah melaksanakan ujian dan juga p5 bersama teman-temannya.
+  </p>
 
-    <h2 class="section-title hidden">Lomba</h2>
-    <div class="gambar" id="lomba-container">
-      <!-- Lomba posters will be inserted by JavaScript here -->
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Fabian Ghafiqi Ahmad</p>
     </div>
-
-    <h2 class="section-title hidden">Other Activities</h2>
-    <div class="gambar" id="other-activities-container">
-      <!-- Other Activities posters will be inserted by JavaScript here -->
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>M. Adly Fawwazy Gumay</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 2</b></p>
+      <p>Quinsha Fakhira</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Nayla Salsabilla Zulva</p>
     </div>
   </div>
 </section>
 
-<!-- Footer Wave -->
+<!-- Content Section -->
+<section class="content">
+  <!-- Performance Section -->
+  <div class="performance">
+    <h1 class="hidden">Activities & Performances</h1>
+    <div class="lists">
+      <div
+        onclick="showDetail('Pentasonix', 'bx bx-music bx-tada', 'Pada classmeet kali ini Pentasonix akan menampilkan pertunjukkan spesial dari grup vokal yang membawakan lagu `Mata ke Hati` by Hivi.')"
+        class="list hidden"
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Pentasonix</p>
+      </div>
+      <div
+        onclick="showDetail('Pencak Silat', 'bx bx-run bx-tada', 'Pertunjukan seni bela diri tradisional yang memadukan gerakan teknik, konsentrasi, dan nilai-nilai budaya.')"
+        class="list hidden"
+      >
+        <i class="bx bx-run bx-tada"></i>
+        <p>Pencak Silat</p>
+      </div>
+      <div
+        onclick="showDetail('The Pria', 'bx bx-volume-full bx-tada', 'Persembahan musik penuh semangat dari The Pria dengan lagu “You Give Love a Bad Name” oleh Bon Jovi. Lagu rock klasik ini dibawakan dengan energi dan gaya khas yang menghibur.')"
+        class="list hidden"
+      >
+        <i class="bx bx-volume-full bx-tada"></i>
+        <p>The Pria</p>
+      </div>
+      <div
+        onclick="showDetail('Tarot Reading', 'bx bx-spreadsheet bx-tada', 'Booth interaktif di mana peserta dapat mencoba membaca kartu tarot sebagai bentuk hiburan dan refleksi diri. ')"
+        class="list hidden"
+      >
+        <i class="bx bx-spreadsheet bx-tada"></i>
+        <p>Tarot Reading</p>
+      </div>
+      <div
+        onclick="showDetail('Lie Detector', 'bx bx-pulse bx-tada', 'Permainan santai di mana peserta menjawab pertanyaan sambil diuji kejujurannya melalui alat pendeteksi kebohongan sederhana. Aktivitas ini mengundang tawa dan rasa penasaran.')"
+        class="list hidden"
+      >
+        <i class="bx bx-pulse bx-tada"></i>
+        <p>Lie Detector</p>
+      </div>
+      <div
+        onclick="showDetail('Tahan Tawa: Eye Contact', 'bx bx-happy bx-tada', 'Tantangan saling menatap tanpa tertawa. Aktivitas ringan yang melatih fokus dan kontrol emosi menciptakan suasana seru dan lucu di antara para peserta.')"
+        class="list hidden"
+      >
+        <i class="bx bx-happy bx-tada"></i>
+        <p>Tahan Tawa: Eye Contact</p>
+      </div>
+      <div
+        onclick="showDetail('Basket', 'bx bx-basketball bx-tada', 'Pertandingan basket yang seru antar tim dengan semangat berkompetisi dan kekompakan tim yang tinggi hadir untuk memeriahkan event Questival')"
+        class="list hidden"
+      >
+        <i class="bx bx-basketball bx-tada"></i>
+        <p>Basket</p>
+      </div>
+      <div
+        onclick="showDetail('Squid Game 5v5', 'bx bx-joystick bx-tada', 'Tahapan-tahapan permainan yang berbeda  membuat permainan ini sangat menantang kemampuan kerja sama tim dan skill permainan setiap orangnya.')"
+        class="list hidden"
+      >
+        <i class="bx bx-joystick bx-tada"></i>
+        <p>Squid Game 5v5</p>
+      </div>
+      <div
+        onclick="showDetail('Deaf, Blind, Mute Baking', 'bx bx-cake bx-tada', 'Peserta akan dibagi menjadi tiga peran unik, yaitu ditutup matanya, telinganya, dan mulutnya untuk menghadapi tantangan yang seru untuk membuat hidangan bertema coklat')"
+        class="list hidden"
+      >
+        <i class="bx bx-cake bx-tada"></i>
+        <p>Deaf, Blind, Mute Baking</p>
+      </div>
+      <div
+        onclick="showDetail('Round and Round (Dunggulge)', 'bx bx-group bx-tada', 'Permainan tradisional Korea ini mengajak peserta membentuk lingkaran dan bergerak sambil fokus menyanyikan lagu khas dan mendengar instruksi ')"
+        class="list hidden"
+      >
+        <i class="bx bx-group bx-tada"></i>
+        <p>Round and Round (Dunggulge)</p>
+      </div>
+      <div
+        onclick="showDetail('E-Sport Valorant', 'bx bx-game bx-tada', 'Pertandingan Valorant menghadirkan suasana seru dan sengit. Peserta akan bertarung lewat game Valorant dengan semangat dan kerja sama tim')"
+        class="list hidden"
+      >
+        <i class="bx bx-game bx-tada"></i>
+        <p>E-Sport Valorant</p>
+      </div>
+      <div
+        onclick="showDetail('Blind Make Up', 'bx bx-brush bx-tada', 'Peserta akan merias wajah partnernya dalam keadaan mata tertutup dan menggunakan semua alat makeup yang dibawa, membuat game ini menjadi sebuah tantangan yang lucu dna seru')"
+        class="list hidden"
+      >
+        <i class="bx bx-brush bx-tada"></i>
+        <p>Blind Make Up</p>
+      </div>
+      <div
+        onclick="showDetail('Don`t Touch The Colour', 'bx bx-palette bx-tada', 'merupakan sebuah mini games dimana para peserta harus menghindari suatu warna.')"
+        class="list hidden"
+      >
+        <i class="bx bx-palette bx-tada"></i>
+        <p>Don`t Touch The Colour</p>
+      </div>
+      <div
+        onclick="showDetail('Guess The Word', 'bx bx-comment-detail bx-tada', 'merupakan perlombaan yang menwajibkan para peserta untuk menebak suatu warna.')"
+        class="list hidden"
+      >
+        <i class="bx bx-comment-detail bx-tada"></i>
+        <p>Guess The Word</p>
+      </div>
+      <div
+        onclick="showDetail('Swap The Canvas', 'bx bx-revision bx-tada', 'merupakan workshop dimana para peserta yang telah mendaftar akan saling menukar canvas setiap 5 menit.')"
+        class="list hidden"
+      >
+        <i class="bx bx-revision bx-tada"></i>
+        <p>Swap The Canvas</p>
+      </div>
+      <div
+        onclick="showDetail('Dalgona', 'bx bx-cookie bx-tada', 'merupakan sebuah worksop yang mengharuskan para peserta untuk memisahkan bagian tengah dari piringannya. Para peserta yang mematahkan bagian tengah akan gugur.')"
+        class="list hidden"
+      >
+        <i class="bx bx-cookie bx-tada"></i>
+        <p>Dalgona</p>
+      </div>
+      <div
+        onclick="showDetail('Velocity Trend', 'bx bx-trending-up bx-tada', 'merupakan perlombaan dimana para peserta akan mengajak para guru untuk membuat trend velocity yang akan di upload di tiktok menggunakan hashtag yang telah di beri.')"
+        class="list hidden"
+      >
+        <i class="bx bx-trending-up bx-tada"></i>
+        <p>Velocity Trend</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <svg
   class="waves-footer"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1440 320"
 >
-  <defs>
-    <filter id="waveShadow3" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
-      <feOffset in="blur" dx="0" dy="0" result="offsetBlur" />
-      <feFlood flood-color="white" flood-opacity="1" result="color" />
-      <feComposite in2="offsetBlur" operator="in" result="shadow" />
-      <feMerge>
-        <feMergeNode in="shadow" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-  </defs>
   <path
     filter="url(#waveShadow3)"
+    fill="#FFD700"
     fill-opacity="1"
     d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
   ></path>
 </svg>
+
 {% endblock main %}
