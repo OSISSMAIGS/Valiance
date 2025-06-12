@@ -5,14 +5,14 @@
     --bg: #0A2463; /* Deep Blue */
     --bg-color: #1E40AF; /* Medium Blue */
     --bg-color2: #FF8C00; /* Dark Orange */
-    --text-color: #FFD700; /* Gold/Yellow */
-    --text-color-darker: #B8860B; /* Dark Gold */
+    --text-color: rgb(193, 113, 152); /* Gold/Yellow */
+    --text-color-darker: rgb(148, 60, 102); /* Dark Gold */
     --text-color2: #FFFFFF; /* White for contrast */
     
     /* UI colors for Questival */
     --nav-headings: #FFFFFF; /* White */
-    --overlay-bg: rgba(255, 215, 0, 0.65); /* Gold with opacity */
-    --accent-color: #FFD700; /* Gold/Yellow */
+    --overlay-bg: rgb(193, 113, 152); /* Gold with opacity */
+    --accent-color: rgb(193, 113, 152); /* Gold/Yellow */
     --nav-bg: #0D3B87; /* Darker Blue for Nav */
     --dropdown-bg: #0D3B87; /* Dark Orange for Dropdown */
     --splash-bg: #0D3B87; /* Darker Blue for Splash */
@@ -358,7 +358,7 @@ footer .gradient {
 footer .column2 a h1,
 footer .column3 a h2 {
   margin: 0;
-  color: var(--accent-color);
+  color: var(--bg-color);
 }
 
 footer .copyright {

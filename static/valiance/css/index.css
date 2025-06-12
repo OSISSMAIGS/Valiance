@@ -37,7 +37,7 @@
 
     /* Effects */
     --text-shadow-yellow: 0 0 5px var(--shadow-color-yellow), 0 0 15px var(--shadow-color-yellow);
-    --text-shadow-yellow-hero: 0 0 15px var(--nav-headings), 0 0 25px var(--nav-headings);
+    --text-shadow-yellow-hero: 0 0 10px var(--nav-headings), 0 0 25px var(--nav-headings);
     --text-shadow-white: 0px 0px 25px var(--shadow-color-white);
     --text-shadow-dark: 0 2px 4px var(--shadow-color-dark);
     --drop-shadow-white-small: 0px 0px 3px var(--shadow-color-white);
@@ -363,7 +363,7 @@ p.cabinet-description{
     }
 
     .hero-logo {
-        width: 45vw;
+        width: 60vw;
         max-width: 250px;
         margin: 2rem 0;
     }
@@ -373,7 +373,7 @@ p.cabinet-description{
     }
 
     .hero-text-left h1, .hero-text-right h1 {
-        font-size: 8vw;
+        font-size: 15vw;
     }
 }
 
@@ -453,6 +453,16 @@ p.cabinet-description{
     }
     .ai-showcase .showcase-title {
         font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .ai-showcase .showcase-img{
+        min-width: 90vw;
+    }
+
+    .about-img{
+        min-width: 90vw;
     }
 }
 
@@ -577,6 +587,3 @@ p.cabinet-description{
         font-size: 1.3rem;
     }
 }
-
-
-

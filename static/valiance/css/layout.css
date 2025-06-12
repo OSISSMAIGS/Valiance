@@ -374,7 +374,7 @@ section.gradient-header {
 
 footer {
 	background: var(--black);
-	padding: 2rem 0;
+	padding-top: 2rem 0;
 }
 
 footer .gradient {
@@ -386,6 +386,7 @@ footer .gradient {
 footer .footer-content {
 	display: flex;
 	justify-content: space-evenly;
+	padding-top: 1.8rem;
 }
 
 footer .footer-content img {
