@@ -153,7 +153,8 @@ section.about img {
 /* Prior Cabinets */
 section.prior-cabinets{
     width: 100vw;
-    background-image: url('../img/index/background-colour.png');
+    background: black;
+    background: linear-gradient(90deg,rgba(212, 70, 143, 1) 2%, rgba(238, 92, 25, 1) 31%, rgba(255, 197, 72, 1) 100%);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -379,7 +380,8 @@ p.cabinet-description{
 
 /* AI Showcase */
 .ai-showcase {
-    background-image: url('../img/index/background-colour.png');
+    background: black;
+    background: linear-gradient(90deg,rgba(212, 70, 143, 1) 2%, rgba(238, 92, 25, 1) 31%, rgba(255, 197, 72, 1) 100%);
     background-size: cover;
     background-position: center;
     display: flex;
