@@ -301,7 +301,7 @@ div.navbarMain{
 div.navbarScroll {
     width: 100vw;
     height: 6vh;
-    background-color: rgb(222, 97, 48);
+    background-color: black;
     position: fixed;
     color: white;
     z-index: 9000;
