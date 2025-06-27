@@ -533,6 +533,10 @@ div.navbarScroll {
     div.sekbid-container .sekbid-item .frame-card .lower-frame-card a.instagram-redirect i:hover {
         color: rgb(200, 200, 200);
     }
+    
+    div.sekbid-container{
+        margin-bottom: 10rem;
+    }
 }
 @media (max-width:1024px) and (orientation:landscape) {
     div.navbarScroll {
@@ -575,6 +579,8 @@ div.navbarScroll {
 }
 
 
-    
-
-
+@media screen and (max-width: 768px) {
+    div.sekbid-container{
+        margin-bottom: 10rem;
+    }
+}
