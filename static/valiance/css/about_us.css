@@ -32,7 +32,7 @@ section.top-section h1.about-heading{
     --size: 80vw;
     width: var(--size);
     height: calc(var(--size)/1.8);
-    background-image: url(../img/about_us/fotbar_kabinet.jpg);
+    background-image: url(../img/about_us/fotbar_kabinet.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
