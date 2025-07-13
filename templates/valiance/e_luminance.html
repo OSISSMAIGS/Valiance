@@ -1,0 +1,309 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_luminance.css') }}"
+/>
+<script src="{{ url_for('static', filename='valiance/js/detail.js') }}"></script>
+<script src="{{ url_for('static', filename='valiance/js/e_luminance.js') }}"></script>
+{% endblock css_js %} {% block title %}Luminance{% endblock title %} {% block
+main%}
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/luminance_banner.jpg') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Luminance</h1>
+  <p class="hidden">
+    Luminance adalah acara penyambutan siswa baru yang bertujuan untuk
+    memperkenalkan mereka dengan lingkungan sekolah dan nilai-nilai yang
+    dijunjung tinggi. Nama Luminance memiliki arti jumlah cahaya yang dapat
+    dipancarkan melalui suatu permukaan, memiliki arti yang mendalam bagi kami.
+    Sekolah adalah cahaya pengetahuan yang akan memancarkan edukasi di setiap
+    sisi, membimbing siswa untuk mencapai potensi terbaik mereka. Melalui acara
+    ini, siswa baru dapat menemukan jati diri dan semangat belajar yang akan
+    membawa mereka menuju masa depan yang cerah.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>Irene Christantie Hiumawan</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 1</b></p>
+      <p>Michelle Aneurin</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 2</b></p>
+      <p>Alvaro Valentino</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Nabila Putri</p>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <h1 class="hidden">Activities & Performances</h1>
+
+  <div class="date-section">
+    <h2 class="hidden">JUNE 30</h2>
+    <div class="lists">
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Video Antar Jemput + Seragam"
+        data-class-event="bx bx-video bx-tada"
+        data-desc-event="Video dokumentasi kegiatan antar jemput siswa dan pemakaian seragam sebagai bagian dari pengenalan suasana sekolah. Visualisasi ini membantu peserta baru memahami aktivitas kehidupan sekolah sehari-hari."
+      >
+        <i class="bx bx-video bx-tada"></i>
+        <p>Video Antar Jemput</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Performance Kheiren & Jason"
+        data-class-event="bx bx-music bx-tada"
+        data-desc-event="Duet spesial dari Kheiren & Jason akan membawakan lagu 'Satu-satunya' oleh HIVI. Penampilan ini dipenuhi dengan harmoni vokal yang hangat dan menyentuh."
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Performance Kheiren & Jason</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Video Perkenalan Guru"
+        data-class-event="bx bx-user-voice bx-tada"
+        data-desc-event="Melalui video perkenalan ini, para guru akan memperkenalkan diri kepada peserta. Momen ini menjadi langkah awal untuk menciptakan kedekatan dan rasa kekeluargaan antara guru dan siswa."
+      >
+        <i class="bx bx-user-voice bx-tada"></i>
+        <p>Video Perkenalan Guru</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Performance Celine"
+        data-class-event="bx bx-music bx-tada"
+        data-desc-event="Celine akan membawakan lagu 'A Million Dreams' dari The Greatest Showman. Sebuah persembahan inspiratif yang mengangkat semangat dan mimpi-mimpi besar."
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Performance Celine</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Sosialisasi"
+        data-class-event="bx bx-chalkboard bx-tada"
+        data-desc-event="Sesi informatif mengenai kegiatan belajar siswa yang di presentasikan oleh guru dan kepala sekolah tentang berbagai aspek penting seperti: Bahasa Asing, Tata Tertib Sekolah, Olimpiade dan Lomba Akademik, Penggunaan Platform Moodle."
+      >
+        <i class="bx bx-chalkboard bx-tada"></i>
+        <p>Sosialisasi</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Tour Sekolah"
+        data-class-event="bx bx-buildings bx-tada"
+        data-desc-event="Kegiatan berkeliling sekolah untuk mengenalkan fasilitas-fasilitas agar para siswa merasa familier dan dapat beradaptasi lebih mudah dengan lingkungan sekolah baru."
+      >
+        <i class="bx bx-buildings bx-tada"></i>
+        <p>Tour Sekolah</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-section">
+    <h2 class="hidden">JULY 1-6</h2>
+    <div class="lists">
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Matrikulasi"
+        data-class-event="bx bx-book-reader bx-tada"
+        data-desc-event="Masa percobaan pembelajaran bagi siswa baru guna memperkenalkan mereka dengan sistem pembelajaran di IGS."
+      >
+        <i class="bx bx-book-reader bx-tada"></i>
+        <p>Matrikulasi</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-section">
+    <h2 class="hidden">JULY 7</h2>
+    <div class="lists">
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Video Club"
+        data-class-event="bx bx-movie-play bx-tada"
+        data-desc-event="Kompilasi kegiatan club-club di IGS yang beraneka ragam agar para siswa baru dapat menemukan club yang sesuai dengan hobi mereka."
+      >
+        <i class="bx bx-movie-play bx-tada"></i>
+        <p>Video Club</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Performance Anastasya"
+        data-class-event="bx bx-microphone bx-tada"
+        data-desc-event="Lagu Oscar Winning Tears yang memiliki irama yang kuat dibawakan dengan sangat meriah mampu menghidupkan suasana mpls kali ini."
+      >
+        <i class="bx bx-microphone bx-tada"></i>
+        <p>Performance Anastasya</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Sosialisasi OSIS"
+        data-class-event="bx bx-group bx-tada"
+        data-desc-event="Presentasi dari setiap sekbid OSIS yang dilakukan untuk memperkenalkan dan menjelaskan hal terkait OSIS SMA IGS serta mengajak mereka yang juga tertarik untuk bergabung."
+      >
+        <i class="bx bx-group bx-tada"></i>
+        <p>Sosialisasi OSIS</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Performance Teater"
+        data-class-event="bx bx-mask bx-tada"
+        data-desc-event="Pertunjukan teater yang mengangkat kisah Candi Borobudur, dibawakan dengan penuh penghayatan dan ekspresi mendalam oleh para anggota Club Teater dan Club Tari."
+      >
+        <i class="bx bx-mask bx-tada"></i>
+        <p>Performance Teater</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Performance Wushu"
+        data-class-event="bx bx-body bx-tada"
+        data-desc-event="Aksi seni bela diri yang cepat dan penuh energi dari para anggota Club Wushu IGS sukses memeriahkan acara."
+      >
+        <i class="bx bx-body bx-tada"></i>
+        <p>Performance Wushu</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Performance Dance Kaylee"
+        data-class-event="bx bxs-face bx-tada"
+        data-desc-event="merupakan performance yang di tampilkan oleh peserta MPLS kelas 10 yang bertujuan untuk menanmpilkan bakat mereka dalan bidang dance."
+      >
+        <i class="bx bxs-face bx-tada"></i>
+        <p>Dance Performance Kaylee</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Stand Club"
+        data-class-event="bx bx-store-alt bx-tada"
+        data-desc-event="kegiatan ini stand club ini bertujuan untuk memperkenalkan berbagai club yang ada di IGS, sehingga mereka dapat memilih dan bergabung dengan club pilihan mereka yang sesuai dengan minat dan bakat masing masing."
+      >
+        <i class="bx bx-store-alt bx-tada"></i>
+        <p>Stand Club</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Flashmob Kakak Pembina"
+        data-class-event="bx bxs-bomb bx-tada"
+        data-desc-event="Performance spesial dari para kakak pembina untuk para siswa MPLS dengan lagu 'Zigi zaga' yang bertujuan untuk memberi semangat dan membangkitkan kekompakan antar siswa."
+      >
+        <i class="bx bxs-bomb bx-tada"></i>
+        <p>Flashmob</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Problem Solving"
+        data-class-event="bx bx-brain bx-tada"
+        data-desc-event="merupakan kegiatan yang di adakan untuk melatih kemampuan berpikir kritis dan mempererat kerja sama antar anggota kelompok."
+      >
+        <i class="bx bx-brain bx-tada"></i>
+        <p>Problem Solving</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Api Unggun"
+        data-class-event="bx bxs-hot bx-tada"
+        data-desc-event="merupakan kegiatan malam hari yang dilakukan untuk memberi kesan yang hangat dan mempererat pertemanan dengan satu sama lain."
+      >
+        <i class="bx bxs-hot bx-tada"></i>
+        <p>Api Unggun</p>
+      </div>
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="BBQ"
+        data-class-event="bx bxs-bowl-hot bx-tada"
+        data-desc-event="merupakan kegiatan bakar-bakar untuk para siswa MPLS dimana mereka dapat makan BBQ bersama dengan teman kelompok mereka, kegiatam ini dilakukan untuk mempererat hubungan pertemanan."
+      >
+        <i class="bx bxs-bowl-hot bx-tada"></i>
+        <p>BBQ</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="date-section">
+    <h2 class="hidden">JULY 8</h2>
+    <div class="lists">
+      <div
+        class="list hidden"
+        onclick="setupDetail(this)"
+        data-event-name="Jalan Santai"
+        data-class-event="bx bx-walk bx-tada"
+        data-desc-event="merupakan kegiatan yang di laksanakan dipagi hari untuk meningkatkan kebugaran fisik, menyegarkan pikiran, dan membangun rasa kebersamanan."
+      >
+        <i class="bx bx-walk bx-tada"></i>
+        <p>Jalan Santai</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <path
+    filter="url(#waveShadow3)"
+    fill="#1a1a2e"
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
+
+{% endblock main %}

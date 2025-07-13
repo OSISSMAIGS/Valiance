@@ -103,9 +103,24 @@ main %}
         data-bs-slide-to="10"
         aria-label="Slide 11"
       ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="11"
+        aria-label="Slide 12"
+      ></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a href="{{ url_for('e_luminance') }}">
+          <img
+            src="{{ url_for('static', filename='valiance/img/banner/luminance_banner.jpg') }}"
+            class="d-block w-100"
+            alt="Luminance Banner"
+          />
+        </a>
+      </div>
+      <div class="carousel-item">
         <a href="{{ url_for('e_questival') }}">
           <img
             src="{{ url_for('static', filename='valiance/img/banner/questival_banner.png') }}"

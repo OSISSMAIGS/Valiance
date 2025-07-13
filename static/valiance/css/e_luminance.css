@@ -1,0 +1,361 @@
+/* Root Variables - Color Scheme */
+
+:root {
+  /* Primary colors */
+  --bg-color: #10111f;
+  --bg-color2: #162447;
+  --text-color: #e43f5a;
+  --text-color-darker: #f8f8f8;
+  --box-list-colour: #e43f5a;
+  --text-color2: #ffffff;
+  --nav-headings: #e43f5a;
+  --overlay-bg: rgba(0, 0, 0, 0.85);
+  --accent-color: #e43f5a;
+  --nav-bg: #1a1a2e;
+  --nav-bg-darker: #162447;
+  --dropdown-bg: #162447;
+  --splash-bg: #1a1a2e;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg-color);
+  color: white;
+  width: 100vw;
+}
+
+p,
+li {
+  font-size: 110%;
+}
+
+a.btn {
+  background-color: var(--bg-color2);
+  color: white;
+}
+
+/* Layout Components */
+
+.kewa {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.kepan {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Navigation Styles */
+
+.navbarlogo {
+  color: white;
+}
+
+.navbar-heading a button {
+  color: white;
+}
+
+div.navbarMain div.navbar-dropdown {
+  background-color: var(--nav-bg);
+}
+
+div.navbarMain div.navbar-dropdown button:hover {
+  background-color: var(--nav-bg-darker);
+}
+
+div.navbarMain div.navbar-heading button {
+  text-shadow: 0 0.2vh 0.6vh rgba(228, 63, 90, 0.3),
+    0 -0.2vh 0.6vh rgba(228, 63, 90, 0.3),
+    0.3vh 0 0.6vh rgba(228, 63, 90, 0.3),
+    -0.3vh 0 0.6vh rgba(228, 63, 90, 0.3);
+}
+
+div.navbarMain div.navbar-heading button:hover {
+  color: #e43f5a !important;
+  text-shadow: 0 0.6vh 1vh rgba(228, 63, 90, 0.4),
+    0 -0.6vh 1vh rgba(228, 63, 90, 0.4),
+    0.4vh 0 1vh rgba(228, 63, 90, 0.4),
+    -0.4vh 0 1vh rgba(228, 63, 90, 0.4);
+}
+
+span.showNav {
+  animation: colorLetters 0.75s linear !important;
+}
+
+/* Banner Section */
+
+section.banner {
+  --size: 100vw;
+  position: relative;
+  width: var(--size);
+  height: calc(var(--size) / 1.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: var(--bg-color);
+}
+
+section.banner img {
+  width: 100vw;
+  height: calc(100vw / 1.6);
+  object-fit: cover;
+}
+
+section.banner .gradient-banner {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  height: 10rem;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1a1a2e);
+}
+
+/* Content Sections */
+
+section.about {
+  display: flex;
+  margin: 1rem auto;
+  flex-direction: column;
+  width: 90%;
+  text-align: center;
+}
+
+section.about h1 {
+  margin-top: 5rem;
+  font-weight: 700;
+}
+
+section.content {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: var(--bg-color);
+  padding: 2rem 5%;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+.date-section {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.date-section h2 {
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+section.content .lists {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+section.content .list {
+  width: 200px;
+  height: 200px;
+  background-color: #162447;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(228, 63, 90, 0.15);
+  border: 1px solid rgba(228, 63, 90, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+section.content .list:hover {
+  animation: box-hover 0.5s linear, box-size 0.3s linear;
+  scale: 1.05;
+  background-color: var(--text-color-darker);
+  box-shadow: 0px 0px 30px rgba(228, 63, 90, 0.25);
+  border: 1px solid rgba(228, 63, 90, 0.3);
+}
+
+section.content .list i {
+  font-size: 50pt;
+  color: var(--box-list-colour);
+}
+
+section.content .list p {
+  font-weight: bold;
+  color: var(--box-list-colour);
+  margin-bottom: 0;
+}
+
+.detail {
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.599);
+}
+
+.detail .detail-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail .content {
+  position: relative;
+  width: 70vw;
+  height: 350px;
+  border-radius: 15px;
+  background-color: #162447;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0px 0px 30px rgba(228, 63, 90, 0.2);
+  border: 1px solid rgba(228, 63, 90, 0.15);
+}
+
+.detail .content .close {
+  position: absolute;
+  display: inline;
+  color: white;
+  cursor: pointer;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+}
+
+.detail .content .content-desc {
+  width: 70%;
+  text-align: left;
+}
+
+.detail .content .content-desc .desc-title {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.detail .content .content-logo {
+  font-size: 100pt;
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waves-footer {
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #1a1a2e;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateY(100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@keyframes colorLetters {
+  from {
+    color: white;
+  }
+  to {
+    color: #e43f5a;
+  }
+}
+
+@keyframes hovering {
+  to {
+    scale: 1.1;
+  }
+}
+
+@keyframes box-hover {
+  to {
+    background-color: #1a1a2e;
+  }
+}
+
+@keyframes box-size {
+  to {
+    scale: 1.05;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail .content {
+    flex-direction: column;
+    height: auto;
+    width: 85vw;
+    padding: 40px 20px;
+  }
+  .detail .content .content-desc {
+    width: 100%;
+    text-align: center;
+  }
+  .detail .content .content-logo {
+    margin-top: 20px;
+    font-size: 80pt;
+  }
+}
+
+/* Footer Overrides for Luminance Page */
+footer {
+  background: var(--nav-bg); /* #1a1a2e */
+}
+
+.waves-footer {
+  background: var(--bg-color);
+}
+
+.waves-footer svg path {
+  fill: var(--bg-color);
+}
+
+footer .column2 a h1,
+footer .column3 a h2 {
+  color: var(--accent-color); /* #e43f5a */
+}
+
+footer a:hover,
+footer a:hover h1,
+footer a:hover h2,
+footer a:hover p {
+  color: var(--text-color-darker); /* #f8f8f8 */
+  opacity: 0.8;
+} 
