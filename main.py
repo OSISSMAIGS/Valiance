@@ -53,6 +53,10 @@ def e_vaisakha():
 def e_eterlight():
     return render_template("valiance/e_eterlight.html")
 
+@app.route("/Events/Luminance")
+def e_luminance():
+    return render_template("valiance/e_luminance.html")
+
 @app.route("/Events/Questival")
 def e_questival():
     return render_template("valiance/e_questival.html")

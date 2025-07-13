@@ -10,6 +10,11 @@
   <h1 class="past" id="past">Our Events</h1>
 
   <section class="event past mb-5">
+    <a href="{{ url_for('e_luminance') }}"
+      ><img
+        id="luminance"
+        src="{{ url_for('static', filename='valiance/img/banner/luminance_banner.jpg') }}"
+    /></a>
     <a href="{{ url_for('e_questival') }}"
       ><img
         id="questival"
@@ -66,7 +71,5 @@
         src="{{ url_for('static', filename='valiance/img/banner/euphony_banner.jpg') }}"
     /></a>
   </section>
-
-  
 </div>
 {% endblock main %}

@@ -127,6 +127,11 @@ img#questival:hover {
     box-shadow: 0 0 25px rgb(8, 5, 181);
     animation: questival-hover 0.5s linear;
 }
+img#luminance:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgb(17, 183, 189);
+    animation: luminance-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -235,6 +240,12 @@ img#questival:hover {
     to {
         transform: scale(1.02);
         box-shadow: 0 0 25px rgb(8, 5, 181);
+    }
+}
+@keyframes luminance-hover {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 rgb(40, 212, 194);
     }
 }
 section.event img,
