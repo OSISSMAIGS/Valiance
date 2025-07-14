@@ -2,19 +2,19 @@
 
 :root {
   /* Primary colors */
-  --bg-color: #10111f;
-  --bg-color2: #162447;
-  --text-color: #e43f5a;
+  --bg-color: rgb(125, 152, 207);
+  --bg-color2: rgb(165, 202, 255);
+  --text-color: rgb(254, 222, 137);
   --text-color-darker: #f8f8f8;
-  --box-list-colour: #e43f5a;
+  --box-list-colour: rgb(254, 222, 137);
   --text-color2: #ffffff;
-  --nav-headings: #e43f5a;
+  --nav-headings: rgb(254, 222, 137);
   --overlay-bg: rgba(0, 0, 0, 0.85);
-  --accent-color: #e43f5a;
-  --nav-bg: #1a1a2e;
-  --nav-bg-darker: #162447;
-  --dropdown-bg: #162447;
-  --splash-bg: #1a1a2e;
+  --accent-color: rgb(254, 222, 137);
+  --nav-bg: rgb(136, 110, 175);
+  --nav-bg-darker: rgb(165, 202, 255);
+  --dropdown-bg: rgb(165, 202, 255);
+  --splash-bg: rgb(136, 110, 175);
 }
 
 /* Reset and Base Styles */
@@ -81,7 +81,7 @@ div.navbarMain div.navbar-heading button {
 }
 
 div.navbarMain div.navbar-heading button:hover {
-  color: #e43f5a !important;
+  color: rgb(254, 222, 137) !important;
   text-shadow: 0 0.6vh 1vh rgba(228, 63, 90, 0.4),
     0 -0.6vh 1vh rgba(228, 63, 90, 0.4),
     0.4vh 0 1vh rgba(228, 63, 90, 0.4),
@@ -120,7 +120,7 @@ section.banner .gradient-banner {
   bottom: 0;
   height: 10rem;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #1a1a2e);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #7d98cf);
 }
 
 /* Content Sections */
@@ -172,7 +172,7 @@ section.content .lists {
 section.content .list {
   width: 200px;
   height: 200px;
-  background-color: #162447;
+  background-color: rgb(133, 131, 204);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(228, 63, 90, 0.15);
@@ -187,9 +187,9 @@ section.content .list {
 }
 
 section.content .list:hover {
-  animation: box-hover 0.5s linear, box-size 0.3s linear;
+  animation: box-hover 0.5s linear, box-size 0.5s linear;
   scale: 1.05;
-  background-color: var(--text-color-darker);
+  background-color: rgb(99, 98, 153);
   box-shadow: 0px 0px 30px rgba(228, 63, 90, 0.25);
   border: 1px solid rgba(228, 63, 90, 0.3);
 }
@@ -230,7 +230,7 @@ section.content .list p {
   width: 70vw;
   height: 350px;
   border-radius: 15px;
-  background-color: #162447;
+  background-color: rgb(133, 131, 204);
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -274,7 +274,7 @@ section.content .list p {
   position: relative;
   bottom: 0;
   left: 0;
-  background-color: #1a1a2e;
+  background-color: rgb(99, 98, 153);
 }
 
 .hidden {
@@ -295,7 +295,7 @@ section.content .list p {
     color: white;
   }
   to {
-    color: #e43f5a;
+    color: rgb(254, 222, 137);
   }
 }
 
@@ -307,7 +307,7 @@ section.content .list p {
 
 @keyframes box-hover {
   to {
-    background-color: #1a1a2e;
+    background-color: rgb(99, 98, 153);
   }
 }
 
@@ -336,7 +336,7 @@ section.content .list p {
 
 /* Footer Overrides for Luminance Page */
 footer {
-  background: var(--nav-bg); /* #1a1a2e */
+  background: var(--bg-color); /* rgb(99, 98, 153) */
 }
 
 .waves-footer {
@@ -349,7 +349,7 @@ footer {
 
 footer .column2 a h1,
 footer .column3 a h2 {
-  color: var(--accent-color); /* #e43f5a */
+  color: var(--accent-color); /* rgb(254, 222, 137) */
 }
 
 footer a:hover,
