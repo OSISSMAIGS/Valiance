@@ -72,22 +72,22 @@ def e_luminance():
     return render_template("valiance/e_luminance.html")
 
 
-@app.route("/Events/Ignatius/Cooking")
+@app.route("/Events/IgnatiusDay/Cooking")
 def l_cooking():
     return render_template("valiance/lomba_ignatius/l_cooking.html")
 
 
-@app.route("/Events/Ignatius/Dont_Step_On_The_Paper")
+@app.route("/Events/IgnatiusDay/Dont_Step_On_The_Paper")
 def l_dont_step():
     return render_template("valiance/lomba_ignatius/l_dont_step.html")
 
 
-@app.route("/Events/Ignatius/Whisper")
+@app.route("/Events/IgnatiusDay/Whisper")
 def l_whisper():
     return render_template("valiance/lomba_ignatius/l_whisper.html")
 
 
-@app.route("/Events/Ignatius/Move_The_Cup")
+@app.route("/Events/IgnatiusDay/Move_The_Cup")
 def l_blow_the_cup():
     return render_template("valiance/lomba_ignatius/l_blow_the_cup.html")
 
