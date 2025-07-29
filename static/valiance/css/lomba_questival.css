@@ -31,6 +31,10 @@
     width: 100vw;
     overflow-x: hidden;
   }
+
+  .back{
+    background-color: var(--bg-color) !important;
+  }
   
   p,
   li {

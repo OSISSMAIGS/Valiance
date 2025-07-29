@@ -8,7 +8,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbzKIn9VG3ntGU-RVs1TuraVXzSjPGoks5cFbRr5onolFzMh-vCgtLrZRVo48jpHOTZl/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbx9UDgFKXPyFFFXxOD-CyxpdeScXzJjExGJ8c17pwUznnOqAVTTqZxOU1HgjWAWrSyh/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -33,7 +33,7 @@
 					formStatus.className = "status";
 					enableSend = false;
 					const formData = new FormData(form);
-					formData.append("formType", "Lomba Dont Step The Paper");
+					formData.append("formType", "Lomba Cooking");
 	
 					fetch(scriptURL, { method: "POST", body: formData })
 						.then(response => response.json())
@@ -70,31 +70,33 @@
 	</script>
 {% endblock css_js %}
 
-{% block title %}Lomba Don't Step On The Paper{% endblock title %}
+{% block title %}Lomba Cooking{% endblock title %}
 
 {% block main %}
 
 	<!-- MEKANISME DAN POSTER -->
 	<div class="container">
 		<div>
-		<h1 class="title">Lomba Don't Step On The Paper</h1>
+		<h1 class="title">Lomba Cooking Indomie</h1>
 		<div class="mechanism">
-				<h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
+				<h4 class="sub-title">MEKANISME:</h4>
 				<ol>
-					<li>Setiap tim wajib berisikan 2 orang pemain.</li>
-                    <li>Panitia akan menaruh kertas secara acak di lantai yang harus dilewati peserta tanpa mengenai kertas manapun. </li>
-                    <li>Salah satu peserta akan memakai penutup mata, dan peserta lainnya akan membantu mengarahkan peserta tersebut. </li>
-                    <li>Jika peserta gagal melewati rintangan kertas yang telah di buat ataupun mengenai kertas, maka tim nya dinyatakan gagal.</li>
-                    <li>Tim yang dapat melewati rintangan kertas tersebut tanpa mengenai kertas sedikitpun, maka akan dinyatakan sebagai pemenang.</li>
+					<li>1. Panitia akan menyediakan tempat di depan lobby  untuk para peserta dan guru (kuota berjumlah 30 kompor, 15 siswa dan 15 guru)</li>
+                    <li>Peserta dan guru akan membawa bahan2 nya dari rumah </li>
+                    <li>Juri akan menilai makanan yang akan disajikan oleh setaip peserta</li>
+                    <li>Pemenang berjumlah empat orang (2 guru dan 2 murid). </li>
 				</ol>
-                <h4 class="sub-title">PERATURAN PERTANDINGAN:</h4>
+                <h4 class="sub-title">RULES:</h4>
                 <ol>
-                    <li>Setiap tim dilarang menyentuh pasangan bermain masing-masing.</li>
-                    <li>Peserta yang matanya tertutup, tidak boleh membuka atau mengintip penutup mata.</li>
-                    <li>Setiap peserta tidak boleh menggeser atau memindahkan rintangan kertas yang telah disiapkan oleh panitia.</li>
-                    <li>Setiap peserta dilarang memprovokasi peserta atau tim lainnya.</li>
-                    <li>Jika terdapat tim atau peserta yang melakukan kecurangan, maka akan langsung didiskualifikasi.</li>
-                    <li>Keputusan juri sudah tidak dapat diganggu gugat.</li>
+                    <li>1 Kelompok terdiri dari 3 orang</li>
+                    <li>Peserta hadir 10 menit sebelum perlombaan dimulai</li>
+                    <li>Peserta sudah membawa bahan serta alat yang diperlukan dari rumah (kompor disiapkan dari sekolah).</li>
+                    <li>Peserta hanya diperbolehkan menggunakan indomie varian mie goreng</li>
+                    <li>Tidak diperbolehkan membawa pisau atau sejenisnya jadi semua bahan2 sudah dipotong dari rumah.</li>
+                    <li>Peserta memiliki waktu 1jam untuk memasak.</li>
+                    <li>Peserta harus menjaga kebersihan di area memasak dan berhati2 saat memasak.</li>
+                    <li>Kriteria Penilaian : Rasa, Kreativitas, Plating, dan Kebersihan</li>
+                    <li>Keputusan Juri bersifat mutlak dan tidak dapat diganggu gugat. </li>
                 </ol>
 		</div>
 		</div>
@@ -144,7 +146,7 @@
 		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
 			<div class="modal-body">
 				<p>Formulir berhasil dikirim! 🎉</p>
-				<a href="https://line.me/ti/g/_jjrmY8L43" target="_blank">Klik di sini untuk join grup Line</a>
+				<a href="https://line.me/ti/g/LqFSTwT5tA" target="_blank">Klik di sini untuk join grup Line</a>
 	        <br><br>
 			</div>
 			<button 
@@ -153,14 +155,4 @@
 			>Tutup</button>
 		</div>
 	</div>
-	<svg
-	    class="waves-footer"
-	    xmlns="http://www.w3.org/2000/svg"
-	    viewBox="0 0 1440 320"
-	  >
-	    <path
-	      fill-opacity="1"
-	      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-	    ></path>
-	</svg>
 {% endblock main %}

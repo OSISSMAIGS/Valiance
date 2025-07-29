@@ -87,7 +87,7 @@ def l_whisper():
     return render_template("valiance/lomba_ignatius/l_whisper.html")
 
 
-@app.route("/Events/Ignatius/Blow_The_Cup")
+@app.route("/Events/Ignatius/Move_The_Cup")
 def l_blow_the_cup():
     return render_template("valiance/lomba_ignatius/l_blow_the_cup.html")
 
