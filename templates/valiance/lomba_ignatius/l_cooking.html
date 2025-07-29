@@ -8,7 +8,7 @@
 	<script>
 		let enableSend = true;
 		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbx9UDgFKXPyFFFXxOD-CyxpdeScXzJjExGJ8c17pwUznnOqAVTTqZxOU1HgjWAWrSyh/exec';
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbwgo6RfjTa70daUc1EYCQlffBUm8_8F5CWOa3LxBxooO2CiKeh9U8ELejBmFwxx_w/exec';
 			const form = document.getElementById("dynamicForm");
 			const formStatus = document.getElementById("formStatus");
 			const popupOverlay = document.getElementById("popupOverlay");
@@ -113,13 +113,17 @@
 
 	        <!-- Input Nama Anggota 1 -->
 	        <div class="form-group">
+	            <label for="nama-kapten">Nama Kapten:</label>
+	            <input type="text" id="nama-kapten" name="nama-kapten" required>
+	        </div>
+	        <div class="form-group">
 	            <label for="nama-anggota-1">Nama Anggota 1:</label>
 	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
 	        </div>
 
 			<!-- Input Nama Anggota 2 -->
 	        <div class="form-group">
-	            <label for="nama-anggota-2">Nama Anggota 1:</label>
+	            <label for="nama-anggota-2">Nama Anggota 2:</label>
 	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
 	        </div>
 
