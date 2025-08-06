@@ -97,6 +97,74 @@ def e_questival():
     return render_template("valiance/e_questival.html")
 
 
+# Lomba Rakwala
+
+
+@app.route("/Events/Rakwala/yel-yel")
+def l_yel_yel():
+    return render_template("valiance/lomba_rakwala/l_yel-yel.html")
+
+
+@app.route("/Events/Rakwala/estafet_kelereng")
+def l_estafet_kelereng():
+    return render_template("valiance/lomba_rakwala/l_estafet_kelereng.html")
+
+
+@app.route("/Events/Rakwala/estafet_air")
+def l_estafet_air():
+    return render_template("valiance/lomba_rakwala/l_estafet_air.html")
+
+
+@app.route("/Events/Rakwala/buah_berhadiah")
+def l_buah_berhadiah():
+    return render_template("valiance/lomba_rakwala/l_buah_berhadiah.html")
+
+
+@app.route("/Events/Rakwala/bola_pipa")
+def l_bola_pipa():
+    return render_template("valiance/lomba_rakwala/l_bola_pipa.html")
+
+
+@app.route("/Events/Rakwala/nyanyi")
+def l_nyanyi():
+    return render_template("valiance/lomba_rakwala/l_nyanyi.html")
+
+
+@app.route("/Events/Rakwala/susun_kata")
+def l_susun_kata():
+    return render_template("valiance/lomba_rakwala/l_susun_kata.html")
+
+
+@app.route("/Events/Rakwala/masak")
+def l_masak():
+    return render_template("valiance/lomba_rakwala/l_masak.html")
+
+
+@app.route("/Events/Rakwala/siapa_cepat_dapat_kursi")
+def l_siapa_cepat_dapat_kursi():
+    return render_template("valiance/lomba_rakwala/l_siapa_cepat_dapat_kursi.html")
+
+
+@app.route("/Events/Rakwala/makan_kerupuk")
+def l_makan_kerupuk():
+    return render_template("valiance/lomba_rakwala/l_makan_kerupuk.html")
+
+
+@app.route("/Events/Rakwala/cerpen")
+def l_cerpen():
+    return render_template("valiance/lomba_rakwala/l_cerpen.html")
+
+
+@app.route("/Events/Rakwala/sarung_smash")
+def l_sarung_smash():
+    return render_template("valiance/lomba_rakwala/l_sarung_smash.html")
+
+
+@app.route("/Events/Rakwala/supporter")
+def l_supporter():
+    return render_template("valiance/lomba_rakwala/l_supporter.html")
+
+
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():
