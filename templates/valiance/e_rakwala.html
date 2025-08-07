@@ -1,0 +1,278 @@
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/e_rakwala.css') }}"
+/>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const competitionData = [
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_yelyel.jpg') }}",
+        title: "Yel-Yel",
+        link: "/Events/Rakwala/yel-yel",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_kelereng.jpg') }}",
+        title: "Estafet Kelereng",
+        link: "/Events/Rakwala/estafet_kelereng",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_estafet.jpg') }}",
+        title: "Estafet Air",
+        link: "/Events/Rakwala/estafet_air",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_buah_berhadiah.jpg') }}",
+        title: "Buah Berhadiah",
+        link: "/Events/Rakwala/buah_berhadiah",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_bola_dan_pipa.jpg') }}",
+        title: "Bola Pipa",
+        link: "/Events/Rakwala/bola_pipa",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_menyanyi.jpg') }}",
+        title: "Nyanyi",
+        link: "/Events/Rakwala/nyanyi",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_susun_kata.png') }}",
+        title: "Susun Kata",
+        link: "/Events/Rakwala/susun_kata",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_masak.png') }}",
+        title: "Masak",
+        link: "/Events/Rakwala/masak",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_kursi.jpg') }}",
+        title: "Siapa Cepat Dapat Kursi",
+        link: "/Events/Rakwala/siapa_cepat_dapat_kursi",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_makan_kerupuk.png') }}",
+        title: "Makan Kerupuk",
+        link: "/Events/Rakwala/makan_kerupuk",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_cerpen.JPG') }}",
+        title: "Cerpen",
+        link: "/Events/Rakwala/cerpen",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_sarung_smash.png') }}",
+        title: "Sarung Smash",
+        link: "/Events/Rakwala/sarung_smash",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_supporter.jpg') }}",
+        title: "Supporter",
+        link: "/Events/Rakwala/supporter",
+      },
+      {
+        image:
+          "{{ url_for('static', filename='valiance/img/rakwala/l_fashion_show.png') }}",
+        title: "Fashion Show",
+        link: "/Events/Rakwala/fashion_show",
+      },
+    ];
+
+    const posterContainer = document.querySelector(".performance .gambar");
+    if (posterContainer) {
+      posterContainer.innerHTML = "";
+
+      competitionData.forEach((comp, index) => {
+        const container = document.createElement("div");
+        container.className = "image-container hidden";
+
+        container.innerHTML = `
+                    <img id="poster" src="${comp.image}" alt="${comp.title}">
+                    <div class="overlay">
+                        <h5><b>${comp.title}</b></h5>
+                        <a href="${comp.link}" class="btn">Registration</a>
+                    </div>
+                `;
+
+        posterContainer.appendChild(container);
+      });
+
+      // Initialize the intersection observer after creating elements
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      // Observe all hidden elements
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+    }
+  });
+</script>
+{% endblock css_js %} {% block title %}Rakwala | OSIS SMA IGS{% endblock title
+%} {% block main %}
+
+<!-- Banner Section -->
+<section class="banner">
+  <img
+    src="{{ url_for('static', filename='valiance/img/banner/rakwala_banner.jpg') }}"
+    alt="banner"
+  />
+  <section class="gradient-banner"></section>
+</section>
+
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Rakwala</h1>
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>M. Chava Putra Anugra</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 1</b></p>
+      <p>Catherine Novia Hartanto</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 2</b></p>
+      <p>M. Daffa Aqeela Shidqi</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Nyimas Faiza Athaya</p>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="content">
+  <!-- Lomba Section -->
+  <div class="performance">
+    <h1 class="hidden">Lomba</h1>
+    <div class="lists">
+      <div class="list hidden">
+        <i class="bx bxs-megaphone bx-tada"></i>
+        <p>Yel-Yel</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-circle bx-tada"></i>
+        <p>Estafet Kelereng</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-droplet bx-tada"></i>
+        <p>Estafet Air</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-gift bx-tada"></i>
+        <p>Buah Berhadiah</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-circle bx-tada"></i>
+        <p>Bola Pipa</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-music bx-tada"></i>
+        <p>Nyanyi</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-edit bx-tada"></i>
+        <p>Susun Kata</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-bowl-hot bx-tada"></i>
+        <p>Masak</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-chair bx-tada"></i>
+        <p>Siapa Cepat Dapat Kursi</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-cookie bx-tada"></i>
+        <p>Makan Kerupuk</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-book-open bx-tada"></i>
+        <p>Cerpen</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-tennis-ball bx-tada"></i>
+        <p>Sarung Smash</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-heart bx-tada"></i>
+        <p>Supporter</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-crown bx-tada"></i>
+        <p>Fashion Show</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minigames Section -->
+  <div class="performance">
+    <h1 class="hidden">Minigames</h1>
+    <div class="lists">
+      <div class="list hidden">
+        <i class="bx bxs-game bx-tada"></i>
+        <p>E-Sport Mobile Legend</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-circle bx-tada"></i>
+        <p>Gelinding Bola Berhadiah</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-wine bx-tada"></i>
+        <p>Meniup Gelas</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-cookie bx-tada"></i>
+        <p>Makan Kukis di Muka</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workshop Section -->
+  <div class="performance">
+    <h1 class="hidden">Workshop</h1>
+    <div class="lists">
+      <div class="list hidden">
+        <i class="bx bxs-palette bx-tada"></i>
+        <p>Workshop Face Painting</p>
+      </div>
+      <div class="list hidden">
+        <i class="bx bxs-paint-roll bx-tada"></i>
+        <p>Workshop Lukis Totebag</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Poster -->
+<section class="content second-content">
+  <div class="performance">
+    <h1 class="hidden">Registration</h1>
+    <div class="gambar"></div>
+  </div>
+</section>
+
+{% endblock main %}

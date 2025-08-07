@@ -99,11 +99,14 @@ def e_questival():
 
 # Lomba Rakwala
 
+@app.route("/Events/Rakwala")
+def e_rakwala():
+    return render_template("valiance/e_rakwala.html")
+
 
 @app.route("/Events/Rakwala/yel-yel")
 def l_yel_yel():
     return render_template("valiance/lomba_rakwala/l_yel-yel.html")
-
 
 @app.route("/Events/Rakwala/estafet_kelereng")
 def l_estafet_kelereng():
@@ -163,6 +166,11 @@ def l_sarung_smash():
 @app.route("/Events/Rakwala/supporter")
 def l_supporter():
     return render_template("valiance/lomba_rakwala/l_supporter.html")
+
+
+@app.route("/Events/Rakwala/fashion_show")
+def l_fashion_show():
+    return render_template("valiance/lomba_rakwala/l_fashion_show.html")
 
 
 # OTHERS

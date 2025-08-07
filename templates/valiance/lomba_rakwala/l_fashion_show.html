@@ -43,7 +43,7 @@
         formStatus.className = "status";
         enableSend = false;
         const formData = new FormData(form);
-        formData.append("formType", "Lomba Estafet Air");
+        formData.append("formType", "Lomba Fashion Show");
 
         fetch(scriptURL, { method: "POST", body: formData })
           .then((response) => response.json())
@@ -82,38 +82,33 @@
     document.getElementById("popupOverlay").style.display = "none";
   }
 </script>
-{% endblock css_js %} {% block title %}Lomba Estafet Air{% endblock title %} {%
+{% endblock css_js %} {% block title %}Lomba Fashion Show{% endblock title %} {%
 block main %}
 
 <!-- MEKANISME DAN POSTER -->
 <div class="container">
   <div>
-    <h1 class="title">Lomba Estafet Air</h1>
+    <h1 class="title">Lomba Fashion Show</h1>
     <div class="mechanism">
       <h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
       <ol>
-        <li>Setiap kelompok wajib berisikan 5 orang.</li>
-        <li>Permainan akan dilakukan dengan metode eliminasi.</li>
-        <li>Permainan akan dilakukan selama 2-5 menit setiap ronde.</li>
         <li>
-          Setiap peserta akan memakai penutup mata yang telah disediakan
-          panitia.
+          Peserta merupakan siswa/i dari setiap kelas yang mewakili kelasnya.
         </li>
         <li>
-          Para peserta akan membentuk 1 barisan dan terdapat wadah di belakang
-          pemain terakhir.
+          Setiap kelas wajib mengirimkan satu pasangan (1 laki-laki & 1
+          perempuan).
+        </li>
+        <li>Pasangan peserta harus berasal dari kelas yang sama.</li>
+        <li>Tema kostum "Jejak Langkah Pahlawan Bangsa".</li>
+        <li>
+          Peserta diwajibkan mengenakan kostum yang meniru atau terinspirasi
+          dari tokoh-tokoh pahlawan nasional Indonesia.
         </li>
         <li>
-          Peserta pertama akan mulai mengambil air di wadah yang telah
-          disediakan, lalu mulai memindahkan air ke pemain selanjutnya.
-        </li>
-        <li>
-          Air harus dipindahkan sampai pemain terakhir, lalu pemain terakhir
-          akan memindahkan air tersebut dengan cara meraba dan menebak posisi
-          wadah yang telah disediakan.
-        </li>
-        <li>
-          Tim dengan takaran air terbanyak otomatis akan menjadi pemenang.
+          Contoh tokoh yang bisa dijadikan inspirasi: R.A. Kartini, Cut Nyak
+          Dien, Jenderal Sudirman, Martha Christina Tiahahu, Ki Hajar Dewantara,
+          Dewi Sartika, Bung Tomo, Pangeran Diponegoro.
         </li>
       </ol>
     </div>
@@ -121,36 +116,64 @@ block main %}
       <h4 class="sub-title">RULES:</h4>
       <ol>
         <li>
-          Setiap peserta dilarang membuka/mengintip penutup mata masing-masing.
+          Peserta akan tampil dan berjalan di atas catwalk yang telah disiapkan
+          panitia.
+        </li>
+        <li>Waktu tampil maksimal: 2–3 menit untuk setiap pasangan.</li>
+        <li>
+          Penampilan dapat diiringi musik pilihan peserta, dengan ketentuan:
         </li>
         <li>
-          Setiap peserta dilarang berbicara atau memberikan instruksi secara
-          verbal, hanya boleh mengandalkan insting atau diraba saja.
+          Lagu bertema tradisional daerah (instrumental atau non-instrumental)
+        </li>
+        <li>Durasi maksimal: 3 menit 30 detik</li>
+        <li>
+          File musik harus dikirimkan ke panitia maksimal H-2 sebelum lomba
         </li>
         <li>
-          Setiap kelompok dilarang memindahkan air langsung ke wadah terakhir
-          tanpa melakukan estafet.
+          Gaya berjalan dan pose bebas, selama tetap sesuai dengan norma
+          kesopanan dan etika sekolah.
+        </li>
+      </ol>
+    </div>
+    <div class="criteria">
+      <h4 class="sub-title">KRITERIA PENILAIAN:</h4>
+      <ol>
+        <li>
+          <strong>Kesesuaian dengan Tema (20%)</strong>: Menilai sejauh mana
+          kostum dan penampilan mencerminkan tema "Semangat Kemerdekaan dalam
+          Budaya Nusantara".
         </li>
         <li>
-          Setiap kelompok dilarang mengubah urutan barisan selama permainan
-          berlangsung.
-        </li>
-        <li>Setiap peserta dilarang memprovokasi peserta atau tim lainnya.</li>
-        <li>
-          Wadah yang dipakai harus digunakan dengan hati-hati. jika jatuh, maka
-          tim akan tetap melanjutkan dengan wadah yang sama.
+          <strong>Kreativitas & Desain Kostum (25%)</strong>: Dinilai dari
+          keunikan desain, ide yang orisinal, serta daya tarik visual kostum.
         </li>
         <li>
-          Jika terdapat tim atau peserta yang melakukan kecurangan, maka akan
-          langsung didiskualifikasi.
+          <strong>Penggunaan Simbol Budaya (15%)</strong>: Penilaian pada upaya
+          peserta dalam menampilkan elemen budaya Indonesia yang bersangkutan
+          tokoh pahlawan.
         </li>
-        <li>Keputusan juri sudah tidak dapat diganggu gugat.</li>
+        <li>
+          <strong>Kepercayaan Diri & Ekspresi Panggung (20%)</strong>: Dinilai
+          dari sikap percaya diri, ekspresi wajah, kontak mata, dan interaksi
+          dengan penonton saat berjalan di catwalk.
+        </li>
+        <li>
+          <strong>Kekompakan & Kerjasama Pasangan (10%)</strong>: Harmoni
+          gerakan dan interaksi antar pasangan, termasuk keharmonisan kostum dan
+          koordinasi saat tampil.
+        </li>
+        <li>
+          <strong>Kerapihan & Estetika Penampilan (10%)</strong>: Penampilan
+          keseluruhan yang mencakup kerapihan, kebersihan kostum, dan kesesuaian
+          antara aksesori, make-up, dan busana.
+        </li>
       </ol>
     </div>
   </div>
   <img
-    src="{{ url_for('static', filename='valiance/img/rakwala/l_estafet.jpg') }}"
-    alt="Lomba Estafet Air"
+    src="{{ url_for('static', filename='valiance/img/rakwala/l_fashion_show.jpeg') }}"
+    alt="Lomba Fashion Show"
   />
 </div>
 
@@ -160,61 +183,76 @@ block main %}
   <form id="dynamicForm" onsubmit="return false;">
     <!-- 1 -->
     <div class="form-group">
-      <label for="nama-ketua-kelompok">Nama Ketua Kelompok:</label>
+      <label for="nama-anggota-pria">Nama Anggota Pria</label>
       <input
         type="text"
-        id="nama-ketua-kelompok"
-        name="nama-ketua-kelompok"
+        id="nama-anggota-pria"
+        name="nama-anggota-pria"
         required
       />
     </div>
 
     <!-- 2 -->
     <div class="form-group">
-      <label for="nama-anggota-1">Nama Anggota 1:</label>
-      <input type="text" id="nama-anggota-1" name="nama-anggota-1" required />
+      <label for="nama-anggota-wanita">Nama Anggota Wanita</label>
+      <input
+        type="text"
+        id="nama-anggota-wanita"
+        name="nama-anggota-wanita"
+        required
+      />
     </div>
 
     <!-- 3 -->
     <div class="form-group">
-      <label for="nama-anggota-2">Nama Anggota 2:</label>
-      <input type="text" id="nama-anggota-2" name="nama-anggota-2" required />
+      <label for="kelas">Kelas</label>
+      <select id="kelas" name="kelas" required>
+        <option value="">Pilih Kelas</option>
+        <option value="X IPA 1">X IPA 1</option>
+        <option value="X IPA 2">X IPA 2</option>
+        <option value="X IPA 3">X IPA 3</option>
+        <option value="X IPA 4">X IPA 4</option>
+        <option value="X IPA 5">X IPA 5</option>
+        <option value="X IPS 1">X IPS 1</option>
+        <option value="X IPS 2">X IPS 2</option>
+        <option value="X IPS 3">X IPS 3</option>
+        <option value="XI IPA 1">XI IPA 1</option>
+        <option value="XI IPA 2">XI IPA 2</option>
+        <option value="XI IPA 3">XI IPA 3</option>
+        <option value="XI IPA 4">XI IPA 4</option>
+        <option value="XI IPA 5">XI IPA 5</option>
+        <option value="XI IPS 1">XI IPS 1</option>
+        <option value="XI IPS 2">XI IPS 2</option>
+        <option value="XI IPS 3">XI IPS 3</option>
+        <option value="XII IPA 1">XII IPA 1</option>
+        <option value="XII IPA 2">XII IPA 2</option>
+        <option value="XII IPA 3">XII IPA 3</option>
+        <option value="XII IPA 4">XII IPA 4</option>
+        <option value="XII IPA 5">XII IPA 5</option>
+        <option value="XII IPS 1">XII IPS 1</option>
+        <option value="XII IPS 2">XII IPS 2</option>
+        <option value="XII IPS 3">XII IPS 3</option>
+      </select>
     </div>
 
     <!-- 4 -->
     <div class="form-group">
-      <label for="nama-anggota-3">Nama Anggota 3:</label>
-      <input type="text" id="nama-anggota-3" name="nama-anggota-3" required />
+      <label for="no-hp">No. HP</label>
+      <input type="tel" id="no-hp" name="no-hp" required />
     </div>
 
     <!-- 5 -->
     <div class="form-group">
-      <label for="nama-anggota-4">Nama Anggota 4:</label>
-      <input type="text" id="nama-anggota-4" name="nama-anggota-4" required />
-    </div>
-
-    <!-- Input Kelas -->
-    <div class="form-group">
-      <label for="kelas">Kelas:</label>
-      <input type="text" id="kelas" name="kelas" required />
-    </div>
-
-    <!-- Input ID Line -->
-    <div class="form-group">
-      <label for="line">ID Line:</label>
+      <label for="line">ID Line</label>
       <input type="text" id="line" name="id-line" required />
     </div>
 
-    <input
-      type="hidden"
-      id="maxParticipants"
-      name="maxParticipants"
-      value="16"
-    />
     <button type="submit">Kirim</button>
   </form>
-  <div class="status" id="formStatus"></div>
 </div>
+
+<!-- Status Message -->
+<div id="formStatus" class="status"></div>
 
 <!-- Popup Overlay -->
 <div
@@ -245,7 +283,7 @@ block main %}
   >
     <div class="modal-body">
       <p>Formulir berhasil dikirim! 🎉</p>
-      <a href="https://line.me/ti/g/3TUHJNEFPM" target="_blank"
+      <a href="https://line.me/ti/g/Mqr7eqwP3T" target="_blank"
         >Klik di sini untuk join grup Line</a
       >
       <br /><br />
@@ -270,14 +308,5 @@ block main %}
     </button>
   </div>
 </div>
-<svg
-  class="waves-footer"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 1440 320"
->
-  <path
-    fill-opacity="1"
-    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-  ></path>
-</svg>
+
 {% endblock main %}

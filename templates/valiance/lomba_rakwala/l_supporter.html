@@ -43,7 +43,7 @@
         formStatus.className = "status";
         enableSend = false;
         const formData = new FormData(form);
-        formData.append("formType", "Lomba Bola dan Pipa");
+        formData.append("formType", "Lomba Supporter");
 
         fetch(scriptURL, { method: "POST", body: formData })
           .then((response) => response.json())
@@ -82,48 +82,26 @@
     document.getElementById("popupOverlay").style.display = "none";
   }
 </script>
-{% endblock css_js %} {% block title %}Lomba Bola Pipa{% endblock title %} {%
+{% endblock css_js %} {% block title %}Lomba Supporter{% endblock title %} {%
 block main %}
 
 <!-- MEKANISME DAN POSTER -->
 <div class="container">
   <div>
-    <h1 class="title">Lomba Bola Pipa</h1>
+    <h1 class="title">Lomba Supporter</h1>
     <div class="mechanism">
       <h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
       <ol>
         <li>
-          Lomba akan dimainkan oleh beberapa tim( 1 tim = 5 orang), sesuai sesi,
-          dan diambil 1 tim untuk maju ke babak selanjutnya.
-        </li>
-        <li>Terdapat babak penyisihan dan babak final.</li>
-        <li>
-          Pada awal permainan para peserta akan mencoba untuk mengangkat pipa
-          dengan tali tanpa menjatuhkan bola tersebut.
+          Peserta lomba supporter berpencar ke setiap lomba gf dan mendukung
+          kelasnya masing-masing.
         </li>
         <li>
-          Setelah dapat mengangkat bola tersebut para peserta akan memegang pipa
-          dengan tali dan mengangkat pipa yang berisi bola ke garis akhir.
+          Peserta diperbolehkan membuat banner kelas (maksimal 40 x 80 cm).
         </li>
         <li>
-          Setelah sampai ke garis akhir para peserta akan mencoba untuk
-          memasukkan bola ke dalam kardus yang telah di siapkan.
-        </li>
-        <li>
-          Jika bola jatuh maka para peserta harus mengulang dari garis start.
-        </li>
-        <li>Setiap tim akan di beri waktu 3 - 5 menit.</li>
-        <li>Lomba akan dilakukan secara berulang sampai waktu habis.</li>
-        <li>
-          Tim yang berhasil mengisi kardus dengan bola terbanyak akan lolos ke
-          babak selanjutnya.
-        </li>
-        <li>
-          Di babak final, akan di lakukan dengan mekanisme yang sama tetapi
-          dengan jumlah bola yang lebih banyak dan waktu yang lebih.
-        </li>
-        <li>
-          Tim yang mengisi bola paling banyak akan memenangkan lomba tersebut.
+          Peserta dinilai dari effort dan kreativitas dalam mendukung kelasnya
+          berlomba.
         </li>
       </ol>
     </div>
@@ -131,25 +109,23 @@ block main %}
       <h4 class="sub-title">RULES:</h4>
       <ol>
         <li>
-          Setiap kelas wajib mengirimkan perwakilan sebanyak 5 siswa sebagai
-          tim.
+          Supporter tetap harus menjaga perilakunya selama mendukung kelasnya
+          dan tidak mengganggu lomba yang berjalan.
         </li>
         <li>
-          Setiap peserta hanya diizinkan memegang tali dan bukan pipa PVC.
+          Banner yang dirancang tidak diperkenankan mengandung kata-kata kasar,
+          penghinaan, dan unsur SARA.
         </li>
-        <li>Jika bola jatuh ke tanah, makan tim harus mengulang dari awal.</li>
         <li>
-          Para peserta tidak diperbolehkan untuk memegang bola secara langsung
-          ketika sedang memasukkan bola ke cup.
+          Bila supporter tidak mematuhi arahan dari panitia lomba maupun
+          keamanan maka kelasnya akan didiskualifikasi dari lomba supporter.
         </li>
-        <li>Akan ada batas waktu pada setiap ronde.</li>
-        <li>Segala bentuk kecurangan akan didiskualifikasi.</li>
       </ol>
     </div>
   </div>
   <img
-    src="{{ url_for('static', filename='valiance/img/rakwala/l_bola_dan_pipa.jpg') }}"
-    alt="Lomba Bola dan Pipa"
+    src="{{ url_for('static', filename='valiance/img/rakwala/l_supporter.jpg') }}"
+    alt="Lomba Supporter"
   />
 </div>
 
@@ -159,32 +135,8 @@ block main %}
   <form id="dynamicForm" onsubmit="return false;">
     <!-- 1 -->
     <div class="form-group">
-      <label for="nama-ketua">Nama Ketua:</label>
-      <input type="text" id="nama-ketua" name="nama-ketua" required />
-    </div>
-
-    <!-- 2 -->
-    <div class="form-group">
-      <label for="nama-anggota-1">Nama Anggota 1:</label>
-      <input type="text" id="nama-anggota-1" name="nama-anggota-1" required />
-    </div>
-
-    <!-- 3 -->
-    <div class="form-group">
-      <label for="nama-anggota-2">Nama Anggota 2:</label>
-      <input type="text" id="nama-anggota-2" name="nama-anggota-2" required />
-    </div>
-
-    <!-- 4 -->
-    <div class="form-group">
-      <label for="nama-anggota-3">Nama Anggota 3:</label>
-      <input type="text" id="nama-anggota-3" name="nama-anggota-3" required />
-    </div>
-
-    <!-- 5 -->
-    <div class="form-group">
-      <label for="nama-anggota-4">Nama Anggota 4:</label>
-      <input type="text" id="nama-anggota-4" name="nama-anggota-4" required />
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
     </div>
 
     <!-- Input Kelas -->
@@ -239,9 +191,7 @@ block main %}
   >
     <div class="modal-body">
       <p>Formulir berhasil dikirim! 🎉</p>
-      <a href="https://line.me/ti/g/AbKLeQy-3K" target="_blank"
-        >Klik di sini untuk join grup Line</a
-      >
+      <p>Grup Line akan segera dibuat. Tim kami akan menghubungi Anda.</p>
       <br /><br />
     </div>
     <button
