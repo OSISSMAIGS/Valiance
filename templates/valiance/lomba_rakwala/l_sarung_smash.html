@@ -1,173 +1,262 @@
-{% extends "valiance/layout.html" %}
+{% extends "valiance/layout.html" %} {% block css_js %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/index.css') }}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='valiance/css/lomba_rakwala.css') }}"
+/>
+<script
+  src="{{ url_for('static', filename='valiance/js/e_questival.js') }}"
+  defer
+></script>
 
-{% block css_js %}
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_rakwala.css') }}">
-	<script src="{{ url_for('static', filename='valiance/js/e_questival.js') }}" defer></script>
+<script>
+  let enableSend = true;
+  document.addEventListener("DOMContentLoaded", () => {
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbyGtUa__R0QyG2xw3B5iVAadEc0zgcxN_QDHamWeW9QUfX-3cDUEDBgCzdfue6nPSUR/exec";
+    const form = document.getElementById("dynamicForm");
+    const formStatus = document.getElementById("formStatus");
+    const popupOverlay = document.getElementById("popupOverlay");
+    const closeButton = document.getElementById("closeButton");
 
-	<script>
-		let enableSend = true;
-		document.addEventListener("DOMContentLoaded", () => {
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbzKIn9VG3ntGU-RVs1TuraVXzSjPGoks5cFbRr5onolFzMh-vCgtLrZRVo48jpHOTZl/exec';
-			const form = document.getElementById("dynamicForm");
-			const formStatus = document.getElementById("formStatus");
-			const popupOverlay = document.getElementById("popupOverlay");
-			const closeButton = document.getElementById("closeButton");
-	
-			popupOverlay.addEventListener('click', function(e) {
-				if (e.target === this) {
-					closePopup();
-				}
-			});
-	
-			closeButton.addEventListener('click', closePopup);
-			closeButton.addEventListener('touchend', function(e) {
-				e.preventDefault();
-				closePopup();
-			});
-	
-			form.addEventListener("submit", e => {
-				if (enableSend){
-					e.preventDefault();
-					formStatus.textContent = "Mengirim data...";
-					formStatus.className = "status";
-					enableSend = false;
-					const formData = new FormData(form);
-					formData.append("formType", "Lomba Sarung Smash");
-	
-					fetch(scriptURL, { method: "POST", body: formData })
-						.then(response => response.json())
-						.then(data => {
-							if (data.status === "success") {
-								formStatus.textContent = "";
-								form.reset();
-								showPopup();
-							} else if (data.status === "error" && data.message === "Peserta sudah penuh") {
-								formStatus.textContent = "Peserta sudah penuh. Tidak bisa mendaftar.";
-								formStatus.className = "status error";
-							} else {
-								throw new Error(data.message || "Gagal mengirim data.");
-							}
-							enableSend = true;
-						})
-						.catch(error => {
-							formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
-							formStatus.className = "status error";
-							console.error("Error!", error.message);
-							enableSend = true;
-						});
-				}
-			});
-		});
-	
-		function showPopup() {
-			document.getElementById("popupOverlay").style.display = "flex";
-		}
-	
-		function closePopup() {
-			document.getElementById("popupOverlay").style.display = "none";
-		}
-	</script>
-{% endblock css_js %}
+    popupOverlay.addEventListener("click", function (e) {
+      if (e.target === this) {
+        closePopup();
+      }
+    });
 
-{% block title %}Lomba Sarung Smash{% endblock title %}
+    closeButton.addEventListener("click", closePopup);
+    closeButton.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      closePopup();
+    });
 
-{% block main %}
+    form.addEventListener("submit", (e) => {
+      if (enableSend) {
+        e.preventDefault();
+        formStatus.textContent = "Mengirim data...";
+        formStatus.className = "status";
+        enableSend = false;
+        const formData = new FormData(form);
+        formData.append("formType", "Lomba Sarung Smash");
 
-	<!-- MEKANISME DAN POSTER -->
-	<div class="container">
-		<div>
-		<h1 class="title">Lomba Sarung Smash</h1>
-		<div class="mechanism">
-				<h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
-				<ol>
-					<li>Setiap tim terdiri dari 2 pemain, seperti pada pertandingan ganda biasa.</li>
-					<li>Selama permainan berlangsung, setiap pemain harus menggunakan sarung dalam permainan.</li>
-					<li>Pertandingan menggunakan sistem knockout (gugur).</li>
-					<li>Pertandingan menggunakan format best of 3 (pemenang adalah yang mendapatkan 2 dari 3 set).</li>
-					<li>Skor Pertandingan:</li>
-					<li>Babak Eliminasi: Pemenang adalah yang lebih dulu mencapai 11 poin (Set 1 & 2) atau 7 poin (Set 3).</li>
-					<li>Semifinal & Final: Pemenang adalah yang lebih dulu mencapai 21 poin (Set 1 & 2) atau 15 poin (Set 3).</li>
-					<li>Jika poin genap, pemain servis di bagian kanan lapangan. Jika poin ganjil, pemain servis di bagian kiri lapangan.</li>
-					<li>Aturan servis dan perputaran pemain mengikuti aturan ganda pada umumnya.</li>
-					<li>Jika skor mencapai 10-10 (eliminasi) atau 20-20 (semifinal/final), pertandingan dilanjutkan hingga poin 12 (eliminasi) atau 22(semifinal/final).</li>
-				</ol>
-		</div>
-		<div class="rules">
-				<h4 class="sub-title">RULES:</h4>
-				<ol>
-					<li>Setiap tim harus berasal dari kelas yang sama.</li>
-					<li>Lomba dapat diikuti oleh maksimal 16 tim.</li>
-					<li>Sarung dan shuttlecock akan disediakan oleh panitia, namun boleh membawa sendiri sebagai cadangan.</li>
-					<li>Peserta tidak diperbolehkan menggunakan alas kaki apapun saat bertanding.</li>
-					<li>Peserta diwajibkan untuk hadir tepat waktu dengan batas keterlambatan 5 menit atau akan langsung didiskualifikasi.</li>
-					<li>Peserta tidak diperbolehkan melakukan kecurangan apa pun.</li>
-					<li>Keputusan wasit bersifat final.</li>
-				</ol>
-		</div>
-		</div>
-		<img 
-			src="{{ url_for('static', filename='valiance/img/rakwala/l_sarung_smash.png') }}"
-			alt="Lomba Sarung Smash"
-		></img>
-	</div>
-					
-	<!-- Registration -->
-	<h2 class="regis">Registration</h2>
-	<div class="form-container mb-3">
-	    <form id="dynamicForm" onsubmit="return false;">
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.status === "success") {
+              formStatus.textContent = "";
+              form.reset();
+              showPopup();
+            } else if (
+              data.status === "error" &&
+              data.message === "Peserta sudah penuh"
+            ) {
+              formStatus.textContent =
+                "Peserta sudah penuh. Tidak bisa mendaftar.";
+              formStatus.className = "status error";
+            } else {
+              throw new Error(data.message || "Gagal mengirim data.");
+            }
+            enableSend = true;
+          })
+          .catch((error) => {
+            formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
+            formStatus.className = "status error";
+            console.error("Error!", error.message);
+            enableSend = true;
+          });
+      }
+    });
+  });
 
-	        <!-- 2 -->
-	        <div class="form-group">
-	            <label for="nama-anggota-1">Nama Anggota 1:</label>
-	            <input type="text" id="nama-anggota-1" name="nama-anggota-1" required>
-	        </div>
-	        <!-- 3 -->
-	        <div class="form-group">
-	            <label for="nama-anggota-2">Nama Anggota 2:</label>
-	            <input type="text" id="nama-anggota-2" name="nama-anggota-2" required>
-	        </div>
+  function showPopup() {
+    document.getElementById("popupOverlay").style.display = "flex";
+  }
 
-	        <!-- Input Kelas -->
-	        <div class="form-group">
-	            <label for="kelas">Kelas:</label>
-	            <input type="text" id="kelas" name="kelas" required>
-	        </div>
+  function closePopup() {
+    document.getElementById("popupOverlay").style.display = "none";
+  }
+</script>
+{% endblock css_js %} {% block title %}Lomba Sarung Smash{% endblock title %} {%
+block main %}
 
-	        <!-- Input ID Line -->
-	        <div class="form-group">
-	            <label for="idline">ID Line:</label>
-	            <input type="text" id="idline" name="idline" required>
-	        </div>
+<!-- MEKANISME DAN POSTER -->
+<div class="container">
+  <div>
+    <h1 class="title">Lomba Sarung Smash</h1>
+    <div class="mechanism">
+      <h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
+      <ol>
+        <li>
+          Setiap tim terdiri dari 2 pemain, seperti pada pertandingan ganda
+          biasa.
+        </li>
+        <li>
+          Selama permainan berlangsung, setiap pemain harus menggunakan sarung
+          dalam permainan.
+        </li>
+        <li>Pertandingan menggunakan sistem knockout (gugur).</li>
+        <li>
+          Pertandingan menggunakan format best of 3 (pemenang adalah yang
+          mendapatkan 2 dari 3 set).
+        </li>
+        <li>Skor Pertandingan:</li>
+        <li>
+          Babak Eliminasi: Pemenang adalah yang lebih dulu mencapai 11 poin (Set
+          1 & 2) atau 7 poin (Set 3).
+        </li>
+        <li>
+          Semifinal & Final: Pemenang adalah yang lebih dulu mencapai 21 poin
+          (Set 1 & 2) atau 15 poin (Set 3).
+        </li>
+        <li>
+          Jika poin genap, pemain servis di bagian kanan lapangan. Jika poin
+          ganjil, pemain servis di bagian kiri lapangan.
+        </li>
+        <li>
+          Aturan servis dan perputaran pemain mengikuti aturan ganda pada
+          umumnya.
+        </li>
+        <li>
+          Jika skor mencapai 10-10 (eliminasi) atau 20-20 (semifinal/final),
+          pertandingan dilanjutkan hingga poin 12 (eliminasi) atau
+          22(semifinal/final).
+        </li>
+      </ol>
+    </div>
+    <div class="rules">
+      <h4 class="sub-title">RULES:</h4>
+      <ol>
+        <li>Setiap tim harus berasal dari kelas yang sama.</li>
+        <li>Lomba dapat diikuti oleh maksimal 16 tim.</li>
+        <li>
+          Sarung dan shuttlecock akan disediakan oleh panitia, namun boleh
+          membawa sendiri sebagai cadangan.
+        </li>
+        <li>
+          Peserta tidak diperbolehkan menggunakan alas kaki apapun saat
+          bertanding.
+        </li>
+        <li>
+          Peserta diwajibkan untuk hadir tepat waktu dengan batas keterlambatan
+          5 menit atau akan langsung didiskualifikasi.
+        </li>
+        <li>Peserta tidak diperbolehkan melakukan kecurangan apa pun.</li>
+        <li>Keputusan wasit bersifat final.</li>
+      </ol>
+    </div>
+  </div>
+  <img
+    src="{{ url_for('static', filename='valiance/img/rakwala/l_sarung_smash.png') }}"
+    alt="Lomba Sarung Smash"
+  />
+</div>
 
-            <input type="hidden" id="maxParticipants" name="maxParticipants" value="16">
-	        <button type="submit">Kirim</button>
-	    </form>
-	    <div class="status" id="formStatus"></div>
-	</div>
+<!-- Registration -->
+<h2 class="regis">Registration</h2>
+<div class="form-container mb-3">
+  <form id="dynamicForm" onsubmit="return false;">
+    <!-- 2 -->
+    <div class="form-group">
+      <label for="nama-ketua">Nama Ketua:</label>
+      <input type="text" id="nama-ketua" name="nama-ketua" required />
+    </div>
+    <!-- 3 -->
+    <div class="form-group">
+      <label for="nama-anggota-1">Nama Anggota 1:</label>
+      <input type="text" id="nama-anggota-1" name="nama-anggota-1" required />
+    </div>
 
-	<!-- Popup Overlay -->
-	<div id="popupOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
-		<div style="background: rgb(222, 216, 196); color: black; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; margin: 20px;">
-			<div class="modal-body">
-				<p>Formulir berhasil dikirim! 🎉</p>
-				<a href="https://line.me/ti/g/_jjrmY8L43" target="_blank">Klik di sini untuk join grup Line</a>
-	        <br><br>
-			</div>
-			<button 
-				id="closeButton"
-				style="padding: 10px 20px; background: rgb(124, 28, 28); color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;"
-			>Tutup</button>
-		</div>
-	</div>
-	<svg
-	    class="waves-footer"
-	    xmlns="http://www.w3.org/2000/svg"
-	    viewBox="0 0 1440 320"
-	  >
-	    <path
-	      fill-opacity="1"
-	      d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-	    ></path>
-	</svg>
+    <!-- Input Kelas -->
+    <div class="form-group">
+      <label for="kelas">Kelas:</label>
+      <input type="text" id="kelas" name="kelas" required />
+    </div>
+
+    <!-- Input ID Line -->
+    <div class="form-group">
+      <label for="line">ID Line:</label>
+      <input type="text" id="line" name="id-line" required />
+    </div>
+
+    <input
+      type="hidden"
+      id="maxParticipants"
+      name="maxParticipants"
+      value="16"
+    />
+    <button type="submit">Kirim</button>
+  </form>
+  <div class="status" id="formStatus"></div>
+</div>
+
+<!-- Popup Overlay -->
+<div
+  id="popupOverlay"
+  style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <div
+    style="
+      background: rgb(222, 216, 196);
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      margin: 20px;
+    "
+  >
+    <div class="modal-body">
+      <p>Formulir berhasil dikirim! 🎉</p>
+      <a href="https://line.me/R/ti/g/rjkD-YgYBH" target="_blank"
+        >Klik di sini untuk join grup Line</a
+      >
+      <br /><br />
+    </div>
+    <button
+      id="closeButton"
+      style="
+        padding: 10px 20px;
+        background: rgb(124, 28, 28);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      "
+    >
+      Tutup
+    </button>
+  </div>
+</div>
+<svg
+  class="waves-footer"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1440 320"
+>
+  <path
+    fill-opacity="1"
+    d="M0,64L60,101.3C120,139,240,213,360,240C480,267,600,245,720,240C840,235,960,245,1080,208C1200,171,1320,85,1380,42.7L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+  ></path>
+</svg>
 {% endblock main %}

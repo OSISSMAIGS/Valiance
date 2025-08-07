@@ -103,7 +103,7 @@
         container.className = "image-container hidden";
 
         container.innerHTML = `
-                    <img id="poster" src="${comp.image}" alt="${comp.title}" onerror="this.src='{{ url_for('static', filename='valiance/img/rakwala/default_poster.png') }}'">
+                    <img id="poster" src="${comp.image}" alt="${comp.title}">
                     <div class="overlay">
                         <h5><b>${comp.title}</b></h5>
                         <a href="${comp.link}" class="btn">Registration</a>

@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
             imageContainer.style.animationDelay = `${index * 0.1}s`;
 
             imageContainer.innerHTML = `
-                <img src="${comp.image}" alt="${comp.title}" onerror="this.src='{{ url_for('static', filename='valiance/img/rakwala/default_poster.png') }}'">
+                <img src="${comp.image}" alt="${comp.title}" >
                 <div class="overlay">
                     <h5>${comp.title}</h5>
                     <a href="${comp.link}" class="btn">Lihat Detail</a>
