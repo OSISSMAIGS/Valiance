@@ -72,6 +72,10 @@ def e_luminance():
     return render_template("valiance/e_luminance.html")
 
 
+@app.route("/Events/IgnatiusDay")
+def e_ignatius():
+    return render_template("valiance/e_ignatius.html")
+
 @app.route("/Events/IgnatiusDay/Cooking")
 def l_cooking():
     return render_template("valiance/lomba_ignatius/l_cooking.html")

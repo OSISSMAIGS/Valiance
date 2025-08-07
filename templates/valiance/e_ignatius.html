@@ -2,7 +2,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{{ url_for('static', filename='valiance/css/e_questival.css') }}"
+  href="{{ url_for('static', filename='valiance/css/e_ignatius.css') }}"
 />
 <script
   src="{{ url_for('static', filename='valiance/js/e_questival.js') }}"
@@ -16,7 +16,7 @@
         image:
           "{{ url_for('static', filename='valiance/img/questival/lomba_basket.jpg') }}",
         title: "Lomba Basket",
-        link: "{{ url_for('lomba_basket') }}",
+        link: "{{ url_for('l_cooking') }}",
         type: "lomba",
         hasRegistration: true,
       },
@@ -24,7 +24,7 @@
         image:
           "{{ url_for('static', filename='valiance/img/questival/lomba_blind_makeup.jpg') }}",
         title: "Lomba Blind Make Up",
-        link: "{{ url_for('lomba_blind_makeup') }}",
+        link: "{{ url_for('l_dont_step') }}",
         type: "lomba",
         hasRegistration: true,
       },
@@ -32,7 +32,7 @@
         image:
           "{{ url_for('static', filename='valiance/img/questival/lomba_deal_blind_mute_baking.jpg') }}",
         title: "Lomba Deaf, Blind, Mute Baking",
-        link: "{{ url_for('lomba_deaf_blind_mute_baking') }}",
+        link: "{{ url_for('l_whisper') }}",
         type: "lomba",
         hasRegistration: true,
       },
@@ -40,83 +40,9 @@
         image:
           "{{ url_for('static', filename='valiance/img/questival/lomba_esport_valorant.jpg') }}",
         title: "Lomba E-Sport Valorant",
-        link: "{{ url_for('lomba_esport_valorant') }}",
+        link: "{{ url_for('l_blow_the_cup') }}",
         type: "lomba",
         hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_guess_the_word.jpeg') }}",
-        title: "Lomba Guess The Words",
-        link: "{{ url_for('lomba_guess_the_words') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_round_and_round.jpg') }}",
-        title: "Lomba Round And Round",
-        link: "{{ url_for('lomba_round_and_round') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_squid_game.jpeg') }}",
-        title: "Lomba Squid Game 5v5",
-        link: "{{ url_for('lomba_squid_game_5v5') }}",
-        type: "lomba",
-        hasRegistration: true,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/lomba_velocity.jpeg') }}",
-        title: "Lomba Velocity",
-        link: "{{ url_for('lomba_velocity') }}",
-        type: "lomba",
-        hasRegistration: false,
-      },
-      // Minigames (will be changed to type: "other")
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/minigames_eye_contact.jpeg') }}",
-        title: "Eye Contact",
-        link: "{{ url_for('minigames_eye_contact') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/minigames_lie_detector.jpg') }}",
-        title: "Lie Detector",
-        link: "{{ url_for('minigames_lie_detector') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/minigames_dont_touch_the_color.jpg') }}",
-        title: "Don't Touch The Color",
-        link: "{{ url_for('minigames_dont_touch_the_color') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/workshop_swap_the_canvas.jpg') }}",
-        title: "Swap The Canvas",
-        link: "{{ url_for('workshop_swap_the_canvas') }}",
-        type: "other",
-        hasRegistration: false,
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/questival/workshop_dalgona.jpg') }}",
-        title: "Dalgona Workshop",
-        link: "{{ url_for('workshop_dalgona') }}",
-        type: "other",
-        hasRegistration: false,
       },
     ];
 
