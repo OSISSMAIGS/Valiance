@@ -1,0 +1,206 @@
+{% extends "valiance/layout.html" %}
+
+{% block css_js %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/index.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='valiance/css/lomba_rakwala.css') }}">
+	<script src="{{ url_for('static', filename='valiance/js/e_questival.js') }}" defer></script>
+
+	<script>
+		let enableSend = true;
+		document.addEventListener("DOMContentLoaded", () => {
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbzKIn9VG3ntGU-RVs1TuraVXzSjPGoks5cFbRr5onolFzMh-vCgtLrZRVo48jpHOTZl/exec';
+			const form = document.getElementById("dynamicForm");
+			const formStatus = document.getElementById("formStatus");
+			const popupOverlay = document.getElementById("popupOverlay");
+			const closeButton = document.getElementById("closeButton");
+	
+			popupOverlay.addEventListener('click', function(e) {
+				if (e.target === this) {
+					closePopup();
+				}
+			});
+	
+			closeButton.addEventListener('click', closePopup);
+			closeButton.addEventListener('touchend', function(e) {
+				e.preventDefault();
+				closePopup();
+			});
+	
+			form.addEventListener("submit", e => {
+				if (enableSend){
+					e.preventDefault();
+					formStatus.textContent = "Mengirim data...";
+					formStatus.className = "status";
+					enableSend = false;
+					const formData = new FormData(form);
+					formData.append("formType", "Lomba Fashion Show");
+	
+					fetch(scriptURL, { method: "POST", body: formData })
+						.then(response => response.json())
+						.then(data => {
+							if (data.status === "success") {
+								formStatus.textContent = "";
+								form.reset();
+								showPopup();
+							} else if (data.status === "error" && data.message === "Peserta sudah penuh") {
+								formStatus.textContent = "Peserta sudah penuh. Tidak bisa mendaftar.";
+								formStatus.className = "status error";
+							} else {
+								throw new Error(data.message || "Gagal mengirim data.");
+							}
+							enableSend = true;
+						})
+						.catch(error => {
+							formStatus.textContent = "Gagal mengirim data. Silakan coba lagi.";
+							formStatus.className = "status error";
+							console.error("Error!", error.message);
+							enableSend = true;
+						});
+				}
+			});
+		});
+	
+		function showPopup() {
+			document.getElementById("popupOverlay").style.display = "flex";
+		}
+	
+		function closePopup() {
+			document.getElementById("popupOverlay").style.display = "none";
+		}
+	</script>
+{% endblock css_js %}
+
+{% block title %}Lomba Fashion Show{% endblock title %}
+
+{% block main %}
+
+	<!-- MEKANISME DAN POSTER -->
+	<div class="container">
+		<div>
+		<h1 class="title">Lomba Fashion Show</h1>
+		<div class="mechanism">
+				<h4 class="sub-title">MEKANISME PERTANDINGAN:</h4>
+				<ol>
+					<li>Peserta merupakan siswa/i dari setiap kelas yang mewakili kelasnya.</li>
+					<li>Setiap kelas wajib mengirimkan satu pasangan (1 laki-laki & 1 perempuan).</li>
+					<li>Pasangan peserta harus berasal dari kelas yang sama.</li>
+					<li>Tema kostum "Jejak Langkah Pahlawan Bangsa".</li>
+					<li>Peserta diwajibkan mengenakan kostum yang meniru atau terinspirasi dari tokoh-tokoh pahlawan nasional Indonesia.</li>
+					<li>Contoh tokoh yang bisa dijadikan inspirasi: R.A. Kartini, Cut Nyak Dien, Jenderal Sudirman, Martha Christina Tiahahu, Ki Hajar Dewantara, Dewi Sartika, Bung Tomo, Pangeran Diponegoro.</li>
+				</ol>
+		</div>
+		<div class="rules">
+				<h4 class="sub-title">RULES:</h4>
+				<ol>
+					<li>Peserta akan tampil dan berjalan di atas catwalk yang telah disiapkan panitia.</li>
+					<li>Waktu tampil maksimal: 2–3 menit untuk setiap pasangan.</li>
+					<li>Penampilan dapat diiringi musik pilihan peserta, dengan ketentuan:</li>
+					<li>Lagu bertema tradisional daerah (instrumental atau non-instrumental)</li>
+					<li>Durasi maksimal: 3 menit 30 detik</li>
+					<li>File musik harus dikirimkan ke panitia maksimal H-2 sebelum lomba</li>
+					<li>Gaya berjalan dan pose bebas, selama tetap sesuai dengan norma kesopanan dan etika sekolah.</li>
+				</ol>
+		</div>
+		<div class="criteria">
+				<h4 class="sub-title">KRITERIA PENILAIAN:</h4>
+				<ol>
+					<li><strong>Kesesuaian dengan Tema (20%)</strong>: Menilai sejauh mana kostum dan penampilan mencerminkan tema "Semangat Kemerdekaan dalam Budaya Nusantara".</li>
+					<li><strong>Kreativitas & Desain Kostum (25%)</strong>: Dinilai dari keunikan desain, ide yang orisinal, serta daya tarik visual kostum.</li>
+					<li><strong>Penggunaan Simbol Budaya (15%)</strong>: Penilaian pada upaya peserta dalam menampilkan elemen budaya Indonesia yang bersangkutan tokoh pahlawan.</li>
+					<li><strong>Kepercayaan Diri & Ekspresi Panggung (20%)</strong>: Dinilai dari sikap percaya diri, ekspresi wajah, kontak mata, dan interaksi dengan penonton saat berjalan di catwalk.</li>
+					<li><strong>Kekompakan & Kerjasama Pasangan (10%)</strong>: Harmoni gerakan dan interaksi antar pasangan, termasuk keharmonisan kostum dan koordinasi saat tampil.</li>
+					<li><strong>Kerapihan & Estetika Penampilan (10%)</strong>: Penampilan keseluruhan yang mencakup kerapihan, kebersihan kostum, dan kesesuaian antara aksesori, make-up, dan busana.</li>
+				</ol>
+		</div>
+		</div>
+		<img 
+			src="{{ url_for('static', filename='valiance/img/rakwala/l_fashion_show.jpeg') }}"
+			alt="Lomba Fashion Show"
+		></img>
+	</div>
+					
+	<!-- Registration -->
+	<h2 class="regis">Registration</h2>
+	<div class="form-container mb-3">
+	    <form id="dynamicForm" onsubmit="return false;">
+
+	        <!-- 1 -->
+             <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <!-- 2 -->
+            <div class="form-group">
+                <label for="kelas">Kelas</label>
+                <select id="kelas" name="kelas" required>
+                    <option value="">Pilih Kelas</option>
+                    <option value="X IPA 1">X IPA 1</option>
+                    <option value="X IPA 2">X IPA 2</option>
+                    <option value="X IPA 3">X IPA 3</option>
+                    <option value="X IPA 4">X IPA 4</option>
+                    <option value="X IPA 5">X IPA 5</option>
+                    <option value="X IPS 1">X IPS 1</option>
+                    <option value="X IPS 2">X IPS 2</option>
+                    <option value="X IPS 3">X IPS 3</option>
+                    <option value="XI IPA 1">XI IPA 1</option>
+                    <option value="XI IPA 2">XI IPA 2</option>
+                    <option value="XI IPA 3">XI IPA 3</option>
+                    <option value="XI IPA 4">XI IPA 4</option>
+                    <option value="XI IPA 5">XI IPA 5</option>
+                    <option value="XI IPS 1">XI IPS 1</option>
+                    <option value="XI IPS 2">XI IPS 2</option>
+                    <option value="XI IPS 3">XI IPS 3</option>
+                    <option value="XII IPA 1">XII IPA 1</option>
+                    <option value="XII IPA 2">XII IPA 2</option>
+                    <option value="XII IPA 3">XII IPA 3</option>
+                    <option value="XII IPA 4">XII IPA 4</option>
+                    <option value="XII IPA 5">XII IPA 5</option>
+                    <option value="XII IPS 1">XII IPS 1</option>
+                    <option value="XII IPS 2">XII IPS 2</option>
+                    <option value="XII IPS 3">XII IPS 3</option>
+                </select>
+            </div>
+
+            <!-- 3 -->
+            <div class="form-group">
+                <label for="no_hp">No. HP</label>
+                <input type="tel" id="no_hp" name="no_hp" required>
+            </div>
+
+            <!-- 4 -->
+            <div class="form-group">
+                <label for="line">ID Line</label>
+                <input type="text" id="line" name="line" required>
+            </div>
+
+            <!-- 5 -->
+            <div class="form-group">
+                <label for="nama_tim">Nama Tim</label>
+                <input type="text" id="nama_tim" name="nama_tim" required>
+            </div>
+
+            <!-- 6 -->
+            <div class="form-group">
+                <label for="nama_anggota">Nama Anggota Tim</label>
+                <textarea id="nama_anggota" name="nama_anggota" rows="3" placeholder="Masukkan nama-nama anggota tim (jika ada)" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Daftar</button>
+        </form>
+    </div>
+
+    <!-- Status Message -->
+    <div id="formStatus" class="status"></div>
+
+    <!-- Popup Overlay -->
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Pendaftaran Berhasil!</h3>
+            <p>Terima kasih telah mendaftar untuk Lomba Fashion Show. Tim kami akan menghubungi Anda segera.</p>
+            <button id="closeButton" class="btn btn-secondary">Tutup</button>
+        </div>
+    </div>
+
+{% endblock main %}
