@@ -107,72 +107,62 @@ def e_questival():
 def e_rakwala():
     return render_template("valiance/e_rakwala.html")
 
-
-@app.route("/Events/Rakwala/yel-yel")
-def l_yel_yel():
-    return render_template("valiance/lomba_rakwala/l_yel-yel.html")
-
-@app.route("/Events/Rakwala/estafet_kelereng")
+@app.route("/Events/Rakwala/Estafet_Kelereng")
 def l_estafet_kelereng():
     return render_template("valiance/lomba_rakwala/l_estafet_kelereng.html")
 
 
-@app.route("/Events/Rakwala/estafet_air")
+@app.route("/Events/Rakwala/Estafet_Air")
 def l_estafet_air():
     return render_template("valiance/lomba_rakwala/l_estafet_air.html")
 
 
-@app.route("/Events/Rakwala/buah_berhadiah")
+@app.route("/Events/Rakwala/Buah_Berhadiah")
 def l_buah_berhadiah():
     return render_template("valiance/lomba_rakwala/l_buah_berhadiah.html")
 
 
-@app.route("/Events/Rakwala/bola_pipa")
+@app.route("/Events/Rakwala/Bola_Pipa")
 def l_bola_pipa():
     return render_template("valiance/lomba_rakwala/l_bola_pipa.html")
 
 
-@app.route("/Events/Rakwala/nyanyi")
+@app.route("/Events/Rakwala/Nyanyi")
 def l_nyanyi():
     return render_template("valiance/lomba_rakwala/l_nyanyi.html")
 
 
-@app.route("/Events/Rakwala/susun_kata")
+@app.route("/Events/Rakwala/Susun_Kata")
 def l_susun_kata():
     return render_template("valiance/lomba_rakwala/l_susun_kata.html")
 
 
-@app.route("/Events/Rakwala/masak")
+@app.route("/Events/Rakwala/Masak")
 def l_masak():
     return render_template("valiance/lomba_rakwala/l_masak.html")
 
 
-@app.route("/Events/Rakwala/siapa_cepat_dapat_kursi")
+@app.route("/Events/Rakwala/Siapa_Cepat_Dapat_Kursi")
 def l_siapa_cepat_dapat_kursi():
     return render_template("valiance/lomba_rakwala/l_siapa_cepat_dapat_kursi.html")
 
 
-@app.route("/Events/Rakwala/makan_kerupuk")
+@app.route("/Events/Rakwala/Makan_Kerupuk")
 def l_makan_kerupuk():
     return render_template("valiance/lomba_rakwala/l_makan_kerupuk.html")
 
 
-@app.route("/Events/Rakwala/cerpen")
+@app.route("/Events/Rakwala/Cerpen")
 def l_cerpen():
     return render_template("valiance/lomba_rakwala/l_cerpen.html")
 
 
-@app.route("/Events/Rakwala/sarung_smash")
+@app.route("/Events/Rakwala/Sarung_Smash")
 def l_sarung_smash():
     return render_template("valiance/lomba_rakwala/l_sarung_smash.html")
 
 
-@app.route("/Events/Rakwala/supporter")
-def l_supporter():
-    return render_template("valiance/lomba_rakwala/l_supporter.html")
-
-
-@app.route("/Events/Rakwala/fashion_show")
+@app.route("/Events/Rakwala/Fashion_Show")
 def l_fashion_show():
     return render_template("valiance/lomba_rakwala/l_fashion_show.html")
 

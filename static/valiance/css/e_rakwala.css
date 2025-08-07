@@ -14,7 +14,7 @@
     --accent-color: white;
     --nav-bg: #b91c1c;
     --dropdown-bg: #991b1b;
-    --splash-bg: #dc2626;
+    --splash-bg: rgb(133, 20, 20);
 }
 
 
@@ -194,11 +194,6 @@ section.content .list {
     border: 2px solid var(--text-color);
 }
 
-section.content .list:hover {
-    animation: box-hover 0.5s linear, box-size 0.3s linear;
-    scale: 1.05;
-    box-shadow: 0px 0px 30px rgba(220, 38, 38, 0.5);
-}
 
 section.content .list i {
     font-size: 50pt;

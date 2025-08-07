@@ -132,6 +132,11 @@ img#luminance:hover {
     box-shadow: 0 0 25px rgb(17, 183, 189);
     animation: luminance-hover 0.5s linear;
 }
+img#rakwala:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgb(231, 39, 13);
+    animation: rakwala-hover 0.5s linear;
+}
 @keyframes euphony-hover {
     0% {
         scale: 1;
@@ -246,6 +251,12 @@ img#luminance:hover {
     from {
         transform: scale(1);
         box-shadow: 0 0 rgb(40, 212, 194);
+    }
+}
+@keyframes rakwala-hover {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 rgb(231, 39, 13)
     }
 }
 section.event img,

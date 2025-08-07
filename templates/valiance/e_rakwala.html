@@ -5,92 +5,82 @@
   href="{{ url_for('static', filename='valiance/css/e_rakwala.css') }}"
 />
 
+<script src="https://kit.fontawesome.com/3f10e282b9.js" crossorigin="anonymous"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const competitionData = [
       {
         image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_yelyel.jpg') }}",
-        title: "Yel-Yel",
-        link: "/Events/Rakwala/yel-yel",
-      },
-      {
-        image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_kelereng.jpg') }}",
         title: "Estafet Kelereng",
-        link: "/Events/Rakwala/estafet_kelereng",
+        link: "/Events/Rakwala/Estafet_Kelereng",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_estafet.jpg') }}",
         title: "Estafet Air",
-        link: "/Events/Rakwala/estafet_air",
+        link: "/Events/Rakwala/Estafet_Air",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_buah_berhadiah.jpg') }}",
         title: "Buah Berhadiah",
-        link: "/Events/Rakwala/buah_berhadiah",
+        link: "/Events/Rakwala/Buah_Berhadiah",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_bola_dan_pipa.jpg') }}",
         title: "Bola Pipa",
-        link: "/Events/Rakwala/bola_pipa",
+        link: "/Events/Rakwala/Bola_Pipa",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_menyanyi.jpg') }}",
         title: "Nyanyi",
-        link: "/Events/Rakwala/nyanyi",
+        link: "/Events/Rakwala/Nyanyi",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_susun_kata.png') }}",
         title: "Susun Kata",
-        link: "/Events/Rakwala/susun_kata",
+        link: "/Events/Rakwala/Susun_Kata",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_masak.png') }}",
         title: "Masak",
-        link: "/Events/Rakwala/masak",
+        link: "/Events/Rakwala/Masak",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_kursi.jpg') }}",
         title: "Siapa Cepat Dapat Kursi",
-        link: "/Events/Rakwala/siapa_cepat_dapat_kursi",
+        link: "/Events/Rakwala/Siapa_Cepat_Dapat_Kursi",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_makan_kerupuk.png') }}",
         title: "Makan Kerupuk",
-        link: "/Events/Rakwala/makan_kerupuk",
+        link: "/Events/Rakwala/Makan_Kerupuk",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_cerpen.JPG') }}",
         title: "Cerpen",
-        link: "/Events/Rakwala/cerpen",
+        link: "/Events/Rakwala/Cerpen",
       },
       {
         image:
           "{{ url_for('static', filename='valiance/img/rakwala/l_sarung_smash.png') }}",
         title: "Sarung Smash",
-        link: "/Events/Rakwala/sarung_smash",
+        link: "/Events/Rakwala/Sarung_Smash",
       },
       {
         image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_supporter.jpg') }}",
-        title: "Supporter",
-        link: "/Events/Rakwala/supporter",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_fashion_show.png') }}",
+          "{{ url_for('static', filename='valiance/img/rakwala/l_fashion_show.jpeg') }}",
         title: "Fashion Show",
-        link: "/Events/Rakwala/fashion_show",
+        link: "/Events/Rakwala/Fashion_Show",
       },
     ];
 
@@ -134,34 +124,12 @@
 <!-- Banner Section -->
 <section class="banner">
   <img
-    src="{{ url_for('static', filename='valiance/img/banner/rakwala_banner.jpg') }}"
+    src="{{ url_for('static', filename='valiance/img/rakwala/Banner.png') }}"
     alt="banner"
   />
   <section class="gradient-banner"></section>
 </section>
 
-<!-- About Section -->
-<section class="about">
-  <h1 class="hidden">About Rakwala</h1>
-  <div class="kewa">
-    <div class="kepan hidden">
-      <p><b>Ketua Panitia</b></p>
-      <p>M. Chava Putra Anugra</p>
-    </div>
-    <div class="kepan hidden">
-      <p><b>Wakil Ketua Panitia 1</b></p>
-      <p>Catherine Novia Hartanto</p>
-    </div>
-    <div class="kepan hidden">
-      <p><b>Wakil Ketua Panitia 2</b></p>
-      <p>M. Daffa Aqeela Shidqi</p>
-    </div>
-    <div class="kepan hidden">
-      <p><b>Ketua Acara</b></p>
-      <p>Nyimas Faiza Athaya</p>
-    </div>
-  </div>
-</section>
 
 <!-- Content Section -->
 <section class="content">
@@ -202,7 +170,7 @@
         <p>Masak</p>
       </div>
       <div class="list hidden">
-        <i class="bx bxs-chair bx-tada"></i>
+        <i class="fa-solid fa-chair bx-tada"></i>
         <p>Siapa Cepat Dapat Kursi</p>
       </div>
       <div class="list hidden">
