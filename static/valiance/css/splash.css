@@ -26,6 +26,7 @@ div#splash {
 	z-index: 9999999;
 	user-select: none;
 	/* handling */
+	display: none;
 
 }
 
