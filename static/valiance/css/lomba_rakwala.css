@@ -196,6 +196,22 @@
     border-radius: 10px;
     margin-top: 1rem;
   }
+
+  #pengumpulan {
+    /* max-width: 80vw; */
+    flex-wrap: wrap;
+    word-break: break-word;       /* pecah kata/link panjang */
+    overflow-wrap: anywhere;      /* pecah di mana saja kalau perlu */
+}
+
+#pengumpulan h4,
+#pengumpulan h4 a {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    display: inline-block;        /* biar link bisa patah */
+    white-space: normal;          /* hilangkan nowrap default */
+}
+
   
   .container div .criteria {
     width: auto;
