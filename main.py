@@ -166,6 +166,9 @@ def l_sarung_smash():
 def l_fashion_show():
     return render_template("valiance/lomba_rakwala/l_fashion_show.html")
 
+@app.route("/Events/Rakwala/Melukis_Totebag")
+def l_melukis_totebag():
+    return render_template("valiance/lomba_rakwala/l_melukis_totebag.html")
 
 # OTHERS
 @app.route("/Coming_Soon")
