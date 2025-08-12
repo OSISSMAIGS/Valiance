@@ -109,47 +109,47 @@ def e_rakwala():
 
 @app.route("/Events/Rakwala/Estafet_Kelereng")
 def l_estafet_kelereng():
-    return render_template("valiance/lomba_rakwala/l_estafet_kelereng.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Estafet_Air")
 def l_estafet_air():
-    return render_template("valiance/lomba_rakwala/l_estafet_air.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Buah_Berhadiah")
 def l_buah_berhadiah():
-    return render_template("valiance/lomba_rakwala/l_buah_berhadiah.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Bola_Pipa")
 def l_bola_pipa():
-    return render_template("valiance/lomba_rakwala/l_bola_pipa.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Nyanyi")
 def l_nyanyi():
-    return render_template("valiance/lomba_rakwala/l_nyanyi.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Susun_Kata")
 def l_susun_kata():
-    return render_template("valiance/lomba_rakwala/l_susun_kata.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Masak")
 def l_masak():
-    return render_template("valiance/lomba_rakwala/l_masak.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Siapa_Cepat_Dapat_Kursi")
 def l_siapa_cepat_dapat_kursi():
-    return render_template("valiance/lomba_rakwala/l_siapa_cepat_dapat_kursi.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Makan_Kerupuk")
 def l_makan_kerupuk():
-    return render_template("valiance/lomba_rakwala/l_makan_kerupuk.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Cerpen")
@@ -159,16 +159,16 @@ def l_cerpen():
 
 @app.route("/Events/Rakwala/Sarung_Smash")
 def l_sarung_smash():
-    return render_template("valiance/lomba_rakwala/l_sarung_smash.html")
+    return render_template("valiance/l_closed.html")
 
 
 @app.route("/Events/Rakwala/Fashion_Show")
 def l_fashion_show():
-    return render_template("valiance/lomba_rakwala/l_fashion_show.html")
+    return render_template("valiance/l_closed.html")
 
 @app.route("/Events/Rakwala/Melukis_Totebag")
 def l_melukis_totebag():
-    return render_template("valiance/lomba_rakwala/l_melukis_totebag.html")
+    return render_template("valiance/l_closed.html")
 
 # OTHERS
 @app.route("/Coming_Soon")
