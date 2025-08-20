@@ -107,69 +107,6 @@ def e_questival():
 def e_rakwala():
     return render_template("valiance/e_rakwala.html")
 
-@app.route("/Events/Rakwala/Estafet_Kelereng")
-def l_estafet_kelereng():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Estafet_Air")
-def l_estafet_air():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Buah_Berhadiah")
-def l_buah_berhadiah():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Bola_Pipa")
-def l_bola_pipa():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Nyanyi")
-def l_nyanyi():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Susun_Kata")
-def l_susun_kata():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Masak")
-def l_masak():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Siapa_Cepat_Dapat_Kursi")
-def l_siapa_cepat_dapat_kursi():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Makan_Kerupuk")
-def l_makan_kerupuk():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Cerpen")
-def l_cerpen():
-    return render_template("valiance/lomba_rakwala/l_cerpen.html")
-
-
-@app.route("/Events/Rakwala/Sarung_Smash")
-def l_sarung_smash():
-    return render_template("valiance/l_closed.html")
-
-
-@app.route("/Events/Rakwala/Fashion_Show")
-def l_fashion_show():
-    return render_template("valiance/l_closed.html")
-
-@app.route("/Events/Rakwala/Melukis_Totebag")
-def l_melukis_totebag():
-    return render_template("valiance/l_closed.html")
-
 # OTHERS
 @app.route("/Coming_Soon")
 def coming_soon():

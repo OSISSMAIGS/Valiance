@@ -5,248 +5,250 @@
   href="{{ url_for('static', filename='valiance/css/e_rakwala.css') }}"
 />
 
-<script src="https://kit.fontawesome.com/3f10e282b9.js" crossorigin="anonymous"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const competitionData = [
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/melukis_totebag.png') }}",
-        title: "Workshop Melukis Totebag",
-        link: "/Events/Rakwala/Melukis_Totebag",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_kelereng.jpg') }}",
-        title: "Estafet Kelereng",
-        link: "/Events/Rakwala/Estafet_Kelereng",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_estafet.jpg') }}",
-        title: "Estafet Air",
-        link: "/Events/Rakwala/Estafet_Air",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_buah_berhadiah.jpg') }}",
-        title: "Buah Berhadiah",
-        link: "/Events/Rakwala/Buah_Berhadiah",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_bola_dan_pipa.jpg') }}",
-        title: "Bola Pipa",
-        link: "/Events/Rakwala/Bola_Pipa",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_menyanyi.jpg') }}",
-        title: "Nyanyi",
-        link: "/Events/Rakwala/Nyanyi",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_susun_kata.png') }}",
-        title: "Susun Kata",
-        link: "/Events/Rakwala/Susun_Kata",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_masak.png') }}",
-        title: "Masak",
-        link: "/Events/Rakwala/Masak",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_kursi.jpg') }}",
-        title: "Siapa Cepat Dapat Kursi",
-        link: "/Events/Rakwala/Siapa_Cepat_Dapat_Kursi",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_makan_kerupuk.png') }}",
-        title: "Makan Kerupuk",
-        link: "/Events/Rakwala/Makan_Kerupuk",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_cerpen.JPG') }}",
-        title: "Cerpen",
-        link: "/Events/Rakwala/Cerpen",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_sarung_smash.png') }}",
-        title: "Sarung Smash",
-        link: "/Events/Rakwala/Sarung_Smash",
-      },
-      {
-        image:
-          "{{ url_for('static', filename='valiance/img/rakwala/l_fashion_show.jpeg') }}",
-        title: "Fashion Show",
-        link: "/Events/Rakwala/Fashion_Show",
-      },
-    ];
-
-    const posterContainer = document.querySelector(".performance .gambar");
-    if (posterContainer) {
-      posterContainer.innerHTML = "";
-
-      competitionData.forEach((comp, index) => {
-        const container = document.createElement("div");
-        container.className = "image-container hidden";
-
-        container.innerHTML = `
-                    <img id="poster" src="${comp.image}" alt="${comp.title}">
-                    <div class="overlay">
-                        <h5><b>${comp.title}</b></h5>
-                        <a href="${comp.link}" class="btn">Registration</a>
-                    </div>
-                `;
-
-        posterContainer.appendChild(container);
-      });
-
-      // Initialize the intersection observer after creating elements
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
-      });
-
-      // Observe all hidden elements
-      const hiddenElements = document.querySelectorAll(".hidden");
-      hiddenElements.forEach((el) => observer.observe(el));
-    }
-  });
-</script>
-{% endblock css_js %} {% block title %}Rakwala | OSIS SMA IGS{% endblock title
-%} {% block main %}
-
+{% endblock css_js %} {% block title %}Rakwala{% endblock title %} {% block
+main%}
 <!-- Banner Section -->
 <section class="banner">
   <img
-    src="{{ url_for('static', filename='valiance/img/rakwala/Banner.png') }}"
+    src="{{ url_for('static', filename='valiance/img/banner/rakwala_banner.jpg') }}"
     alt="banner"
   />
   <section class="gradient-banner"></section>
 </section>
 
+<!-- About Section -->
+<section class="about">
+  <h1 class="hidden">About Rakwala</h1>
+  <p class="hidden">
+    Rakwala merupakan nama yang berasal dari kata "Rakyat Indonesia dalam
+    Bhinneka Tunggal Ika." Rakwala menggambarkan rakyat Indonesia yang selalu
+    menanamkan nilai-nilai Bhinneka Tunggal Ika yang berarti berbebda-beda
+    tetapi tetap satu. Rakwala ini diadakan untuk memeriahkan Hari Kemerdekaan
+    Republik Indonesia dan memperingati jasa para pahlawan yang telah berjuang
+    untuk kemerdekaan. Dalam event Rakwala ini para siswa dapat mengikuti
+    berbagai perlombaan dan minigames yang dapat meningkatan solidaritas,
+    mempererat persaudaraan dan menjaga semangat kemerdekaan di kalangan
+    masyarakat.
+  </p>
+
+  <div class="kewa">
+    <div class="kepan hidden">
+      <p><b>Ketua Panitia</b></p>
+      <p>M. Chava Putra Anugra</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia</b></p>
+      <p>Catherine Novia Hartanto</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Wakil Ketua Panitia 2</b></p>
+      <p>M. Daffa Aqeela Shidqi</p>
+    </div>
+    <div class="kepan hidden">
+      <p><b>Ketua Acara</b></p>
+      <p>Nyimas Faiza Athaya</p>
+    </div>
+  </div>
+</section>
 
 <!-- Content Section -->
 <section class="content">
-  <!-- Lomba Section -->
+  <!-- Performance Section -->
   <div class="performance">
-    <h1 class="hidden">Lomba</h1>
+    <h1 class="hidden">Activities & Performances</h1>
     <div class="lists">
-      <div class="list hidden">
-        <i class="bx bxs-megaphone bx-tada"></i>
-        <p>Yel-Yel</p>
+      <div
+        onclick="showDetail('Band Fanatsix', 'bx bx-music bx-tada', 'Merupakan penampilan band yang membawakan berbagai lagu daerah yang menggambarkan keberagaman dan kekayaan budaya yang dimiliki oleh berbagai suku, menciptakan jembatan antara tradisi dan generasi muda.')"
+        class="list hidden"
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Band Fanatsix</p>
       </div>
-      <div class="list hidden">
-        <i class="bx bxs-circle bx-tada"></i>
-        <p>Estafet Kelereng</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-droplet bx-tada"></i>
-        <p>Estafet Air</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-gift bx-tada"></i>
-        <p>Buah Berhadiah</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-circle bx-tada"></i>
-        <p>Bola Pipa</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-music bx-tada"></i>
-        <p>Nyanyi</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-edit bx-tada"></i>
-        <p>Susun Kata</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-bowl-hot bx-tada"></i>
-        <p>Masak</p>
-      </div>
-      <div class="list hidden">
-        <i class="fa-solid fa-chair bx-tada"></i>
-        <p>Siapa Cepat Dapat Kursi</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-cookie bx-tada"></i>
-        <p>Makan Kerupuk</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-book-open bx-tada"></i>
-        <p>Cerpen</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-tennis-ball bx-tada"></i>
-        <p>Sarung Smash</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-heart bx-tada"></i>
-        <p>Supporter</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-crown bx-tada"></i>
+
+      <div
+        onclick="showDetail('Fashion Show', 'bx bx-user-pin bx-tada', 'Merupakan perlombaan fashion show dengan tema Tokoh Pahlawan, kegiatan ini dilaksanakan untuk mengenang jasa para pahlawan serta menanamkan semangat kepahlawanan pada generasi muda melalui busana dan kekreatifan para siswa.')"
+        class="list hidden"
+      >
+        <i class="bx bx-user-pin bx-tada"></i>
         <p>Fashion Show</p>
       </div>
-    </div>
-  </div>
 
-  <!-- Minigames Section -->
-  <div class="performance">
-    <h1 class="hidden">Minigames</h1>
-    <div class="lists">
-      <div class="list hidden">
-        <i class="bx bxs-game bx-tada"></i>
-        <p>E-Sport Mobile Legend</p>
+      <div
+        onclick="showDetail('Tari Piring', 'bx bx-disc bx-tada', 'Merupakan pertunjukan tari tradisional yang berasal dari Minangkabau, Sumatera Barat. Tari ini dikenal dengan keindahan gerakannya yang dinamis dan penggunaan piring sebagai properti utama.')"
+        class="list hidden"
+      >
+        <i class="bx bx-disc bx-tada"></i>
+        <p>Tari Piring</p>
       </div>
-      <div class="list hidden">
-        <i class="bx bxs-circle bx-tada"></i>
-        <p>Gelinding Bola Berhadiah</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-wine bx-tada"></i>
-        <p>Meniup Gelas</p>
-      </div>
-      <div class="list hidden">
-        <i class="bx bxs-cookie bx-tada"></i>
-        <p>Makan Kukis di Muka</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Workshop Section -->
-  <div class="performance">
-    <h1 class="hidden">Workshop</h1>
-    <div class="lists">
-      <div class="list hidden">
-        <i class="bx bxs-palette bx-tada"></i>
-        <p>Workshop Face Painting</p>
+      <div
+        onclick="showDetail('Lomba Yel - Yel', 'bx bx-volume-full bx-tada', 'Merupakan lomba yang diadakan untuk menciptakan yel-yel yang kreatif dan energik, yang mencerminkan semangat nasionalisme dan persatuan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-volume-full bx-tada"></i>
+        <p>Lomba Yel - Yel</p>
       </div>
-      <div class="list hidden">
-        <i class="bx bxs-paint-roll bx-tada"></i>
+
+      <div
+        onclick="showDetail('Estafet Air', 'bx bx-droplet bx-tada', 'Merupakan lomba dimana para siswa akan melakukan estafet dengan mata tertutup dan memindahkan air melalui sebuah cup.')"
+        class="list hidden"
+      >
+        <i class="bx bx-droplet bx-tada"></i>
+        <p>Estafet Air</p>
+      </div>
+
+      <div
+        onclick="showDetail('Buah Berhadiah', 'bx bx-gift bx-tada', 'Merupakan perlombaan dimana para siswa harus mengambil koin dari sebuah buah yang di gantung.')"
+        class="list hidden"
+      >
+        <i class="bx bx-gift bx-tada"></i>
+        <p>Buah Berhadiah</p>
+      </div>
+
+      <div
+        onclick="showDetail('Bola Pipa', 'bx bx-football bx-tada', 'Merupakan perlombaan dimana para siswa harus memindahkan bola melalui sebuah pipa.')"
+        class="list hidden"
+      >
+        <i class="bx bx-football bx-tada"></i>
+        <p>Bola Pipa</p>
+      </div>
+
+      <div
+        onclick="showDetail('Workshop Lukis Totebag', 'bx bx-paint bx-tada', 'Workshop lukis totebag dengan tema kemerdekaan menghadirkan kanvas bagi para murid untuk mengekspresikan diri dalam acara 17 Agustus ini')"
+        class="list hidden"
+      >
+        <i class="bx bx-paint bx-tada"></i>
         <p>Workshop Lukis Totebag</p>
       </div>
+
+      <div
+        onclick="showDetail('Face Painting Indonesia Theme', 'bx bx-brush bx-tada', 'Para murid dapat merasakan keseruan kemerdekaan dengan face painting bertema Indonesia yang juga dapat menumbuhkan jiwa cinta negara dalam diri murid.')"
+        class="list hidden"
+      >
+        <i class="bx bx-brush bx-tada"></i>
+        <p>Face Painting Indonesia Theme</p>
+      </div>
+
+      <div
+        onclick="showDetail('Gelinding Bola Berhadiah', 'bx bx-bowling-ball bx-tada', 'Peserta mendapat tiga bola untuk digelindingkan ke arah gelas. Jika bola masuk, hadiah diberikan sesuai label pada gelas tersebut. Lomba ini melatih ketepatan bidikan.')"
+        class="list hidden"
+      >
+        <i class="bx bx-bowling-ball bx-tada"></i>
+        <p>Gelinding Bola Berhadiah</p>
+      </div>
+
+      <div
+        onclick="showDetail('Meniup Gelas', 'bx bx-wind bx-tada', 'Lomba yang melatih strategi dan kekuatan napas peserta, dilakukan dengan meniup gelas dari garis start hingga garis finish tanpa menyentuhnya dengan tangan. Siapa yang lebih dulu mencapai garis finish menjadi pemenangnya.')"
+        class="list hidden"
+      >
+        <i class="bx bx-wind bx-tada"></i>
+        <p>Meniup Gelas</p>
+      </div>
+
+      <div
+        onclick="showDetail('Makan Kukis di Muka', 'bx bx-cookie bx-tada', 'Lomba ini melatih presisi dan konsentrasi para peserta agar kukis yang berada di muka bisa termakan dan tidak jatuh.')"
+        class="list hidden"
+      >
+        <i class="bx bx-cookie bx-tada"></i>
+        <p>Makan Kukis di Muka</p>
+      </div>
+
+      <div
+        onclick="showDetail('Paduan Suara', 'bx bx-microphone bx-tada', 'Paduan suara yang dibawakan oleh Club Vocal menjadi salah satu performance yang memeriahkan event Rakwala tahun ini. Lagu Sik Sik Sibatumanikam pun sangat digemari oleh para peserta')"
+        class="list hidden"
+      >
+        <i class="bx bx-microphone bx-tada"></i>
+        <p>Paduan Suara</p>
+      </div>
+
+      <div
+        onclick="showDetail('Lomba Nyanyi', 'bx bx-music bx-tada', 'Peserta menunjukkan bakat bernyanyi mereka dengan penuh percaya diri. Lagu-lagu yang dibawakan menghadirkan suasana yang meriah dan menampilkan keragaman warna vokal dari tiap peserta.')"
+        class="list hidden"
+      >
+        <i class="bx bx-music bx-tada"></i>
+        <p>Lomba Nyanyi</p>
+      </div>
+
+      <div
+        onclick="showDetail('Sarung Smash', 'bx bx-tennis-ball bx-tada', 'Peserta bertanding bulu tangkis dengan mengenakan sarung sebagai tantangan dan simbol dalam perlombaan ini.')"
+        class="list hidden"
+      >
+        <i class="bx bx-tennis-ball bx-tada"></i>
+        <p>Sarung Smash</p>
+      </div>
+
+      <div
+        onclick="showDetail('Estafet Kelereng', 'bx bx-circle bx-tada', 'Setiap peserta berusaha menjaga keseimbangan sendok agar kelereng tidak jatuh dan membawa kelereng tersebut masuk ke dalam wadah.')"
+        class="list hidden"
+      >
+        <i class="bx bx-circle bx-tada"></i>
+        <p>Estafet Kelereng</p>
+      </div>
+
+      <div
+        onclick="showDetail('Susun Kata', 'bx bx-text bx-tada', 'Peserta ditantang untuk menyusun huruf-huruf acak menjadi kata yang tepat.')"
+        class="list hidden"
+      >
+        <i class="bx bx-text bx-tada"></i>
+        <p>Susun Kata</p>
+      </div>
+
+      <div
+        onclick="showDetail('Lomba Masak', 'bx bx-restaurant bx-tada', 'Peserta ditantang untuk mengolah bahan-bahan sederhana menjadi hidangan kreatif dalam waktu terbatas, lalu hasil masakan dinilai dari rasa, kreativitas, dan kerapian penyajian.')"
+        class="list hidden"
+      >
+        <i class="bx bx-restaurant bx-tada"></i>
+        <p>Lomba Masak</p>
+      </div>
+
+      <div
+        onclick="showDetail('Siapa Cepat Dapat Kardus', 'bx bx-cube bx-tada', 'Peserta bergerak mengikuti irama musik mengelilingi kardus, dan ketika musik berhenti mereka harus segera berebut masuk atau menduduki kardus yang jumlahnya lebih sedikit dari peserta.')"
+        class="list hidden"
+      >
+        <i class="bx bx-cube bx-tada"></i>
+        <p>Siapa Cepat Dapat Kardus</p>
+      </div>
+
+      <div
+        onclick="showDetail('Lomba Makan Kerupuk', 'bx bx-baguette bx-tada', 'Peserta berlomba menghabiskan kerupuk yang digantung dengan tali dan peserta tidak boleh menggunakan tangan saat perlombaan di mulai.')"
+        class="list hidden"
+      >
+        <i class="bx bx-baguette bx-tada"></i>
+        <p>Lomba Makan Kerupuk</p>
+      </div>
+
+      <div
+        onclick="showDetail('Puisi x Nyanyi', 'bx bx-book bx-tada', 'Penampilan perpaduan antara puisi dan nyanyian menghadirkan nuansa yang berbeda.')"
+        class="list hidden"
+      >
+        <i class="bx bx-book bx-tada"></i>
+        <p>Puisi x Nyanyi</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Poster -->
-<section class="content second-content">
-  <div class="performance">
-    <h1 class="hidden">Registration</h1>
-    <div class="gambar"></div>
+<!-- Detail -->
+<div class="detail" id="detail">
+  <div class="detail-container">
+    <div class="content">
+      <div onclick="closeDetail()" class="close">
+        <i class="bi bi-x-circle"></i>
+      </div>
+      <div class="content-desc">
+        <h2 id="detail-heading">Band Performance</h2>
+        <p id="detail-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni
+          impedit veniam quia quod unde dignissimos officia consequuntur harum.
+          Quidem necessitatibus doloribus quae at! Cum hic commodi beatae maxime
+          voluptates.
+        </p>
+      </div>
+      <div class="content-logo">
+        <i id="detail-logo"></i>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
 {% endblock main %}
