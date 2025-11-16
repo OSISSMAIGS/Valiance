@@ -232,6 +232,18 @@ p.cabinet-description{
     transition: var(--transition-fast);
 }
 
+#credence-card{
+    background-color: black;
+    color: black;
+    border: none;
+}
+
+#credence-card:hover{
+    background-color: black;
+    color: black;
+    text-decoration: none;
+}
+
 .cabinets-button:hover{
     scale: 1.05;
     background-color: var(--white);
