@@ -69,7 +69,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='valiance/css/splash.css') }}"
     />
-
+  
     <script src="{{ url_for('static', filename='valiance/js/toggle.js') }}"></script>
     <script src="{{ url_for('static', filename='valiance/js/index.js') }}"></script>
     <script src="{{ url_for('static', filename='valiance/js/shown_up.js') }}"></script>
@@ -124,7 +124,7 @@
         <a href="https://valthephoenix.osissmaigs.com" target="_self"
           ><button>Try Val</button></a
         >
-        <a href="{{ url_for('coming_soon') }}"><button>Magazine</button></a>
+        <a href="{{ url_for('magazine') }}"><button>Magazine</button></a>
         <a href="{{ url_for('about_us') }}"><button>About Us</button></a>
       </div>
 
@@ -141,7 +141,7 @@
         <a href="https://valthephoenix.osissmaigs.com" target="_self"
           ><button><i class="bx bxs-chat"></i>Try Val</button></a
         >
-        <a href="{{ url_for('coming_soon') }}"
+        <a href="{{ url_for('magazine') }}"
           ><button><i class="bx bxs-book"></i>Magazine</button></a
         >
         <a href="{{ url_for('about_us') }}"
@@ -261,4 +261,5 @@
       </div>
     </div>
   </body>
+  
 </html>

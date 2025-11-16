@@ -117,6 +117,10 @@ def coming_soon():
 def about_us():
     return render_template("valiance/about_us.html")
 
+@app.route("/Magazine")
+def magazine():
+    return render_template("valiance/magazine.html")
+
 
 @app.errorhandler(404)
 def page_not_found(error):
