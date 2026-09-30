@@ -56,6 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Redirect on button click
     buyButton.addEventListener('click', function() {
-        window.location.href = 'https://valthephoenix.osissmaigs.com';
+        window.location.href = 'https://valai.osissmaigs.com/';
     });
 });
